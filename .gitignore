@@ -1,0 +1,15 @@
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Generated/runtime files
+*.log
+*.tmp
+__pycache__/
+.venv/
+node_modules/
+dist/
+build/
+.DS_Store
+Thumbs.db
