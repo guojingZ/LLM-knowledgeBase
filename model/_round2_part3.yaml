@@ -1,0 +1,1200 @@
+# 第二轮填充 · 批次 3
+# 原文依据：raw/从架构思维到大架构观的培养.md、
+#           raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md、
+#           raw/从经验思维到统计思维你应该了解的思维发展史.md、
+#           raw/从认知的概念到认知系统模型的构建.md、
+#           raw/信息爆炸时代认知高和认知低的六大核心差异体现.md、
+#           raw/克服认知障碍实现认知升级打造认知闭环.md
+
+concepts:
+  - id: 主动信息过滤
+    define: 按核心目标与价值观启动过滤机制，只让相关信号进入认知系统
+    ipo:
+      input:
+        - 外部涌入的海量信息
+        - 自己当前的核心目标与关注焦点
+      process:
+        steps:
+          - 先建立清晰的目标和关注焦点，明确自己的关注点在哪里
+          - 面对外界信息时启动感知接收器的过滤机制
+          - 只放行与核心目标、核心价值观相关的信号
+          - 主动屏蔽无关的娱乐八卦与情绪垃圾
+          - 训练注意力的选择性和持久性，保持聚焦
+        tools:
+          - entity://认知系统模型
+      output:
+        - 与核心目标相关的高质量信息原材料
+        - 持续聚焦而不被分散的注意力
+    relations:
+      depends_on:
+        - concept://目标定位
+      uses:
+        - entity://认知系统模型
+      related_to:
+        - concept://信息降噪
+        - concept://认知水平差异
+        - concept://认知偏差
+    tags: [主动过滤, 降噪, 目标导向, 注意力]
+
+  - id: 举一反三
+    define: 由单个案例抽象出共性后推及同类场景，获得独立解决问题能力
+    ipo:
+      input:
+        - 已经做过的单个案例或题目
+        - 从该案例中抽象出的共性规律
+      process:
+        steps:
+          - 解决完单个案例后回看其关键求解点
+          - 从该案例抽象出同类问题的通用思路
+          - 遇到换了花样或换了场景的新问题时做模式匹配
+          - 把通用思路适配到新场景并求解，验证是否需要修正
+      output:
+        - 面对同类新场景的独立解决能力
+        - 修正完善后的通用思路
+    decomposition:
+      - step: 抽象共性
+        uses: concept://抽象
+        why: 认知升级的人一定是具备了抽象共性、举一反三的人
+      - step: 推及新场景
+        uses: concept://演绎
+        why: 由抽象出的通用思路推导到具体的新场景才能算会用
+    relations:
+      depends_on:
+        - concept://基础认知
+      contains:
+        - concept://抽象
+        - concept://演绎
+      related_to:
+        - concept://方法论迁移
+        - concept://事物群分析
+        - concept://深度复盘
+    tags: [抽象共性, 迁移, 通用思路, 认知升级]
+
+  - id: 事物群分析
+    define: 由问题驱动的单个事物研究转入自我驱动的同类事物群研究以抽象共性
+    ipo:
+      input:
+        - 大量同类事物或事件的案例积累
+        - 已有的基础认知
+      process:
+        steps:
+          - 在问题驱动下积累足够多的同类单个案例
+          - 自我驱动地提出这类问题是否存在通用化求解思路
+          - 把同类案例放在一起对比，找出共同点与差异
+          - 抽象共性并归纳出一般性的规律和方法论
+          - 用无法套用的反例修正和完善该规律
+      output:
+        - 同类事物的普遍性规律
+        - 可迁移的方法论
+    relations:
+      depends_on:
+        - concept://基础认知
+      uses:
+        - entity://认知闭环
+      related_to:
+        - concept://深度复盘
+        - concept://概念抽象
+        - concept://举一反三
+        - concept://模式提炼
+    tags: [事物群, 自我驱动, 共性抽象, 认知升级]
+
+  - id: 从表象到本质
+    define: 不满足于表象和结果，打破盒子洞悉事物内在运行原理
+    ipo:
+      input:
+        - 具体可观察的现象与结果
+        - 现象背后的原因线索
+      process:
+        steps:
+          - 如实观察并记录具体现象，先从感性认知开始
+          - 追问现象由什么构成、其本质特征是什么
+          - 追问现象产生的原因动力与存在目的
+          - 用逻辑推理找到现象背后不变的本质与规律
+        tools:
+          - entity://四因说
+      output:
+        - 事物的本质与底层规律
+        - 可迁移的底层逻辑
+    relations:
+      uses:
+        - entity://四因说
+      references:
+        - entity://亚里士多德
+      related_to:
+        - concept://概念抽象
+        - concept://底层逻辑
+        - concept://跳出盒子
+        - concept://认知水平差异
+    tags: [现象, 本质, 抽象, 底层逻辑]
+
+  - id: 元认知
+    define: 对认知本身的认知，从多个基础认知中抽象共性并对认知过程监控调整
+    ipo:
+      input:
+        - 自己正在进行的认知过程
+        - 认知结果与外部反馈
+      process:
+        steps:
+          - 观察自己当下在用什么样的思维方式
+          - 评估推理是否合理、结论是否成立
+          - 识别是否陷入固定思维或认知偏差
+          - 检验判断所依据的前提是否可靠
+          - 调整或替换分析方法与认知策略
+        tools:
+          - entity://认知系统模型
+      output:
+        - 修正后的认知策略
+        - 更准确的判断与决策
+    relations:
+      depends_on:
+        - concept://基础认知
+      uses:
+        - entity://认知系统模型
+      related_to:
+        - concept://认知偏差
+        - concept://批判思维
+        - concept://深度复盘
+        - concept://认知水平差异
+    tags: [对认知的认知, 监控, 偏差识别, 策略调整]
+
+  - id: 先验知识
+    define: 独立于经验、具普遍必然性并使经验得以可能的先天条件与范畴
+    ipo:
+      input:
+        - 感官提供的杂乱直观材料
+        - 先天的纯粹范畴与认识形式
+      process:
+        steps:
+          - 确认所用范畴独立于经验且具有普遍性和必然性
+          - 用先天的纯粹范畴对感性直观材料进行整理加工
+          - 形成具普遍性和必然性的判断
+          - 把零散经验整理为有序的知识体系
+      output:
+        - 有序的、具普遍必然性的知识体系
+        - 使经验得以可能的先天条件说明
+    relations:
+      references:
+        - entity://康德
+        - entity://《纯粹理性批判》
+      related_to:
+        - concept://感性知性理性三分
+        - concept://认知三要素
+        - concept://天赋观念
+    tags: [康德, 先验范畴, 普遍必然, 认识论]
+
+  - id: 分层
+    define: 按资源、服务、应用等层次切分，使各层可独立设计且相互松耦合
+    ipo:
+      input:
+        - 待设计的系统或应用
+        - 系统涉及的资源、服务、应用要素
+      process:
+        steps:
+          - 按资源、服务、应用三大层对系统做切分
+          - 明确每一层的职责边界与对外接口
+          - 检查各层是否能够独立设计、相互松耦合
+          - 检查分层是否理清了整个应用的构建过程
+        tools:
+          - entity://资源-服务-应用三层
+      output:
+        - 层次清晰且松耦合的架构分层
+        - 各层独立设计的约束说明
+    relations:
+      is_a:
+        - concept://分解
+      uses:
+        - entity://资源-服务-应用三层
+      related_to:
+        - concept://复杂度屏蔽
+        - concept://集成
+        - entity://平台+应用
+    tags: [架构分层, 松耦合, 独立设计, SOA]
+
+  - id: 可证伪性
+    define: 理论在逻辑上可能被反驳或检验，是区分科学与非科学的划界标准
+    ipo:
+      input:
+        - 待判断的普遍命题或理论
+        - 有限的个别经验事实
+      process:
+        steps:
+          - 把理论表述为可被检验的普遍命题
+          - 推演在何种观察事实下该命题会被推翻
+          - 用观察和实验去尝试证伪而非证实
+          - 逻辑上可能被反驳者判为科学，否则判为非科学
+      output:
+        - 科学与非科学的划界判断
+        - 经检验暂时保留下来的理论
+    relations:
+      references:
+        - entity://波普尔
+        - entity://证伪主义
+      related_to:
+        - concept://试错法
+        - concept://科学思维
+        - concept://实证
+    tags: [波普尔, 划界标准, 可反驳, 科学哲学]
+
+  - id: 否定之否定
+    define: 知识通过不断否定旧知识、建立新知识而持续更新进步的规律
+    ipo:
+      input:
+        - 已有的知识或命题
+        - 其内部潜藏的矛盾与对立面
+      process:
+        steps:
+          - 把握现有知识作为出发点并展开其内在矛盾
+          - 提出与现有知识相对立的一面
+          - 在矛盾的对立与扬弃中综合出更高层的知识
+          - 新知识继续成为被否定的对象而循环推进
+      output:
+        - 更新后的知识
+        - 由量的积累达到的质的飞跃
+    relations:
+      references:
+        - entity://黑格尔
+        - entity://《小逻辑》
+      related_to:
+        - concept://辩证逻辑
+        - concept://正题反题合题
+        - concept://质变突破
+        - concept://对立统一
+    tags: [黑格尔, 辩证法, 扬弃, 知识发展]
+
+  - id: 因果的习惯性联想
+    define: 休谟认为因果关系只是多次经验形成的心理习惯性预期，非客观必然
+    ipo:
+      input:
+        - 多次重复观察到的相继现象
+      process:
+        steps:
+          - 反复观察到两个现象先后相继出现
+          - 在心理上形成后者将随前者出现的预期
+          - 把先后相继当作因果关系来使用
+          - 承认无法通过经验证明其客观必然性
+      output:
+        - 关于因果的习惯性预期
+        - 对人类认识能力有限性的判断
+    relations:
+      references:
+        - entity://休谟
+        - entity://经验主义
+      related_to:
+        - concept://误认因果
+        - concept://归纳
+        - concept://实证
+    tags: [休谟, 因果, 习惯联想, 怀疑论]
+
+  - id: 基础认知
+    define: 学过和见过的记忆性认知，遇相似场景即可直接匹配而无需分解组合
+    ipo:
+      input:
+        - 学过和见过的知识与题型
+        - 当前遇到的相似场景
+      process:
+        steps:
+          - 通过学习和练习把知识记入大脑形成存量
+          - 判断当前场景与过去哪个场景相似
+          - 直接做基础匹配而不做分解和组合
+          - 持续积累，为后续的抽象提供原材料
+      output:
+        - 由直接匹配得到的解答
+        - 可供抽象的基础认知积累量
+    relations:
+      related_to:
+        - concept://元认知
+        - concept://事物群分析
+        - concept://模式匹配
+        - concept://经验存量
+    tags: [记忆匹配, 基础, 认知铺垫]
+
+  - id: 复杂度屏蔽
+    define: 把架构复杂性作为黑盒封装在内部，以粗粒度接口对外屏蔽
+    ipo:
+      input:
+        - 架构设计内部的复杂性
+        - 使用方的功能诉求
+      process:
+        steps:
+          - 识别架构内部哪些复杂性应当对外隐藏
+          - 把这些复杂性封装为黑盒留在架构设计内部
+          - 对外只暴露粗粒度的接口
+          - 配套输出架构原则、标准规范与开发指南
+      output:
+        - 屏蔽内部复杂性的粗粒度接口
+        - 开发人员可遵循的架构原则与规范
+    relations:
+      related_to:
+        - concept://黑盒思维
+        - concept://架构思维
+        - concept://分层
+        - concept://集成
+    tags: [黑盒, 粗粒度接口, 屏蔽复杂性, 架构]
+
+  - id: 复用
+    define: 将共性功能抽取为可复用组件，支撑平台化与共享中心建设的思考方式
+    ipo:
+      input:
+        - 多个业务场景中反复出现的共性功能
+        - 已有的实现模块与技术资产
+      process:
+        steps:
+          - 在多个场景中识别反复出现的共性功能
+          - 将共性功能抽取为独立的共性组件
+          - 把组件能力服务化并下沉为共享能力
+          - 新场景直接复用组件而不重复建设
+      output:
+        - 可复用的共性组件与服务
+        - 共性能力下沉后的共享中心
+    relations:
+      references:
+        - entity://SOA
+      related_to:
+        - concept://抽象
+        - concept://分层
+        - concept://集成
+        - entity://平台+应用
+    tags: [复用, 共性抽取, 组件化, 共享中心]
+
+  - id: 天赋观念
+    define: 笛卡尔所指与生俱来、清晰自明、无需感官经验验证的观念
+    ipo:
+      input:
+        - 心灵中固有的数学公理与逻辑规则
+      process:
+        steps:
+          - 由普遍怀疑筛出清楚明确、无可怀疑的观念
+          - 把天赋观念作为知识构建的公理起点
+          - 从起点出发通过严格的逻辑推理逐层演绎
+          - 检验推导结果是否清晰明确、避免模糊
+      output:
+        - 由公理化演绎得到的知识体系
+        - 可推导其他知识的确定性起点
+    relations:
+      references:
+        - entity://笛卡尔
+        - entity://理性主义
+      related_to:
+        - concept://普遍怀疑
+        - concept://演绎
+        - concept://先验知识
+        - entity://白板说
+    tags: [笛卡尔, 天赋, 公理化, 理性主义]
+
+  - id: 定性到定量
+    define: 将对现象的定性经验结论进一步用数据、公式与模型做精确定量表达
+    ipo:
+      input:
+        - 对现象的定性经验结论
+        - 可采集的观测数据
+      process:
+        steps:
+          - 先由观察和归纳得出定性的结论
+          - 确定影响目标的关键变量
+          - 采集数据并用符号系统抽象表达变量关系
+          - 建立公式或模型对关系做定量描述
+          - 用模型做预测并与实际结果比对
+        tools:
+          - entity://符号系统
+      output:
+        - 精确描述规律的定量模型与公式
+        - 可预测可验证的结论
+    relations:
+      uses:
+        - entity://符号系统
+      related_to:
+        - concept://科学思维
+        - concept://机械思维
+        - concept://经验思维
+        - concept://统计思维
+    tags: [定量, 公式模型, 精确化, 科学]
+
+  - id: 感性知性理性三分
+    define: 康德划分的感性接受直观、知性加工材料、理性追求统一的三种认识能力
+    ipo:
+      input:
+        - 外部对象刺激感官产生的直观材料
+        - 先天的知觉形式与纯粹范畴
+      process:
+        steps:
+          - 感性接受外部对象刺激，产生形象的直观印象
+          - 知性用先天的纯粹范畴对直观材料做整理加工
+          - 形成有序的、具普遍必然性的知识
+          - 理性进一步追求最高统一与绝对总体性
+          - 由理性指引实践并建立道德和伦理体系
+      output:
+        - 从感性直观到知性加工再到理性超越的知识
+        - 对知识统一性与完整性的把握
+    relations:
+      references:
+        - entity://康德
+        - entity://《纯粹理性批判》
+      related_to:
+        - concept://先验知识
+        - concept://认知三要素
+        - concept://认知升华
+        - concept://概念抽象
+    tags: [康德, 感性, 知性, 理性]
+
+  - id: 方法论迁移
+    define: 面对新问题时做模式匹配，将已有方法论适配迁移而非生搬硬套
+    ipo:
+      input:
+        - 新问题或全新领域的场景
+        - 已有的经验模式库与方法论
+      process:
+        steps:
+          - 判断新问题与过往哪一类问题相似
+          - 从经验模式库中检索并匹配相应的方法论
+          - 按新场景的约束对方法论做适配而非照搬
+          - 用演绎从普遍原理推出具体场景的解法
+          - 在新领域尝试并依据结果修正
+      output:
+        - 适配新场景的解决方案
+        - 进入全新领域的切入路径
+    relations:
+      depends_on:
+        - concept://模式匹配
+      related_to:
+        - concept://举一反三
+        - concept://演绎
+        - concept://元认知
+        - concept://认知水平差异
+    tags: [模式匹配, 适配迁移, 经验模式库, 新问题]
+
+  - id: 普遍怀疑
+    define: 笛卡尔以怀疑一切寻找不可动摇的确定性、确立知识起点的思维方法
+    ipo:
+      input:
+        - 待接受的各种既有结论与观念
+      process:
+        steps:
+          - 对既有结论逐一怀疑，包括权威的结论
+          - 只保留自己判断非常清楚确定、无可怀疑者
+          - 发现怀疑这一行为本身无法被怀疑
+          - 由怀疑行为的存在确立思考者自身的存在
+          - 以该确定性为起点展开其余知识
+      output:
+        - 不可动摇的知识起点
+        - 经怀疑筛选后的清楚明确的观念
+    relations:
+      references:
+        - entity://笛卡尔
+        - entity://《方法论》
+      related_to:
+        - concept://天赋观念
+        - concept://演绎
+        - concept://批判思维
+        - concept://独立思考
+    tags: [笛卡尔, 怀疑, 确定性起点, 我思故我在]
+
+  - id: 机械思维
+    define: 认定规律确定且可用精确数学公式表达并用于指导未知领域的思维方式
+    ipo:
+      input:
+        - 观察到的现象数据
+        - 关于确定性规律的假设
+      process:
+        steps:
+          - 假定世界变化有规律且规律具有确定性
+          - 用数学公式对规律做精确建模
+          - 用模型在未知领域做预测
+          - 用预测结果指导实践、改造自然
+          - 检查建模失败是否源于影响因子过多或测量不准
+      output:
+        - 精确描述规律的数学模型
+        - 可用于未知领域的预测与指导
+    relations:
+      references:
+        - entity://《自然哲学的数学原理》
+      related_to:
+        - concept://科学思维
+        - concept://定性到定量
+        - concept://统计思维
+        - concept://实证
+    tags: [确定性, 数学公式, 模型, 工业革命]
+
+  - id: 概念抽象
+    define: 识别共相、按MECE分类归纳、结构化，从个体中抽象出概念与层级
+    ipo:
+      input:
+        - 多个具体个体或案例的观察
+      process:
+        steps:
+          - 识别多个个体共同具备的属性即共相
+          - 按MECE原则相互独立、完全穷尽地分类归纳
+          - 构建清晰的概念框架与层级关系
+          - 形成结构化的概念与定义
+      output:
+        - 抽象出的概念与分类体系
+        - 结构化知识
+    relations:
+      is_a:
+        - concept://抽象
+      uses:
+        - concept://MECE
+      references:
+        - entity://第一实体与第二实体
+      related_to:
+        - concept://分类
+        - concept://从表象到本质
+    tags: [共相, MECE, 概念, 结构化]
+
+  - id: 深度复盘
+    define: 在周期性时间点对事物群体做共性抽象，归纳出一般性规律与方法论
+    ipo:
+      input:
+        - 一个周期内积累的同类事件与案例
+        - 已有的元认知规律
+      process:
+        steps:
+          - 在周期性的时间点汇总同类事件与案例
+          - 提取本次成功或失败的可复用经验点
+          - 对比多个案例归纳共性规律
+          - 抽象为可在X情境下用Y方法解决Z问题的方法论
+          - 识别认知盲区并更新经验模式库
+      output:
+        - 更新后的经验模式库
+        - 可迁移的方法论
+    relations:
+      depends_on:
+        - concept://事物群分析
+      uses:
+        - entity://认知闭环
+      produces:
+        - concept://方法论抽象
+      related_to:
+        - concept://复盘
+        - concept://元认知
+        - concept://知识经验库
+    tags: [周期性复盘, 共性抽象, 经验模式库, 自我驱动]
+
+  - id: 现象学还原
+    define: 胡塞尔通过分析意识的意向模式揭示知识构造过程的方法
+    ipo:
+      input:
+        - 意识中的意向活动与被指向的对象
+      process:
+        steps:
+          - 分析意识当下以感知、回忆或想象何种模式指向对象
+          - 考察对象的意义如何被意向活动构造出来
+          - 沿时间–生成结构追溯该知识的起源与历史背景
+          - 揭示知识作为动态构造过程的生成性
+      output:
+        - 对象意义被构造的方式
+        - 知识构造过程的揭示
+    relations:
+      references:
+        - entity://胡塞尔
+      related_to:
+        - concept://认识论分析
+        - concept://知识
+        - concept://先验知识
+    tags: [胡塞尔, 现象学, 意向性, 知识构造]
+
+  - id: 相关性分析先行
+    define: 认知不足时先按相关性分析解决问题，待能力提升再探索背后因果关系
+    ipo:
+      input:
+        - 复杂问题与待改进的目标
+        - 大量采集的数据
+      process:
+        steps:
+          - 承认复杂事物难以短时间找到确定性和因果关系
+          - 用不确定性的思路看待世界
+          - 把复杂问题转换为消除不确定性的问题
+          - 从数据中找出与目标强相关的信息并先据此改进
+          - 认知能力提升后再回头探索背后的因果关系
+      output:
+        - 目标改进的结果
+        - 待进一步验证的因果假设
+    relations:
+      related_to:
+        - concept://统计思维
+        - concept://因果链分析
+        - concept://误认因果
+        - concept://实证
+    tags: [相关性, 先于因果, 不确定性, 数据]
+
+  - id: 知识结构化
+    define: 将新知识点精准挂载到已有知识树，使零散知识形成可调用的连接
+    ipo:
+      input:
+        - 新学到的知识点
+        - 已有的知识树与知识体系
+      process:
+        steps:
+          - 确定该知识点所属的学科或领域
+          - 在已有知识树上找到其应挂载的位置
+          - 像拼积木一样把新知识点精准挂载上去
+          - 建立它与相邻知识点之间的连接
+          - 定期梳理结构并识别缺失环节
+        tools:
+          - entity://思维导图
+      output:
+        - 相互连接、可快速调取的知识树
+        - 知识体系的缺失环节清单
+    relations:
+      uses:
+        - entity://思维导图
+        - entity://认知系统模型
+      related_to:
+        - concept://知识树
+        - concept://知识体系构建
+        - concept://概念抽象
+    tags: [知识树, 连接, 挂载, 结构化]
+
+  - id: 科学思维
+    define: 以实验、量化与模型方法研究自然现象，从定性经验走向精确定量
+    ipo:
+      input:
+        - 待研究的自然现象
+        - 已有的定性经验
+      process:
+        steps:
+          - 提出明确的问题
+          - 设计并进行实验
+          - 从实验中得到结论并加以解释
+          - 将结论推广并普遍化
+          - 在实践中找出新问题并循环往复
+      output:
+        - 可推广的普遍性结论
+        - 进入下一轮循环的新问题
+    relations:
+      references:
+        - entity://笛卡尔科学方法论
+        - entity://《方法论》
+      related_to:
+        - concept://经验思维
+        - concept://定性到定量
+        - concept://实证
+    tags: [实验, 量化, 模型, 方法论]
+
+  - id: 经验思维
+    define: 通过经验积累分类与组织，对特定情境寻找过去成功行动方式的思维方式
+    ipo:
+      input:
+        - 过去积累下来的经验
+        - 当前已确定的特定情境
+      process:
+        steps:
+          - 对过往经验进行积累、分类与组织
+          - 判断当前情境属于哪一类过往情境
+          - 寻找过去在该情境下使之成功的行动方式
+          - 直接选择并套用该方式行动
+          - 随同类经验增多逐步固化为反射和下意识
+      output:
+        - 针对该情境的行动方式
+        - 由归纳得到的经验性规律
+    relations:
+      contains:
+        - concept://归纳
+        - concept://演绎
+      references:
+        - entity://亚里士多德
+      related_to:
+        - concept://科学思维
+        - concept://误认因果
+        - concept://模式匹配
+    tags: [经验, 归纳演绎, 情境匹配, 局限性]
+
+  - id: 统计思维
+    define: 以不确定性视角把复杂问题转为消除不确定性问题、先相关性后因果
+    ipo:
+      input:
+        - 复杂问题与待改进目标
+        - 大量且完备的数据
+      process:
+        steps:
+          - 承认复杂事物难以短时间找到确定性和因果关系
+          - 改用不确定性的思路看待世界
+          - 把复杂问题转换为消除不确定性的问题
+          - 找到能够消除相应不确定性的信息
+          - 用足够大量的数据持续训练并迭代模型
+        tools:
+          - entity://信息熵
+      output:
+        - 不确定性被消除后的决策与模型
+    relations:
+      uses:
+        - entity://信息熵
+      references:
+        - entity://香农
+      related_to:
+        - concept://相关性分析先行
+        - concept://机械思维
+        - concept://定性到定量
+    tags: [不确定性, 数据驱动, 概率, 人工智能]
+
+  - id: 认知三要素
+    define: 康德所述认识世界依赖的空间、时间与范畴（逻辑）三个先验要素
+    ipo:
+      input:
+        - 待认识的客观事物
+      process:
+        steps:
+          - 沿空间维度分析事物由哪些部分组成、如何排列
+          - 沿时间维度分析事物如何发展变化、状态如何转换
+          - 沿逻辑维度分析因果关系与组件间相互作用
+          - 检查三个维度是否都已被把握
+      output:
+        - 同时回答是什么、如何发展、为什么的完整认知
+    relations:
+      references:
+        - entity://康德
+        - entity://《纯粹理性批判》
+      related_to:
+        - concept://先验知识
+        - concept://静态结构分析
+        - concept://动态行为分析
+        - concept://认知水平差异
+    tags: [康德, 空间时间逻辑, 先验, 完整认知]
+
+  - id: 认知水平差异
+    define: 高认知与低认知在感知、抽象、结构、时空、解题与进化上的系统性差异
+    decomposition:
+      - step: 信息感知差异
+        uses: concept://主动信息过滤
+        why: 认知高的人启动过滤机制只放行与核心目标相关的信号，认知低的人被动接收
+      - step: 抽象能力差异
+        uses: concept://概念抽象
+        why: 认知高的人提取第二实体即概念与共性，认知低的人只停留在具体现象
+      - step: 思维结构差异
+        uses: concept://知识结构化
+        why: 认知高的人把新知识点挂载到知识树上形成连接，认知低的人知识零散点状
+      - step: 时空维度差异
+        uses: concept://认知三要素
+        why: 认知高的人掌握时间与空间维度的思维武器，坚持长期主义
+      - step: 解决问题差异
+        uses: concept://方法论迁移
+        why: 认知高的人做模式匹配后适配迁移，认知低的人只能生搬硬套经验
+      - step: 自我进化差异
+        uses: concept://元认知
+        why: 认知高的人靠元认知监控与复盘持续迭代，认知低的人静态重复
+    relations:
+      contains:
+        - concept://主动信息过滤
+        - concept://概念抽象
+        - concept://知识结构化
+        - concept://方法论迁移
+      related_to:
+        - concept://认知三要素
+        - concept://元认知
+    tags: [认知差异, 六维度, 高认知, 自我进化]
+
+  - id: 试错法
+    define: 波普尔所述大胆猜测后由观察实验检验淘汰、推动科学知识增长的方式
+    ipo:
+      input:
+        - 待解释的现象与问题
+        - 大胆提出的猜测性理论
+      process:
+        steps:
+          - 针对问题大胆提出猜测性的假说
+          - 推演该假说在何种观察事实下会被推翻
+          - 用严格的观察和实验进行检验
+          - 淘汰经不起检验的理论
+          - 以新的思辨推测取代后继续检验
+      output:
+        - 检验后存活下来的更适应的理论
+        - 增长后的科学知识
+    relations:
+      references:
+        - entity://波普尔
+        - entity://证伪主义
+      related_to:
+        - concept://可证伪性
+        - concept://假设验证
+        - concept://实证
+    tags: [波普尔, 大胆猜测, 检验淘汰, 知识增长]
+
+  - id: 误认因果
+    define: 仅凭已有现象的归纳把偶然相继误判为因果联系而形成错误信念
+    ipo:
+      input:
+        - 已观察到的若干相继出现的现象
+      process:
+        steps:
+          - 观察到两个现象多次相继出现
+          - 在无法穷举现象的情况下做出归纳
+          - 把偶然的相继当作因果联系
+          - 忽略不符合的反例或捏造一种联络作为解释
+      output:
+        - 错误的因果信念
+        - 心智的惰性与独断
+    relations:
+      related_to:
+        - concept://经验思维
+        - concept://因果的习惯性联想
+        - concept://样本充分性
+        - concept://认知偏差
+    tags: [错误因果, 归纳局限, 认知偏差, 经验]
+
+  - id: 质变突破
+    define: 量的积累经复盘串联为完整方法链条后打破旧认知边界的跃迁
+    ipo:
+      input:
+        - 长期积累的基础认知与实践经验
+        - 周期性复盘得出的共性规律
+      process:
+        steps:
+          - 持续积累大量的基础认知与实践经验
+          - 通过周期性复盘把零散经验点相互串联
+          - 使量的积累达到可以突破的临界程度
+          - 打破旧的认知边界
+          - 实现认知的螺旋式上升
+      output:
+        - 完整的方法链条
+        - 跃迁后的认知水平
+    relations:
+      depends_on:
+        - concept://深度复盘
+      related_to:
+        - concept://否定之否定
+        - concept://基础认知
+        - concept://认知四境界
+        - concept://临界点突破
+    tags: [量变到质变, 临界, 跃迁, 螺旋上升]
+
+  - id: 辩证综合
+    define: 在对立中寻求统一，为概念补上内在矛盾与边界条件后再下判断
+    ipo:
+      input:
+        - 初步得出的抽象概念或判断
+        - 该概念内在的矛盾与边界条件
+      process:
+        steps:
+          - 先给出初步的抽象概念或判断
+          - 找出该概念内在的矛盾与对立面
+          - 补上概念成立所依赖的边界条件与前提
+          - 在对立中综合出包含矛盾与条件的完整概念
+      output:
+        - 含内在矛盾与边界条件的完整概念
+    relations:
+      references:
+        - entity://黑格尔
+      related_to:
+        - concept://辩证逻辑
+        - concept://对立统一
+        - concept://正题反题合题
+        - concept://二元对立
+    tags: [对立统一, 边界条件, 黑格尔, 概念完整]
+
+  - id: 辩证逻辑
+    define: 黑格尔强调在矛盾对立中分析属性与行为相互作用以达统一的逻辑
+    ipo:
+      input:
+        - 已抽象出的概念及其思维具体化的产物
+      process:
+        steps:
+          - 得出抽象概念并通过思维具体化将其展开
+          - 列出该抽象事物具备的属性与行为
+          - 分析属性与行为之间的内在影响
+          - 分析各行为之间相互的正反作用
+          - 综合出矛盾作为事物发展的动力
+      output:
+        - 属性与行为相互作用的分析结论
+        - 深化后的更深层次知识
+    relations:
+      references:
+        - entity://《小逻辑》
+        - entity://黑格尔
+      related_to:
+        - concept://辩证综合
+        - concept://属性行为内在影响分析
+        - concept://正题反题合题
+        - concept://否定之否定
+    tags: [黑格尔, 属性行为, 正反作用, 矛盾分析]
+
+  - id: 集成
+    define: 通过合适的接口设计将分解后的组件或子系统重新组合为完整整体
+    ipo:
+      input:
+        - 分解后得到的组件或子系统
+        - 各组件的接口约定
+      process:
+        steps:
+          - 明确各分解组件的职责边界
+          - 为每个组件设计合适的对外接口
+          - 按接口把各组件或子系统装配起来
+          - 验证集成后的整体是否真正满足业务与需求
+      output:
+        - 可协同运行的完整整体
+        - 验证后的架构模型
+    relations:
+      depends_on:
+        - concept://分解
+      related_to:
+        - concept://架构思维
+        - concept://复杂度屏蔽
+        - concept://复用
+        - concept://自底向上装配
+    tags: [接口设计, 组件装配, 整体, 架构]
+
+entities:
+  - id: AlphaGo
+    define: Google于2016年推出、以人工神经网络为训练算法的围棋程序
+    relations:
+      related_to:
+        - concept://统计思维
+        - entity://大模型
+    tags: [围棋程序, 人工神经网络, 人工智能]
+
+  - id: J2EE多层框架
+    define: 常被误认为架构全部内容的多层技术框架
+    relations:
+      related_to:
+        - concept://架构思维
+        - entity://Spring
+    tags: [技术框架, 架构误解, J2EE]
+
+  - id: 《方法论》
+    define: 笛卡尔1637年著，提出怀疑一切与复杂问题分解的科学方法论
+    relations:
+      references:
+        - concept://普遍怀疑
+        - concept://分解
+        - concept://科学思维
+      related_to:
+        - entity://笛卡尔
+        - entity://笛卡尔科学方法论
+    tags: [笛卡尔, 科学方法论, 书籍]
+
+  - id: 《纯粹理性批判》
+    define: 康德所著，论述感性知性理性并调和经验主义与理性主义的著作
+    relations:
+      references:
+        - concept://先验知识
+        - concept://感性知性理性三分
+        - concept://认知三要素
+      related_to:
+        - entity://康德
+        - entity://经验主义
+        - entity://理性主义
+    tags: [康德, 先验, 认识论, 书籍]
+
+  - id: 《自然哲学的数学原理》
+    define: 牛顿1687年著，提出力学三大定律与万有引力定律
+    relations:
+      references:
+        - concept://机械思维
+        - concept://科学思维
+        - concept://定性到定量
+    tags: [牛顿, 经典力学, 机械思维, 书籍]
+
+  - id: 休谟
+    define: 经验主义集大成者，质疑因果关系的客观必然性与经验可靠性
+    relations:
+      related_to:
+        - concept://因果的习惯性联想
+        - entity://经验主义
+        - concept://误认因果
+        - concept://知识
+    tags: [经验主义, 怀疑论, 哲学家]
+
+  - id: 信息熵
+    define: 香农1948年提出的对信源不确定度进行量化度量的概念
+    relations:
+      related_to:
+        - concept://统计思维
+        - entity://香农
+        - concept://定性到定量
+    tags: [不确定性, 量化度量, 信息论]
+
+  - id: 光照说
+    define: 奥古斯丁认为理性需上帝光照方能认识真理的知识来源学说
+    relations:
+      related_to:
+        - concept://知识
+        - entity://柏拉图
+        - concept://认识论分析
+    tags: [奥古斯丁, 信仰与知识, 中世纪哲学]
+
+  - id: 哥白尼式革命
+    define: 康德主张对象必须符合主体先天认识形式的认识论转向
+    relations:
+      related_to:
+        - concept://先验知识
+        - entity://康德
+        - entity://《纯粹理性批判》
+        - concept://认识论分析
+    tags: [康德, 认识论转向, 现象界]
+
+  - id: 四因说
+    define: 亚里士多德提出的质料因、形式因、动力因、目的因四原因分析框架
+    relations:
+      related_to:
+        - concept://从表象到本质
+        - concept://本体论分析
+        - entity://亚里士多德
+        - concept://因果链分析
+    tags: [亚里士多德, 四因, 原因分析]
+
+  - id: 图像论
+    define: 维特根斯坦前期认为语言命题结构与事实结构逻辑同构的学说
+    relations:
+      related_to:
+        - concept://命题
+        - concept://逻辑图像
+        - entity://维特根斯坦
+        - entity://《逻辑哲学论》
+    tags: [维特根斯坦, 命题, 事实同构]
+
+  - id: 平台+应用
+    define: 分层模式的一种变形，强调共性能力下沉与共享中心建设
+    relations:
+      is_a:
+        - entity://资源-服务-应用三层
+      related_to:
+        - concept://复用
+        - concept://分层
+    tags: [分层变形, 共享中心, 能力下沉]
+
+  - id: 波普尔
+    define: 提出证伪主义与试错法，构建科学知识与科学方法论
+    relations:
+      related_to:
+        - entity://证伪主义
+        - concept://可证伪性
+        - concept://试错法
+        - concept://科学思维
+    tags: [证伪主义, 科学哲学, 哲学家]
+
+  - id: 白板说
+    define: 洛克认为心灵初始如白板、一切知识来源于经验的学说
+    relations:
+      related_to:
+        - concept://经验思维
+        - entity://经验主义
+        - concept://概念抽象
+        - concept://天赋观念
+    tags: [洛克, 经验来源, 白板]
+
+  - id: 科学归纳法
+    define: 培根提出的含事实收集、三表法、排斥法与肯定结论的归纳方法
+    relations:
+      related_to:
+        - concept://归纳
+        - entity://培根
+        - entity://经验主义
+        - concept://实证
+    tags: [培根, 归纳, 三表法]
+
+  - id: 笛卡尔科学方法论
+    define: 笛卡尔提出的普遍怀疑、分析分解、演绎、归纳、综合验证六步法
+    relations:
+      contains:
+        - concept://普遍怀疑
+        - concept://分解
+        - concept://演绎
+        - concept://归纳
+      related_to:
+        - entity://笛卡尔
+        - entity://《方法论》
+    tags: [笛卡尔, 六步法, 科学方法]
+
+  - id: 符号系统
+    define: 以语言、文字、图像等编码形式承载并跨时空传递信息的载体
+    relations:
+      related_to:
+        - concept://知识显性化
+        - concept://知识显隐转化
+        - entity://迈克尔·波兰尼
+        - concept://定性到定量
+    tags: [语言文字, 载体, 显性化]
+
+  - id: 第一实体与第二实体
+    define: 亚里士多德对具体个体与其抽象概念的区分
+    relations:
+      related_to:
+        - concept://概念抽象
+        - concept://从表象到本质
+        - entity://亚里士多德
+        - concept://认知水平差异
+    tags: [亚里士多德, 个体与概念, 抽象]
+
+  - id: 维特根斯坦
+    define: 以图像论与语言游戏论述知识与事实、逻辑及语境的关系
+    relations:
+      related_to:
+        - entity://图像论
+        - entity://语言游戏
+        - entity://《逻辑哲学论》
+        - concept://知识
+    tags: [维特根斯坦, 语言哲学, 语境]
+
+  - id: 认知系统模型
+    define: 含输入层、处理层、存储层、输出层、控制层的六层认知系统模型
+    relations:
+      contains:
+        - concept://概念抽象
+        - concept://元认知
+        - concept://深度复盘
+        - concept://辩证综合
+      related_to:
+        - concept://认知三要素
+        - concept://认知四境界
+    tags: [认知模型, 六层, 输入输出, 控制层]
+
+  - id: 认知闭环
+    define: 事物群分析-深度复盘-经验入库-演绎解决新问题的持续改进循环
+    relations:
+      contains:
+        - concept://事物群分析
+        - concept://深度复盘
+        - concept://演绎
+        - concept://模式匹配
+      related_to:
+        - concept://知识经验库
+    tags: [闭环, 持续改进, 经验模式库, 螺旋上升]
+
+  - id: 证伪主义
+    define: 波普尔提出的以可证伪性划界科学、以试错推动知识增长的理论
+    relations:
+      contains:
+        - concept://可证伪性
+        - concept://试错法
+      references:
+        - entity://科学归纳法
+        - entity://笛卡尔科学方法论
+      related_to:
+        - entity://波普尔
+    tags: [波普尔, 科学划界, 知识增长]
+
+  - id: 语言游戏
+    define: 维特根斯坦后期认为意义由具体语境中的语言使用所赋予的学说
+    relations:
+      related_to:
+        - entity://图像论
+        - entity://维特根斯坦
+        - concept://知识
+        - concept://命题
+    tags: [语境, 语言使用, 后期维特根斯坦]
+
+  - id: 资源-服务-应用三层
+    define: 架构分层的核心三大层，平台+应用为其变形
+    relations:
+      related_to:
+        - concept://分层
+        - entity://平台+应用
+        - entity://SOA
+        - concept://复用
+    tags: [架构分层, SOA, 三层]
+
+  - id: 迈克尔·波兰尼
+    define: 1958年从哲学领域提出隐性知识与显性知识的划分
+    relations:
+      related_to:
+        - concept://知识显性化
+        - concept://知识显隐转化
+        - entity://符号系统
+    tags: [隐性知识, 显性知识, 哲学家]
+
+  - id: 香农
+    define: 信息论创立者，提出信息熵解决信息的量化度量问题
+    relations:
+      related_to:
+        - entity://信息熵
+        - concept://统计思维
+        - concept://定性到定量
+    tags: [信息论, 信息熵, 量化]

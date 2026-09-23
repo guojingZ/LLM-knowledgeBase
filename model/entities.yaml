@@ -1,0 +1,2366 @@
+# ============================================================
+# entities.yaml — 实体清单（唯一实体文件）
+# 第一轮：骨架（id/sources/category/type/define）
+# 第二轮：填充 relations / children / tags
+# 生成：_round2_merge.py 合并 _round2_part1..8.yaml（2026-09-23）
+# ============================================================
+
+version: "2.0"
+updated_at: "2026-09-23"
+
+entities:
+
+  - id: 5W1H
+    sources:
+      - raw/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+    define: 问题定义需明确对象、原因、地点、时间、人物和方式的原则
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://问题定义
+      related_to:
+      - entity://麦肯锡七步法
+      - concept://目标定位
+    tags: [问题定义, 六要素]
+
+  - id: AOP
+    sources:
+      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+    define: 将日志记录、性能统计、安全控制、事务处理等横切关注点从业务逻辑中分离的技术
+    category: 技术与标准
+    type: 技术
+    relations:
+      references:
+      - entity://GoF设计模式
+      related_to:
+      - concept://横切思维
+      - concept://复用
+    tags: [AOP, 横切关注点, 解耦]
+
+  - id: AlphaGo
+    sources:
+      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+    define: Google于2016年推出、以人工神经网络为训练算法的围棋程序
+    category: 工具与平台
+    type: 产品
+    relations:
+      related_to:
+      - concept://统计思维
+      - entity://大模型
+    tags: [围棋程序, 人工神经网络, 人工智能]
+
+  - id: BAT
+    sources:
+      - raw/关于思维的七个观点供大家参考.md
+    define: 毕业后进入并完成第一阶段积累的互联网大厂代表
+    category: 人物与组织
+    type: 组织
+    relations:
+      related_to:
+      - concept://经验存量
+      - concept://长期主义
+      - concept://目标定位
+    tags: [互联网大厂, 职场前五年]
+
+  - id: BSC平衡计分卡
+    sources:
+      - raw/我是如此思考的思维整体框架和逻辑.md
+    define: 从学习、客户、财务、流程四维分解绩效目标的模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://分解
+      related_to:
+      - concept://目标转化
+      - concept://多目标决策转换
+      - concept://矩阵分析
+    tags: [绩效目标, 四维分解, 战略绩效]
+
+  - id: CMMI
+    sources:
+      - raw/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
+      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/我是如此思考的思维整体框架和逻辑.md
+      - raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+    define: 软件工程领域的标准模型，被借作知识树主干结构参考
+    category: 技术与标准
+    type: 标准
+    relations:
+      related_to:
+      - concept://知识树
+      - concept://找寻主干
+      - concept://结构化决策
+    tags: [软件工程, 参考模型, 标准]
+
+  - id: CRM客户关系管理系统
+    sources:
+      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+    define: 作者已有的业务系统经验来源，作为方案制作案例的匹配基础
+    category: 工具与平台
+    type: 产品
+    relations:
+      related_to:
+      - concept://模式匹配
+      - concept://场景应用模式
+      - concept://破题
+    tags: [CRM, 售前方案, 已有经验]
+
+  - id: CSF关键成功因素法
+    sources:
+      - raw/我是如此思考的思维整体框架和逻辑.md
+    define: 将终极目标分解为子目标、关键要素和控制变量的方法
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://分解
+      related_to:
+      - concept://目标转化
+      - concept://流程分析
+      - entity://BSC平衡计分卡
+    tags: [关键成功因素, 目标分解, 控制变量]
+
+  - id: ChatGPT
+    sources:
+      - raw/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
+    define: 生成式AI代表工具，可基于个人现状给出渐进式学习计划
+    category: 工具与平台
+    type: 工具
+    relations:
+      is_a:
+      - entity://大模型
+      related_to:
+      - concept://渐进式学习
+      - concept://知识广度
+      - concept://场景-技术映射
+    tags: [ChatGPT, 生成式AI, 学习计划]
+
+  - id: Claude Skills
+    sources:
+      - raw/AI时代个体思维能力进化知识显性化表达和输出能力.md
+    define: Claude推出的技能机制，将问题定义与个人知识经验描述封装为技能
+    category: 工具与平台
+    type: 工具
+    relations:
+      uses:
+      - concept://问题定义
+      - concept://知识显性化
+      related_to:
+      - concept://知识萃取
+    tags: [AI技能, 提示语, 经验封装]
+
+  - id: Claude.md
+    sources:
+      - raw/AI时代个体思维能力进化知识显性化表达和输出能力.md
+    define: 写给AI的操作手册文件，承载个人规则约束与历史参考样例
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - concept://知识显性化
+      - concept://知识萃取
+      - entity://Claude Skills
+    tags: [操作手册, 规则约束, 样例库]
+
+  - id: DeepSeek
+    sources:
+      - raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
+    define: 带来知识管理思路变革、可协助完成内容输出的AI工具
+    category: 工具与平台
+    type: 工具
+    relations:
+      related_to:
+      - entity://GPT
+      - entity://大模型
+      - concept://信息场景依赖
+      - concept://知识关联
+    tags: [AI工具, 知识管理变革, 内容输出]
+
+  - id: GPT
+    sources:
+      - raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
+    define: 与DeepSeek同类的AI工具，使重心转向问题场景下知识的应用
+    category: 工具与平台
+    type: 工具
+    relations:
+      related_to:
+      - entity://DeepSeek
+      - entity://大模型
+      - concept://信息场景依赖
+      - concept://知识关联
+    tags: [AI工具, 知识应用, 大模型]
+
+  - id: GRAI模型
+    sources:
+      - raw/如何高效和系统化的构建个人思维和认知体系.md
+    define: 回顾目标、评估结果、分析原因、总结规律的复盘方法
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://复盘
+      - concept://根因分析
+      related_to:
+      - concept://深度复盘
+      - concept://模式提炼
+      - entity://PDCA
+    tags: [复盘, 四步法, 总结规律]
+
+  - id: GoF设计模式
+    sources:
+      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+    define: 追求调用者与被调用者解耦以提升灵活性和可扩展性的模式集合
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - entity://AOP
+      - concept://复用
+      - concept://模式提炼
+    tags: [设计模式, 解耦, 可扩展性]
+
+  - id: Google DeepResearch
+    sources:
+      - raw/AI时代个体思维能力进化知识显性化表达和输出能力.md
+    define: 对陌生知识领域做深度研究并输出长篇研究报告的AI工具
+    category: 工具与平台
+    type: 工具
+    relations:
+      uses:
+      - concept://知识萃取
+      related_to:
+      - concept://思维链分析
+    tags: [深度研究, 报告生成, AI工具]
+
+  - id: Google Nano Banana
+    sources:
+      - raw/AI时代个体思维能力进化知识显性化表达和输出能力.md
+    define: 对已有知识做结构化与可视化呈现表达的AI信息图绘制工具
+    category: 工具与平台
+    type: 工具
+    relations:
+      uses:
+      - concept://结构化呈现
+      - concept://知识显性化
+      related_to:
+      - entity://Google DeepResearch
+    tags: [信息图, 可视化, AI绘图]
+
+  - id: HP
+    sources:
+      - raw/关于思维的七个观点供大家参考.md
+    define: 咨询规划报告来源之一，与IBM、埃森哲并列被分析
+    category: 人物与组织
+    type: 组织
+    relations:
+      related_to:
+      - concept://模仿超越
+      - concept://方法论抽象
+      - entity://IBM
+      - entity://埃森哲
+    tags: [咨询报告, 模仿对象]
+
+  - id: Hadoop
+    sources:
+      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+    define: 大数据技术平台，文中作为仅凭技术跳槽而脱离业务终被劝退的案例
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://业务驱动技术
+      - entity://Java
+    tags: [大数据平台, 技术狂热案例, 跳槽教训]
+
+  - id: IBM
+    sources:
+      - raw/关于思维的七个观点供大家参考.md
+    define: 作者做企业架构与IT规划时大量分析其咨询规划报告
+    category: 人物与组织
+    type: 组织
+    relations:
+      related_to:
+      - concept://模仿超越
+      - concept://方法论抽象
+      - entity://企业架构
+      - entity://埃森哲
+    tags: [咨询报告, 企业架构]
+
+  - id: J2EE多层框架
+    sources:
+      - raw/从架构思维到大架构观的培养.md
+    define: 常被误认为架构全部内容的多层技术框架
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://架构思维
+      - entity://Spring
+    tags: [技术框架, 架构误解, J2EE]
+
+  - id: Java
+    sources:
+      - raw/思维系列从学习的本质到如何高效快速学习.md
+    define: 新领域学习案例中用于说明开发知识框架的编程技术
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - entity://SSH框架
+      - entity://Spring
+      - concept://主干认知
+      - concept://最小目标验证
+    tags: [编程技术, 学习案例, 开发]
+
+  - id: KM指数增长公式
+    sources:
+      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+    define: 以人与知识之和的分享科技次方表示知识管理增长的公式
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://知识流动
+      - concept://复用
+      - entity://知识竞争力公式
+    tags: [知识管理, 指数增长, 分享]
+
+  - id: MBSE
+    sources:
+      - raw/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
+    define: 基于模型的系统工程学建模思想，被用于为个人学习系统建模
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://学习系统建模
+      related_to:
+      - concept://系统思维
+    tags: [系统工程, 建模思想, MBSE]
+
+  - id: NotebookLM
+    sources:
+      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+    define: 将文档资料转为双人播客或PPT视频讲解方式的AI学习工具
+    category: 工具与平台
+    type: 工具
+    relations:
+      related_to:
+      - concept://理解型学习
+      - concept://知识内化
+    tags: [AI学习工具, 播客讲解, 文档]
+
+  - id: Notion
+    sources:
+      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+    define: 通过建立双向链接构建知识点间关系的个人知识管理工具
+    category: 工具与平台
+    type: 工具
+    relations:
+      uses:
+      - concept://知识图谱构建
+      related_to:
+      - concept://知识网络构建
+      - concept://知识关联
+    tags: [知识管理, 双向链接, 知识点关系]
+
+  - id: Obsidian
+    sources:
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+    define: 用于建立外脑、将隐性思考外化为显性知识的笔记工具
+    category: 工具与平台
+    type: 工具
+    relations:
+      related_to:
+      - concept://知识显性化
+      - concept://外思考
+      - entity://Notion
+      - entity://NotebookLM
+    tags: [笔记工具, 外脑, 思考显性化]
+
+  - id: PDCA
+    sources:
+      - raw/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
+      - raw/信息爆炸时代认知高和认知低的六大核心差异体现.md
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/思维系列从学习的本质到如何高效快速学习.md
+      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/构建思维能力知识体系和框架逻辑的闭环体系.md
+      - raw/知识和认知的本质区别.md
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/突破认知障碍构建认知提升闭环系统.md
+      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+    define: 计划-执行-检查-改进的持续迭代循环
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://迭代思维
+      - concept://复盘
+      - concept://知识显隐转化
+      - concept://双循环
+    tags: [持续改进, 闭环迭代, 复盘]
+
+  - id: PMBOK
+    sources:
+      - raw/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
+      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/突破认知障碍构建认知提升闭环系统.md
+    define: 项目管理领域的标准模型，被借作知识树主干结构参考
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      is_a:
+      - entity://CMMI
+      related_to:
+      - concept://黑盒思维
+      - concept://知识体系三维度
+      - concept://知识树
+    tags: [项目管理, 标准参考模型, 知识主干]
+
+  - id: RUP
+    sources:
+      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+    define: 提倡用例驱动、架构为核心，先用例分析再找核心对象与接口
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      references:
+      - concept://动态行为分析
+      - concept://架构思维
+      related_to:
+      - concept://抽象
+      - entity://SOA
+    tags: [用例驱动, 架构核心, 软件工程]
+
+  - id: SCOR
+    sources:
+      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+    define: 供应链领域用于搭建专业知识树干的标准参考模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://找寻主干
+      - concept://知识树
+      - entity://CMMI
+      - entity://PMBOK
+    tags: [供应链, 参考模型, 知识树主干]
+
+  - id: SMART原则
+    sources:
+      - raw/我是如此思考的思维整体框架和逻辑.md
+      - raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
+    define: 以具体、可度量、可达成等要求判断目标的原则
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://目标转化
+      related_to:
+      - concept://定性到定量
+      - concept://目标定位
+      - concept://分解
+    tags: [目标量化, 时空约束, 可达成]
+
+  - id: SOA
+    sources:
+      - raw/从架构思维到大架构观的培养.md
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/思维框架和知识体系构建知识组件并实现知识快速组装.md
+      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+    define: 面向服务的架构思想，其分层与复用是架构核心思考模式
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - entity://微服务
+      - entity://《SOA和大数据-企业私有云PaaS平台建设实践》
+      - concept://组件化思维
+      - concept://复用
+      - concept://架构思维
+    tags: [SOA, 服务复用, 架构思想]
+
+  - id: SOA治理框架
+    sources:
+      - raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md
+    define: 以服务全生命周期与管理过程两个维度构建的知识体系参考框架
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      references:
+      - entity://SOA
+      related_to:
+      - concept://知识体系三维度
+      - concept://矩阵分析
+      - entity://CMMI
+    tags: [双维度框架, 服务治理, 参考框架]
+
+  - id: SSH框架
+    sources:
+      - raw/思维系列从学习的本质到如何高效快速学习.md
+      - raw/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md
+    define: 由多层协同完成Java应用功能的组合开发框架
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - entity://Java
+      - entity://Spring
+      - concept://主干认知
+      - concept://最小目标验证
+    tags: [开发框架, 分层协作, 学习案例]
+
+  - id: Spring
+    sources:
+      - raw/思维系列从学习的本质到如何高效快速学习.md
+    define: SSH学习案例中涉及IOC和AOP机制的开发框架
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - entity://SSH框架
+      - entity://AOP
+      - entity://Java
+      - concept://不求甚解
+    tags: [开发框架, IOC, AOP]
+
+  - id: TPG
+    sources:
+      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+    define: 企业内构建共享技术平台与组件、统一评估技术选型的平台型组织
+    category: 人物与组织
+    type: 组织
+    relations:
+      uses:
+      - concept://复用
+      related_to:
+      - concept://横切思维
+      - entity://SOA
+      - entity://平台+应用
+    tags: [TPG, 技术平台组织, 组件复用]
+
+  - id: TRIZ
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+    define: 产品研发与创新领域已有的完整方法论，被作为思维应有方法论的参照
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://方法论抽象
+      - concept://思维框架体系
+    tags: [TRIZ, 创新方法论, 参照对象]
+
+  - id: T型人才
+    sources:
+      - raw/在职场怎么抓住学习和成长的机会.md
+    define: 既有专业深度又具备一定广度的能力结构
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://知识深度
+      - concept://知识广度
+      - concept://跨领域迁移
+    tags: [专业深度, 知识广度]
+
+  - id: iThink
+    sources:
+      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+    define: 支持系统思维动态建模与模拟仿真的建模软件
+    category: 工具与平台
+    type: 工具
+    relations:
+      related_to:
+      - concept://系统动力学建模
+      - entity://系统动力学
+      - concept://系统思维
+    tags: [建模工具, 系统动力学, 仿真]
+
+  - id: ima知识库
+    sources:
+      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
+    define: 用于导入历史文章、提炼关键词并输出知识图谱的知识库产品
+    category: 工具与平台
+    type: 产品
+    relations:
+      produces:
+      - entity://知识图谱
+      related_to:
+      - concept://知识图谱构建
+      - concept://知识网络构建
+      - concept://知识萃取
+    tags: [知识库产品, AI提炼, 图谱输出]
+
+  - id: 《P9工作法》
+    sources:
+      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+    define: 阿里出版，把技术人员成长分为编码设计、架构思维、技术领导力
+    category: 知识资产
+    type: 书籍
+    relations:
+      references:
+      - concept://架构思维
+      related_to:
+      - entity://企业架构
+    tags: [书籍, 技术人员成长, 架构思维]
+
+  - id: 《SOA和大数据-企业私有云PaaS平台建设实践》
+    sources:
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 作者2020年出版、依托联通UCloud项目实践总结的技术书籍
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - entity://SOA
+      - entity://微服务
+    tags: [作者著作, PaaS平台, 一线实践提炼]
+
+  - id: 《你的灯亮着吗》
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+    define: 给出"问题是现状与期望之间差距"这一定义的著作
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - concept://问题定义
+    tags: [书籍, 问题定义, 差距定义]
+
+  - id: 《刻意练习》
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 学习细分领域的代表著作
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - entity://学习金字塔模型
+      - concept://渐进式学习
+    tags: [书籍, 学习方法, 细分领域]
+
+  - id: 《如何阅读一本书》
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 阅读细分领域的代表著作
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - entity://学习金字塔模型
+    tags: [书籍, 阅读方法, 细分领域]
+
+  - id: 《小逻辑》
+    sources:
+      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+    define: 黑格尔所著，阐述正题反题如何走向对立统一的辩证逻辑著作
+    category: 知识资产
+    type: 书籍
+    relations:
+      references:
+      - entity://黑格尔
+      related_to:
+      - concept://正题反题合题
+      - concept://对立统一
+      - concept://辩证逻辑
+      - entity://辩证法
+    tags: [黑格尔, 辩证逻辑]
+
+  - id: 《底层逻辑》
+    sources:
+      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+    define: 刘润所著，提出人生商业模式与个体进化三要素等内容的书
+    category: 知识资产
+    type: 书籍
+    relations:
+      produces:
+      - entity://人生商业模式
+      related_to:
+      - concept://时间颗粒度
+      - concept://零边际成本
+      - entity://刘润
+    tags: [书籍, 个体进化, 人生商业模式]
+
+  - id: 《庖丁解牛》
+    sources:
+      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+    define: 以从见全牛到未见全牛比喻显性知识内化为隐性知识的过程
+    category: 知识资产
+    type: 书籍
+    relations:
+      references:
+      - concept://知识显隐转化
+      - concept://知识内化
+      related_to:
+      - concept://证悟
+    tags: [寓言典故, 显性到隐性, 熟练自如]
+
+  - id: 《思维框架和逻辑》
+    sources:
+      - raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 作者正在详细修订的、讲思维框架逻辑与思维能力体系的书
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - concept://静态架构与动态运转
+      - concept://思维双主线
+      - concept://事物群认知
+      - entity://思维钻石模型
+      - entity://贺博士
+    tags: [思维框架, 书籍]
+
+  - id: 《思维简史》
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 叙述整个思维发展历程的著作
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - concept://经验思维
+      - concept://科学思维
+    tags: [书籍, 思维发展史, 通识读物]
+
+  - id: 《提问的智慧》
+    sources:
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+    define: 给出完整描述问题四要素的提问方法论
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - concept://问题定义
+    tags: [提问, 问题定义, 书籍]
+
+  - id: 《方法论》
+    sources:
+      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+    define: 笛卡尔1637年著，提出怀疑一切与复杂问题分解的科学方法论
+    category: 知识资产
+    type: 书籍
+    relations:
+      references:
+      - concept://普遍怀疑
+      - concept://分解
+      - concept://科学思维
+      related_to:
+      - entity://笛卡尔
+      - entity://笛卡尔科学方法论
+    tags: [笛卡尔, 科学方法论, 书籍]
+
+  - id: 《暗时间》
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+    define: 刘未鹏所著，提出"锤子和钉子"的心智隐喻
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - entity://刘未鹏
+      - concept://实践反刍
+    tags: [书籍, 刘未鹏, 思维类读物]
+
+  - id: 《架构之美》
+    sources:
+      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+    define: 指出架构是洞见内在结构、规律、原则和逻辑的过程而非结果
+    category: 知识资产
+    type: 书籍
+    relations:
+      references:
+      - concept://架构思维
+      - concept://抽象
+      related_to:
+      - concept://大架构观
+    tags: [架构专著, 过程是本质, 目标图像]
+
+  - id: 《第五项修炼》
+    sources:
+      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 彼得·圣吉所著，系统思维与学习型组织的经典著作
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - entity://彼得·圣吉
+      - concept://系统思维
+    tags: [书籍, 系统思维, 学习型组织]
+
+  - id: 《系统实践》工具包
+    sources:
+      - raw/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
+    define: 融合工程实践与管理实践、体现系统化思维与敏捷思想的电子文档
+    category: 知识资产
+    type: 书籍
+    relations:
+      produces:
+      - entity://三环学习法
+      references:
+      - entity://敏捷方法
+      related_to:
+      - concept://系统思维
+      - entity://加兴
+    tags: [工具包, 工程实践, 系统化思维]
+
+  - id: 《系统思考》
+    sources:
+      - raw/AI时代的个体思维进化从系统思维到第一性原理.md
+      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+    define: 以问题驱动方式讲解系统思考方法的专著
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - concept://系统思维
+    tags: [系统思考, 书籍]
+
+  - id: 《纯粹理性批判》
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/思维系列如何一阵见血的看透事物的本质.md
+    define: 康德所著，论述感性知性理性并调和经验主义与理性主义的著作
+    category: 知识资产
+    type: 书籍
+    relations:
+      references:
+      - concept://先验知识
+      - concept://感性知性理性三分
+      - concept://认知三要素
+      related_to:
+      - entity://康德
+      - entity://经验主义
+      - entity://理性主义
+    tags: [康德, 先验, 认识论, 书籍]
+
+  - id: 《自然哲学的数学原理》
+    sources:
+      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+    define: 牛顿1687年著，提出力学三大定律与万有引力定律
+    category: 知识资产
+    type: 书籍
+    relations:
+      references:
+      - concept://机械思维
+      - concept://科学思维
+      - concept://定性到定量
+    tags: [牛顿, 经典力学, 机械思维, 书籍]
+
+  - id: 《见识》
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 吴军所著，作者列举的相对不错的思维类书籍之一
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - entity://吴军
+      - concept://实践反刍
+    tags: [书籍, 吴军, 思维类读物]
+
+  - id: 《逻辑哲学论》
+    sources:
+      - raw/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
+    define: 维特根斯坦著作，阐述事实、事态、命题、逻辑图像与逻辑空间
+    category: 知识资产
+    type: 书籍
+    relations:
+      references:
+      - entity://维特根斯坦
+      related_to:
+      - concept://事实
+      - concept://事态
+      - concept://命题
+      - concept://逻辑图像
+      - concept://逻辑空间
+    tags: [维特根斯坦, 逻辑哲学, 事实命题]
+
+  - id: 万维钢
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 《智识分子》《万万没想到》作者，物理学科背景
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://实践反刍
+      - concept://复盘
+    tags: [人物, 物理学科, 跨领域作者]
+
+  - id: 三层六阶段学习法
+    sources:
+      - raw/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
+      - raw/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
+      - raw/知识和认知的本质区别.md
+      - raw/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md
+      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+    define: 基础-进阶-突破三层与不求甚解到融会贯通六阶段构成的学习路径模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://不求甚解
+      - concept://找寻主干
+      - concept://最小目标验证
+      - concept://可视化迭代学习
+      - concept://融会贯通
+      related_to:
+      - concept://学习路径
+      - concept://知识内化
+    tags: [学习金字塔, 三层六阶段, 学习路径]
+
+  - id: 三环学习法
+    sources:
+      - raw/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
+    define: 依次对行动、假设、上下文做反思以构建逆向闭环学习的方法
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://假设验证
+      - concept://复盘
+      references:
+      - entity://《系统实践》工具包
+      related_to:
+      - concept://跳出盒子
+    tags: [逆向闭环, 反思, 场景上下文]
+
+  - id: 事物认知模型
+    sources:
+      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+    define: 以静态结构、动态时间、环境关系形成完整认知的三维模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://静态结构分析
+      - concept://动态行为分析
+      - concept://动静结合分析
+      related_to:
+      - concept://事物认知
+      - concept://系统思维
+    tags: [三维认知, 静态动态环境, 立体认知]
+
+  - id: 二八法则
+    sources:
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+    define: 关键的少数影响因子决定多数结果的优先级判定法则
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://优先级排序
+    tags: [关键少数, 优先级]
+
+  - id: 亚里士多德
+    sources:
+      - raw/AI时代的个体思维进化从系统思维到第一性原理.md
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维系列如何一阵见血的看透事物的本质.md
+      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+    define: 强调知识是对事物本质和原因的把握
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://认知升华
+      - concept://知识
+    tags: [哲学家, 知识本质]
+
+  - id: 人生商业模式
+    sources:
+      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+    define: 能力、效率与杠杆三者相乘的公式，用于解释个体进化与价值创造
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      references:
+      - entity://《底层逻辑》
+      related_to:
+      - concept://长期主义
+      - concept://空间换时间
+    tags: [能力效率杠杆, 价值创造]
+
+  - id: 以师带徒
+    sources:
+      - raw/在职场怎么抓住学习和成长的机会.md
+    define: 公司内部导师制度，定期与导师交流困惑与感悟以少走弯路
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://知识显性化
+      - concept://实践驱动学习
+      - concept://复盘
+    tags: [导师制, 交流]
+
+  - id: 企业架构
+    sources:
+      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+    define: 由软件架构升华而来的企业数字化规划与平台建设能力体系
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://架构思维
+      - concept://大架构观
+      - entity://《P9工作法》
+    tags: [企业架构, 数字化规划, 平台建设]
+
+  - id: 休谟
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+    define: 经验主义集大成者，质疑因果关系的客观必然性与经验可靠性
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://因果的习惯性联想
+      - entity://经验主义
+      - concept://误认因果
+      - concept://知识
+    tags: [经验主义, 怀疑论, 哲学家]
+
+  - id: 佛学
+    sources:
+      - raw/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
+    define: 提出"诸法皆因缘起，缘起性空"，用以解释事物无独立自存本质
+    category: 知识资产
+    type: 概念实体
+    relations:
+      references:
+      - concept://缘起性空
+      related_to:
+      - concept://事实
+      - concept://从表象到本质
+    tags: [佛学, 因缘和合, 性空]
+
+  - id: 信息熵
+    sources:
+      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+    define: 香农1948年提出的对信源不确定度进行量化度量的概念
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://统计思维
+      - entity://香农
+      - concept://定性到定量
+    tags: [不确定性, 量化度量, 信息论]
+
+  - id: 倒金字塔转化模型
+    sources:
+      - raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md
+    define: 描述个人知识库向经验模式库持续转化的模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://知识经验库
+      - concept://经验模式库
+      - concept://知识转技能
+      - concept://技能转经验
+      - concept://知识四层演进
+    tags: [知识转化, 经验模式库]
+
+  - id: 先验逻辑
+    sources:
+      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+    define: 康德将逻辑要素展开为质、量、关系、模态等十二范畴的学说
+    category: 知识资产
+    type: 概念实体
+    relations:
+      contains:
+      - concept://逻辑要素
+      references:
+      - entity://康德
+      related_to:
+      - concept://先验知识
+      - concept://逻辑分层
+    tags: [先验逻辑, 十二范畴, 康德]
+
+  - id: 光照说
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+    define: 奥古斯丁认为理性需上帝光照方能认识真理的知识来源学说
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - concept://知识
+      - entity://柏拉图
+      - concept://认识论分析
+    tags: [奥古斯丁, 信仰与知识, 中世纪哲学]
+
+  - id: 关键路径法
+    sources:
+      - raw/关于思维的七个观点供大家参考.md
+    define: 进度管理中计算进度与工期的方法，在角色分工场景下往往不适用
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://任务依赖打破
+      - concept://依赖关系排序
+    tags: [进度管理, 工期计算]
+
+  - id: 决策树
+    sources:
+      - raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
+    define: 用于问题分析思考并输出树状结构的分析工具
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      is_a:
+      - entity://树模型
+      references:
+      - concept://结构化思维
+      - concept://结构化决策
+      related_to:
+      - concept://问题分解
+    tags: [树状输出, 问题分析, 结构化]
+
+  - id: 决策矩阵
+    sources:
+      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+    define: 按标准、成本、风险及权重为多个方案计算综合得分的工具
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://结构化决策
+      - concept://矩阵分析
+      related_to:
+      - concept://科学决策
+      - entity://层次分析法
+    tags: [多方案评估, 权重得分, 量化直觉]
+
+  - id: 刘未鹏
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+    define: 《暗时间》作者
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://《暗时间》
+      - concept://实践反刍
+    tags: [人物, IT背景, 思维类作者]
+
+  - id: 刘润
+    sources:
+      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+    define: 《底层逻辑》作者，将复杂道理演绎得浅显易懂
+    category: 人物与组织
+    type: 人物
+    relations:
+      produces:
+      - entity://《底层逻辑》
+      related_to:
+      - concept://时间颗粒度
+    tags: [作者, 商业顾问]
+
+  - id: 加兴
+    sources:
+      - raw/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
+    define: 发布《系统实践》工具包、引出三环学习法的作者好友
+    category: 人物与组织
+    type: 人物
+    relations:
+      produces:
+      - entity://《系统实践》工具包
+      related_to:
+      - entity://三环学习法
+    tags: [作者好友, 系统实践]
+
+  - id: 动态规划
+    sources:
+      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+    define: 运筹学中背包问题可转化映射到的已知解法
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://问题转化
+      - entity://回溯算法
+    tags: [算法, 运筹学, 背包问题]
+
+  - id: 古典
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 《拆掉思维的墙》《跃迁》作者，原新东方名师
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://实践反刍
+    tags: [人物, 新东方出身, 思维类作者]
+
+  - id: 吴军
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 《见识》作者，IT行业专家
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://《见识》
+      - concept://实践反刍
+    tags: [人物, IT专家, 作家]
+
+  - id: 哥白尼式革命
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+    define: 康德主张对象必须符合主体先天认识形式的认识论转向
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - concept://先验知识
+      - entity://康德
+      - entity://《纯粹理性批判》
+      - concept://认识论分析
+    tags: [康德, 认识论转向, 现象界]
+
+  - id: 四因说
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+    define: 亚里士多德提出的质料因、形式因、动力因、目的因四原因分析框架
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://从表象到本质
+      - concept://本体论分析
+      - entity://亚里士多德
+      - concept://因果链分析
+    tags: [亚里士多德, 四因, 原因分析]
+
+  - id: 回溯算法
+    sources:
+      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+    define: 八皇后问题可转化映射到的已知解法
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://问题转化
+      - entity://动态规划
+    tags: [算法, 八皇后问题, 已知解法]
+
+  - id: 因果循环图
+    sources:
+      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/我是如此思考的思维整体框架和逻辑.md
+    define: 描述系统中各要素正负反馈作用关系的环形图示
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://要素关联分析
+      related_to:
+      - concept://系统思维
+      - entity://系统动力学
+    tags: [反馈回路, 系统思维, 图式]
+
+  - id: 图像论
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+    define: 维特根斯坦前期认为语言命题结构与事实结构逻辑同构的学说
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - concept://命题
+      - concept://逻辑图像
+      - entity://维特根斯坦
+      - entity://《逻辑哲学论》
+    tags: [维特根斯坦, 命题, 事实同构]
+
+  - id: 埃森哲
+    sources:
+      - raw/关于思维的七个观点供大家参考.md
+    define: 咨询规划报告来源之一，作者分析其方法论的内在逻辑
+    category: 人物与组织
+    type: 组织
+    relations:
+      related_to:
+      - concept://模仿超越
+      - concept://方法论抽象
+      - entity://IBM
+      - entity://HP
+    tags: [咨询报告, 方法论]
+
+  - id: 培根
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+    define: 经验主义代表，主张一切知识起源于经验
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://经验主义
+      - concept://归纳
+    tags: [哲学家, 经验主义]
+
+  - id: 大模型
+    sources:
+      - raw/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
+    define: 生成式反馈式学习模型，可边学边反馈并调整学习路径
+    category: 工具与平台
+    type: 技术
+    relations:
+      related_to:
+      - entity://ChatGPT
+      - concept://渐进式学习
+      - concept://知识广度
+      - concept://场景-技术映射
+    tags: [大模型, 反馈式学习, 生成式AI]
+
+  - id: 头脑风暴
+    sources:
+      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/如何高效和系统化的构建个人思维和认知体系.md
+    define: 发散收集影响因子后再自下而上归纳整合的方法
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://归纳
+      - concept://分解
+    tags: [发散, 归纳整合]
+
+  - id: 学习状态机
+    sources:
+      - raw/思维系列从学习的本质到如何高效快速学习.md
+    define: 由学习、实践、复盘、进化状态及触发转换构成的模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://实践驱动学习
+      - concept://复盘
+      - concept://质变突破
+      related_to:
+      - concept://学习系统建模
+      - concept://状态逻辑
+    tags: [状态机, 学习实践复盘, 跃迁]
+
+  - id: 学习金字塔
+    sources:
+      - raw/如何高效和系统化的构建个人思维和认知体系.md
+    define: 揭示被动学习与主动学习方式在知识留存效率上的差异
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://输出倒逼输入
+      - concept://深度学习
+      - concept://实践驱动学习
+      - concept://知识内化
+    tags: [留存率, 主动学习]
+
+  - id: 学习金字塔模型
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+    define: 概念模型-找寻主干-最小目标-知识树-可视化迭代-跃迁的六步学习模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://概念模型搭建
+      - concept://找寻主干
+      - concept://最小目标验证
+      - concept://知识树
+      - concept://可视化迭代学习
+      related_to:
+      - concept://POC验证
+    tags: [学习模型, 六步法, 金字塔]
+
+  - id: 层次分析法
+    sources:
+      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/构建你的多维思考力从事物认知到问题解决.md
+    define: 适用于简单二元决策的结构化决策方法
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://结构化决策
+    tags: [决策方法, 二元决策]
+
+  - id: 平台+应用
+    sources:
+      - raw/从架构思维到大架构观的培养.md
+      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+    define: 分层模式的一种变形，强调共性能力下沉与共享中心建设
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      is_a:
+      - entity://资源-服务-应用三层
+      related_to:
+      - concept://复用
+      - concept://分层
+    tags: [分层变形, 共享中心, 能力下沉]
+
+  - id: 康德
+    sources:
+      - raw/AI时代的个体思维进化从系统思维到第一性原理.md
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/思维系列如何一阵见血的看透事物的本质.md
+      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+    define: 融合经验与理性，提出知识是感性经验与先验范畴的结合
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://认知升华
+      - concept://感性知性理性三分
+    tags: [哲学家, 先验范畴]
+
+  - id: 彼得·圣吉
+    sources:
+      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+    define: 《第五项修炼》作者，作者系统思维的启蒙来源
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://《第五项修炼》
+      - concept://系统思维
+    tags: [系统思维, 学习型组织]
+
+  - id: 微服务
+    sources:
+      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+    define: 当前主流架构风格之一，文中强调需与业务适配而非盲目追随
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - entity://SOA
+      - concept://业务驱动技术
+      - concept://组件化思维
+    tags: [微服务, 服务化, 业务驱动]
+
+  - id: 德鲁克
+    sources:
+      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/在职场怎么抓住学习和成长的机会.md
+      - raw/突破认知障碍构建认知提升闭环系统.md
+    define: 提出知识管理者首先要做好个人自我管理，再走向团队与部门管理
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://目标驱动知识管理
+    tags: [管理学家, 自我管理, 知识管理者]
+
+  - id: 思维导图
+    sources:
+      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
+      - raw/从认知的概念到认知系统模型的构建.md
+      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/构建思维能力知识体系和框架逻辑的闭环体系.md
+      - raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md
+      - raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
+    define: 以树状展开呈现知识领域结构的图，常用于构建知识树
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://分解
+      related_to:
+      - concept://知识树
+      - concept://找寻主干
+    tags: [树状展开, 知识树, 结构化]
+
+  - id: 思维框架
+    sources:
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+    define: 作者对整体思维体系结构的称呼，含思维框架与思维逻辑两大方面、四个分支
+    category: 知识资产
+    type: 概念实体
+    relations:
+      references:
+      - entity://《思维框架和逻辑》
+      related_to:
+      - concept://思维框架体系
+      - concept://思维双主线
+      - concept://归纳演绎循环
+      - concept://模式匹配
+    tags: [思维框架, 主线分支, 整体结构]
+
+  - id: 思维钻石模型
+    sources:
+      - raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md
+    define: 思维层级模型，本书重点做第四、第五两个层级的事情
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://静态架构与动态运转
+      - concept://思维框架体系
+      - concept://体系思维
+      - entity://《思维框架和逻辑》
+    tags: [思维层级, 元模型]
+
+  - id: 思维闭环系统
+    sources:
+      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+    define: 由信息输入、大脑处理、知识经验库和价值输出构成的闭环
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://信息降噪
+      - concept://加工
+      - concept://模式匹配
+      - concept://复盘
+      related_to:
+      - concept://思维框架体系
+      - entity://认知闭环
+    tags: [闭环系统, 输入输出, 知识经验库]
+
+  - id: 成长第一定律
+    sources:
+      - raw/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
+    define: 自我价值由经验存量与效率增量构成的动量决定，存量越大越易产出
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      references:
+      - entity://成长第二定律
+      contains:
+      - concept://经验存量
+      related_to:
+      - concept://学习曲线
+      - concept://差异化竞争
+    tags: [动量, 经验存量, 效率增量]
+
+  - id: 成长第二定律
+    sources:
+      - raw/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
+    define: 效率增量可分解为生产率与时间，以生产率换时间应对精力下降
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      is_a:
+      - entity://成长第一定律
+      references:
+      - concept://差异化竞争
+      - concept://升维思考
+      related_to:
+      - concept://经验存量
+    tags: [生产率, 换时间, 产出质量]
+
+  - id: 敏捷方法
+    sources:
+      - raw/在职场怎么抓住学习和成长的机会.md
+    define: 软件开发方法，被作者迁移应用到市场活动策划中
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://方法论迁移
+      - concept://跨领域迁移
+      - concept://批判性提问
+      - concept://迭代思维
+    tags: [软件开发, 跨领域迁移]
+
+  - id: 数字化转型架构方法论
+    sources:
+      - raw/深度思考的一个关键完成思维逻辑的自洽.md
+    define: 以业务战略到治理体系组件堆砌呈现过程模型的架构方法论书
+    category: 知识资产
+    type: 书籍
+    relations:
+      related_to:
+      - concept://逻辑自洽
+    tags: [架构方法论, 过程模型, 书籍]
+
+  - id: 柏拉图
+    sources:
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+    define: 主张知识是对永恒不变理念的认识
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://认知升华
+      - entity://理性主义
+    tags: [哲学家, 理念论]
+
+  - id: 树模型
+    sources:
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+    define: 逻辑树、问题树、决策树、思维导图等树状分解模型的统称
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - entity://鱼骨图
+      related_to:
+      - concept://问题分解
+      - concept://分解
+    tags: [树状分解, 分解模型]
+
+  - id: 正态分布
+    sources:
+      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+    define: 与幂等分布相对的收益分布形态，用于讨论服务与产品模式选择
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - entity://长尾理论
+      - concept://零边际成本
+      - entity://《底层逻辑》
+    tags: [收益分布, 服务模式, 差异化]
+
+  - id: 沙堆理论
+    sources:
+      - raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
+    define: 以沙堆底面积喻知识广度、高度喻深度，二者动态互动的模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://知识广度
+      - concept://知识深度
+      related_to:
+      - entity://知识竞争力公式
+      - concept://广度深度阶段策略
+      - concept://价值锚点
+    tags: [沙堆模型, 广度底面积, 深度高度]
+
+  - id: 波普尔
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+    define: 提出证伪主义与试错法，构建科学知识与科学方法论
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://证伪主义
+      - concept://可证伪性
+      - concept://试错法
+      - concept://科学思维
+    tags: [证伪主义, 科学哲学, 哲学家]
+
+  - id: 海德格尔
+    sources:
+      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+    define: 区分存在与存在者并强调时间性的哲学家
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://本体论分析
+      - concept://事物认知
+      - entity://胡塞尔
+    tags: [存在论差异, 时间性, 哲学家]
+
+  - id: 特斯拉
+    sources:
+      - raw/思维系列如何一阵见血的看透事物的本质.md
+    define: 第一性原理电池案例中实现成本降低的企业
+    category: 人物与组织
+    type: 组织
+    relations:
+      related_to:
+      - concept://第一性原理
+      - entity://马斯克
+    tags: [电池成本, 第一性原理, 企业案例]
+
+  - id: 王徽之
+    sources:
+      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+    define: 雪夜乘兴访戴安道而不入门，用以说明过程的体悟胜于结果
+    category: 人物与组织
+    type: 人物
+    relations:
+      references:
+      - concept://证悟
+      related_to:
+      - concept://长期主义
+    tags: [历史典故, 过程体悟, 兴尽而返]
+
+  - id: 环形正负反馈回路
+    sources:
+      - raw/如何提升自己的结构化思维和系统思维能力.md
+    define: 系统思维中描述要素间正反反馈作用关系的闭环回路
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://系统思维
+      - concept://要素关联分析
+      - concept://动态平衡
+      - entity://因果循环图
+    tags: [正负反馈, 系统思维]
+
+  - id: 理性主义
+    sources:
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+    define: 主张知识源于先天理性演绎的哲学流派
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - entity://笛卡尔
+      - concept://演绎
+    tags: [哲学流派, 理性演绎]
+
+  - id: 白板说
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+    define: 洛克认为心灵初始如白板、一切知识来源于经验的学说
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - concept://经验思维
+      - entity://经验主义
+      - concept://概念抽象
+      - concept://天赋观念
+    tags: [洛克, 经验来源, 白板]
+
+  - id: 百度文库
+    sources:
+      - raw/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
+    define: 传统搜索式学习工具，无法针对个体给出渐进式学习计划
+    category: 工具与平台
+    type: 工具
+    relations:
+      related_to:
+      - concept://渐进式学习
+      - entity://ChatGPT
+    tags: [搜索式学习, 传统工具, AI对比]
+
+  - id: 知识与认知五维对比
+    sources:
+      - raw/知识和认知的本质区别.md
+    define: 从存在形式、存储位置、核心动作、进化逻辑、产物对比二者
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://知识
+      - concept://经验模式库
+      related_to:
+      - concept://模式匹配
+      - concept://知识显隐转化
+    tags: [对比框架, 知识认知差异, 五维度]
+
+  - id: 知识四层金字塔
+    sources:
+      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+    define: 数据资料、知识信息、技能、经验方法论构成的知识层次模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://知识
+      - concept://知识转技能
+      - concept://知识显隐转化
+      related_to:
+      - concept://知识四层演进
+      - concept://知识内化
+    tags: [显性隐性, 四层金字塔, 知识资产]
+
+  - id: 知识图谱
+    sources:
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+    define: 结构与流程相互关联作用形成的网络，是知识关联后的价值放大形态
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      depends_on:
+      - concept://知识关联
+      contains:
+      - concept://静态结构分析
+      - concept://动态行为分析
+      related_to:
+      - concept://知识网络构建
+      - concept://知识体系构建
+    tags: [知识网络, 结构流程交织, 复合价值]
+
+  - id: 知识竞争力公式
+    sources:
+      - raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
+    define: 知识竞争力等于深度乘广度乘时间的竞争力构成公式
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://知识深度
+      - concept://知识广度
+      related_to:
+      - entity://沙堆理论
+      - concept://价值锚点
+      - concept://长期主义
+    tags: [竞争力公式, 深度广度时间, 价值上限]
+
+  - id: 科学归纳法
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+    define: 培根提出的含事实收集、三表法、排斥法与肯定结论的归纳方法
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://归纳
+      - entity://培根
+      - entity://经验主义
+      - concept://实证
+    tags: [培根, 归纳, 三表法]
+
+  - id: 笛卡尔
+    sources:
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+    define: 理性主义代表，主张先天理性通过演绎获得知识
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://理性主义
+      - concept://演绎
+    tags: [哲学家, 理性主义]
+
+  - id: 笛卡尔科学方法论
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+    define: 笛卡尔提出的普遍怀疑、分析分解、演绎、归纳、综合验证六步法
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://普遍怀疑
+      - concept://分解
+      - concept://演绎
+      - concept://归纳
+      related_to:
+      - entity://笛卡尔
+      - entity://《方法论》
+    tags: [笛卡尔, 六步法, 科学方法]
+
+  - id: 符号系统
+    sources:
+      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+    define: 以语言、文字、图像等编码形式承载并跨时空传递信息的载体
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://知识显性化
+      - concept://知识显隐转化
+      - entity://迈克尔·波兰尼
+      - concept://定性到定量
+    tags: [语言文字, 载体, 显性化]
+
+  - id: 第一实体与第二实体
+    sources:
+      - raw/信息爆炸时代认知高和认知低的六大核心差异体现.md
+    define: 亚里士多德对具体个体与其抽象概念的区分
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - concept://概念抽象
+      - concept://从表象到本质
+      - entity://亚里士多德
+      - concept://认知水平差异
+    tags: [亚里士多德, 个体与概念, 抽象]
+
+  - id: 系统动力学
+    sources:
+      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+    define: 研究系统因子相互作用与动态平衡的建模仿真方法体系
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://系统动力学建模
+      - entity://iThink
+      - concept://动态平衡
+    tags: [系统仿真, 动态平衡]
+
+  - id: 经验主义
+    sources:
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+    define: 主张知识起源于感官经验的哲学流派
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - entity://培根
+      - concept://归纳
+    tags: [哲学流派, 感官经验]
+
+  - id: 维特根斯坦
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
+    define: 以图像论与语言游戏论述知识与事实、逻辑及语境的关系
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://图像论
+      - entity://语言游戏
+      - entity://《逻辑哲学论》
+      - concept://知识
+    tags: [维特根斯坦, 语言哲学, 语境]
+
+  - id: 胡塞尔
+    sources:
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+    define: 现象学创立者，揭示知识的意向构造过程
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://认知升华
+    tags: [哲学家, 现象学]
+
+  - id: 胡萝卜加大棒
+    sources:
+      - raw/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
+    define: 管理学上用奖励与强制驱动行为的方式，会削弱学习成长的自主性
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://长期主义
+      - concept://负熵
+    tags: [外在激励, 自主自发, 管理学]
+
+  - id: 芭芭拉·明托
+    sources:
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+    define: 麦肯锡咨询顾问，《金字塔原理》作者
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://金字塔原理
+      - entity://麦肯锡
+    tags: [咨询顾问, 金字塔原理]
+
+  - id: 苏格拉底
+    sources:
+      - raw/如何高效和系统化的构建个人思维和认知体系.md
+    define: 提出"我唯一知道的，就是我一无所知"，并被用作三段论演绎举例
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://认知四境界
+      - concept://三段论推理
+      - concept://演绎
+    tags: [哲学家, 无知之知]
+
+  - id: 认知提升闭环操作系统
+    sources:
+      - raw/知识和认知的本质区别.md
+    define: 学习、实践、复盘三模块加反馈回路构成的认知进化操作系统
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://复盘
+      - concept://模式匹配
+      uses:
+      - entity://PDCA
+      references:
+      - entity://三层六阶段学习法
+      related_to:
+      - concept://双循环
+    tags: [闭环操作系统, 学习实践复盘, 反馈回路]
+
+  - id: 认知系统模型
+    sources:
+      - raw/从认知的概念到认知系统模型的构建.md
+    define: 含输入层、处理层、存储层、输出层、控制层的六层认知系统模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://概念抽象
+      - concept://元认知
+      - concept://深度复盘
+      - concept://辩证综合
+      related_to:
+      - concept://认知三要素
+      - concept://认知四境界
+    tags: [认知模型, 六层, 输入输出, 控制层]
+
+  - id: 认知闭环
+    sources:
+      - raw/克服认知障碍实现认知升级打造认知闭环.md
+    define: 事物群分析-深度复盘-经验入库-演绎解决新问题的持续改进循环
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://事物群分析
+      - concept://深度复盘
+      - concept://演绎
+      - concept://模式匹配
+      related_to:
+      - concept://知识经验库
+    tags: [闭环, 持续改进, 经验模式库, 螺旋上升]
+
+  - id: 证伪主义
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+    define: 波普尔提出的以可证伪性划界科学、以试错推动知识增长的理论
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      contains:
+      - concept://可证伪性
+      - concept://试错法
+      references:
+      - entity://科学归纳法
+      - entity://笛卡尔科学方法论
+      related_to:
+      - entity://波普尔
+    tags: [波普尔, 科学划界, 知识增长]
+
+  - id: 语言游戏
+    sources:
+      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+    define: 维特根斯坦后期认为意义由具体语境中的语言使用所赋予的学说
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - entity://图像论
+      - entity://维特根斯坦
+      - concept://知识
+      - concept://命题
+    tags: [语境, 语言使用, 后期维特根斯坦]
+
+  - id: 贺博士
+    sources:
+      - raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md
+    define: 提出"学习本身就是思维，思维框架应是认知过程加学习过程"
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://动态学习链
+      - concept://复盘
+      - entity://《思维框架和逻辑》
+    tags: [学习即思维, 交流]
+
+  - id: 资源-服务-应用三层
+    sources:
+      - raw/从架构思维到大架构观的培养.md
+    define: 架构分层的核心三大层，平台+应用为其变形
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://分层
+      - entity://平台+应用
+      - entity://SOA
+      - concept://复用
+    tags: [架构分层, SOA, 三层]
+
+  - id: 赫拉克利特
+    sources:
+      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+    define: 古希腊时期以朴素形式提出并说明对立统一的辩证法思想
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://对立统一
+      - concept://辩证思维
+      - entity://辩证法
+      - entity://黑格尔
+    tags: [古希腊, 朴素辩证法]
+
+  - id: 辩证法
+    sources:
+      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+    define: 在西方哲学体系中占重要地位的、关于对立统一的思维学说
+    category: 知识资产
+    type: 概念实体
+    relations:
+      related_to:
+      - concept://辩证思维
+      - concept://对立统一
+      - concept://辩证逻辑
+      - entity://黑格尔
+      - entity://《小逻辑》
+    tags: [西方哲学, 对立统一]
+
+  - id: 迈克尔·波兰尼
+    sources:
+      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+    define: 1958年从哲学领域提出隐性知识与显性知识的划分
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://知识显性化
+      - concept://知识显隐转化
+      - entity://符号系统
+    tags: [隐性知识, 显性知识, 哲学家]
+
+  - id: 逻辑树
+    sources:
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+    define: 用于可视化拆解复杂问题、做逻辑分解的树状结构模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      is_a:
+      - entity://树模型
+      references:
+      - concept://分解
+      - concept://可视化迭代学习
+      related_to:
+      - concept://问题分解
+    tags: [可视化拆解, 树模型, 深度思考]
+
+  - id: 金字塔原理
+    sources:
+      - raw/从架构思维到大架构观的培养.md
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/我是如此思考的思维整体框架和逻辑.md
+      - raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+    define: 明托提出的金字塔结构、MECE分解与写作呈现原则
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - entity://芭芭拉·明托
+      - concept://结构逻辑
+      - concept://MECE
+      - concept://结构化呈现
+      - concept://呈现和泛化
+    tags: [金字塔结构, 呈现逻辑, 明托]
+
+  - id: 金字塔结构
+    sources:
+      - raw/构建思维能力知识体系和框架逻辑的闭环体系.md
+    define: 以树状层次组织论点、自上而下展开的结构化呈现模型
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      is_a:
+      - entity://树模型
+      uses:
+      - concept://MECE
+      related_to:
+      - entity://思维导图
+      - concept://结构化呈现
+    tags: [树状结构, 层次呈现, 二维分解]
+
+  - id: 长尾理论
+    sources:
+      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+    define: 幂等分布下边际成本趋零，但也将遭遇更强竞争的分布规律
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://零边际成本
+      - entity://正态分布
+      - entity://《底层逻辑》
+    tags: [幂等分布, 边际成本, 竞争]
+
+  - id: 问题分类矩阵
+    sources:
+      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+    define: 以输入定义/输出评价与事物描述/问题解决两维划分的四象限问题矩阵
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      references:
+      - concept://问题分类
+      - concept://事物认知
+      related_to:
+      - concept://模式匹配
+      - concept://结构化决策
+    tags: [四象限, 问题预判, 矩阵划分]
+
+  - id: 问题四分类
+    sources:
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+    define: 将问题分为What、How、Which、Where四类的分类框架
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      related_to:
+      - concept://问题定义
+      - entity://麦肯锡七步法
+    tags: [问题分类, 咨询方法论]
+
+  - id: 面向对象
+    sources:
+      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+    define: 以类、继承、接口先抽象描述现实世界再解决问题的编程思想
+    category: 技术与标准
+    type: 技术
+    relations:
+      related_to:
+      - concept://抽象规定
+      - concept://思维具体化
+      - concept://抽象
+      - concept://概念抽象
+      - concept://辩证思维
+    tags: [Class类, 属性方法]
+
+  - id: 香农
+    sources:
+      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+    define: 信息论创立者，提出信息熵解决信息的量化度量问题
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - entity://信息熵
+      - concept://统计思维
+      - concept://定性到定量
+    tags: [信息论, 信息熵, 量化]
+
+  - id: 马斯克
+    sources:
+      - raw/AI时代的个体思维进化从系统思维到第一性原理.md
+      - raw/思维系列如何一阵见血的看透事物的本质.md
+    define: 以回归本质根节点实现突破性创新的代表性人物
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://第一性原理
+      - concept://本源抽象
+    tags: [企业家, 突破性创新, 第一性原理]
+
+  - id: 鱼骨图
+    sources:
+      - raw/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+    define: 从人、机、料、法、环五方面做因果分解的分析图
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      is_a:
+      - entity://树模型
+      related_to:
+      - concept://问题分解
+    tags: [因果分解, 分析图]
+
+  - id: 麦肯锡
+    sources:
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+    define: 咨询公司，输出七步法等结构化思维与呈现方法论
+    category: 人物与组织
+    type: 组织
+    relations:
+      produces:
+      - entity://麦肯锡七步法
+      related_to:
+      - entity://金字塔原理
+    tags: [咨询公司, 方法论]
+
+  - id: 麦肯锡七步法
+    sources:
+      - raw/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/我是如此思考的思维整体框架和逻辑.md
+      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+    define: 麦肯锡提出的、面向How类问题的结构化解决方案方法论
+    category: 框架与模型
+    type: 模型-框架
+    relations:
+      uses:
+      - concept://结构化思维
+      references:
+      - entity://麦肯锡
+      related_to:
+      - concept://问题分解
+      - entity://金字塔原理
+      - entity://问题四分类
+    tags: [咨询方法论, 解决方案, 结构化]
+
+  - id: 黑格尔
+    sources:
+      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+    define: 提出辩证逻辑，强调知识的动态发展
+    category: 人物与组织
+    type: 人物
+    relations:
+      related_to:
+      - concept://辩证逻辑
+      - concept://认知升华
+    tags: [哲学家, 辩证逻辑]
+

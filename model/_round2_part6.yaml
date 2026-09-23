@@ -1,0 +1,701 @@
+# 第二轮填充 · 批次 6
+# 原文依据：raw/思维系列从个人知识体系构建到知识网络图谱的构建.md、
+#           raw/思维系列从学习的本质到如何高效快速学习.md、
+#           raw/思维系列如何一阵见血的看透事物的本质.md、
+#           raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md、
+#           raw/我是如此思考的思维整体框架和逻辑.md、
+#           raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+
+concepts:
+  - id: 主干认知
+    define: 先掌握新领域核心点及其关系、依赖和整体脉络的认知
+    ipo:
+      input:
+        - 新领域中大量陌生的名词术语与概念
+        - 事物对外提供的能力与功能说明
+      process:
+        steps:
+          - 以不求甚解的策略先不钻细节，只把握事物整体
+          - 静态层面只确认事物对外提供哪些功能和能力
+          - 动态层面只确认起点状态A能否到达终点状态Z
+          - 理清黑盒内部究竟有几个主干点
+          - 分析主干点之间的相互影响与前后依赖顺序
+          - 能用自己的语言复述出主干脉络才算真正掌握
+        tools:
+          - entity://SSH框架
+      output:
+        - 新领域的主干框架与粗粒度脉络
+        - 可供后续深入学习挂靠的骨架结构
+    decomposition:
+      - step: 战略性跳过细节
+        uses: concept://不求甚解
+        why: 一开始钻入细节容易丧失信心也无法把握全貌
+      - step: 以黑盒视角看整体
+        uses: concept://黑盒思维
+        why: 静态只关心对外功能，动态只关心起点到终点能否到达
+      - step: 识别并复述主干点
+        uses: concept://找寻主干
+        why: 只有能用自己的语言复述清楚才说明掌握了主干框架
+    relations:
+      depends_on:
+        - concept://不求甚解
+      contains:
+        - concept://黑盒思维
+        - concept://找寻主干
+      uses:
+        - entity://SSH框架
+      produces:
+        - concept://知识树
+      related_to:
+        - concept://从点到面学习
+        - concept://目标驱动学习
+    tags: [黑盒思维, 先总后分, 主干框架, 新领域学习]
+
+  - id: 动态学习链
+    define: 围绕前导知识、当前问题和外延知识双向拓展的学习过程
+    ipo:
+      input:
+        - 已确定的知识边界与树干结构
+        - 当前正在推进的工作任务与问题
+      process:
+        steps:
+          - 先参考业界标准参考模型确定该领域的树干与边界
+          - 当前工作推进不下去时回溯补齐缺失的前导知识
+          - 当前任务完成后继续主动思考以拓展外延知识
+          - 在前导与外延两端的不断补齐中让知识树持续生长
+      output:
+        - 持续生长的知识树与知识外延
+        - 前导、当前、外延串联起来的知识结构
+    decomposition:
+      - step: 先立树干再谈深入
+        uses: concept://找寻主干
+        why: 树干没有立起来，树叶再多也连不起来
+      - step: 补齐前导知识
+        uses: concept://问题驱动学习
+        why: 当前工作做不下去往往是前导知识缺失，问题是补齐的触发器
+      - step: 向外延拓展
+        uses: concept://从点到面学习
+        why: 任务做完就停止思考会失去外延拓展的机会
+    relations:
+      depends_on:
+        - concept://找寻主干
+      uses:
+        - entity://SCOR
+        - entity://CMMI
+        - entity://PMBOK
+      produces:
+        - concept://知识树
+      related_to:
+        - concept://问题驱动学习
+        - concept://从点到面学习
+        - concept://知识体系构建
+    tags: [前导知识, 外延拓展, 双向拓展, 知识树]
+
+  - id: 可视化迭代学习
+    define: 按贡献和依赖分阶段学习实践，并以量化成果检验迭代
+    ipo:
+      input:
+        - 已构建的知识树与知识点清单
+        - 各知识点对学习目标的贡献度与前后依赖关系
+      process:
+        steps:
+          - 按知识点对目标贡献大小排出学习优先级
+          - 结合知识点之间的前后依赖关系划分学习阶段
+          - 为每一阶段设定明确的产出目标而非泛读积累
+          - 每阶段学习完成后立即实践，实践后再复盘总结
+          - 以可量化的成果检验本轮迭代成效并进入下一轮
+        tools:
+          - entity://PDCA
+      output:
+        - 分阶段迭代的学习计划
+        - 可量化的阶段性学习成果
+    decomposition:
+      - step: 每阶段设定明确产出目标
+        uses: concept://目标驱动学习
+        why: 目标驱动意味着不漫无目的泛读，而是有明确产出
+      - step: 按贡献与依赖排序
+        uses: concept://依赖关系排序
+        why: 知识点对目标的贡献和彼此依赖共同决定学习次序
+      - step: 实践后复盘
+        uses: concept://复盘
+        why: 每个迭代完成后马上实践再复盘，才能螺旋上升
+      - step: 循环持续改进
+        uses: concept://迭代思维
+        why: 按计划执行检查改进的闭环持续迭代，无法一蹴而就
+    relations:
+      contains:
+        - concept://目标驱动学习
+        - concept://复盘
+        - concept://迭代思维
+      uses:
+        - entity://PDCA
+      related_to:
+        - concept://依赖关系排序
+        - concept://优先级排序
+        - concept://深度学习
+    tags: [目标驱动, 分阶段迭代, 可量化检验, 实践导向]
+
+  - id: 因果链分析
+    define: 把事物置于环境中，分析多因素作用与行为间的因果链条
+    ipo:
+      input:
+        - 事物在特定环境下的外在行为表现
+        - 环境中可能作用于该事物的诸多因素
+      process:
+        steps:
+          - 把事物放进大环境中识别与之关联和依存的外在因素
+          - 观察并记录事物行为表现及其变化
+          - 逐一考察单因素变化是否引起该行为变化
+          - 检验该行为是单因所致还是多因素组合影响的结果
+          - 用严谨的实验论证串出导致该行为的因果链条
+      output:
+        - 导致事物行为的多因素因果链条
+        - 经实验验证的因果关系结论
+    decomposition:
+      - step: 先观察因素与行为的相关性
+        uses: concept://相关性分析先行
+        why: 环境研究首先是观察事物与外部因素的关联作用，再谈因果
+      - step: 警惕习惯性联想
+        uses: concept://因果的习惯性联想
+        why: 休谟指出因果只是心理上的习惯性联想，靠经验联想易得错误结论
+      - step: 排除伪因果
+        uses: concept://误认因果
+        why: 看到浇水后花开不等于浇水是必然原因，需排除偶然与不相关因素
+      - step: 实验论证因果
+        uses: concept://实证
+        why: 找出因果链条不是简单关联联想，需要更严谨的实验论证
+    relations:
+      depends_on:
+        - concept://相关性分析先行
+      contains:
+        - concept://实证
+      references:
+        - entity://休谟
+      related_to:
+        - concept://误认因果
+        - concept://因果的习惯性联想
+        - concept://事物认知
+    tags: [因果链条, 环境因素, 组合影响, 实验论证]
+
+  - id: 本体论分析
+    define: 研究存在的本质、基本结构、形式与本质属性
+    ipo:
+      input:
+        - 待研究的事物或存在者
+      process:
+        steps:
+          - 确认该事物作为存在者的客观实在性
+          - 追问什么是最真实的存在
+          - 考察存在有哪些种类或形式，区分质料与形式
+          - 提炼事物的本质属性与共相
+          - 区分第一实体（具体个体）与第二实体（抽象类别）
+      output:
+        - 对事物存在本质与基本结构的界定
+        - 抽象出的共相与第二实体概念
+    decomposition:
+      - step: 研究存在本身
+        uses: concept://事物认知
+        why: 单纯研究事物本体是自然科学的起源，先确认事物是什么
+      - step: 抽象理解这种存在
+        uses: concept://本源抽象
+        why: 形而上学研究的重点是如何抽象地理解客观存在的事物和现象
+    relations:
+      references:
+        - entity://亚里士多德
+        - entity://海德格尔
+        - entity://第一实体与第二实体
+      related_to:
+        - concept://认识论分析
+        - concept://事物认知
+        - concept://本源抽象
+    tags: [本体论, 存在, 本质属性, 哲学]
+
+  - id: 根因分析
+    define: 将复杂问题逐层拆为因素，经排除验证锁定根本原因
+    ipo:
+      input:
+        - 已定义为期望与实际差距的问题
+      process:
+        steps:
+          - 将复杂问题逐层拆解为多个子问题
+          - 深入分析每个子问题背后的各种因素
+          - 通过排除和验证逐步收敛因素范围
+          - 综合各方面结果锁定牵一发而动全身的根本原因
+      output:
+        - 确认的根本原因
+        - 指向根因的解决方案方向
+    decomposition:
+      - step: 分解
+        uses: concept://分解
+        why: 问题粒度越粗越难匹配，拆解为子问题才能逐个分析
+      - step: 匹配
+        uses: concept://模式匹配
+        why: 将子问题与知识经验库中的经验模式进行对应
+      - step: 综合
+        uses: concept://集成
+        why: 逐个子问题的分析结果需要综合成完整的解决方案
+    relations:
+      depends_on:
+        - concept://问题定义
+      contains:
+        - concept://分解
+        - concept://模式匹配
+        - concept://假设验证
+      related_to:
+        - concept://根因两类
+        - concept://问题分解
+    tags: [根因, 层层分解, 排除验证, 抽丝剥茧]
+
+  - id: 深度学习
+    define: 持续专注、追问到底，并在学习后实践复盘和关注价值
+    ipo:
+      input:
+        - 专注领域内的学习材料
+        - 实践中遇到的真实问题
+      process:
+        steps:
+          - 缩小兴趣圈、降低自我欲望以形成专注
+          - 对遇到的问题持续追问到底而非浅尝辄止
+          - 学习完成后立即投入实践
+          - 实践后复盘并关注学习带来的效果与价值
+          - 长期坚持积累以克服熵增逼近临界点
+      output:
+        - 内化为个人能力的方法论与经验
+        - 可衡量的学习价值产出
+    decomposition:
+      - step: 持续专注与坚持
+        uses: concept://长期主义
+        why: 没有坚持就没有量的积累，没有专注就无法实现深度学习
+      - step: 学习后实践复盘
+        uses: concept://复盘
+        why: 深度学习与浅学习的区别就在是否实践、复盘、关注产出
+      - step: 追求量变到质变
+        uses: concept://质变突破
+        why: 深度学习是痛苦的，靠不断练习持续思考逼近临界点
+    relations:
+      contains:
+        - concept://复盘
+      related_to:
+        - concept://长期主义
+        - concept://质变突破
+        - concept://知识内化
+    tags: [专注, 坚持, 实践复盘, 价值产出]
+
+  - id: 理解型学习
+    define: 信息摄入后经主动思考加工并形成自己新理解的学习
+    ipo:
+      input:
+        - 感知器官摄入的外部信息
+        - 多个可供观察的具体现象或案例
+      process:
+        steps:
+          - 通过感知器官完成信息摄入
+          - 在大脑内部对信息进行主动思考和加工
+          - 从多个具体现象中归纳出通用的规律或套路
+          - 形成属于自己的新理解即一次理解
+          - 在实践中检验并把公理条件化为特定场景成立的定理
+      output:
+        - 自己加工后形成的新理解
+        - 经实践检验的二次理解与条件化定理
+    decomposition:
+      - step: 对摄入信息主动加工
+        uses: concept://加工
+        why: 没有大脑内部思考加工的过程就只是记忆型学习
+      - step: 从具体现象中归纳
+        uses: concept://归纳
+        why: 从大量个例中归纳出通用套路才是真正的学习
+      - step: 实践检验深化理解
+        uses: concept://知识内化
+        why: 一次理解停留在理论，二次理解才是知识内化为能力的关键
+    relations:
+      contains:
+        - concept://加工
+        - concept://归纳
+      related_to:
+        - concept://深度学习
+        - concept://知识内化
+        - concept://实践驱动学习
+    tags: [信息摄入, 主动思考, 一次理解, 二次理解]
+
+  - id: 目标转化
+    define: 从问题找到期望，再将期望量化为带时空约束的目标
+    ipo:
+      input:
+        - 当前面临的具体困惑或问题
+        - 现实结果与期望之间的差距
+      process:
+        steps:
+          - 明确问题即现实与期望之间的差距
+          - 由差距反溯其背后真正的期望
+          - 把期望转化为目标并加上空间性与时间性约束
+          - 将多个子目标抽象提升为单一的终极目标
+          - 剔除被误当作目标的影响因素和制约因素
+          - 无法量化时先做短周期试验评估目标可达成性
+        tools:
+          - entity://SMART原则
+      output:
+        - 符合空间与时间要求的单一终极目标
+    decomposition:
+      - step: 先定义清楚问题
+        uses: concept://问题定义
+        why: 问题就是期望与现实的差距，不明确差距就无从谈目标
+      - step: 由问题反溯期望
+        uses: concept://目标反溯
+        why: 思考之第一步是破题，从对表象的思考转化到对目标的定义
+      - step: 对目标做量化约束
+        uses: concept://定性到定量
+        why: 单纯的空间目标没有意义，必须加上时间与范围的量化
+      - step: 用短周期试验校准
+        uses: concept://最小目标验证
+        why: 无法很好量化时通过短周期试验来评估并最终确定目标
+    relations:
+      depends_on:
+        - concept://问题定义
+        - concept://目标反溯
+      uses:
+        - entity://SMART原则
+      related_to:
+        - concept://定性到定量
+        - concept://最小目标验证
+        - concept://目标定位
+    tags: [问题转目标, 终极目标, 时空约束, 破题]
+
+  - id: 目标驱动学习
+    define: 每阶段以明确产出目标确定内容与行动，而非无目的泛读
+    ipo:
+      input:
+        - 本阶段要达成的产出目标
+        - 知识树上各知识点及其对目标的贡献
+      process:
+        steps:
+          - 明确本阶段学习要达成的产出目标
+          - 按知识点对目标的贡献大小确定学习内容和范围
+          - 排除与当前目标无关的泛读与积累
+          - 以产出物检验本阶段目标是否达成
+      output:
+        - 与产出目标对应的学习成果
+    decomposition:
+      - step: 按贡献度选择学习内容
+        uses: concept://优先级排序
+        why: 知识点对目标贡献大小决定了学习的先后顺序
+      - step: 用最小目标验证理解
+        uses: concept://最小目标验证
+        why: 带着最基础的目标去学习才知道学的知识有什么用、解决什么问题
+    relations:
+      depends_on:
+        - concept://目标转化
+      contains:
+        - concept://最小目标验证
+      related_to:
+        - concept://可视化迭代学习
+        - concept://问题驱动学习
+        - concept://深度学习
+    tags: [产出目标, 阶段学习, 避免泛读, 贡献度]
+
+  - id: 目标驱动知识管理
+    define: 围绕目标、问题和场景整理知识并服务价值创造的知识管理方式
+    ipo:
+      input:
+        - 个人成长或职业发展的价值目标
+        - 围绕目标产生的真实问题与场景
+      process:
+        steps:
+          - 先明确知识管理要创造的价值目标
+          - 判断是围绕专业域建体系还是围绕某类问题建方法论
+          - 以目标和问题为牵引组织分类、整理与归档
+          - 用PDCA持续改进让显性隐性知识螺旋上升
+      output:
+        - 面向目标与场景的结构化知识网
+        - 可复用的问题解决能力
+    decomposition:
+      - step: 明确价值目标
+        uses: concept://目标定位
+        why: 目标不清楚，分类整理归档都会变成机械劳动
+      - step: 围绕目标组织知识
+        uses: concept://知识网络构建
+        why: 知识网首先解决的是方向问题而不是存储问题
+      - step: 持续改进
+        uses: concept://迭代思维
+        why: 显性知识与隐性知识需要不断转化、螺旋式持续上升
+    relations:
+      contains:
+        - concept://知识网络构建
+      uses:
+        - entity://PDCA
+      related_to:
+        - concept://目标驱动学习
+        - concept://知识体系构建
+        - concept://知识萃取
+    tags: [目标驱动, 价值创造, 知识管理, 持续改进]
+
+  - id: 知识网络构建
+    define: 将知识层级、依赖、映射、流程和场景连接成可用网络
+    ipo:
+      input:
+        - 已形成的知识树与离散知识点
+        - 知识点之间的层级、依赖与映射关系
+      process:
+        steps:
+          - 梳理知识的组成与层级关系形成知识树
+          - 标注知识点之间前后依赖顺序
+          - 建立跨领域知识点之间的关联与映射
+          - 把静态结构、动态流程与场景问题和解决方法连接起来
+          - 补出依赖、映射、聚合和复用关系使知识点不再是孤岛
+        tools:
+          - entity://ima知识库
+          - entity://知识图谱
+      output:
+        - 可支撑问题解决的知识网络
+        - 知识地图与可检索的知识索引
+    decomposition:
+      - step: 下层知识点向上归纳
+        uses: concept://归纳
+        why: 只有不断朝上归纳抽象，知识树才长得起来
+      - step: 跨领域关联映射
+        uses: concept://知识关联
+        why: 跨学科知识点之间的关联映射能力决定能否把树连成网
+      - step: 形成知识地图
+        uses: concept://知识地图
+        why: 通过挖掘知识点间的关联依赖关系形成地图，才知道当前位置
+      - step: 建立知识索引
+        uses: concept://知识索引
+        why: 记忆能力有限，记住主干与索引才能按图索骥
+    relations:
+      contains:
+        - concept://知识关联
+        - concept://知识地图
+        - concept://知识索引
+      uses:
+        - entity://ima知识库
+        - entity://知识图谱
+      related_to:
+        - concept://知识体系构建
+        - concept://动态学习链
+        - concept://知识图谱构建
+    tags: [知识网络, 关联依赖, 映射, 静态动态结合]
+
+  - id: 认识论分析
+    define: 研究知识、信念与意见的性质、起源、范围和限制
+    ipo:
+      input:
+        - 对外部世界的感知与观察
+        - 已有的知识、信念与意见
+      process:
+        steps:
+          - 区分事物本身与对事物的认识，承认认识因人而异
+          - 追问我们如何知道我们所知道的
+          - 检验该认识的真理标准
+          - 界定这一认识的适用范围与限制条件
+          - 由感性材料经知性判断再到理性综合形成普遍必然认知
+      output:
+        - 关于认识能力边界与知识有效性的判断
+    decomposition:
+      - step: 区分事物与对事物的认识
+        uses: concept://事物认知
+        why: 事物的存在是绝对客观的，而认识是后天的且因人而异
+      - step: 感性到理性逐级加工
+        uses: concept://感性知性理性三分
+        why: 先验自我提供先天形式，感知观察提供后天质料，两者结合才形成理性认知
+      - step: 考察认识的来源
+        uses: concept://先验知识
+        why: 需要判断知识是来自先天先验形式还是后天的经验归纳
+    relations:
+      references:
+        - entity://康德
+        - entity://《纯粹理性批判》
+        - entity://休谟
+      related_to:
+        - concept://本体论分析
+        - concept://感性知性理性三分
+        - concept://先验知识
+    tags: [认识论, 知识来源, 认识边界, 哲学]
+
+entities:
+  - id: BSC平衡计分卡
+    define: 从学习、客户、财务、流程四维分解绩效目标的模型
+    relations:
+      uses:
+        - concept://分解
+      related_to:
+        - concept://目标转化
+        - concept://多目标决策转换
+        - concept://矩阵分析
+    tags: [绩效目标, 四维分解, 战略绩效]
+
+  - id: CMMI
+    define: 软件工程领域的标准模型，被借作知识树主干结构参考
+    relations:
+      related_to:
+        - concept://知识树
+        - concept://找寻主干
+        - concept://结构化决策
+    tags: [软件工程, 参考模型, 标准]
+
+  - id: CSF关键成功因素法
+    define: 将终极目标分解为子目标、关键要素和控制变量的方法
+    relations:
+      uses:
+        - concept://分解
+      related_to:
+        - concept://目标转化
+        - concept://流程分析
+        - entity://BSC平衡计分卡
+    tags: [关键成功因素, 目标分解, 控制变量]
+
+  - id: Java
+    define: 新领域学习案例中用于说明开发知识框架的编程技术
+    relations:
+      related_to:
+        - entity://SSH框架
+        - entity://Spring
+        - concept://主干认知
+        - concept://最小目标验证
+    tags: [编程技术, 学习案例, 开发]
+
+  - id: KM指数增长公式
+    define: 以人与知识之和的分享科技次方表示知识管理增长的公式
+    relations:
+      related_to:
+        - concept://知识流动
+        - concept://复用
+        - entity://知识竞争力公式
+    tags: [知识管理, 指数增长, 分享]
+
+  - id: PDCA
+    define: 计划-执行-检查-改进的持续迭代循环
+    relations:
+      related_to:
+        - concept://迭代思维
+        - concept://复盘
+        - concept://知识显隐转化
+        - concept://双循环
+    tags: [持续改进, 闭环迭代, 复盘]
+
+  - id: SCOR
+    define: 供应链领域用于搭建专业知识树干的标准参考模型
+    relations:
+      related_to:
+        - concept://找寻主干
+        - concept://知识树
+        - entity://CMMI
+        - entity://PMBOK
+    tags: [供应链, 参考模型, 知识树主干]
+
+  - id: SMART原则
+    define: 以具体、可度量、可达成等要求判断目标的原则
+    relations:
+      uses:
+        - concept://目标转化
+      related_to:
+        - concept://定性到定量
+        - concept://目标定位
+        - concept://分解
+    tags: [目标量化, 时空约束, 可达成]
+
+  - id: SSH框架
+    define: 由多层协同完成Java应用功能的组合开发框架
+    relations:
+      related_to:
+        - entity://Java
+        - entity://Spring
+        - concept://主干认知
+        - concept://最小目标验证
+    tags: [开发框架, 分层协作, 学习案例]
+
+  - id: Spring
+    define: SSH学习案例中涉及IOC和AOP机制的开发框架
+    relations:
+      related_to:
+        - entity://SSH框架
+        - entity://AOP
+        - entity://Java
+        - concept://不求甚解
+    tags: [开发框架, IOC, AOP]
+
+  - id: ima知识库
+    define: 用于导入历史文章、提炼关键词并输出知识图谱的知识库产品
+    relations:
+      produces:
+        - entity://知识图谱
+      related_to:
+        - concept://知识图谱构建
+        - concept://知识网络构建
+        - concept://知识萃取
+    tags: [知识库产品, AI提炼, 图谱输出]
+
+  - id: 事物认知模型
+    define: 以静态结构、动态时间、环境关系形成完整认知的三维模型
+    relations:
+      contains:
+        - concept://静态结构分析
+        - concept://动态行为分析
+        - concept://动静结合分析
+      related_to:
+        - concept://事物认知
+        - concept://系统思维
+    tags: [三维认知, 静态动态环境, 立体认知]
+
+  - id: 决策矩阵
+    define: 按标准、成本、风险及权重为多个方案计算综合得分的工具
+    relations:
+      uses:
+        - concept://结构化决策
+        - concept://矩阵分析
+      related_to:
+        - concept://科学决策
+        - entity://层次分析法
+    tags: [多方案评估, 权重得分, 量化直觉]
+
+  - id: 学习状态机
+    define: 由学习、实践、复盘、进化状态及触发转换构成的模型
+    relations:
+      contains:
+        - concept://实践驱动学习
+        - concept://复盘
+        - concept://质变突破
+      related_to:
+        - concept://学习系统建模
+        - concept://状态逻辑
+    tags: [状态机, 学习实践复盘, 跃迁]
+
+  - id: 思维闭环系统
+    define: 由信息输入、大脑处理、知识经验库和价值输出构成的闭环
+    relations:
+      contains:
+        - concept://信息降噪
+        - concept://加工
+        - concept://模式匹配
+        - concept://复盘
+      related_to:
+        - concept://思维框架体系
+        - entity://认知闭环
+    tags: [闭环系统, 输入输出, 知识经验库]
+
+  - id: 海德格尔
+    define: 区分存在与存在者并强调时间性的哲学家
+    relations:
+      related_to:
+        - concept://本体论分析
+        - concept://事物认知
+        - entity://胡塞尔
+    tags: [存在论差异, 时间性, 哲学家]
+
+  - id: 特斯拉
+    define: 第一性原理电池案例中实现成本降低的企业
+    relations:
+      related_to:
+        - concept://第一性原理
+        - entity://马斯克
+    tags: [电池成本, 第一性原理, 企业案例]
+
+  - id: 知识四层金字塔
+    define: 数据资料、知识信息、技能、经验方法论构成的知识层次模型
+    relations:
+      contains:
+        - concept://知识
+        - concept://知识转技能
+        - concept://知识显隐转化
+      related_to:
+        - concept://知识四层演进
+        - concept://知识内化
+    tags: [显性隐性, 四层金字塔, 知识资产]

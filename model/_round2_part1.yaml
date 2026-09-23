@@ -1,0 +1,858 @@
+# 第二轮填充 · 批次 1（主 agent 示范）
+# 原文依据：raw/什么是系统思维….md、raw/如何构建完整的个人知识体系….md、
+#           raw/深度思考的一个关键….md、raw/问题分析和解决逻辑….md
+
+concepts:
+  - id: 系统思维
+    define: 以元素、连接、目标三要素认识事物，关注要素间相互作用与动态平衡的整体思维方式
+    ipo:
+      input:
+        - 待决策的问题或现象
+        - 系统边界内的构成要素清单
+        - 历史运行数据
+      process:
+        steps:
+          - 由问题反溯其背后的目标，因为目标下才隐藏完整系统
+          - 确定目标的空间维度（静态）与时间维度（动态）
+          - 将系统分解为子系统或影响因子，分析因子间相互促进与制约
+          - 基于动态模拟寻找多因子平衡下的满意解并决策
+        tools:
+          - entity://因果循环图
+          - entity://iThink
+      output:
+        - 要素间正负反馈关系图
+        - 多目标平衡后的满意决策方案
+    decomposition:
+      - step: 由问题反溯目标
+        uses: concept://目标反溯
+        why: 问题本身不是系统，只有目标下才隐藏完整的系统
+      - step: 分解系统为影响因子
+        uses: concept://分解
+        why: 理解复杂系统必须先分类分解再分析单元间关系
+      - step: 分析因子间相互作用
+        uses: concept://要素关联分析
+        why: 分解只是第一步，因子间的制约影响才是系统思考的根本
+    relations:
+      uses:
+        - entity://因果循环图
+        - entity://系统动力学
+      contains:
+        - concept://目标反溯
+        - concept://要素关联分析
+      references:
+        - entity://《第五项修炼》
+        - entity://《系统思考》
+      related_to:
+        - concept://结构化思维
+        - concept://逻辑思维
+        - concept://批判思维
+    tags: [系统思维, 整体观, 动态平衡, 决策]
+
+  - id: 目标反溯
+    define: 由问题反溯其背后的目标，再由目标定位完整系统的分析方法
+    ipo:
+      input:
+        - 一个待解决的具体问题
+      process:
+        steps:
+          - 追问该问题究竟服务于什么目标
+          - 给出目标的空间范围与时间周期
+          - 以目标为锚定位系统的完整边界
+      output:
+        - 带时空约束的明确目标
+        - 系统边界与影响因子清单
+    relations:
+      related_to:
+        - concept://系统思维
+        - concept://问题定义
+    tags: [目标, 系统边界, 问题定义]
+
+  - id: 要素关联分析
+    define: 分解出影响因子后进一步分析各因子间相互促进或制约的作用关系
+    ipo:
+      input:
+        - 已分解出的影响因子清单
+      process:
+        steps:
+          - 逐一考察单个因子变动会对其余因子产生何种影响
+          - 标注因子间的促进（正）与制约（负）作用
+          - 找出关键的正负反馈回路
+          - 定位多因子共同作用下的动态平衡点
+        tools:
+          - entity://因果循环图
+      output:
+        - 要素相互作用关系图
+        - 多因子作用的动态平衡点
+    relations:
+      uses:
+        - entity://因果循环图
+      related_to:
+        - concept://系统思维
+        - concept://分解
+        - concept://动态平衡
+    tags: [要素关系, 反馈回路, 系统分析]
+
+  - id: 多目标决策转换
+    define: 将多目标转为单目标，或将N维问题拆为多个二维问题逐个分析
+    ipo:
+      input:
+        - 多个并存且相互冲突的子目标
+      process:
+        steps:
+          - 判断能否把部分目标约束为不可变常量，从而转为单目标
+          - 若保留多目标，则将N维问题拆为多个二维问题
+          - 对每组二维目标做系统模拟，得出多组可选方案
+          - 按目标容忍度与子目标重要性选择最佳平衡点
+      output:
+        - 多组可选方案
+        - 平衡后的满意决策
+    relations:
+      uses:
+        - entity://系统动力学
+      related_to:
+        - concept://系统思维
+        - concept://结构化决策
+        - concept://动态平衡
+    tags: [多目标, 降维, 决策]
+
+  - id: 动态平衡
+    define: 系统中各因子相互作用达成的暂时稳定态，任一因子变动即被打破
+    ipo:
+      input:
+        - 系统中各影响因子的当前取值
+        - 因子间的正负反馈关系
+      process:
+        steps:
+          - 观察各因子取值在反馈作用下的变化
+          - 找到各因子作用力相互抵消的均衡点
+          - 施加外部扰动，观察系统是否自行调整回到均衡
+      output:
+        - 系统当前的动态平衡点
+        - 扰动后的演化趋势
+    relations:
+      related_to:
+        - concept://系统思维
+        - entity://系统动力学
+    tags: [系统, 均衡, 仿真]
+
+  - id: 系统动力学建模
+    define: 用建模模拟工具量化因子关系、观察系统随时间演化的分析方法
+    ipo:
+      input:
+        - 待研究的系统与影响因子
+        - 因子间的量化关系假设
+        - 历史运行数据
+      process:
+        steps:
+          - 识别系统中的存量、流量与反馈回路
+          - 将因子间关系量化为函数与参数
+          - 在建模工具中搭建模型并设定时间单位
+          - 运行模拟，观察各变量随时间演化
+          - 调整参数反复模拟，比较不同策略下的结果
+        tools:
+          - entity://iThink
+      output:
+        - 系统动力学仿真模型
+        - 不同策略下的模拟结果数据
+    relations:
+      uses:
+        - entity://iThink
+        - entity://系统动力学
+      related_to:
+        - concept://系统思维
+        - concept://多目标决策转换
+    tags: [建模, 仿真, 系统动力学]
+
+  - id: 逻辑思维
+    define: 以归纳和演绎为核心、由多因得果或由结论泛化诸因的思维形式
+    ipo:
+      input:
+        - 多个已知的事实或前提
+      process:
+        steps:
+          - 明确推导方向：由多个因归纳得一果，或由一个结论演绎泛化出多个因
+          - 逐层检验每一步推导是否符合形式逻辑规则
+          - 检查结论能否回溯到前提，排除反向倒推
+      output:
+        - 因果关联的判断或结论
+    relations:
+      contains:
+        - concept://归纳
+        - concept://演绎
+      related_to:
+        - concept://结构化思维
+        - concept://辩证逻辑
+    tags: [归纳, 演绎, 形式逻辑]
+
+  - id: 结构化思维
+    define: 通过分解、分类、组合、聚合探究事物内部构造的思维方式
+    ipo:
+      input:
+        - 待认识的事物或问题
+        - 事物的组成信息
+      process:
+        steps:
+          - 按MECE原则自顶向下分解事物的静态组成结构
+          - 用树状或表格结构呈现分解结果
+          - 沿流程梳理事物的动态行为与步骤
+          - 将静态组成部件与动态操作步骤建立映射
+        tools:
+          - entity://树模型
+      output:
+        - 事物的静态结构树
+        - 动静结合的完整结构认知
+    relations:
+      contains:
+        - concept://分解
+        - concept://静态结构分析
+        - concept://动态行为分析
+      uses:
+        - entity://树模型
+        - concept://MECE
+      related_to:
+        - concept://系统思维
+        - concept://逻辑思维
+    tags: [结构化, 分解, MECE, 动静结合]
+
+  - id: 批判思维
+    define: 对思维中的主客观态度、二元对立与辩证关系进行反思的思维方式
+    ipo:
+      input:
+        - 已有的判断或结论
+        - 结论背后的主客观前提
+      process:
+        steps:
+          - 识别结论中隐含的主观态度与二元对立预设
+          - 从正反两个方面审视论据
+          - 综合两个方面形成更完整的判断
+      output:
+        - 经过正反检验的更完整结论
+    relations:
+      related_to:
+        - concept://逻辑自洽
+        - concept://辩证思维
+        - concept://对立统一
+    tags: [批判, 二元对立, 反思]
+
+  - id: MECE
+    define: 分解时相互独立、完全穷尽、不重不漏的划分原则
+    ipo:
+      input:
+        - 待分解的整体或问题
+      process:
+        steps:
+          - 确定分解维度并逐层展开
+          - 检查同一层各子项是否相互独立
+          - 检查子项加总是否完全覆盖整体
+      output:
+        - 不重不漏的分解结构
+    relations:
+      references:
+        - entity://金字塔原理
+      related_to:
+        - concept://分解
+        - concept://结构化思维
+    tags: [分解, 不重不漏, MECE]
+
+  - id: 问题分解
+    define: 将目标或可能原因按树状结构逐层拆解以穷尽影响因子
+    ipo:
+      input:
+        - 已定义的问题或已转化的目标
+      process:
+        steps:
+          - 选择分解视角：按子目标分解或按可能原因分解
+          - 用树模型逐层展开
+          - 分解到可识别控制变量的细粒度为止
+          - 检查分解是否穷尽所有影响因子
+        tools:
+          - entity://树模型
+          - entity://鱼骨图
+      output:
+        - 问题分解树
+        - 影响因子或控制变量清单
+    relations:
+      depends_on:
+        - concept://问题定义
+      uses:
+        - entity://树模型
+        - entity://鱼骨图
+      references:
+        - entity://金字塔原理
+      related_to:
+        - concept://优先级排序
+        - concept://分解
+    tags: [问题分解, 树模型, 影响因子]
+
+  - id: 优先级排序
+    define: 依据经验与初步诊断对影响因子排序以定位关键少数
+    ipo:
+      input:
+        - 分解出的影响因子清单
+        - 历史经验或初步诊断结果
+      process:
+        steps:
+          - 依据历史经验与专家判断给出各因子可能性
+          - 通过初步诊断尝试排除非关键点
+          - 按可能性大小排出先后次序
+          - 形成关键影响因素的优先级列表
+        tools:
+          - entity://二八法则
+      output:
+        - 关键影响因素的优先级列表
+    relations:
+      depends_on:
+        - concept://问题分解
+      uses:
+        - entity://二八法则
+      related_to:
+        - concept://假设验证
+    tags: [排序, 关键少数, 优先级]
+
+  - id: 结构化分析
+    define: 穷举所有可能导致问题的原因并逐个验证的分析方式
+    ipo:
+      input:
+        - 已定义的问题
+      process:
+        steps:
+          - 穷举所有可能导致问题的原因
+          - 对每一个原因逐个验证
+          - 汇总验证结果
+      output:
+        - 完整的原因列表与验证结论
+    relations:
+      related_to:
+        - concept://非结构化分析
+        - concept://问题分解
+        - concept://假设验证
+    tags: [穷举, 结构化, 原因分析]
+
+  - id: 非结构化分析
+    define: 依据经验直接提出最可能假设并优先验证的分析方式
+    ipo:
+      input:
+        - 已定义的问题
+        - 过往经验积累
+      process:
+        steps:
+          - 依据经验直接提出最可能假设
+          - 优先验证该假设
+          - 若被否定则转向次可能假设
+      output:
+        - 最可能原因的验证结论
+    relations:
+      related_to:
+        - concept://结构化分析
+        - concept://假设验证
+        - concept://模式匹配
+    tags: [经验假设, 快速定位]
+
+  - id: 假设验证
+    define: 制定验证计划并执行、观察结果以确认根因的过程
+    ipo:
+      input:
+        - 按优先级排序的可能原因假设
+      process:
+        steps:
+          - 针对最可能假设制定详细的验证方案与计划
+          - 执行验证计划
+          - 观察并确认结果是否解决了问题
+          - 未解决则回到下一个假设继续迭代
+      output:
+        - 确认的根本原因
+        - 验证结论
+    relations:
+      depends_on:
+        - concept://优先级排序
+      related_to:
+        - concept://结构化分析
+        - concept://非结构化分析
+        - concept://根因分析
+    tags: [验证, 假设, 根因]
+
+  - id: 结构化决策
+    define: 能用确定模型或语言描述并从中选出最优方案的决策方式
+    ipo:
+      input:
+        - 若干可选方案
+        - 确定的评价标准与规则
+      process:
+        steps:
+          - 用确定的模型或语言描述决策过程与环境
+          - 设定各评价维度的权重
+          - 用算法或公式计算各方案得分
+          - 从多方案中选取得分最优者
+        tools:
+          - entity://层次分析法
+      output:
+        - 选定的最优方案
+    relations:
+      uses:
+        - entity://层次分析法
+      related_to:
+        - concept://非结构化决策
+        - concept://科学决策
+    tags: [决策, 模型化, 最优解]
+
+  - id: 非结构化决策
+    define: 过程复杂、无法用确定模型描述且不存在最优解的决策方式
+    ipo:
+      input:
+        - 复杂的决策情境
+        - 无法量化的影响因素
+      process:
+        steps:
+          - 承认无法用确定模型描述该决策过程
+          - 依靠经验与判断权衡各因素
+          - 给出可接受方案而非最优解
+      output:
+        - 可接受的决策方案
+    relations:
+      related_to:
+        - concept://结构化决策
+        - concept://系统思维
+    tags: [决策, 非结构化, 满意解]
+
+  - id: 三段论推理
+    define: 由大前提、小前提推出结论的形式逻辑推理方式
+    ipo:
+      input:
+        - 大前提（普遍规律）
+        - 小前提（具体情境）
+      process:
+        steps:
+          - 确认大前提为真
+          - 确认小前提落入大前提适用范围
+          - 由两者推出结论
+          - 检查不可由结论反推前提
+      output:
+        - 关于具体情境的结论
+    relations:
+      related_to:
+        - concept://演绎
+        - concept://逻辑自洽
+        - concept://形式逻辑
+    tags: [演绎, 形式逻辑, 三段论]
+
+  - id: 样本充分性
+    define: 归纳结论成立所需观察样本在数量与代表性上的要求
+    ipo:
+      input:
+        - 已观察到的若干样本现象
+      process:
+        steps:
+          - 统计已观察样本的数量
+          - 检查样本在不同情境下的代表性
+          - 判断样本是否足以支撑归纳结论
+          - 不足则补充样本或收窄结论适用范围
+      output:
+        - 可靠的归纳结论或收窄后的结论
+    relations:
+      related_to:
+        - concept://归纳
+        - concept://逻辑自洽
+        - concept://误认因果
+    tags: [归纳, 样本, 逻辑自洽]
+
+  - id: 逻辑自洽
+    define: 结论在因果、关系、过程三个层面均能自圆其说的思维状态
+    ipo:
+      input:
+        - 得出的结论
+        - 支撑结论的素材与论据
+      process:
+        steps:
+          - 检查归纳样本是否充分、演绎前提能否支撑结论
+          - 检查多个知识点之间的关联关系能否说清
+          - 复述从素材一步步推导出结论的完整过程
+      output:
+        - 在因果、关系、过程三方面均能自洽的结论
+    decomposition:
+      - step: 因果自洽
+        uses: concept://三段论推理
+        why: 结论必须由前提按形式逻辑推出，且不可由结论反推前提
+      - step: 关系自洽
+        uses: concept://知识关联
+        why: 多个知识点之间的关联关系要能完整说清，不能各说各话
+      - step: 过程自洽
+        uses: concept://演绎
+        why: 要能一步步复述从素材到结论的推导路径，不能只有素材和结论
+    relations:
+      related_to:
+        - concept://批判思维
+        - concept://样本充分性
+        - concept://三段论推理
+    tags: [自洽, 深度思考, 逻辑]
+
+  - id: 知识三层模型
+    define: 任何知识都包含概念、结构、逻辑三个层面，由浅入深递进
+    ipo:
+      input:
+        - 待认识的领域或问题
+      process:
+        steps:
+          - 建立概念模型，明确关键概念与概念模型
+          - 建立结构模型，研究静态组成与动态演化
+          - 归纳出分解、集成、抽象、聚合等逻辑方法
+      output:
+        - 概念、结构、逻辑三层完整的领域认知
+    relations:
+      related_to:
+        - concept://知识体系构建
+        - concept://知识树
+        - concept://结构化思维
+    tags: [概念模型, 结构模型, 逻辑方法]
+
+  - id: 知识体系构建
+    define: 将碎片化知识按一定逻辑组织为系统化、可检索可复用架构的过程
+    ipo:
+      input:
+        - 碎片化的学习笔记与实践经验
+        - 待覆盖的知识领域
+      process:
+        steps:
+          - 理解知识的三层结构：概念、结构、逻辑
+          - 构建可复用的知识组件
+          - 建立学习、实践、复盘的动态闭环
+          - 用双维度矩阵梳理知识地图与学习路径
+          - 通过实践把理论知识转化为证悟的智慧
+      output:
+        - 系统化的个人知识体系
+        - 可复用的知识组件
+    decomposition:
+      - step: 知识组件构建
+        uses: concept://知识组件组装
+        why: 面对千变万化场景时不从零开始，而是复用组件快速组装
+      - step: 闭环迭代
+        uses: concept://复盘
+        why: 学习不是终点，只有复盘形成的经验模式才是内化的知识
+      - step: 知识地图绘制
+        uses: concept://知识地图
+        why: 没有知识地图就不知道要去哪里
+      - step: 学习路径制定
+        uses: concept://学习路径
+        why: 没有学习路径就不知道如何到达
+    relations:
+      contains:
+        - concept://知识三层模型
+        - concept://知识组件组装
+        - concept://知识地图
+        - concept://学习路径
+      references:
+        - entity://SOA
+        - entity://PDCA
+    tags: [知识体系, 知识管理, 结构化]
+
+  - id: 知识组件组装
+    define: 将可复用知识组件按场景分解结果匹配并快速组装为解决方案
+    ipo:
+      input:
+        - 待解决的业务场景
+        - 可复用的知识组件库
+      process:
+        steps:
+          - 将场景分解为若干活动
+          - 为每个活动匹配底层知识组件
+          - 将匹配到的组件快速组装为完整方案
+      output:
+        - 针对该场景的解决方案
+    relations:
+      references:
+        - entity://SOA
+      related_to:
+        - concept://知识体系构建
+        - concept://模式匹配
+    tags: [知识组件, 复用, 组装]
+
+  - id: 双维度知识矩阵
+    define: 纵向全生命周期流程、横向分层解耦交织的知识组织方式
+    ipo:
+      input:
+        - 待组织的知识领域
+      process:
+        steps:
+          - 纵向按全生命周期流程展开完整价值链
+          - 横向按业务、数据、技术、管理分层解耦
+          - 横纵交织形成矩阵坐标
+          - 将知识点填入矩阵并识别空白格
+      output:
+        - 覆盖领域全貌的知识矩阵
+        - 知识边界与空白点
+    relations:
+      related_to:
+        - concept://知识体系构建
+        - concept://知识地图
+    tags: [矩阵, 知识体系, 双维度]
+
+  - id: 知识地图
+    define: 呈现知识全景、标明知识边界与当前位置和目标位置的全景图
+    ipo:
+      input:
+        - 领域知识全景信息
+        - 个人当前掌握情况
+      process:
+        steps:
+          - 列出领域全部知识节点并划定边界
+          - 标注自己当前所处位置
+          - 标注想要达到的目标位置
+      output:
+        - 知识全景地图
+        - 当前位置与目标位置的差距
+    relations:
+      produces:
+        - concept://学习路径
+      related_to:
+        - concept://知识体系构建
+    tags: [知识地图, 全景, 定位]
+
+  - id: 学习路径
+    define: 基于当前位置与目标位置的差距制定的针对性学习计划与路线
+    ipo:
+      input:
+        - 知识地图上的当前位置与目标位置
+        - 知识点间的依赖关系
+      process:
+        steps:
+          - 计算当前位置与目标位置的差距
+          - 按知识点对目标的贡献度排优先级
+          - 按前后依赖顺序排列学习次序
+          - 制定分阶段学习计划
+      output:
+        - 有针对性的学习路径与计划
+    relations:
+      depends_on:
+        - concept://知识地图
+      related_to:
+        - concept://依赖关系排序
+    tags: [学习路径, 差距, 计划]
+
+  - id: 认知升华
+    define: 知识沿感性→知性→理性逐级加工并在实践中证悟的上升过程
+    ipo:
+      input:
+        - 感性提供的经验材料
+        - 先验的认识形式
+      process:
+        steps:
+          - 感性接受直观材料
+          - 知性用范畴对材料进行判断推理
+          - 理性追求更高层次的统一
+          - 在实践中验证并证悟为智慧
+      output:
+        - 从感性上升到理性的知识
+        - 经实践证悟的智慧
+    relations:
+      references:
+        - entity://康德
+      related_to:
+        - concept://感性知性理性三分
+    tags: [感性, 知性, 理性, 证悟]
+
+entities:
+  - id: iThink
+    define: 支持系统思维动态建模与模拟仿真的建模软件
+    relations:
+      related_to:
+        - concept://系统动力学建模
+        - entity://系统动力学
+        - concept://系统思维
+    tags: [建模工具, 系统动力学, 仿真]
+
+  - id: 《提问的智慧》
+    define: 给出完整描述问题四要素的提问方法论
+    relations:
+      related_to:
+        - concept://问题定义
+    tags: [提问, 问题定义, 书籍]
+
+  - id: 《系统思考》
+    define: 以问题驱动方式讲解系统思考方法的专著
+    relations:
+      related_to:
+        - concept://系统思维
+    tags: [系统思考, 书籍]
+
+  - id: 二八法则
+    define: 关键的少数影响因子决定多数结果的优先级判定法则
+    relations:
+      related_to:
+        - concept://优先级排序
+    tags: [关键少数, 优先级]
+
+  - id: 亚里士多德
+    define: 强调知识是对事物本质和原因的把握
+    relations:
+      related_to:
+        - concept://认知升华
+        - concept://知识
+    tags: [哲学家, 知识本质]
+
+  - id: 因果循环图
+    define: 描述系统中各要素正负反馈作用关系的环形图示
+    relations:
+      uses:
+        - concept://要素关联分析
+      related_to:
+        - concept://系统思维
+        - entity://系统动力学
+    tags: [反馈回路, 系统思维, 图式]
+
+  - id: 培根
+    define: 经验主义代表，主张一切知识起源于经验
+    relations:
+      related_to:
+        - entity://经验主义
+        - concept://归纳
+    tags: [哲学家, 经验主义]
+
+  - id: 头脑风暴
+    define: 发散收集影响因子后再自下而上归纳整合的方法
+    relations:
+      related_to:
+        - concept://归纳
+        - concept://分解
+    tags: [发散, 归纳整合]
+
+  - id: 层次分析法
+    define: 适用于简单二元决策的结构化决策方法
+    relations:
+      related_to:
+        - concept://结构化决策
+    tags: [决策方法, 二元决策]
+
+  - id: 康德
+    define: 融合经验与理性，提出知识是感性经验与先验范畴的结合
+    relations:
+      related_to:
+        - concept://认知升华
+        - concept://感性知性理性三分
+    tags: [哲学家, 先验范畴]
+
+  - id: 彼得·圣吉
+    define: 《第五项修炼》作者，作者系统思维的启蒙来源
+    relations:
+      related_to:
+        - entity://《第五项修炼》
+        - concept://系统思维
+    tags: [系统思维, 学习型组织]
+
+  - id: 数字化转型架构方法论
+    define: 以业务战略到治理体系组件堆砌呈现过程模型的架构方法论书
+    relations:
+      related_to:
+        - concept://逻辑自洽
+    tags: [架构方法论, 过程模型, 书籍]
+
+  - id: 柏拉图
+    define: 主张知识是对永恒不变理念的认识
+    relations:
+      related_to:
+        - concept://认知升华
+        - entity://理性主义
+    tags: [哲学家, 理念论]
+
+  - id: 树模型
+    define: 逻辑树、问题树、决策树、思维导图等树状分解模型的统称
+    relations:
+      contains:
+        - entity://鱼骨图
+      related_to:
+        - concept://问题分解
+        - concept://分解
+    tags: [树状分解, 分解模型]
+
+  - id: 理性主义
+    define: 主张知识源于先天理性演绎的哲学流派
+    relations:
+      related_to:
+        - entity://笛卡尔
+        - concept://演绎
+    tags: [哲学流派, 理性演绎]
+
+  - id: 笛卡尔
+    define: 理性主义代表，主张先天理性通过演绎获得知识
+    relations:
+      related_to:
+        - entity://理性主义
+        - concept://演绎
+    tags: [哲学家, 理性主义]
+
+  - id: 系统动力学
+    define: 研究系统因子相互作用与动态平衡的建模仿真方法体系
+    relations:
+      related_to:
+        - concept://系统动力学建模
+        - entity://iThink
+        - concept://动态平衡
+    tags: [系统仿真, 动态平衡]
+
+  - id: 经验主义
+    define: 主张知识起源于感官经验的哲学流派
+    relations:
+      related_to:
+        - entity://培根
+        - concept://归纳
+    tags: [哲学流派, 感官经验]
+
+  - id: 胡塞尔
+    define: 现象学创立者，揭示知识的意向构造过程
+    relations:
+      related_to:
+        - concept://认知升华
+    tags: [哲学家, 现象学]
+
+  - id: 芭芭拉·明托
+    define: 麦肯锡咨询顾问，《金字塔原理》作者
+    relations:
+      related_to:
+        - entity://金字塔原理
+        - entity://麦肯锡
+    tags: [咨询顾问, 金字塔原理]
+
+  - id: 问题四分类
+    define: 将问题分为What、How、Which、Where四类的分类框架
+    relations:
+      related_to:
+        - concept://问题定义
+        - entity://麦肯锡七步法
+    tags: [问题分类, 咨询方法论]
+
+  - id: 鱼骨图
+    define: 从人、机、料、法、环五方面做因果分解的分析图
+    relations:
+      is_a:
+        - entity://树模型
+      related_to:
+        - concept://问题分解
+    tags: [因果分解, 分析图]
+
+  - id: 麦肯锡
+    define: 咨询公司，输出七步法等结构化思维与呈现方法论
+    relations:
+      produces:
+        - entity://麦肯锡七步法
+      related_to:
+        - entity://金字塔原理
+    tags: [咨询公司, 方法论]
+
+  - id: 麦肯锡七步法
+    define: 麦肯锡提出的、面向How类问题的结构化解决方案方法论
+    relations:
+      uses:
+        - concept://结构化思维
+      references:
+        - entity://麦肯锡
+      related_to:
+        - concept://问题分解
+        - entity://金字塔原理
+        - entity://问题四分类
+    tags: [咨询方法论, 解决方案, 结构化]
+
+  - id: 黑格尔
+    define: 提出辩证逻辑，强调知识的动态发展
+    relations:
+      related_to:
+        - concept://辩证逻辑
+        - concept://认知升华
+    tags: [哲学家, 辩证逻辑]

@@ -1,0 +1,988 @@
+# 第二轮填充 · 批次 4
+# 原文依据：raw/关于思维的七个观点供大家参考.md、raw/在职场怎么抓住学习和成长的机会.md、
+#           raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md、
+#           raw/如何提升自己的结构化思维和系统思维能力.md、
+#           raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md、
+#           raw/如何高效和系统化的构建个人思维和认知体系.md
+
+concepts:
+  - id: 主动探索
+    define: 从被动接受任务转向主动思考，任务完成后主动弥补其暴露的知识缺陷
+    ipo:
+      input:
+        - 已完成的一个具体工作任务
+        - 已解决的一个具体问题
+      process:
+        steps:
+          - 任务完成后追问该任务还涉及哪些知识或外延值得学习
+          - 问题解决了追问该问题暴露了自己哪些知识缺陷
+          - 针对识别出的缺陷主动去搜索材料并学习弥补
+          - 在没有工作安排时也自主发起思考和探索
+      output:
+        - 补上的知识外延与缺陷清单
+        - 持续自我提升的主动习惯
+    relations:
+      related_to:
+        - concept://问题驱动学习
+        - concept://从点到面学习
+        - concept://主动信息过滤
+        - concept://实践驱动学习
+    tags: [主动学习, 自我驱动, 持续改进]
+
+  - id: 事物群认知
+    define: 由单个事物认知扩展到同类事物群，归纳抽象出普适性规律并入库
+    ipo:
+      input:
+        - 多个同类事物的单次认知记录
+        - 知识经验库中的历史同类分析经验
+      process:
+        steps:
+          - 去知识经验库查找是否原来分析过类似的同类事物
+          - 把同类事物放到一起做周期性的复盘
+          - 抽象归纳出同类事物共性的规律和方法论
+          - 将形成的普适性规律入库到经验模式库
+      output:
+        - 同类事物的普适性规律
+        - 经验模式库中的新增条目
+    decomposition:
+      - step: 周期性复盘同类事物
+        uses: concept://深度复盘
+        why: 对一类事物的周期性复盘才是一个深度复盘过程
+      - step: 从特殊到一般归纳抽象
+        uses: concept://归纳
+        why: 认知升级的关键就是从特殊到一般完成关键的抽象动作
+    relations:
+      is_a:
+        - concept://事物认知
+      depends_on:
+        - concept://深度复盘
+        - concept://归纳
+      produces:
+        - concept://经验模式库
+      related_to:
+        - concept://举一反三
+        - concept://空间换时间
+    tags: [事物群, 归纳抽象, 认知升级]
+
+  - id: 从点到面学习
+    define: 由问题之点出发，复盘后延展到该领域整个知识体系和框架的学习
+    ipo:
+      input:
+        - 实践中已经解决的一个具体问题
+      process:
+        steps:
+          - 承认问题解决并不是终点并进入复盘
+          - 思考该问题究竟涉及到哪个知识体系
+          - 确定对该领域进行系统和有针对性的学习的内容
+          - 展开对该领域整个知识体系和框架的学习
+      output:
+        - 该领域完整的知识体系与框架
+    relations:
+      depends_on:
+        - concept://复盘
+      related_to:
+        - concept://问题驱动学习
+        - concept://知识体系构建
+        - concept://知识地图
+    tags: [问题驱动, 由点到面, 知识体系]
+
+  - id: 任务依赖打破
+    define: 通过任务拆分打破传统任务依赖与关键路径约束，提升早期资源利用率
+    ipo:
+      input:
+        - 项目的任务清单与传统任务依赖关系
+        - 团队的角色分工与可用资源
+      process:
+        steps:
+          - 识别哪些工作只有特定角色才能完成从而形成等待
+          - 将任务拆分为更细粒度可并行的子任务
+          - 打破传统的前置依赖与关键路径约束
+          - 把当前能够提前做的工作尽早启动迭代
+          - 持续检查是否有人闲着没事做
+      output:
+        - 提前启动的工作任务安排
+        - 项目早期更高的资源利用率
+    relations:
+      depends_on:
+        - concept://分解
+      related_to:
+        - entity://关键路径法
+        - concept://依赖关系排序
+        - concept://迭代思维
+    tags: [任务拆分, 并行启动, 资源利用率]
+
+  - id: 信息茧房
+    define: 推荐机制只让人看到想看的内容，不断固化习惯并收窄认知
+    ipo:
+      input:
+        - 平台上实际存在的全部内容
+        - 你过去的点击与浏览行为
+      process:
+        steps:
+          - 内容推荐机制按你的历史行为筛选推送内容
+          - 你实际看到的内容只占全部内容的冰山一角
+          - 有用的但不在兴趣范围内的信息被过滤掉
+          - 行为习惯被不断固化并停留在自我舒适区
+          - 认知范围越来越狭窄
+      output:
+        - 只剩自己想看的少量内容
+        - 受限且收窄的个人认知
+    relations:
+      related_to:
+        - concept://主动信息过滤
+        - concept://认知偏差
+        - concept://跳出盒子
+        - concept://体系思维
+    tags: [推荐机制, 信息窄化, 认知障碍]
+
+  - id: 去我化呈现
+    define: 输出呈现时去自我中心，关注受众真正关心的内容与受众的知识经验结构
+    ipo:
+      input:
+        - 已内化的知识或解决方案内容
+        - 受众的角色与知识经验结构
+      process:
+        steps:
+          - 明确本次呈现面向的受众是谁
+          - 分析受众的经验和知识结构是怎样的
+          - 判断受众真正关心的关键内容是什么
+          - 以最有效的方式把Key Point呈现给受众
+          - 用不同时长和不同受众反复做呈现练习
+      output:
+        - 受众能抓住重点的呈现版本
+        - 面向不同受众的差异化讲述方案
+    relations:
+      related_to:
+        - concept://呈现和泛化
+        - concept://结构化呈现
+        - concept://自我最简陈述
+        - concept://知识显性化
+    tags: [受众视角, Key Point, 去我化]
+
+  - id: 场景约束结合
+    define: 应用抽象概念必须结合相应场景，不能脱离事物内在关联与依赖约束
+    ipo:
+      input:
+        - 已完善属性与行为的抽象概念
+        - 待应用的具体场景
+      process:
+        steps:
+          - 取出抽象概念上附带的属性与行为特征
+          - 为每条行为特征找出其成立的前提条件与约束
+          - 将概念放到具体场景中检验其行为是否成立
+          - 按场景约束补充或修正属性与行为定义
+      output:
+        - 带前提约束的行为特征
+        - 结合场景后更完整的概念认知
+    relations:
+      depends_on:
+        - concept://思维具体化
+        - concept://抽象规定
+      related_to:
+        - concept://辩证思维
+        - concept://属性行为内在影响分析
+        - concept://信息场景依赖
+    tags: [场景约束, 前提条件, 概念应用]
+
+  - id: 复杂匹配
+    define: 先将问题分解为细粒度子问题，底层逐一匹配后再向上聚合形成完整方案
+    ipo:
+      input:
+        - 待解决的一个新问题
+        - 经验模式库中的细粒度可复用经验点
+      process:
+        steps:
+          - 将问题分解为细粒度的子问题
+          - 在底层为每个子问题逐一匹配已有的经验模式
+          - 将底层匹配到的结果向上聚合
+          - 整合形成针对原问题的完整解决方案
+      output:
+        - 针对该问题的完整解决方案
+    relations:
+      is_a:
+        - concept://模式匹配
+      depends_on:
+        - concept://问题分解
+      uses:
+        - concept://经验模式库
+      related_to:
+        - concept://集成
+        - concept://跨领域迁移
+    tags: [模式匹配, 分解, 聚合]
+
+  - id: 对立统一
+    define: 不只看到事物好的一面，综合正反两个方面形成更加完整的结论
+    ipo:
+      input:
+        - 事物被观察到的正面表现
+        - 事物被观察到的反面表现
+      process:
+        steps:
+          - 列出事物好的一面的相关论据
+          - 列出事物不好的一面的相关论据
+          - 认识到不能只用单一方面下结论
+          - 把正反两个方面综合起来考量
+          - 形成一个更加完整的结论
+      output:
+        - 综合正反两面后的完整结论
+    relations:
+      related_to:
+        - concept://辩证思维
+        - concept://正题反题合题
+        - concept://辩证综合
+        - concept://二元对立
+      references:
+        - entity://赫拉克利特
+        - entity://《小逻辑》
+    tags: [正反两面, 辩证法, 综合结论]
+
+  - id: 属性行为内在影响分析
+    define: 分析抽象事物具备的属性和行为之间的内在影响以及行为间的正反作用
+    ipo:
+      input:
+        - 已完成属性与行为定义的抽象概念
+      process:
+        steps:
+          - 列出该抽象事物具备的属性与行为特征
+          - 分析属性与行为之间的内在影响关系
+          - 分析行为与行为之间相互的正反作用
+          - 识别每个行为特征成立所需的条件判断
+          - 将得到的约束与联系回填到概念定义中
+      output:
+        - 属性行为间的内在影响关系
+        - 行为间的正反作用关系
+    relations:
+      depends_on:
+        - concept://思维具体化
+      related_to:
+        - concept://辩证思维
+        - concept://场景约束结合
+        - concept://动静结合分析
+        - concept://动态行为分析
+    tags: [属性行为, 正反作用, 辩证逻辑]
+
+  - id: 岗位能力差距分析
+    define: 分析岗位所需核心能力、诚实面对短板，形成现状与目标的GAP差距清单
+    ipo:
+      input:
+        - 所在岗位要求掌握的核心能力清单
+        - 自己当前真实的能力现状
+      process:
+        steps:
+          - 列出岗位究竟需要掌握哪些核心能力
+          - 诚实评估自己当前的现状与真实短板
+          - 列出自己想要达到的能力目标清单
+          - 比对现状与目标形成GAP差距清单
+          - 依据差距制定有针对性的季度学习计划
+      output:
+        - 能力现状与目标的GAP差距清单
+        - 有针对性的季度学习计划
+    relations:
+      depends_on:
+        - concept://目标定位
+      produces:
+        - concept://学习路径
+      related_to:
+        - concept://量化自我评估
+        - concept://知识体系构建
+    tags: [能力差距, 目标清单, 学习计划]
+
+  - id: 思维三阶段
+    define: 信息输入、大脑处理、价值输出，处理含定义降噪、加工处理、模式匹配
+    ipo:
+      input:
+        - 外界输入的信息
+      process:
+        steps:
+          - 接收外界信息的输入
+          - 对信息做定义与降噪，筛掉无效部分
+          - 对保留下来的信息做加工处理
+          - 与已有知识经验做模式匹配
+          - 形成有价值的输出结果
+      output:
+        - 对事物的认识或问题的解决方案
+    decomposition:
+      - step: 定义降噪
+        uses: concept://信息降噪
+        why: 加工车间第一步是筛选清洗，去掉噪声才谈得上后续加工
+      - step: 加工处理
+        uses: concept://加工
+        why: 有效信息需要被组织与加工才能成型
+      - step: 模式匹配
+        uses: concept://模式匹配
+        why: 大脑会自动调用已有知识经验对比匹配，形成认识与方案
+    relations:
+      contains:
+        - concept://信息降噪
+        - concept://加工
+        - concept://模式匹配
+      related_to:
+        - concept://思维双主线
+        - concept://思维框架体系
+        - concept://元认知
+    tags: [信息输入, 大脑处理, 价值输出]
+
+  - id: 思维具体化
+    define: 为抽象概念完善其属性与行为特征，属性行为完备才完成对事物的完整抽象
+    ipo:
+      input:
+        - 从特殊到一般得出的抽象概念
+        - 关于该类事物的感性认知积累
+      process:
+        steps:
+          - 确认已经抽象出的概念名，类似Class类的定义
+          - 具体化地定义该概念究竟应该包括哪些属性
+          - 具体化地定义该概念究竟应该具备哪些行为特征
+          - 检查属性与行为是否已经完备
+          - 属性行为完备才算完成对事物的完整抽象
+      output:
+        - 具备完整属性与行为特征的抽象概念定义
+    relations:
+      depends_on:
+        - concept://抽象规定
+      related_to:
+        - concept://辩证思维
+        - concept://属性行为内在影响分析
+        - concept://概念抽象
+        - entity://面向对象
+    tags: [属性行为, 完整抽象, Class类]
+
+  - id: 批判性提问
+    define: 对既有流程和最佳实践持续追问为什么，引发对陈旧做法的重新思考
+    ipo:
+      input:
+        - 既有的流程、规范或最佳实践
+      process:
+        steps:
+          - 指出某项流程或最佳实践没有人说得清为什么
+          - 对该做法持续追问为什么一定要这么做
+          - 判断它在当前场景下是否仍然成立
+          - 提出质疑并引发团队对陈旧做法的重新思考
+          - 重新设计一套更精简的替代方案
+      output:
+        - 更精简高效的替代方案
+    relations:
+      is_a:
+        - concept://批判思维
+      related_to:
+        - concept://方法论迁移
+        - concept://独立思考
+        - entity://敏捷方法
+    tags: [质疑, 追问为什么, 流程优化]
+
+  - id: 抽象规定
+    define: 从特殊到一般得出的抽象概念，类似面向对象分析中Class类的定义
+    ipo:
+      input:
+        - 对多个同类具体事物的感性认知
+      process:
+        steps:
+          - 观察并积累多个同类的具体事物
+          - 从特殊到一般完成关键的抽象动作
+          - 给出该类事物的概念名
+          - 此时只有类名，属性与方法尚未完备
+      output:
+        - 一个尚未完备的抽象概念
+    relations:
+      is_a:
+        - concept://抽象
+      related_to:
+        - concept://思维具体化
+        - concept://概念抽象
+        - concept://归纳
+        - entity://面向对象
+    tags: [从特殊到一般, Class类, 抽象]
+
+  - id: 模仿超越
+    define: 先模仿他人结构和写法做到形似，理解内在逻辑后经实践消化形成自己的方法论
+    ipo:
+      input:
+        - 同类材料与他人写好的文档或PPT
+        - 他人的方法论与最佳实践
+      process:
+        steps:
+          - 上网搜索相似材料，看看其他人究竟怎么写的并做对比
+          - 完全模仿他人的结构和写法，先做到形似
+          - 详细分析并对别人方法论的内在逻辑进行思考
+          - 真正从原理上搞明白而不完全照搬
+          - 通过自身项目大量实践消化，取其精华去其糟粕
+      output:
+        - 适合团队和自我的方法论体系
+    relations:
+      uses:
+        - entity://IBM
+        - entity://埃森哲
+        - entity://HP
+      related_to:
+        - concept://方法论抽象
+        - concept://实践反刍
+        - concept://方法论迁移
+    tags: [模仿形似, 内在逻辑, 实践消化]
+
+  - id: 正题反题合题
+    define: 正题与反题通过辩证思考走向合题的辩证逻辑推进形式
+    ipo:
+      input:
+        - 一个待考察的命题作为正题
+        - 与之相对的反命题
+      process:
+        steps:
+          - 提出正题
+          - 提出与之相对的反题
+          - 对正题与反题做辩证思考
+          - 由正题反题推进到对立统一形成合题
+      output:
+        - 对立统一后的合题
+    relations:
+      is_a:
+        - concept://辩证逻辑
+      related_to:
+        - concept://对立统一
+        - concept://辩证思维
+        - concept://二元对立
+      references:
+        - entity://《小逻辑》
+        - entity://黑格尔
+    tags: [正题反题, 合题, 黑格尔]
+
+  - id: 深度复盘追问
+    define: 复盘不停留在表面原因，逐层追问为什么以找到真正的解决方案
+    ipo:
+      input:
+        - 刚结束的项目或事件
+        - 已经给出的表面原因
+      process:
+        steps:
+          - 项目结束后给自己留出专门的思考时间
+          - 问自己做对了什么、做错了什么、为什么会这样、下次如何更好
+          - 不满足于时间估计不准确这类表面原因
+          - 继续追问为什么以逐层深挖
+          - 找到流程或方法上的漏洞并在下个项目中调整
+      output:
+        - 真正的解决方案
+        - 下一个项目的改进调整项
+    relations:
+      is_a:
+        - concept://深度复盘
+      depends_on:
+        - concept://复盘
+      related_to:
+        - concept://根因分析
+        - concept://因果链分析
+        - concept://批判性提问
+    tags: [追问为什么, 深度挖掘, 改进]
+
+  - id: 知识串联
+    define: 以串接和扩展把已有知识点整合为体系，并转化为自己的经验与方法论
+    ipo:
+      input:
+        - 已有的大量知识点存量
+        - 实践中产生的新经验
+      process:
+        steps:
+          - 盘点自己已有的知识点
+          - 在知识点之间建立前后串接关系
+          - 对串联后的知识点做扩展与融会贯通
+          - 在持续的自我实践中检验串联形成的经验
+          - 将串联能力沉淀为工作经验和方法论
+      output:
+        - 串联成体系的知识网络
+        - 转化为自我的工作经验与方法论
+    relations:
+      related_to:
+        - concept://融会贯通
+        - concept://知识关联
+        - concept://知识网络构建
+        - concept://经验模式库
+        - concept://知识结构化
+    tags: [知识串联, 融会贯通, 方法论]
+
+  - id: 科学决策
+    define: 设定标准、成本、风险与权重，以综合得分比较方案
+    ipo:
+      input:
+        - 多个可选的备选方案
+        - 真实的场景与问题目标
+      process:
+        steps:
+          - 明确决策目标与问题场景
+          - 确定评价的准则与维度
+          - 结合场景与问题驱动为各准则设定权重
+          - 对各方案按准则评估打分并计算综合得分
+          - 比较综合得分选择最终方案
+      output:
+        - 选定的最终方案
+        - 落到具体行动上的计划
+    relations:
+      depends_on:
+        - concept://评价模型
+      related_to:
+        - concept://结构化决策
+        - concept://多目标决策转换
+        - concept://事物认知
+        - concept://优先级排序
+    tags: [评估准则, 权重, 综合得分]
+
+  - id: 自我最简陈述
+    define: 用最简单方式陈述一个道理，越能最简说明越说明深入实践过并了解细节
+    ipo:
+      input:
+        - 想要表达的一个道理或一件事
+        - 自己亲身经历过的细节实践
+      process:
+        steps:
+          - 回想该道理是否来自自己亲身的细节实践
+          - 剔除只说大套话与普适大道理的理论表述
+          - 用最简单的方式把该道理陈述出来
+          - 检验能否说清究竟该怎么做
+          - 以能否真正落地来检验陈述是否到位
+      output:
+        - 最简且能落地的陈述
+        - 反映出的自身实践深浅程度
+    relations:
+      related_to:
+        - concept://呈现和泛化
+        - concept://去我化呈现
+        - concept://知识显性化
+        - concept://证悟
+    tags: [最简陈述, 实践深浅, 落地]
+
+  - id: 认知偏差
+    define: 大脑为节省能量形成思维捷径而带来的确认偏差、锚定效应、可得性偏差
+    ipo:
+      input:
+        - 大脑接收到的待判断信息
+      process:
+        steps:
+          - 大脑为节省能量启用思维捷径
+          - 捷径带来确认偏差、锚定效应和可得性偏差
+          - 主动寻找反面证据
+          - 延迟判断并做多角度思考
+          - 寻求外部反馈来校正判断
+      output:
+        - 被识别出的偏差清单
+        - 校正后的判断
+    relations:
+      related_to:
+        - concept://元认知
+        - concept://信息茧房
+        - concept://批判思维
+        - concept://误认因果
+        - concept://实证
+    tags: [确认偏差, 锚定效应, 思维捷径]
+
+  - id: 认知四境界
+    define: 不知道自己不知道、知道自己不知道、知道自己知道、不知道自己知道
+    decomposition:
+      - step: 不知道自己不知道
+        uses: concept://元认知
+        why: 此境界知识库和经验库都贫乏且元认知缺失，需靠重大挫折意识到无知
+      - step: 知道自己不知道
+        uses: concept://知识体系构建
+        why: 突破路径是系统化学习与大量输入，构建初步知识框架
+      - step: 知道自己知道
+        uses: concept://深度复盘
+        why: 突破路径是大量刻意实践与深度复盘反思，使理性推理流畅
+      - step: 不知道自己知道
+        uses: concept://模式匹配
+        why: 此境界的特征是专家直觉，能快速识别模式并做出判断
+    relations:
+      related_to:
+        - concept://元认知
+        - concept://认知水平差异
+        - concept://模式匹配
+        - concept://长期主义
+    tags: [认知境界, 元认知, 螺旋上升]
+
+  - id: 评价模型
+    define: 认知升级的关键，负责选择评价维度并打分，是事物认知的演绎过程
+    ipo:
+      input:
+        - 已完成认知的事物
+        - 可选的评价维度
+      process:
+        steps:
+          - 确定对该事物评价需要选择哪些维度
+          - 为每个维度设定打分标准
+          - 对事物在各维度上逐一打分
+          - 汇总形成该事物的评价结论
+          - 将评价结果交给决策模型结合场景权重做选择
+      output:
+        - 该事物的多维度评价得分
+    relations:
+      is_a:
+        - concept://演绎
+      depends_on:
+        - concept://事物认知
+      related_to:
+        - concept://科学决策
+        - concept://结构化决策
+        - concept://认知升华
+    tags: [评价维度, 打分, 认知升级]
+
+  - id: 输出倒逼输入
+    define: 通过写博客、做分享、向他人解释，把模糊理解转化为清晰表达
+    ipo:
+      input:
+        - 刚学到的新知识
+        - 自己尚且模糊的理解
+      process:
+        steps:
+          - 学完新知识后主动寻找输出场景
+          - 通过写博客、做部门分享或向同事解释来输出
+          - 为讲清楚而把模糊理解转化为清晰表达
+          - 在输出中暴露自己理解上的漏洞
+          - 回头补学并修正理解
+      output:
+        - 清晰的表达与固化后的知识
+        - 被发现的知识漏洞
+    relations:
+      related_to:
+        - concept://知识显性化
+        - concept://知识内化
+        - concept://呈现和泛化
+        - concept://知识显隐转化
+        - concept://修悟结合
+    tags: [输出, 分享, 知识消化]
+
+  - id: 辩证思维
+    define: 从抽象规定出发经思维具体化，分析事物属性与行为间内在影响与正反作用
+    ipo:
+      input:
+        - 对具体事物的感性认知
+        - 归纳演绎得出的抽象概念
+      process:
+        steps:
+          - 由多个同类具体事物归纳得出一个抽象规定
+          - 为抽象概念补全它究竟应该包括的属性
+          - 为抽象概念补全它究竟应该具备的行为特征
+          - 分析属性与行为之间的内在影响
+          - 分析行为与行为之间相互的正反作用
+          - 结合具体场景与约束检验概念以形成完整认知
+      output:
+        - 对事物完整而具体的抽象认知
+    decomposition:
+      - step: 得出抽象规定
+        uses: concept://抽象规定
+        why: 辩证思维的起点是从特殊到一般抽象出概念，类似定义出Class类
+      - step: 完成思维具体化
+        uses: concept://思维具体化
+        why: 只有事物具备了完整的属性和行为，才完成对事物完整的抽象
+      - step: 分析属性行为内在影响
+        uses: concept://属性行为内在影响分析
+        why: 分析属性和行为间的内在影响与行为间正反作用是辩证逻辑最核心的内容
+      - step: 结合场景约束应用
+        uses: concept://场景约束结合
+        why: 应用概念一定要结合相应场景，不能脱离事物内在关联和依赖约束
+    relations:
+      contains:
+        - concept://抽象规定
+        - concept://思维具体化
+        - concept://属性行为内在影响分析
+        - concept://场景约束结合
+      related_to:
+        - concept://对立统一
+        - concept://辩证逻辑
+        - concept://形式逻辑
+      references:
+        - entity://《小逻辑》
+        - entity://黑格尔
+    tags: [抽象规定, 思维具体化, 对立统一]
+
+  - id: 量化自我评估
+    define: 用任务耗时、bug率、方案采纳次数等数据建立个人能力的量化评估
+    ipo:
+      input:
+        - 完成任务的过程数据
+        - 团队同类的平均水平数据
+      process:
+        steps:
+          - 选定可量化的个人能力指标
+          - 持续记录任务耗时、bug率、方案采纳次数等数据
+          - 建立个人能力的数据仪表盘
+          - 将个人数据与团队平均水平做对比
+          - 针对暴露出的差距改进自己的工作习惯
+      output:
+        - 个人能力的数据仪表盘
+        - 待改进的短板清单
+    relations:
+      related_to:
+        - concept://岗位能力差距分析
+        - concept://统计思维
+        - concept://实证
+        - concept://复盘
+    tags: [数据仪表盘, 量化, 自我评估]
+
+  - id: 问题驱动学习
+    define: 以实践中遇到的问题为驱动，按需拓展相关领域的知识广度
+    ipo:
+      input:
+        - 工作中遇到的具体问题
+        - 问题所处的实际场景
+      process:
+        steps:
+          - 把遇到的问题当作学习的入口并动手解决
+          - 定位问题背后的根因所属领域
+          - 围绕该领域延伸学习相关的理论
+          - 进一步研究该领域的最佳实践
+          - 把学到的知识立即应用到场景中验证
+      output:
+        - 立即得到应用和验证的知识
+        - 串联成体系的知识网络
+    relations:
+      related_to:
+        - concept://知识串联
+        - concept://从点到面学习
+        - concept://主动探索
+        - concept://实践驱动学习
+    tags: [问题入口, 场景支撑, 知识延展]
+
+  - id: 静态架构与动态运转
+    define: 由静态架构、动态运转及二者结合构成的具备普遍适用性的思维框架元模型
+    ipo:
+      input:
+        - 待认知的事物或待解决的问题
+      process:
+        steps:
+          - 分析面对的思维场景属于事物认知类还是问题分析解决类
+          - 认知类按静态加动态再加动静结合的认知模型展开
+          - 问题解决类按问题定义、问题分析、问题解决验证的流程展开
+          - 完成后复盘并将经验入库到个人知识经验库
+      output:
+        - 对事物的完整认知或问题的解决方案
+        - 入库后的可复用经验点
+    decomposition:
+      - step: 静态架构分析
+        uses: concept://静态结构分析
+        why: 先研究事物内在的组成部件与静态架构
+      - step: 动态运转分析
+        uses: concept://动态行为分析
+        why: 再研究事物的行为特征与运作流程
+      - step: 动静结合
+        uses: concept://动静结合分析
+        why: 回答底层各组件如何匹配到具体活动并协同完成外在行为
+      - step: 降维后整合
+        uses: concept://集成
+        why: 核心逻辑是分解加集成，降维后再整合回完整认知
+    relations:
+      contains:
+        - concept://静态结构分析
+        - concept://动态行为分析
+        - concept://动静结合分析
+      related_to:
+        - entity://思维钻石模型
+        - concept://思维框架体系
+        - concept://分解
+    tags: [元模型, 静态架构, 动态运转]
+
+entities:
+  - id: 5W1H
+    define: 问题定义需明确对象、原因、地点、时间、人物和方式的原则
+    relations:
+      uses:
+        - concept://问题定义
+      related_to:
+        - entity://麦肯锡七步法
+        - concept://目标定位
+    tags: [问题定义, 六要素]
+
+  - id: BAT
+    define: 毕业后进入并完成第一阶段积累的互联网大厂代表
+    relations:
+      related_to:
+        - concept://经验存量
+        - concept://长期主义
+        - concept://目标定位
+    tags: [互联网大厂, 职场前五年]
+
+  - id: GRAI模型
+    define: 回顾目标、评估结果、分析原因、总结规律的复盘方法
+    relations:
+      uses:
+        - concept://复盘
+        - concept://根因分析
+      related_to:
+        - concept://深度复盘
+        - concept://模式提炼
+        - entity://PDCA
+    tags: [复盘, 四步法, 总结规律]
+
+  - id: HP
+    define: 咨询规划报告来源之一，与IBM、埃森哲并列被分析
+    relations:
+      related_to:
+        - concept://模仿超越
+        - concept://方法论抽象
+        - entity://IBM
+        - entity://埃森哲
+    tags: [咨询报告, 模仿对象]
+
+  - id: IBM
+    define: 作者做企业架构与IT规划时大量分析其咨询规划报告
+    relations:
+      related_to:
+        - concept://模仿超越
+        - concept://方法论抽象
+        - entity://企业架构
+        - entity://埃森哲
+    tags: [咨询报告, 企业架构]
+
+  - id: T型人才
+    define: 既有专业深度又具备一定广度的能力结构
+    relations:
+      related_to:
+        - concept://知识深度
+        - concept://知识广度
+        - concept://跨领域迁移
+    tags: [专业深度, 知识广度]
+
+  - id: 《小逻辑》
+    define: 黑格尔所著，阐述正题反题如何走向对立统一的辩证逻辑著作
+    relations:
+      references:
+        - entity://黑格尔
+      related_to:
+        - concept://正题反题合题
+        - concept://对立统一
+        - concept://辩证逻辑
+        - entity://辩证法
+    tags: [黑格尔, 辩证逻辑]
+
+  - id: 《思维框架和逻辑》
+    define: 作者正在详细修订的、讲思维框架逻辑与思维能力体系的书
+    relations:
+      related_to:
+        - concept://静态架构与动态运转
+        - concept://思维双主线
+        - concept://事物群认知
+        - entity://思维钻石模型
+        - entity://贺博士
+    tags: [思维框架, 书籍]
+
+  - id: 以师带徒
+    define: 公司内部导师制度，定期与导师交流困惑与感悟以少走弯路
+    relations:
+      related_to:
+        - concept://知识显性化
+        - concept://实践驱动学习
+        - concept://复盘
+    tags: [导师制, 交流]
+
+  - id: 倒金字塔转化模型
+    define: 描述个人知识库向经验模式库持续转化的模型
+    relations:
+      related_to:
+        - concept://知识经验库
+        - concept://经验模式库
+        - concept://知识转技能
+        - concept://技能转经验
+        - concept://知识四层演进
+    tags: [知识转化, 经验模式库]
+
+  - id: 关键路径法
+    define: 进度管理中计算进度与工期的方法，在角色分工场景下往往不适用
+    relations:
+      related_to:
+        - concept://任务依赖打破
+        - concept://依赖关系排序
+    tags: [进度管理, 工期计算]
+
+  - id: 埃森哲
+    define: 咨询规划报告来源之一，作者分析其方法论的内在逻辑
+    relations:
+      related_to:
+        - concept://模仿超越
+        - concept://方法论抽象
+        - entity://IBM
+        - entity://HP
+    tags: [咨询报告, 方法论]
+
+  - id: 学习金字塔
+    define: 揭示被动学习与主动学习方式在知识留存效率上的差异
+    relations:
+      related_to:
+        - concept://输出倒逼输入
+        - concept://深度学习
+        - concept://实践驱动学习
+        - concept://知识内化
+    tags: [留存率, 主动学习]
+
+  - id: 思维钻石模型
+    define: 思维层级模型，本书重点做第四、第五两个层级的事情
+    relations:
+      related_to:
+        - concept://静态架构与动态运转
+        - concept://思维框架体系
+        - concept://体系思维
+        - entity://《思维框架和逻辑》
+    tags: [思维层级, 元模型]
+
+  - id: 敏捷方法
+    define: 软件开发方法，被作者迁移应用到市场活动策划中
+    relations:
+      related_to:
+        - concept://方法论迁移
+        - concept://跨领域迁移
+        - concept://批判性提问
+        - concept://迭代思维
+    tags: [软件开发, 跨领域迁移]
+
+  - id: 环形正负反馈回路
+    define: 系统思维中描述要素间正反反馈作用关系的闭环回路
+    relations:
+      related_to:
+        - concept://系统思维
+        - concept://要素关联分析
+        - concept://动态平衡
+        - entity://因果循环图
+    tags: [正负反馈, 系统思维]
+
+  - id: 苏格拉底
+    define: 提出"我唯一知道的，就是我一无所知"，并被用作三段论演绎举例
+    relations:
+      related_to:
+        - concept://认知四境界
+        - concept://三段论推理
+        - concept://演绎
+    tags: [哲学家, 无知之知]
+
+  - id: 贺博士
+    define: 提出"学习本身就是思维，思维框架应是认知过程加学习过程"
+    relations:
+      related_to:
+        - concept://动态学习链
+        - concept://复盘
+        - entity://《思维框架和逻辑》
+    tags: [学习即思维, 交流]
+
+  - id: 赫拉克利特
+    define: 古希腊时期以朴素形式提出并说明对立统一的辩证法思想
+    relations:
+      related_to:
+        - concept://对立统一
+        - concept://辩证思维
+        - entity://辩证法
+        - entity://黑格尔
+    tags: [古希腊, 朴素辩证法]
+
+  - id: 辩证法
+    define: 在西方哲学体系中占重要地位的、关于对立统一的思维学说
+    relations:
+      related_to:
+        - concept://辩证思维
+        - concept://对立统一
+        - concept://辩证逻辑
+        - entity://黑格尔
+        - entity://《小逻辑》
+    tags: [西方哲学, 对立统一]
+
+  - id: 面向对象
+    define: 以类、继承、接口先抽象描述现实世界再解决问题的编程思想
+    relations:
+      related_to:
+        - concept://抽象规定
+        - concept://思维具体化
+        - concept://抽象
+        - concept://概念抽象
+        - concept://辩证思维
+    tags: [Class类, 属性方法]

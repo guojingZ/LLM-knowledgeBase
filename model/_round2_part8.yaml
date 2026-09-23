@@ -1,0 +1,1257 @@
+# 第二轮填充 · 批次 8
+# 原文依据：raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md、
+#           raw/碎片化时代从体系思维到系统化知识体系构建之路.md、
+#           raw/突破认知障碍构建认知提升闭环系统.md、
+#           raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md、
+#           raw/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md、
+#           raw/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md、
+#           raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md、
+#           raw/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md、
+#           raw/重申观点学习过程的价值远远超过学到的知识本身.md、
+#           raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+
+concepts:
+  - id: 不求甚解
+    define: 先一览事物整体全貌，静态只问外部能力，动态只问能否从A到Z
+    ipo:
+      input:
+        - 一个全新的知识领域或陌生事物
+      process:
+        steps:
+          - 不急于打开黑盒，先一览事物的整体全貌
+          - 静态层面不管内部结构，只搞清事物提供哪些外部能力
+          - 动态层面只关注能否由A到达Z，先不关心具体路线
+      output:
+        - 事物整体全貌的初步认知
+        - 事物的外部能力与输入输出边界
+    relations:
+      depends_on:
+        - concept://黑盒思维
+      produces:
+        - concept://找寻主干
+      related_to:
+        - concept://基础认知
+        - concept://大架构观
+        - entity://三层六阶段学习法
+    tags: [黑盒思维, 整体全貌, 学习入门, 三层六阶段]
+
+  - id: 业务驱动技术
+    define: 技术为解决业务问题和业务目标服务，避免技术狂热与过度设计
+    ipo:
+      input:
+        - 业务场景与业务需求目标
+        - 候选技术与开源框架清单
+        - 成本与收益数据
+      process:
+        steps:
+          - 全面理解业务需求，明确要解决的业务问题和业务目标
+          - 判断候选技术能否真正支撑业务目标的实现
+          - 做技术适配与成本收益分析，选当前最合适而非最新最热的技术
+          - 检查是否存在过度设计和技术平台反复推翻重建
+      output:
+        - 业务与技术相互适配的技术方案
+        - 避免高估的技术狂热与过度设计
+    relations:
+      depends_on:
+        - concept://架构思维
+      uses:
+        - concept://模式匹配
+      related_to:
+        - concept://迭代思维
+        - concept://大架构观
+        - entity://RUP
+    tags: [业务驱动, 技术适配, 成本收益, 反技术狂热]
+
+  - id: 临界点突破
+    define: 持续改进逼近极限与临界点，由量变积累触发质变并真正突破
+    ipo:
+      input:
+        - 长期实践练习后积累的知识与实践量
+        - 自我反省与复盘形成的方法论
+        - 高人对突破关键点的指点
+      process:
+        steps:
+          - 分析无法突破的原因，是练习时间不够、基础不牢还是知识没有系统化
+          - 养成总结反省和复盘的习惯，形成自己的方法论和模式
+          - 用更严格专业的眼光要求自己去追求极致，形成持续改进意识
+          - 在持续改进中不断逼近极限和临界点直至突破
+      output:
+        - 由量变触发的质变突破
+        - 突破后贯通的完整领域认知
+    relations:
+      produces:
+        - concept://融会贯通
+      related_to:
+        - concept://质变突破
+        - concept://长期主义
+        - concept://负熵
+        - entity://三层六阶段学习法
+    tags: [量变质变, 持续改进, 复盘习惯, 三层六阶段]
+
+  - id: 主题阅读
+    define: 基于目标或主题对收集资料归类整理并精读，形成个人知识库
+    ipo:
+      input:
+        - 平时收集来的资料与碎片化信息
+        - 明确的学习目标或主题
+      process:
+        steps:
+          - 按目标或主题对收集到的资料进行归类整理
+          - 围绕该主题跨学科搜集素材做主题学习
+          - 对筛选出的有用资料进行精读和学习
+          - 将精读成果挂接进已有知识树的对应枝叶
+      output:
+        - 条理清晰的知识树枝干
+        - 初步形成的个人知识库
+    relations:
+      uses:
+        - concept://目标驱动学习
+      produces:
+        - concept://知识树
+      related_to:
+        - concept://知识四层演进
+        - concept://知识体系构建
+    tags: [主题阅读, 精读, 归类整理]
+
+  - id: 事实
+    define: 事物间发生关联或作用后最终展现出来的形态或行为
+    ipo:
+      input:
+        - 客观存在的若干事物或对象
+      process:
+        steps:
+          - 识别参与该场景的事物或更小颗粒度的对象
+          - 确认事物彼此间发生了何种关联和联系
+          - 记录相互发生作用后最终展现出来的形态或行为
+      output:
+        - 一个当下正在发生的客观事实
+    relations:
+      depends_on:
+        - concept://事物认知
+      produces:
+        - concept://命题
+      related_to:
+        - concept://事态
+        - concept://逻辑图像
+        - entity://《逻辑哲学论》
+    tags: [事实, 关联作用, 客观现实, 逻辑哲学论]
+
+  - id: 事态
+    define: 潜在可能发生但尚未发生的状态，是成为事实之前的一种可能性
+    ipo:
+      input:
+        - 当前正在发生的事实与事物状态
+        - 观察者基于现状做出的推测
+      process:
+        steps:
+          - 基于当前情况推测下一步可能发生何种变化
+          - 确认该变化此刻尚未发生，仅为潜在可能
+          - 随时间推移观察其是否由潜在变为现实
+      output:
+        - 尚未实现的一种可能状态
+    relations:
+      depends_on:
+        - concept://事实
+      related_to:
+        - concept://逻辑空间
+        - entity://《逻辑哲学论》
+    tags: [潜在可能, 可能性, 时间维度, 逻辑哲学论]
+
+  - id: 体系思维
+    define: 由静态结构与动态逻辑构成、靠归纳演绎驱动并持续闭环反馈的思维系统
+    ipo:
+      input:
+        - 待认知的事物或待解决的新问题
+        - 与时间、环境、信息相关的输入要素
+      process:
+        steps:
+          - 用静态结构模型解剖信息的组成并完成分类组织
+          - 用输入到黑盒再到输出的模型打开黑盒看清运行机制
+          - 将静态零件清单与动态运转行为集成为完整系统
+          - 借助归纳与演绎的逻辑引擎驱动知识与经验升级
+          - 通过结构化输出与闭环反馈让系统自我进化
+        tools:
+          - entity://逻辑树
+          - entity://问题分类矩阵
+      output:
+        - 动静结合的完整系统认知
+        - 由模式匹配得到的解决方案
+    decomposition:
+      - step: 静态结构解剖
+        uses: concept://静态结构分析
+        why: 先把纷繁信息分类组织并分解立体结构，得到可管理的组成单元
+      - step: 动态结构理解
+        uses: concept://动态行为分析
+        why: 静态只回答是什么，还要靠过程与状态逻辑理解事物如何运作
+      - step: 系统集成
+        uses: concept://要素关联分析
+        why: 系统思维的核心是研究组成要素之间的相互影响和关联
+      - step: 归纳演绎驱动
+        uses: concept://归纳演绎循环
+        why: 归纳构建模型、演绎验证应用模型，是推动知识提炼升华的核心动力
+      - step: 闭环反馈进化
+        uses: concept://复盘
+        why: 静态体系没有生命力，复盘提炼的新模式回灌知识库才形成持续迭代
+    relations:
+      contains:
+        - concept://静态结构分析
+        - concept://动态行为分析
+        - concept://归纳演绎循环
+      uses:
+        - entity://逻辑树
+        - entity://PDCA
+      related_to:
+        - concept://系统思维
+    tags: [体系思维, 静态结构, 动态逻辑, 闭环反馈]
+
+  - id: 元知识
+    define: 关于知识的知识，描述知识的类型、结构和维度的高层抽象框架
+    ipo:
+      input:
+        - 某一熟悉领域已掌握的知识结构与抽象框架
+        - 一个有待解析的陌生领域
+      process:
+        steps:
+          - 从已知领域中抽象出知识的类型、结构和维度
+          - 保持空杯心态，去掉对已有存量的执着
+          - 识别陌生领域与该框架在底层组织、流程和管理逻辑上的共通模式
+          - 用已有框架去重构和解析陌生领域
+      output:
+        - 可跨领域复用的高层思维框架
+        - 触类旁通的陌生领域理解
+    relations:
+      uses:
+        - concept://抽象
+      produces:
+        - concept://跨领域迁移
+      related_to:
+        - concept://体系思维
+        - concept://模式匹配
+    tags: [元知识, 关于知识的知识, 触类旁通, 空杯心态]
+
+  - id: 命题
+    define: 用语言对事实进行描述形成的语言表达，即事实的语言化结果
+    ipo:
+      input:
+        - 一个已发生的具体事实
+      process:
+        steps:
+          - 观察并确认事实展现出来的形态和行为
+          - 用语言和文字对事实的形态和行为进行描述
+          - 形成一句完整可传达的语句
+      output:
+        - 描述该事实的基本命题
+    relations:
+      depends_on:
+        - concept://事实
+      produces:
+        - concept://复合命题
+      related_to:
+        - concept://逻辑图像
+        - entity://《逻辑哲学论》
+    tags: [命题, 语言表达, 事实描述, 逻辑哲学论]
+
+  - id: 复合命题
+    define: 多个基本命题组合而成，用于更全面描述复杂事实或多个事实的组合
+    ipo:
+      input:
+        - 描述同一复杂事实的多个基本命题
+      process:
+        steps:
+          - 列出描述该复杂事实的各个独立基本命题
+          - 将多个基本命题组合在一起形成复合命题
+          - 检查组合后能否更全面详细地描述该复杂事实
+      output:
+        - 复合命题
+        - 复合命题对应的复合逻辑图像
+    relations:
+      depends_on:
+        - concept://命题
+      produces:
+        - concept://逻辑图像
+      related_to:
+        - concept://逻辑空间
+        - entity://《逻辑哲学论》
+    tags: [复合命题, 命题组合, 复杂事实, 逻辑哲学论]
+
+  - id: 大架构观
+    define: 既深入细节又跳出盒子，既能分解又能集成回去的产品理解思维观
+    ipo:
+      input:
+        - 待理解的产品与业务需求
+        - 产品内部组件与外围系统信息
+      process:
+        steps:
+          - 深入产品内部细节，理解组件间如何高效协同
+          - 跳出盒子站在用户视角看待整个事物的运行
+          - 既追根究底又不求甚解，同时做静态分解与动态集成
+          - 回到业务需求本身校验理解偏差并给出当下最合理的架构模型
+      output:
+        - 对产品组成与整体运行的完整理解
+        - 当下最合理且能落地的架构模型
+    relations:
+      contains:
+        - concept://跳出盒子
+        - concept://抽象
+        - concept://集成
+      related_to:
+        - concept://架构思维
+        - concept://业务驱动技术
+        - concept://迭代思维
+    tags: [大架构观, 全局视角, 分解集成, 用户视角]
+
+  - id: 学习曲线
+    define: 一定时间内获得技能或知识的速率，初期加速明显、越到后期进步越难
+    ipo:
+      input:
+        - 单位时间的学习投入
+        - 该时间段内技能与知识的增长量
+      process:
+        steps:
+          - 记录一段时间内投入的学习和实践时间
+          - 度量该时间段内获得的知识深度增量
+          - 计算单位时间获得速率并绘制练习曲线
+          - 观察后期为支撑深度提升所需的广度是否指数级增长
+      output:
+        - 技能与知识的获得速率曲线
+        - 关于边际收益递减的判断
+    relations:
+      related_to:
+        - concept://知识深度
+        - concept://知识广度
+        - concept://经验存量
+        - concept://差异化竞争
+        - entity://成长第一定律
+    tags: [学习曲线, 练习曲线, 边际收益, 深度广度]
+
+  - id: 实证
+    define: 凡所有事须经亲自实践或验证，才能确定是否满足自我与他人的期望
+    ipo:
+      input:
+        - 待验证的方法、理论或构想
+        - 自我期望与他人期望
+      process:
+        steps:
+          - 亲自上手参与实践而非仅做理论推演
+          - 在验证环境中观察实际结果与预期是否吻合
+          - 同时对照他人期望做校验
+          - 确定其是否满足期望并将结论沉淀为经验
+      output:
+        - 经自身实践验证后的结论
+        - 可确信的经验判断
+    relations:
+      uses:
+        - concept://最小目标验证
+      related_to:
+        - concept://证悟
+        - concept://修悟结合
+        - concept://实践驱动学习
+    tags: [亲自验证, 实践出真知, 期望确认]
+
+  - id: 实践驱动学习
+    define: 工作后的学习先实践，再进行反馈和理论系统化，而非先理论后实践
+    ipo:
+      input:
+        - 工作中的真实任务或待解决问题
+        - 初步粗浅的理论了解
+      process:
+        steps:
+          - 先动手实践而不是先把理论系统学一遍
+          - 完成实践后观察效果并收集反馈
+          - 反馈追问各层各组件间究竟如何协同，补齐原理
+          - 把实践收获系统化上升为个人理论体系与方法论
+      output:
+        - 融入个人实践经验的知识体系
+        - 由实践反推出来的方法论与模式
+    relations:
+      depends_on:
+        - concept://目标驱动学习
+      uses:
+        - concept://实证
+        - concept://修悟结合
+        - entity://PDCA
+      related_to:
+        - concept://知识转技能
+        - entity://三层六阶段学习法
+    tags: [实践先行, 反馈纠偏, 理论系统化, PDCA]
+
+  - id: 差异化竞争
+    define: 不与年轻人比时间投入与加班，而以经验存量和生产率形成优势
+    ipo:
+      input:
+        - 自身已积累的经验存量
+        - 年龄与精力下降的现实约束
+        - 可选的工具与工作方法
+      process:
+        steps:
+          - 认清不能用相同方法和工具与年轻人竞争的现实约束
+          - 升维思考换用更高效率的工具和方法，以生产率换时间
+          - 依靠大存量提升起步基础量与产出质量
+          - 在不增加时间投入的前提下形成差异化的产出优势
+      output:
+        - 以生产率取胜的差异化竞争力
+    relations:
+      depends_on:
+        - concept://经验存量
+        - concept://升维思考
+      uses:
+        - entity://成长第二定律
+      related_to:
+        - concept://学习曲线
+        - entity://成长第一定律
+    tags: [差异化, 生产率换时间, 中年破局]
+
+  - id: 思维构成公式
+    define: 思维等于思考加维度，即动态的思维加工过程加静态的维度存储结构
+    decomposition:
+      - step: 动态思考（CPU）
+        uses: concept://加工
+        why: 思考是动态的加工过程，遵循输入→加工→输出的信息处理流程
+      - step: 静态维度（HDD）
+        uses: concept://静态结构分析
+        why: 维度是静态的存储结构，决定信息以何种结构与分类被组织存放
+    relations:
+      contains:
+        - concept://加工
+        - concept://静态结构分析
+      produces:
+        - concept://结构化思维
+      related_to:
+        - concept://体系思维
+        - concept://动态行为分析
+    tags: [思维公式, 思考过程, 维度结构]
+
+  - id: 找寻主干
+    define: 对事物做静态拆解与动态拆解，从基础概念明白推进到基本原理明白
+    ipo:
+      input:
+        - 已形成黑盒整体认知的事物
+        - 事物的静态组成与动态协同信息
+      process:
+        steps:
+          - 对事物做静态拆解，先拆分为几个大块
+          - 对事物做动态拆解，弄清几个大块之间如何协同
+          - 提炼出自我可理解的最简概念模型
+          - 校验是否由基础概念上明白推进到基本原理上明白
+      output:
+        - 事物的主干结构与核心框架
+        - 自我可理解的最简概念模型
+    relations:
+      depends_on:
+        - concept://不求甚解
+      contains:
+        - concept://静态结构分析
+        - concept://动态行为分析
+      uses:
+        - concept://概念模型搭建
+      produces:
+        - concept://知识树
+    tags: [主干, 动静拆解, 概念模型, 三层六阶段]
+
+  - id: 抽象
+    define: 从非类似场景中总结共性内容并归纳为规则方法，以适应各类变更
+    ipo:
+      input:
+        - 大量已实现过的场景案例
+        - 其中相似与不相似的各类场景
+      process:
+        steps:
+          - 类似场景反复实现后归纳出规则或方法供后续设计使用
+          - 进一步考察非类似场景中的共性内容
+          - 把非类似场景的共性也总结抽象为更高层的规则和方法
+          - 用抽象结果去应对后续的变更和各种变化
+      output:
+        - 可适应各类变更的抽象规则与方法
+    relations:
+      depends_on:
+        - concept://归纳
+      produces:
+        - concept://模式提炼
+        - concept://共性模板化
+      related_to:
+        - concept://架构思维
+        - concept://大架构观
+        - concept://本源抽象
+    tags: [抽象, 归纳共性, 架构思维, 应对变更]
+
+  - id: 方案整合
+    define: 将各子问题匹配到的解决方案聚合起来，形成解决复杂问题的完整方案
+    ipo:
+      input:
+        - 各个子问题匹配到的解决方案
+        - 分解后的问题树与优先级排序
+      process:
+        steps:
+          - 汇总各子问题各自匹配到的解决方案
+          - 检查各方案间的边界、依赖与冲突
+          - 按目标贡献度做整合排序，确定哪些内容优先呈现
+          - 把各子问题方案聚合为能协同达成大目标的完整方案
+      output:
+        - 解决复杂问题的完整方案
+    relations:
+      depends_on:
+        - concept://模式匹配
+        - concept://优先级排序
+      uses:
+        - concept://集成
+      related_to:
+        - concept://根因分析
+    tags: [方案整合, 聚合, 复杂问题]
+
+  - id: 方案误作问题
+    define: 不要把解决方案错当成问题本身，否则会误导问题解决的方向
+    ipo:
+      input:
+        - 一段待定义的问题描述
+      process:
+        steps:
+          - 检查该描述是否已把某种具体解决手段写成了问题
+          - 剥离手段回到事物现状与期望结果的差距本身
+          - 把问题重述为不预设方案的形式，如提升耕田效率而非寻找更快的动物
+      output:
+        - 未被方案预设误导方向的问题定义
+    relations:
+      depends_on:
+        - concept://问题定义
+      uses:
+        - concept://跳出盒子
+      related_to:
+        - concept://目标反溯
+        - concept://问题抽象
+    tags: [问题定义, 认知误区, 去预设]
+
+  - id: 根因两类
+    define: 问题根因只有两类：输入的某个条件错误，或加工处理的某个步骤错误
+    ipo:
+      input:
+        - 已发生的异常或错误现象
+        - 问题的输入条件清单与加工步骤清单
+      process:
+        steps:
+          - 逐一核对输入端的各个条件是否发生错误
+          - 再逐一核对加工处理的各个步骤是否出错
+          - 定位到出错的那个条件或那个具体步骤
+      output:
+        - 二选一的问题根因归类
+    relations:
+      produces:
+        - concept://假设验证
+      related_to:
+        - concept://根因分析
+        - concept://优先级排序
+        - concept://非结构化分析
+    tags: [根因二分, 输入条件, 加工步骤]
+
+  - id: 模式匹配
+    define: 将问题分解到细粒度后，在经验模式库中寻找匹配点并组合为候选方案
+    ipo:
+      input:
+        - 已定义并分解到细粒度的新问题
+        - 经分解、降噪、排序后提取出的核心特征
+        - 个人长期实践沉淀的经验模式库
+      process:
+        steps:
+          - 对收集到的时间、环境、信息等要素做分解、降噪和排序
+          - 从处理后的信息中提取出最核心的关键特征
+          - 将关键特征与模式库中存储的模型进行比对和匹配
+          - 找到高度匹配的模式后调用其对应的解决方案
+        tools:
+          - entity://问题分类矩阵
+      output:
+        - 可复用的候选解决方案
+        - 业务域问题到技术实现的匹配结果
+    relations:
+      depends_on:
+        - concept://问题分解
+        - concept://经验模式库
+      produces:
+        - concept://方案整合
+      uses:
+        - entity://问题分类矩阵
+      related_to:
+        - concept://抽象
+        - concept://模式提炼
+    tags: [模式匹配, 特征识别, 经验模式库, 专家思维]
+
+  - id: 模式提炼
+    define: 经体系化研究与深度复盘，从经验中提炼特定场景下经过验证的最佳解法
+    ipo:
+      input:
+        - 长期实践中累积的数据和资料
+        - 个人实践后的经验记录与复盘材料
+      process:
+        steps:
+          - 先积累原始数据和资料并将其转化为知识和技能
+          - 通过大量实践把知识转化为自己的经验
+          - 对某一事物群或问题群做体系化研究
+          - 经深度复盘提炼出可跨情境复用的方法论和模式
+      output:
+        - 特定场景下的最佳解决方案集合
+        - 可随时调用的个人模式库
+    relations:
+      depends_on:
+        - concept://深度复盘
+        - concept://经验模式库
+      produces:
+        - concept://模式匹配
+      related_to:
+        - concept://知识四层演进
+        - concept://抽象
+        - entity://PDCA
+    tags: [模式提炼, 最佳实践, 体系化研究]
+
+  - id: 状态逻辑
+    define: 描述事物在特定条件下产生循环、跳转或状态变化的黑盒内部逻辑
+    ipo:
+      input:
+        - 事物当前所处状态
+        - 可施加到事物上的外部输入条件
+      process:
+        steps:
+          - 列出事物可能出现的全部状态
+          - 明确触发各状态变化的外部输入条件
+          - 标注条件与状态之间的循环和跳转关系
+          - 按条件逐条跟踪状态变化路径
+      output:
+        - 状态迁移规则与状态流转图
+    relations:
+      contains:
+        - concept://运行机制分析
+      related_to:
+        - concept://过程逻辑
+        - concept://动态行为分析
+        - concept://黑盒思维
+    tags: [状态迁移, 循环跳转, 动态结构]
+
+  - id: 目标定位
+    define: 明确长期与短期目标，识别现状与要求的差距并用数据量化当前位置
+    ipo:
+      input:
+        - 个人职业发展方向
+        - 当前岗位的能力要求
+        - 自身当前的能力现状
+      process:
+        steps:
+          - 明确长期目标，找准个人职业发展方向
+          - 识别短期目标，看清当前岗位要求
+          - 对比自身能力看清差距
+          - 用数据记录和量化差距，明确当下所处位置
+      output:
+        - 明确的长短期目标
+        - 用数据量化的能力差距
+    relations:
+      contains:
+        - concept://岗位能力差距分析
+        - concept://量化自我评估
+      produces:
+        - concept://学习路径
+      related_to:
+        - concept://目标驱动知识管理
+        - entity://PDCA
+    tags: [目标, 差距量化, 职业发展]
+
+  - id: 知识体系三维度
+    define: 由知识组成维度、知识应用维度、参考模块维度共同构成的三维知识结构
+    decomposition:
+      - step: 知识组成维度
+        uses: concept://静态结构分析
+        why: 用静态方法对知识组成做逐层分解，产出偏知识模型的组成结构
+      - step: 知识应用维度
+        uses: concept://动态行为分析
+        why: 用动态方法说清知识的动态应用过程，产出偏方法论的应用过程
+    relations:
+      contains:
+        - concept://静态结构分析
+        - concept://动态行为分析
+      uses:
+        - entity://PMBOK
+        - entity://SOA治理框架
+      related_to:
+        - concept://知识体系构建
+        - concept://双维度知识矩阵
+    tags: [知识体系, 三维结构, 动静结合, 参考框架]
+
+  - id: 知识四层演进
+    define: 资料库、知识库、经验库、模式库四个层级的持续演进与抽象浓缩
+    ipo:
+      input:
+        - 泛读收集来的碎片化资料
+        - 个人实践经历与复盘记录
+      process:
+        steps:
+          - 做资料收集下载与碎片化泛读形成资料库
+          - 按目标驱动或主题阅读做归类整理和精读形成知识库
+          - 通过大量实践后的总结复盘形成经验库
+          - 长期实践后做体系化总结抽象出某专业领域的模式库
+      output:
+        - 逐层浓缩后的个人模式库
+        - 沉淀的经验教训与心得体会
+    relations:
+      contains:
+        - concept://主题阅读
+        - concept://实证
+        - concept://深度复盘
+        - concept://模式提炼
+      produces:
+        - concept://经验模式库
+      related_to:
+        - concept://知识体系构建
+    tags: [资料库, 知识库, 经验库, 模式库]
+
+  - id: 知识显隐转化
+    define: 显性知识经实践内化为隐性知识，隐性经验再经复盘总结显性化的循环
+    ipo:
+      input:
+        - 阅读学习获得的显性理论知识
+        - 亲身实践获得的隐性经验
+      process:
+        steps:
+          - 通过阅读和学习掌握显性理论知识
+          - 亲身实践把理论内化为肌肉记忆和直觉
+          - 深度复盘把隐性经验提炼为清晰的方法论实现再显性化
+          - 把方法论回灌个人知识库，开启下一轮循环
+      output:
+        - 可被理解、传授、复用的方法论
+        - 个人经验模式库
+    relations:
+      uses:
+        - concept://实践反刍
+        - concept://深度复盘
+      references:
+        - entity://《庖丁解牛》
+        - entity://PDCA
+      related_to:
+        - concept://知识内化
+        - concept://证悟
+    tags: [显性知识, 隐性知识, 复盘显性化]
+
+  - id: 知识树
+    define: 呈现领域完整知识结构及知识点间关联依赖关系的树状结构
+    ipo:
+      input:
+        - 已建立的主干知识结构
+        - 最终学习目标
+        - 泛读与资料搜集得到的知识点
+      process:
+        steps:
+          - 明确自己最终的学习目标是什么
+          - 把第一步形成的主干知识结构做知识点分解和梳理
+          - 标注各知识点间的关联和前后依赖关系
+          - 用思维导图逐层展开成为羽翼丰满的知识树
+        tools:
+          - entity://思维导图
+      output:
+        - 覆盖领域全貌的知识树
+        - 带依赖关系的知识点清单
+    relations:
+      depends_on:
+        - concept://找寻主干
+      uses:
+        - entity://思维导图
+        - concept://依赖关系排序
+      related_to:
+        - concept://知识关联
+        - concept://知识体系三维度
+    tags: [知识树, 依赖关系, 思维导图]
+
+  - id: 知识流动
+    define: 知识在归类整理、交流互换、实践复盘等流动过程中不断创造增量
+    ipo:
+      input:
+        - 已收集的资料与已有知识
+        - 可交流互换的他人
+        - 可供应用知识的实践场景
+      process:
+        steps:
+          - 对收集到的资料归类整理并打标签
+          - 对读完的书整理出读书笔记
+          - 与他人沟通互换思想
+          - 应用知识解决问题后进行复盘和总结
+      output:
+        - 在流动过程中不断创造的知识增量
+        - 串接后的知识体系
+    relations:
+      depends_on:
+        - concept://知识关联
+      uses:
+        - concept://输出倒逼输入
+      related_to:
+        - concept://知识显隐转化
+        - concept://复盘
+    tags: [知识流动, 增量创造, 交流互换]
+
+  - id: 碎片化时间利用
+    define: 碎片化时间只适合泛读和碎片信息获取，不适合需要大块时间的记忆理解类学习
+    ipo:
+      input:
+        - 个人的时间与工作计划
+        - 日程中出现的碎片时间段落
+      process:
+        steps:
+          - 在计划安排上减少不确定性，从源头压缩碎片时间
+          - 减少被动打扰并变被动响应为主动约定，保住整块时间
+          - 把剩余的碎片时间用于泛读和碎片信息获取
+          - 把需要大量记忆、理解、归纳整理的学习放回整块时间
+      output:
+        - 与碎片时间特性相匹配的学习安排
+        - 被保住的大块时间
+    relations:
+      depends_on:
+        - concept://时间颗粒度
+      uses:
+        - concept://主动信息过滤
+      related_to:
+        - concept://知识四层演进
+        - concept://知识体系构建
+    tags: [碎片时间, 泛读, 减少干扰]
+
+  - id: 经验存量
+    define: 能够创造价值的经验库积累，不等同于工作时长，是后续价值创造的地基
+    ipo:
+      input:
+        - 日常工作的一线实践经历
+        - 实践后的总结与复盘产出
+      process:
+        steps:
+          - 工作前十年大量参与一线实践积攒原始素材
+          - 实践后做总结和复盘把实践转为自己的经验和方法论
+          - 把零散经验汇聚为能够创造价值的经验库而非计时时长
+          - 用持续的效率增量去盘活这笔存量
+      output:
+        - 可持续创造价值的经验存量
+        - 被盘活的地基性沉淀
+    relations:
+      depends_on:
+        - concept://复盘
+        - concept://知识转技能
+      uses:
+        - entity://成长第一定律
+      related_to:
+        - concept://差异化竞争
+        - entity://成长第二定律
+    tags: [经验存量, 价值积累, 地基, 动量]
+
+  - id: 缘起性空
+    define: 事物由多因素在某种因缘下相互作用形成，没有独立自存的本质
+    ipo:
+      input:
+        - 呈现在眼前的事物表象
+      process:
+        steps:
+          - 追问该事物由哪些因素在何种因缘下相互作用而成
+          - 继续下探到事物内部更小颗粒度的运动与作用
+          - 确认不存在可脱离他物独立自存的本质
+          - 把所见形态判定为特定因缘下的暂时表象
+      output:
+        - 对事物无独立自存本质的认识
+        - 剥离表象后的理解
+    relations:
+      references:
+        - entity://佛学
+      related_to:
+        - concept://事实
+        - concept://从表象到本质
+        - concept://脉络追溯
+    tags: [因缘和合, 无自性, 表象]
+
+  - id: 脉络追溯
+    define: 沿逻辑空间→复合命题→基础命题→事实→事物逐层向下追溯的分析路径
+    ipo:
+      input:
+        - 一个待分析的现象或命题世界
+      process:
+        steps:
+          - 从逻辑空间即世界中定位所处整体
+          - 向下拆解为复合命题
+          - 将复合命题继续拆为基础命题
+          - 由基础命题回溯到其描述的事实
+          - 由事实进一步追溯到构成事实的事物本身
+      output:
+        - 从事物到逻辑空间的完整追溯路径
+    relations:
+      contains:
+        - concept://复合命题
+        - concept://命题
+        - concept://事实
+      references:
+        - entity://《逻辑哲学论》
+      related_to:
+        - concept://缘起性空
+    tags: [追溯脉络, 命题链条, 逻辑哲学论]
+
+  - id: 融会贯通
+    define: 量积累后被特殊事件触发，所有知识点串联起来并能跳出盒子看整体
+    ipo:
+      input:
+        - 长期实践与练习积累的知识量
+        - 自我复盘形成的方法论与模式
+        - 高人的指点或某个特殊触发事件
+      process:
+        steps:
+          - 持续积累实践量并保持自我反省和复盘的习惯
+          - 在量积累到一定阶段后等待或借助某个特殊事件的触发
+          - 由触发点把所有知识点全部串联起来
+          - 跳出盒子看待整个完整事物
+      output:
+        - 融会贯通的领域认知
+        - 可独立分析和解决新问题的能力
+    relations:
+      depends_on:
+        - concept://临界点突破
+      uses:
+        - concept://知识串联
+        - concept://跳出盒子
+      produces:
+        - concept://模式匹配
+    tags: [融会贯通, 串联打通, 量变质变]
+
+  - id: 负熵
+    define: 抵抗熵增，主动脱离舒适区去做让自己不舒适不自在的事情并长期坚持
+    ipo:
+      input:
+        - 当前让人舒适的习惯与行为
+        - 有待提升的目标领域
+      process:
+        steps:
+          - 识别自己正在顺应熵增走向混乱和无序的那些舒适行为
+          - 主动脱离舒适区
+          - 找一些让自己不舒适不自在的事情去做
+          - 长期坚持下去不轻易放弃
+      output:
+        - 持续的学习与成长
+        - 被逆转的熵增趋势
+    relations:
+      references:
+        - entity://信息熵
+      related_to:
+        - concept://长期主义
+        - concept://临界点突破
+        - concept://经验存量
+    tags: [熵增, 脱离舒适区, 长期坚持]
+
+  - id: 跳出盒子
+    define: 识别并突破既有框架约束，回到真正问题本身的思考方式
+    ipo:
+      input:
+        - 正在被使用的既有思维框架或工具方法
+        - 一个待解决的真实问题
+      process:
+        steps:
+          - 察觉到自己正处在某个既有框架的约束下解决问题
+          - 指出这种约束的存在，因为身处其中很难自我发现
+          - 跳出盒子回到产品或用户视角重新观察整体运行
+          - 确认自己面对的真正问题是什么再着手解决
+      output:
+        - 去除框架约束后对真正问题的界定
+    relations:
+      references:
+        - entity://《暗时间》
+      related_to:
+        - concept://大架构观
+        - concept://方案误作问题
+        - concept://元认知
+    tags: [跳出盒子, 打破约束, 真正问题]
+
+  - id: 过程逻辑
+    define: 描述事物从一个阶段到下一阶段线性步骤的黑盒内部逻辑
+    ipo:
+      input:
+        - 事物从起始到结束的活动信息
+      process:
+        steps:
+          - 确定事物发展的起点与终点
+          - 打开黑盒划分事物发展的不同阶段
+          - 按线性顺序串联起各阶段的先后顺序
+          - 把每个阶段当成子系统继续逐层分解其内部活动
+      output:
+        - 揭示发展顺序的阶段流程图
+    relations:
+      contains:
+        - concept://流程分析
+      related_to:
+        - concept://状态逻辑
+        - concept://动态行为分析
+        - concept://黑盒思维
+    tags: [阶段顺序, 线性步骤, 黑盒打开]
+
+  - id: 迭代思维
+    define: 没有最优架构，只有随业务需求变化不断进化、当下最适合的架构
+    ipo:
+      input:
+        - 当前正在运行的架构
+        - 发生变化的业务需求
+      process:
+        steps:
+          - 承认不存在一步到位的最优架构
+          - 跟踪业务需求的变化
+          - 随需求变化对架构做持续的迭代和演化
+          - 每轮迭代后校验它是否仍是当下最适合的架构
+      output:
+        - 随业务不断进化的架构
+    relations:
+      depends_on:
+        - concept://业务驱动技术
+      related_to:
+        - concept://大架构观
+        - concept://POC验证
+    tags: [迭代演化, 最合适而非最优, 架构]
+
+  - id: 逻辑图像
+    define: 对事实的描述形成的图像，是事实形态与行为在逻辑上的呈现
+    ipo:
+      input:
+        - 一个已发生的事实
+        - 对该事实的语言描述
+      process:
+        steps:
+          - 用语言描述事实，形成基本命题
+          - 依据命题在脑海中浮现出对应画面
+          - 把事实的形态和行为以图像方式固化呈现
+          - 将该逻辑图像存入庞大的逻辑空间
+      output:
+        - 反映事实形态与行为的逻辑图像
+    relations:
+      depends_on:
+        - concept://命题
+      related_to:
+        - concept://事实
+        - concept://逻辑空间
+        - entity://《逻辑哲学论》
+    tags: [逻辑图像, 事实描述, 图像化]
+
+  - id: 逻辑空间
+    define: 由无数逻辑图像组成的巨大集合，世界是它在当下的一个子集
+    ipo:
+      input:
+        - 由基本命题与复合命题形成的各类逻辑图像
+      process:
+        steps:
+          - 汇集描述各类事实和事态的逻辑图像
+          - 把它们统一存放到一个庞大的集合中
+          - 加入时间维度以区分当下、历史与未来的图像
+          - 取当下图像的总和作为我们看到的世界
+      output:
+        - 由无数逻辑图像构成的逻辑空间
+        - 作为其子集的世界
+    relations:
+      contains:
+        - concept://逻辑图像
+      related_to:
+        - concept://复合命题
+        - concept://事态
+        - entity://《逻辑哲学论》
+    tags: [逻辑空间, 图像集合, 时间维度]
+
+  - id: 黑盒思维
+    define: 不急于打开黑盒探究内部原理，先从外部对事物做整体认知
+    ipo:
+      input:
+        - 一个全新的知识领域或待认知事物
+      process:
+        steps:
+          - 不急着打开黑盒，先把对象当作概念模型或黑盒看待
+          - 搞清它的边界、输入和输出而非内部全部运行机制
+          - 寻找并掌握业界公认的标准参考架构充当骨架
+          - 确认主干之后再逐步深入到内部细节
+        tools:
+          - entity://SCOR
+          - entity://PMBOK
+          - entity://CMMI
+      output:
+        - 事物整体全貌与外部能力认知
+        - 可参考的领域主干骨架
+    relations:
+      produces:
+        - concept://找寻主干
+      uses:
+        - entity://PMBOK
+        - entity://CMMI
+        - entity://SCOR
+      related_to:
+        - concept://不求甚解
+        - concept://概念模型搭建
+    tags: [黑盒思维, 整体全貌, 参考架构]
+
+entities:
+  - id: Hadoop
+    define: 大数据技术平台，文中作为仅凭技术跳槽而脱离业务终被劝退的案例
+    relations:
+      related_to:
+        - concept://业务驱动技术
+        - entity://Java
+    tags: [大数据平台, 技术狂热案例, 跳槽教训]
+
+  - id: Obsidian
+    define: 用于建立外脑、将隐性思考外化为显性知识的笔记工具
+    relations:
+      related_to:
+        - concept://知识显性化
+        - concept://外思考
+        - entity://Notion
+        - entity://NotebookLM
+    tags: [笔记工具, 外脑, 思考显性化]
+
+  - id: PMBOK
+    define: 项目管理领域的标准模型，被借作知识树主干结构参考
+    relations:
+      is_a:
+        - entity://CMMI
+      related_to:
+        - concept://黑盒思维
+        - concept://知识体系三维度
+        - concept://知识树
+    tags: [项目管理, 标准参考模型, 知识主干]
+
+  - id: RUP
+    define: 提倡用例驱动、架构为核心，先用例分析再找核心对象与接口
+    relations:
+      references:
+        - concept://动态行为分析
+        - concept://架构思维
+      related_to:
+        - concept://抽象
+        - entity://SOA
+    tags: [用例驱动, 架构核心, 软件工程]
+
+  - id: SOA治理框架
+    define: 以服务全生命周期与管理过程两个维度构建的知识体系参考框架
+    relations:
+      references:
+        - entity://SOA
+      related_to:
+        - concept://知识体系三维度
+        - concept://矩阵分析
+        - entity://CMMI
+    tags: [双维度框架, 服务治理, 参考框架]
+
+  - id: 《庖丁解牛》
+    define: 以从见全牛到未见全牛比喻显性知识内化为隐性知识的过程
+    relations:
+      references:
+        - concept://知识显隐转化
+        - concept://知识内化
+      related_to:
+        - concept://证悟
+    tags: [寓言典故, 显性到隐性, 熟练自如]
+
+  - id: 《架构之美》
+    define: 指出架构是洞见内在结构、规律、原则和逻辑的过程而非结果
+    relations:
+      references:
+        - concept://架构思维
+        - concept://抽象
+      related_to:
+        - concept://大架构观
+    tags: [架构专著, 过程是本质, 目标图像]
+
+  - id: 《逻辑哲学论》
+    define: 维特根斯坦著作，阐述事实、事态、命题、逻辑图像与逻辑空间
+    relations:
+      references:
+        - entity://维特根斯坦
+      related_to:
+        - concept://事实
+        - concept://事态
+        - concept://命题
+        - concept://逻辑图像
+        - concept://逻辑空间
+    tags: [维特根斯坦, 逻辑哲学, 事实命题]
+
+  - id: 佛学
+    define: 提出"诸法皆因缘起，缘起性空"，用以解释事物无独立自存本质
+    relations:
+      references:
+        - concept://缘起性空
+      related_to:
+        - concept://事实
+        - concept://从表象到本质
+    tags: [佛学, 因缘和合, 性空]
+
+  - id: 决策树
+    define: 用于问题分析思考并输出树状结构的分析工具
+    relations:
+      is_a:
+        - entity://树模型
+      references:
+        - concept://结构化思维
+        - concept://结构化决策
+      related_to:
+        - concept://问题分解
+    tags: [树状输出, 问题分析, 结构化]
+
+  - id: 成长第一定律
+    define: 自我价值由经验存量与效率增量构成的动量决定，存量越大越易产出
+    relations:
+      references:
+        - entity://成长第二定律
+      contains:
+        - concept://经验存量
+      related_to:
+        - concept://学习曲线
+        - concept://差异化竞争
+    tags: [动量, 经验存量, 效率增量]
+
+  - id: 成长第二定律
+    define: 效率增量可分解为生产率与时间，以生产率换时间应对精力下降
+    relations:
+      is_a:
+        - entity://成长第一定律
+      references:
+        - concept://差异化竞争
+        - concept://升维思考
+      related_to:
+        - concept://经验存量
+    tags: [生产率, 换时间, 产出质量]
+
+  - id: 王徽之
+    define: 雪夜乘兴访戴安道而不入门，用以说明过程的体悟胜于结果
+    relations:
+      references:
+        - concept://证悟
+      related_to:
+        - concept://长期主义
+    tags: [历史典故, 过程体悟, 兴尽而返]
+
+  - id: 知识图谱
+    define: 结构与流程相互关联作用形成的网络，是知识关联后的价值放大形态
+    relations:
+      depends_on:
+        - concept://知识关联
+      contains:
+        - concept://静态结构分析
+        - concept://动态行为分析
+      related_to:
+        - concept://知识网络构建
+        - concept://知识体系构建
+    tags: [知识网络, 结构流程交织, 复合价值]
+
+  - id: 胡萝卜加大棒
+    define: 管理学上用奖励与强制驱动行为的方式，会削弱学习成长的自主性
+    relations:
+      related_to:
+        - concept://长期主义
+        - concept://负熵
+    tags: [外在激励, 自主自发, 管理学]
+
+  - id: 逻辑树
+    define: 用于可视化拆解复杂问题、做逻辑分解的树状结构模型
+    relations:
+      is_a:
+        - entity://树模型
+      references:
+        - concept://分解
+        - concept://可视化迭代学习
+      related_to:
+        - concept://问题分解
+    tags: [可视化拆解, 树模型, 深度思考]
+
+  - id: 问题分类矩阵
+    define: 以输入定义/输出评价与事物描述/问题解决两维划分的四象限问题矩阵
+    relations:
+      references:
+        - concept://问题分类
+        - concept://事物认知
+      related_to:
+        - concept://模式匹配
+        - concept://结构化决策
+    tags: [四象限, 问题预判, 矩阵划分]

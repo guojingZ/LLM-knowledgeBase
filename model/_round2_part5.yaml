@@ -1,0 +1,866 @@
+# 第二轮填充 · 批次 5
+# 原文依据：raw/对思维框架和内在逻辑的完整梳理和认识.md、
+#           raw/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md、
+#           raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md、
+#           raw/思维框架和知识体系构建知识组件并实现知识快速组装.md、
+#           raw/思维究竟是什么思维的逻辑和模式匹配.md
+
+concepts:
+  - id: 信息场景依赖
+    define: 信息输入不能脱离场景，脱离场景的信息只是没有价值的数据
+    ipo:
+      input:
+        - 听到的、看到的各种原始输入信号
+        - 信息所处的时间环境与上下文
+      process:
+        steps:
+          - 确认信息是在什么具体场景下产生的，如系统宕机发生在哪个业务环节
+          - 用5W1H对信息做完整定义，而不是只看孤立数值
+          - 判断脱离该场景后信息是否还具备决策价值
+          - 把带场景归属的信息再交给后续的降噪与加工
+      output:
+        - 有明确场景归属的可分析问题定义
+    relations:
+      uses:
+        - entity://5W1H
+      related_to:
+        - concept://信息降噪
+        - concept://加工
+        - concept://问题定义
+    tags: [场景依赖, 信息输入, 5W1H, 数据到信息]
+
+  - id: 信息降噪
+    define: 对输入信息做正确性和完整性校验，去除噪声后再进入处理
+    ipo:
+      input:
+        - 混杂着错误与无关内容的原始数据
+      process:
+        steps:
+          - 承认信息输入本身可能错误，错误输入必然导致错误结论
+          - 用5W1H拷问数据的来源、相关性与时间节点
+          - 对输入做正确性校验，剔除失真数据
+          - 对输入做完整性校验，补齐缺失的关键事实
+        tools:
+          - entity://5W1H
+      output:
+        - 清晰可靠的事实集合
+        - 可直接进入加工环节的干净输入
+    relations:
+      depends_on:
+        - concept://信息场景依赖
+      uses:
+        - entity://5W1H
+      related_to:
+        - concept://加工
+        - concept://模式匹配
+    tags: [降噪, 5W1H, 事实校验, 完整性]
+
+  - id: 加工
+    define: 对输入做分解、组合、排序、聚合、抽象、重组，为后续模式匹配做准备
+    ipo:
+      input:
+        - 降噪后得到的清晰事实
+        - 已定义但粒度仍过粗的问题或事物
+      process:
+        steps:
+          - 判断本次加工应沿静态维度还是动态维度展开
+          - 静态维度做分类、分组、维度属性、矩阵、树和层级、关联关系的处理
+          - 动态维度按阶段、流程、活动、事件、消息拆解时间序
+          - 用分解、组合、排序、聚合、抽象、重组把输入重排为可匹配形态
+          - 检查加工后是否达到能与知识经验对应的细粒度
+        tools:
+          - entity://树模型
+      output:
+        - 细粒度且结构清晰的问题点集合
+        - 可进入模式匹配的加工后数据
+    decomposition:
+      - step: 静态维度加工
+        uses: concept://静态结构分析
+        why: 静态维度覆盖分类分组、维度属性、矩阵、树和层级与关联关系
+      - step: 动态维度加工
+        uses: concept://动态行为分析
+        why: 动态维度覆盖阶段、流程、活动、事件、消息等随时间发展的内容
+      - step: 降低粒度以可匹配
+        uses: concept://分解
+        why: 粒度越粗越难匹配，必须分解到能与已有知识经验对应的粒度
+    relations:
+      uses:
+        - entity://树模型
+      related_to:
+        - concept://信息降噪
+        - concept://模式匹配
+        - concept://静态结构分析
+        - concept://动态行为分析
+    tags: [加工, 动静结合, 细粒度, 降噪后]
+
+  - id: 呈现和泛化
+    define: 问题解决后做结构化呈现，并把解法演绎泛化到同类问题
+    ipo:
+      input:
+        - 已解决问题的完整求解过程
+        - 由本次求解沉淀出的一手经验
+      process:
+        steps:
+          - 确定本次输出的核心结论与要呈现的主题
+          - 用金字塔原理自顶向下组织承上启下的呈现结构
+          - 把本次解法由特殊上升为一般，抽象为可复用的方法论
+          - 用泛化后的方法去解答同类新问题并再次验证
+      output:
+        - 结构完整的呈现文档或方案材料
+        - 可迁移复用的通用方法论
+    relations:
+      uses:
+        - entity://金字塔原理
+      related_to:
+        - concept://结构化呈现
+        - concept://演绎
+        - concept://方法论抽象
+        - concept://经验模式库
+    tags: [呈现, 泛化, 金字塔原理, 方法论沉淀, 证据不足]
+
+  - id: 场景-技术映射
+    define: 判断在具体的问题场景下应该选用什么技术去解决
+    ipo:
+      input:
+        - 现实世界的具体问题场景
+        - 可选的标准技术与底层能力清单
+      process:
+        steps:
+          - 明确当前问题场景的关键特征与约束条件
+          - 判断该场景应映射到哪一类标准技术或AI能力
+          - 用粗粒度的前置后置关系把场景诉求对接到技术接口上
+          - 由已确定的标准技术驱动工具完成具体的实现输出
+        tools:
+          - entity://大模型
+      output:
+        - 场景到具体技术的匹配结论
+        - 由该技术实现交付的可落地结果
+    relations:
+      uses:
+        - entity://大模型
+      related_to:
+        - concept://模式匹配
+        - concept://场景应用模式
+        - concept://知识广度
+        - concept://问题转化
+    tags: [场景驱动, 技术选型, AI映射]
+
+  - id: 场景应用模式
+    define: 在什么场景下应该用什么方法解决问题的经验模式积累
+    ipo:
+      input:
+        - 一次次实践中遇到的具体场景
+        - 当场采用并被验证有效的做法
+      process:
+        steps:
+          - 记录本次实践的场景特征与实际采用的方法
+          - 抽象剥离与场景无关的细节，保留可复用的行动要点
+          - 建立由场景到方法的索引并归入自己的模式库
+          - 遇到同类新场景时按索引检索并直接调用该模式
+      output:
+        - 场景到方法的可检索索引
+        - 形成积累的个人模式库
+    relations:
+      related_to:
+        - concept://知识索引
+        - concept://模式匹配
+        - concept://经验模式库
+        - concept://实践反刍
+        - concept://复用
+    tags: [场景模式, 索引, 模式库, 复用]
+
+  - id: 实践反刍
+    define: 理论指导实践，但更重要的是通过实践反刍理论并形成自己的方法论
+    ipo:
+      input:
+        - 已学到的理论与方法框架
+        - 现实实践中产生的一手经历与结果
+      process:
+        steps:
+          - 先以已有理论指导一次真实场景下的实践
+          - 记录实践结果与理论预期之间的偏差
+          - 用实践结果反过来质疑并修正原有理论
+          - 复盘沉淀为属于自己的经验与方法论
+      output:
+        - 经实践修正后的自家方法论
+        - 被进一步强化的模式匹配能力
+    relations:
+      related_to:
+        - concept://复盘
+        - concept://模式匹配
+        - concept://证悟
+        - concept://实践驱动学习
+        - concept://归纳演绎循环
+    tags: [实践反刍, 复盘, 理论修正, 自家方法论]
+
+  - id: 归纳演绎循环
+    define: 从经验归纳理论，再演绎检验和解决新问题以产生新经验
+    ipo:
+      input:
+        - 实践中产生的多个特殊案例
+        - 已有的经验素材
+      process:
+        steps:
+          - 从特殊案例出发观察现象并寻找共性
+          - 提炼本质形成一般规律或理论模型
+          - 以该规律为大前提，结合当前事实作为小前提进行演绎
+          - 用演绎结论去解决新的特殊案例并验证
+          - 把产生的新经验回补为下一轮归纳的素材
+      output:
+        - 迭代升级的理论模型
+        - 解决新问题的具体结论
+    decomposition:
+      - step: 由具体到抽象
+        uses: concept://归纳
+        why: 由特殊案例出发观察现象、寻找共性、提炼本质形成一般规律
+      - step: 由抽象到具体
+        uses: concept://演绎
+        why: 从一般规律结合事实推出结论，应用到新的特殊案例上
+    relations:
+      contains:
+        - concept://归纳
+        - concept://演绎
+      related_to:
+        - concept://形式逻辑
+        - concept://模式匹配
+        - concept://三段论推理
+    tags: [归纳, 演绎, 双向循环, 认知引擎]
+
+  - id: 形式逻辑
+    define: 讲任何结论都要有大前提小前提，基于三段论推理的思维规律和规则
+    ipo:
+      input:
+        - 待论证的结论
+        - 支撑结论的前提素材
+      process:
+        steps:
+          - 给出并确认被大家公认的大前提是否成立
+          - 给出对具体情境的事实陈述作为小前提
+          - 由大小前提按三段论推出结论
+          - 检查是否存在以偏概全、偷梁换柱或由结论反推前提的漏洞
+      output:
+        - 合乎形式逻辑的结论
+        - 逻辑漏洞的具体定位
+    relations:
+      contains:
+        - concept://三段论推理
+      related_to:
+        - concept://归纳演绎循环
+        - concept://演绎
+        - concept://逻辑自洽
+        - concept://辩证逻辑
+    tags: [三段论, 大前提, 小前提, 推理校验]
+
+  - id: 思维双主线
+    define: 以事物认知和问题解决作为思维的两条主线，二者最终又融合统一
+    ipo:
+      input:
+        - 外界输入的信息
+        - 大脑中已有的知识经验库
+      process:
+        steps:
+          - 判断当前思维活动更偏事物认知还是偏问题解决
+          - 偏事物认知时回答是什么以及如何选择，输出认知与评价
+          - 偏问题解决时回答如何做与哪里出错，输出解决方案与决策
+          - 注意到事物认知的本质仍是问题分析和解决，两条主线最终融合
+      output:
+        - 事物层面的认知与评价
+        - 问题层面的解决方案与决策
+    decomposition:
+      - step: 事物认知主线
+        uses: concept://事物认知
+        why: 面向What与Which类问题，回答是什么与如何选择，最终产出认知与评价
+      - step: 问题解决主线
+        uses: concept://问题定义
+        why: 面向How与Where类问题，先定义期望与实际之间的差距再求解
+      - step: 提炼双线的内在逻辑
+        uses: concept://归纳演绎循环
+        why: 需从外而内研究两条主线背后的归纳演绎与模式匹配逻辑
+    relations:
+      contains:
+        - concept://事物认知
+        - concept://问题定义
+      related_to:
+        - concept://归纳演绎循环
+        - concept://模式匹配
+        - concept://思维框架体系
+    tags: [双主线, 事物认知, 问题解决, 融合统一]
+
+  - id: 概念模型搭建
+    define: 基于业界做法与已有知识经验，快速搭建陌生领域的整体框架结构
+    ipo:
+      input:
+        - 网上检索到的多份业界做法资料
+        - 自身在该领域已有的知识经验
+      process:
+        steps:
+          - 检索并浏览该领域大量资料，包括方案材料与业务资料
+          - 横向对比各份材料，拆分出其中的关键项
+          - 以已有的通用思路为骨架搭出大框架轮廓
+          - 把业界做法整合填入框架并逐层展开
+          - 校验每项内容是否承上启下、相互衔接为一个整体
+        tools:
+          - entity://金字塔原理
+      output:
+        - 覆盖该领域的关键概念模型
+        - 承上启下逻辑完整的总体框架
+    decomposition:
+      - step: 横向对比归纳共性
+        uses: concept://归纳
+        why: 需要综合对比多份业界资料才能理出通用的大框架逻辑
+      - step: 保证框架承上启下
+        uses: concept://结构逻辑
+        why: 框架中每项内容要能向上追溯并向下铺垫，衔接为完整整体
+      - step: 抽离无关细节
+        uses: concept://抽象
+        why: 不必深入每个子系统细节也能先搭出可用的概念模型
+    relations:
+      uses:
+        - entity://金字塔原理
+      related_to:
+        - concept://归纳
+        - concept://结构逻辑
+        - concept://抽象
+        - concept://找寻主干
+    tags: [概念模型, 大框架, 业界做法, 陌生领域]
+
+  - id: 流程分析
+    define: 沿事物发展阶段和活动识别影响要素，再归类形成分解树
+    ipo:
+      input:
+        - 待分析事物或子系统的整体运转目标
+        - 已知的业务环节线索
+      process:
+        steps:
+          - 按时间顺序梳理事物的发展阶段
+          - 把每个阶段进一步拆解为关键活动节点
+          - 明确每一个活动的输入与输出
+          - 校验相邻活动的输入输出是否相互衔接且无缝集成
+          - 由活动闭环反推出各个子模块或子系统的划分
+      output:
+        - 输入输出闭环的完整流程活动序列
+        - 与动态运转对应的子系统模块划分
+    relations:
+      related_to:
+        - concept://动态行为分析
+        - concept://加工
+        - concept://自底向上装配
+        - concept://运行机制分析
+        - concept://分解
+    tags: [流程分析, 活动输入输出, 动态分析, 闭环]
+
+  - id: 渐进式学习
+    define: 基于个体知识现状边学边反馈、动态调整的学习计划与路径
+    ipo:
+      input:
+        - 个体当前的知识现状与基础
+        - 想要进入的新领域目标
+      process:
+        steps:
+          - 向AI陈述自己现有的知识基础与学习目标
+          - 由AI生成针对个体的渐进式学习计划与路径
+          - 按计划学习的同时持续提交学习反馈
+          - 依据反馈不断让AI调整后续的学习计划与路径
+        tools:
+          - entity://ChatGPT
+          - entity://大模型
+      output:
+        - 个性化的渐进式学习计划
+        - 动态调整后的学习路径
+    relations:
+      uses:
+        - entity://ChatGPT
+        - entity://大模型
+      related_to:
+        - concept://学习路径
+        - concept://知识广度
+    tags: [渐进式学习, AI辅助, 个体化, 反馈调整]
+
+  - id: 知识广度
+    define: 知识覆盖的领域与学科范围，即沙堆的底面积，决定发展潜力
+    ipo:
+      input:
+        - 个体当前已覆盖的领域边界
+        - 大模型与AI大数据库可提供的新领域知识
+      process:
+        steps:
+          - 盘点自身当前能力覆盖的领域与学科范围
+          - 把现实世界的问题场景与底层大模型能力做映射和匹配
+          - 借助AI工具快速进入原本不熟悉的相邻领域学习
+          - 用粗粒度的知识索引把多个领域的知识串联起来
+      output:
+        - 扩展后的跨领域知识底座
+        - 整合后可交付的完整解决方案
+    decomposition:
+      - step: 借AI加速广度学习
+        uses: concept://渐进式学习
+        why: AI能基于个体知识现状给出针对性的渐进式学习计划
+      - step: 知识间粗粒度串接
+        uses: concept://知识串联
+        why: 广度阶段只需知道知识的前置后置与关键接口即可完成串接
+    relations:
+      uses:
+        - entity://大模型
+      related_to:
+        - concept://知识深度
+        - concept://知识索引
+        - concept://知识串联
+        - concept://场景-技术映射
+    tags: [知识广度, 跨领域, ai拓展, 串接]
+
+  - id: 知识索引
+    define: 记录知识所属领域与存放位置、支持快速检索调用的路径
+    ipo:
+      input:
+        - 学过但零散分布的知识点
+        - 知识点之间的前置后置关系
+      process:
+        steps:
+          - 确定每个知识点与其他知识的前置和后置依赖
+          - 提取该知识对外暴露的关键接口而非内部细节
+          - 记录知识点所属领域与存放位置形成索引
+          - 在需要时按索引检索并把多个知识点粗粒度串接
+      output:
+        - 可被快速检索调用的知识索引
+        - 串接整合后的完整输出或解决方案
+    relations:
+      related_to:
+        - concept://知识串联
+        - concept://知识地图
+        - concept://场景应用模式
+        - concept://知识广度
+        - concept://知识关联
+    tags: [知识索引, 粗粒度, 串接, 快速调用]
+
+  - id: 知识组件
+    define: 包含概念、结构、逻辑三方面内容、可复用的动态知识块
+    ipo:
+      input:
+        - 某一领域汇集到的资料与实践成果
+      process:
+        steps:
+          - 建立概念模型，明确该领域的关键概念与概念模型
+          - 建立结构模型，分别用静态空间结构与动态时间结构描述
+          - 归纳出分解、集成、抽象、聚合、泛化、匹配、依赖等逻辑方法
+          - 把概念、结构、逻辑封装为一个动态的可复用知识块
+      output:
+        - 含概念结构逻辑三层的知识组件
+        - 可供场景分解后快速匹配调用的组件库
+    relations:
+      contains:
+        - concept://逻辑方法
+      references:
+        - entity://SOA
+      related_to:
+        - concept://知识三层模型
+        - concept://复用
+        - concept://知识组件组装
+    tags: [知识组件, 可复用, SOA借鉴, 动态知识块]
+
+  - id: 知识经验库
+    define: 由基础记忆、知识、经验方法论构成，供思维处理时调用的积累
+    ipo:
+      input:
+        - 外界输入的信息
+        - 实践中产生的一手经历
+      process:
+        steps:
+          - 通过学习把信息转化为记忆与知识
+          - 通过实践把知识进一步转化为技能
+          - 通过事后复盘把技能与经历提炼为经验和方法论
+          - 把基础记忆、知识、经验方法论分层组织为可调取的库
+      output:
+        - 供模式匹配随时调用的知识经验库
+    decomposition:
+      - step: 学习与实践入库
+        uses: concept://实践反刍
+        why: 学习把信息转为知识，实践再把知识转为经验和方法论
+      - step: 事后沉淀为经验
+        uses: concept://复盘
+        why: 知识经验库的形成核心是靠事前学习和事后复盘
+    relations:
+      related_to:
+        - concept://模式匹配
+        - concept://复盘
+        - concept://实践反刍
+        - concept://加工
+        - concept://经验存量
+    tags: [知识经验库, 学习实践, 复盘沉淀, 调用]
+
+  - id: 破题
+    define: 不破不立，先拆解新问题的构成要素并识别自身已有经验的差距
+    ipo:
+      input:
+        - 一个接到的新任务或新问题
+        - 自身在该领域已有的知识经验清单
+      process:
+        steps:
+          - 把新任务按构成要素拆解为几个关键方面
+          - 判断每个方面是否都需要了解清楚才能完成任务
+          - 逐一盘点自己在各方面是否已有相应的方法与经验
+          - 识别出完全陌生并存在技能与经验差距的部分
+          - 确定需要靠业界做法加已有知识经验去补足的方向
+      output:
+        - 新问题的构成要素拆解结果
+        - 自身已有经验与新任务之间的差距清单
+    decomposition:
+      - step: 拆解构成要素
+        uses: concept://分解
+        why: 不破不立，先拆开才能看清智慧、业务与方案各自缺什么
+      - step: 搭出完整框架
+        uses: concept://概念模型搭建
+        why: 破题后要用业界做法加已有经验去达成完整的框架逻辑
+    relations:
+      related_to:
+        - concept://分解
+        - concept://概念模型搭建
+        - concept://知识经验库
+        - concept://场景应用模式
+    tags: [破题, 不破不立, 差距识别, 拆解]
+
+  - id: 结构逻辑
+    define: 由静态结构和动态结构构成、要求内容承上启下相互衔接的逻辑
+    ipo:
+      input:
+        - 待呈现的核心主题
+        - 已分解出的各层内容
+      process:
+        steps:
+          - 确定核心主题作为金字塔结构的根节点
+          - 自顶向下逐层展开，把内容挂到对应层级
+          - 对每个子节点向上检查是否已在父层出现，保证承上可追溯
+          - 对每个父节点向下检查子项是否已先行铺垫，保证启下逐层分解
+          - 剔除任何脱离该树状结构的内容
+        tools:
+          - entity://金字塔原理
+      output:
+        - 结构完整且合乎逻辑的方案或呈现材料
+    relations:
+      uses:
+        - entity://金字塔原理
+      related_to:
+        - concept://结构化思维
+        - concept://静态结构分析
+        - concept://动态行为分析
+        - concept://逻辑自洽
+    tags: [结构逻辑, 承上启下, 金字塔结构, 自顶向下]
+
+  - id: 自底向上装配
+    define: 先组合整合各个细粒度子件，再集成装配到总体架构框架上
+    ipo:
+      input:
+        - 第二步已搭好的总体架构框架
+        - 搜集到的各类材料与细粒度子件
+      process:
+        steps:
+          - 明确总体框架对各个子件的目标要求
+          - 先把细粒度材料按目标要求组合整合为一个个合格子件
+          - 再把完成整合的子件逐个集成装配到总体架构的对应位置
+          - 检查各子件之间是否相互衔接集成为一个高度整体
+      output:
+        - 装配完成且可落地的总体解决方案
+    relations:
+      related_to:
+        - concept://集成
+        - concept://概念模型搭建
+        - concept://流程分析
+        - concept://分解
+    tags: [自底向上, 装配集成, 详细方案, 子件]
+
+  - id: 过程到目标匹配
+    define: 用过程步骤序列回答如何做，把过程推演结果匹配到既定目标
+    ipo:
+      input:
+        - 已确定的既定子目标
+        - 事物内部的运行机制与线索
+      process:
+        steps:
+          - 明确要达成的子目标是什么
+          - 进入事物内部理解其运行机制与运转逻辑
+          - 按时间序排出从起点到目标的活动步骤序列
+          - 明确每个活动节点的输入输出，保证前后环节无缝集成
+          - 用完整过程序列推演验证是否能够得到既定目标
+      output:
+        - 由过程步骤到既定目标的可解释路径
+        - 能回答如何落地实现的详细方案
+    relations:
+      depends_on:
+        - concept://流程分析
+      related_to:
+        - concept://动态行为分析
+        - concept://运行机制分析
+        - concept://目标定位
+        - concept://自底向上装配
+    tags: [过程到目标, how描述, 步骤序列, 落地]
+
+  - id: 逻辑方法
+    define: 分解、集成、抽象、聚合、泛化、匹配、依赖等处理组件关系的方法
+    ipo:
+      input:
+        - 结构模型中已识别出的组件
+        - 组件与组件之间的待处理关系
+      process:
+        steps:
+          - 判断待处理关系属于分解、集成、抽象、聚合、泛化、匹配、依赖中的哪一类
+          - 选用对应的逻辑方法处理该组组件关系
+          - 必要时把多种逻辑方法与概率分析、推理组合使用
+          - 回溯到归纳、演绎、辩证三大基础逻辑校验方法的成立前提
+      output:
+        - 组件之间清晰的关系与依赖
+        - 支撑举一反三的演绎能力
+    decomposition:
+      - step: 打散整体
+        uses: concept://分解
+        why: 分析定义问题时从上到下不断分解是最常用的组件处理方法
+      - step: 复原整体
+        uses: concept://集成
+        why: 最终解决问题要从底朝上不断演绎，把组件重新聚合为整体
+      - step: 提炼共性
+        uses: concept://抽象
+        why: 抽象后的组件才能在更高层面被泛化和复用
+    relations:
+      contains:
+        - concept://分解
+        - concept://集成
+      related_to:
+        - concept://归纳
+        - concept://演绎
+        - concept://辩证逻辑
+        - concept://知识三层模型
+    tags: [逻辑方法, 组件关系, 三大基础逻辑, 举一反三]
+
+  - id: 问题转化
+    define: 把未知的新问题映射转化为头脑中已有成熟解法的已知问题
+    ipo:
+      input:
+        - 一个未知的新问题
+        - 头脑中已有的方程、算法与公式等成熟解法
+      process:
+        steps:
+          - 分析新问题在结构上与哪一类已知问题同属一类
+          - 通过设置参数或改写表达方式把新问题变形为已知问题的形式
+          - 确认映射后的已知解法确实成熟可用
+          - 调用已知解法求解并回译为原问题的答案
+      output:
+        - 映射后的已知问题形式
+        - 由成熟解法得到的求解结果
+    relations:
+      uses:
+        - entity://回溯算法
+        - entity://动态规划
+      related_to:
+        - concept://模式匹配
+        - concept://问题抽象
+    tags: [问题转化, 类别映射, 已知解法, 划归]
+
+entities:
+  - id: CRM客户关系管理系统
+    define: 作者已有的业务系统经验来源，作为方案制作案例的匹配基础
+    relations:
+      related_to:
+        - concept://模式匹配
+        - concept://场景应用模式
+        - concept://破题
+    tags: [CRM, 售前方案, 已有经验]
+
+  - id: ChatGPT
+    define: 生成式AI代表工具，可基于个人现状给出渐进式学习计划
+    relations:
+      is_a:
+        - entity://大模型
+      related_to:
+        - concept://渐进式学习
+        - concept://知识广度
+        - concept://场景-技术映射
+    tags: [ChatGPT, 生成式AI, 学习计划]
+
+  - id: SOA
+    define: 面向服务的架构思想，其分层与复用是架构核心思考模式
+    relations:
+      related_to:
+        - entity://微服务
+        - entity://《SOA和大数据-企业私有云PaaS平台建设实践》
+        - concept://组件化思维
+        - concept://复用
+        - concept://架构思维
+    tags: [SOA, 服务复用, 架构思想]
+
+  - id: TRIZ
+    define: 产品研发与创新领域已有的完整方法论，被作为思维应有方法论的参照
+    relations:
+      related_to:
+        - concept://方法论抽象
+        - concept://思维框架体系
+    tags: [TRIZ, 创新方法论, 参照对象]
+
+  - id: 《SOA和大数据-企业私有云PaaS平台建设实践》
+    define: 作者2020年出版、依托联通UCloud项目实践总结的技术书籍
+    relations:
+      related_to:
+        - entity://SOA
+        - entity://微服务
+    tags: [作者著作, PaaS平台, 一线实践提炼]
+
+  - id: 《你的灯亮着吗》
+    define: 给出"问题是现状与期望之间差距"这一定义的著作
+    relations:
+      related_to:
+        - concept://问题定义
+    tags: [书籍, 问题定义, 差距定义]
+
+  - id: 《刻意练习》
+    define: 学习细分领域的代表著作
+    relations:
+      related_to:
+        - entity://学习金字塔模型
+        - concept://渐进式学习
+    tags: [书籍, 学习方法, 细分领域]
+
+  - id: 《如何阅读一本书》
+    define: 阅读细分领域的代表著作
+    relations:
+      related_to:
+        - entity://学习金字塔模型
+    tags: [书籍, 阅读方法, 细分领域]
+
+  - id: 《思维简史》
+    define: 叙述整个思维发展历程的著作
+    relations:
+      related_to:
+        - concept://经验思维
+        - concept://科学思维
+    tags: [书籍, 思维发展史, 通识读物]
+
+  - id: 《暗时间》
+    define: 刘未鹏所著，提出"锤子和钉子"的心智隐喻
+    relations:
+      related_to:
+        - entity://刘未鹏
+        - concept://实践反刍
+    tags: [书籍, 刘未鹏, 思维类读物]
+
+  - id: 《第五项修炼》
+    define: 彼得·圣吉所著，系统思维与学习型组织的经典著作
+    relations:
+      related_to:
+        - entity://彼得·圣吉
+        - concept://系统思维
+    tags: [书籍, 系统思维, 学习型组织]
+
+  - id: 《见识》
+    define: 吴军所著，作者列举的相对不错的思维类书籍之一
+    relations:
+      related_to:
+        - entity://吴军
+        - concept://实践反刍
+    tags: [书籍, 吴军, 思维类读物]
+
+  - id: 万维钢
+    define: 《智识分子》《万万没想到》作者，物理学科背景
+    relations:
+      related_to:
+        - concept://实践反刍
+        - concept://复盘
+    tags: [人物, 物理学科, 跨领域作者]
+
+  - id: 刘未鹏
+    define: 《暗时间》作者
+    relations:
+      related_to:
+        - entity://《暗时间》
+        - concept://实践反刍
+    tags: [人物, IT背景, 思维类作者]
+
+  - id: 动态规划
+    define: 运筹学中背包问题可转化映射到的已知解法
+    relations:
+      related_to:
+        - concept://问题转化
+        - entity://回溯算法
+    tags: [算法, 运筹学, 背包问题]
+
+  - id: 古典
+    define: 《拆掉思维的墙》《跃迁》作者，原新东方名师
+    relations:
+      related_to:
+        - concept://实践反刍
+    tags: [人物, 新东方出身, 思维类作者]
+
+  - id: 吴军
+    define: 《见识》作者，IT行业专家
+    relations:
+      related_to:
+        - entity://《见识》
+        - concept://实践反刍
+    tags: [人物, IT专家, 作家]
+
+  - id: 回溯算法
+    define: 八皇后问题可转化映射到的已知解法
+    relations:
+      related_to:
+        - concept://问题转化
+        - entity://动态规划
+    tags: [算法, 八皇后问题, 已知解法]
+
+  - id: 大模型
+    define: 生成式反馈式学习模型，可边学边反馈并调整学习路径
+    relations:
+      related_to:
+        - entity://ChatGPT
+        - concept://渐进式学习
+        - concept://知识广度
+        - concept://场景-技术映射
+    tags: [大模型, 反馈式学习, 生成式AI]
+
+  - id: 学习金字塔模型
+    define: 概念模型-找寻主干-最小目标-知识树-可视化迭代-跃迁的六步学习模型
+    relations:
+      contains:
+        - concept://概念模型搭建
+        - concept://找寻主干
+        - concept://最小目标验证
+        - concept://知识树
+        - concept://可视化迭代学习
+      related_to:
+        - concept://POC验证
+    tags: [学习模型, 六步法, 金字塔]
+
+  - id: 微服务
+    define: 当前主流架构风格之一，文中强调需与业务适配而非盲目追随
+    relations:
+      related_to:
+        - entity://SOA
+        - concept://业务驱动技术
+        - concept://组件化思维
+    tags: [微服务, 服务化, 业务驱动]
+
+  - id: 思维框架
+    define: 作者对整体思维体系结构的称呼，含思维框架与思维逻辑两大方面、四个分支
+    relations:
+      references:
+        - entity://《思维框架和逻辑》
+      related_to:
+        - concept://思维框架体系
+        - concept://思维双主线
+        - concept://归纳演绎循环
+        - concept://模式匹配
+    tags: [思维框架, 主线分支, 整体结构]
+
+  - id: 百度文库
+    define: 传统搜索式学习工具，无法针对个体给出渐进式学习计划
+    relations:
+      related_to:
+        - concept://渐进式学习
+        - entity://ChatGPT
+    tags: [搜索式学习, 传统工具, AI对比]
+
+  - id: 金字塔原理
+    define: 明托提出的金字塔结构、MECE分解与写作呈现原则
+    relations:
+      related_to:
+        - entity://芭芭拉·明托
+        - concept://结构逻辑
+        - concept://MECE
+        - concept://结构化呈现
+        - concept://呈现和泛化
+    tags: [金字塔结构, 呈现逻辑, 明托]

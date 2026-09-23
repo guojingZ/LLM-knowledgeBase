@@ -1,0 +1,669 @@
+# 第二轮填充 · 批次 7
+# 原文依据：raw/技术人员如果跳出盒子实现思维和认知升级.md、
+#           raw/普通人理解和认知事物的底层逻辑完整版本.md、
+#           raw/构建你的多维思考力从事物认知到问题解决.md、
+#           raw/构建思维能力知识体系和框架逻辑的闭环体系.md、
+#           raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md、
+#           raw/知识和认知的本质区别.md
+
+concepts:
+  - id: 事物观察
+    define: 从事物的三维立体模型、所处空间环境与所处时间周期三个维度完成对事物的观察
+    ipo:
+      input:
+        - 待认识的单个事物
+        - 事物所处的空间环境
+        - 事物运行所处的时间周期
+      process:
+        steps:
+          - 观察事物的外形、颜色、部件组成等三维立体结构
+          - 观察事物随时间展开的运行情况与发展规律
+          - 将事物放回所处环境，考察它与周围事物的依存关联
+          - 由表象打破黑盒，深入到内部构件的协同机理
+      output:
+        - 事物在时空环境中的完整观察记录
+        - 从表象到内在机理的分层认知
+    relations:
+      related_to:
+        - concept://事物认知
+        - concept://从表象到本质
+        - concept://静态结构分析
+        - concept://动态行为分析
+    tags: [事物观察, 时空环境, 静态属性, 动态属性]
+
+  - id: 价值锚点
+    define: 明确知识价值所在，坚持知识深度创造价值、广度服务于深度
+    ipo:
+      input:
+        - 个人已有的知识广度与深度存量
+        - 所处的专业细分领域
+        - 可投入的持续精进时间
+      process:
+        steps:
+          - 明确在该专业细分领域知识究竟能创造什么价值
+          - 锁定值得极限突破的方向，如海量并发架构、高精度算法
+          - 以深度为核心产出不可替代的成果，让广度服务于深度
+          - 用竞争力公式权衡深度、广度与时间的取舍
+      output:
+        - 明确的个人知识价值定位
+        - 不可替代的核心竞争力
+    relations:
+      uses:
+        - entity://知识竞争力公式
+      related_to:
+        - concept://知识深度
+        - concept://知识广度
+        - concept://差异化竞争
+        - concept://长期主义
+    tags: [价值锚点, 深度创造价值, 不可替代性]
+
+  - id: 分类
+    define: 找到事物群共有的静态或动态属性，据此做初步整理分组
+    ipo:
+      input:
+        - 待处理的一群事物个体
+        - 各事物自身的静态属性与动态属性
+      process:
+        steps:
+          - 确定用于划类的关键属性维度
+          - 提取事物群共有的静态属性或动态属性
+          - 按共有属性先把个体划入若干大类
+          - 对大类继续细分形成完整的类结构树
+      output:
+        - 划分好的事物大类
+        - 初步成形的类结构树
+    relations:
+      references:
+        - entity://面向对象
+      related_to:
+        - concept://抽象
+        - concept://事物群分析
+        - concept://归纳
+    tags: [分类, 共有属性, 事物群]
+
+  - id: 动态行为分析
+    define: 研究事物随时间如何运动变化发展，并沿因果链追溯结果成因
+    ipo:
+      input:
+        - 待考察的事物及其外在行为表现
+        - 外界施加的输入或事件刺激
+      process:
+        steps:
+          - 划定长周期并把周期切分为多个时间片段
+          - 逐段观察各时间片段下事物的状态变化与过程步骤
+          - 以前一步的输出作为后一步的输入串成流程链条
+          - 由最终结果沿因果链逐级向上追溯成因
+          - 排除多因素共同作用下的表面联想式归因
+      output:
+        - 事物阶段、流程、活动、事件的动态刻画
+        - 剔除伪相关后的真实因果链
+    relations:
+      references:
+        - entity://休谟
+      related_to:
+        - concept://流程分析
+        - concept://因果链分析
+        - concept://状态逻辑
+        - concept://动静结合分析
+    tags: [动态行为, 时间维度, 流程链条, 因果追溯]
+
+  - id: 动静结合分析
+    define: 将流程用例等动态分析与数据类等静态建模高度协作以完成对事物的思考
+    ipo:
+      input:
+        - 事物的外在行为特征或运作流程
+        - 事物静态分解后的组成部件清单
+      process:
+        steps:
+          - 对事物做静态分解得到内部的组成部件
+          - 对事物外在行为做动态分解得到具体活动和步骤
+          - 把组成部件与操作步骤建立映射
+          - 打开黑盒追溯底层组件如何交互协同产生该行为
+          - 自顶向下逐层细化并在细粒度组件间继续建立映射
+      output:
+        - 动静融合的事物完整内在逻辑
+        - 对外在行为由内部组件如何协同产生的解释
+    relations:
+      contains:
+        - concept://静态结构分析
+        - concept://动态行为分析
+      related_to:
+        - concept://黑盒思维
+        - concept://从表象到本质
+        - concept://流程分析
+    tags: [动静结合, 打开黑盒, 映射]
+
+  - id: 回溯广度
+    define: 专业发展停滞或需跨领域协作时，反过来拓展广度寻找新突破口
+    ipo:
+      input:
+        - 专业发展停滞或需跨领域协作的触发信号
+        - 已有的垂直领域深度经验
+      process:
+        steps:
+          - 确认已触及沙堆高度的极限，深度难以继续突破
+          - 定位当前受到的约束，如技术应用到业务场景的限制
+          - 以问题驱动的方式学习相邻领域的知识
+          - 借已有领域经验触类旁通，找到新的突破口
+      output:
+        - 新的突破口与更宽的职业发展路径
+    relations:
+      references:
+        - entity://沙堆理论
+      depends_on:
+        - concept://问题驱动学习
+      related_to:
+        - concept://知识广度
+        - concept://跨领域迁移
+        - concept://广度深度阶段策略
+    tags: [回溯广度, 瓶颈突破, 跨域迁移]
+
+  - id: 复盘
+    define: 对实践过程回顾，将理论知识转化为经实践验证的经验模式
+    ipo:
+      input:
+        - 一次已完成的实践过程及其结果反馈
+        - 周期性积累的一组项目实践记录
+      process:
+        steps:
+          - 回顾实践过程，把模糊的感受、直觉和心得讲清楚
+          - 提炼出可复用可迁移的通用规律或模型
+          - 将规律结构化后存入个人经验模式库
+          - 周期性把多个项目放在一起抽象共性模式
+      output:
+        - 更新后的个人经验模式库
+        - 可复用的通用规律与逻辑元素
+    relations:
+      produces:
+        - concept://经验模式库
+      uses:
+        - entity://PDCA
+      related_to:
+        - concept://实践反刍
+        - concept://深度复盘
+        - concept://双循环
+    tags: [复盘, 经验模式库, PDCA, 闭环]
+
+  - id: 广度深度阶段策略
+    define: 学习期广度优先、职业初期深度突破、瓶颈期回溯广度、成熟期融合
+    ipo:
+      input:
+        - 个人当前所处的发展阶段
+        - 该阶段遇到的瓶颈或阶段性任务特征
+      process:
+        steps:
+          - 学习阶段按通识方式优先铺开广度，为后续发展打基础
+          - 职业初期聚焦垂直领域深度突破，用项目实践固化核心技能
+          - 进入瓶颈期时回溯广度，学习相邻领域寻找新突破
+          - 成熟期让广度与深度深度融合形成复合型知识结构
+      output:
+        - 与阶段匹配的广度深度取舍策略
+    decomposition:
+      - step: 瓶颈期突破
+        uses: concept://回溯广度
+        why: 深度到极限后必须先扩展底面积，跨域学习才能带来新的启发
+      - step: 融合期收敛
+        uses: concept://价值锚点
+        why: 融合仍需以深度创造价值为锚，否则容易沦为门门通的杂家
+    relations:
+      contains:
+        - concept://回溯广度
+      references:
+        - entity://沙堆理论
+      related_to:
+        - concept://知识广度
+        - concept://知识深度
+        - concept://价值锚点
+    tags: [阶段策略, 广度深度, 核心竞争力]
+
+  - id: 底层逻辑
+    define: 归根结底只有归纳法、演绎法和辩证法这三大最基础的逻辑
+    ipo:
+      input:
+        - 待认知的事物或待抽象的领域问题
+        - 该情境涉及的质、量、关系等逻辑要素
+      process:
+        steps:
+          - 选定可用的基础逻辑：归纳、演绎或辩证
+          - 叠加空间时间、质与量、关系与模态等关键要素
+          - 组合成适配该情境的逻辑方法并用于认知事物
+      output:
+        - 可落地的逻辑方法而非停留在书本上的空谈
+    decomposition:
+      - step: 由特殊到一般
+        uses: concept://归纳
+        why: 归纳法与演绎法共同构成形式逻辑的内核
+      - step: 由一般到特殊
+        uses: concept://演绎
+        why: 演绎法负责把普遍结论推到具体情境
+      - step: 处理矛盾与对立统一
+        uses: concept://辩证逻辑
+        why: 辩证法是三大基础逻辑之一，负责看事物的正反两面
+    relations:
+      contains:
+        - concept://归纳
+        - concept://演绎
+        - concept://辩证逻辑
+      related_to:
+        - concept://逻辑分层
+        - concept://逻辑要素
+        - concept://形式逻辑
+    tags: [底层逻辑, 归纳演绎, 辩证法]
+
+  - id: 底层逻辑网络
+    define: 由逻辑元素及其因果、层级、互补关系构成的动态可生长关系图
+    ipo:
+      input:
+        - 学习实践复盘积累的经验素材
+        - 已提炼出的可复用逻辑元素
+      process:
+        steps:
+          - 提炼并净化逻辑元素，去个性保留共性
+          - 标注元素之间的因果关系、层级关系与互补关系
+          - 把元素与关系绘制为可持续生长的逻辑关系图
+          - 在新场景中主动寻找边界条件和例外情况做检验
+      output:
+        - 个人可持续进化的底层逻辑关系图
+    relations:
+      contains:
+        - concept://逻辑元素
+      related_to:
+        - concept://底层逻辑
+        - concept://复盘
+        - concept://知识网络构建
+        - concept://迭代思维
+    tags: [逻辑网络, 关系图, 持续进化]
+
+  - id: 思维框架体系
+    define: 学习方法、知识经验库、事物认知、问题分析、方案呈现五部分构成的闭环
+    decomposition:
+      - step: 学习方法模式
+        uses: concept://知识体系构建
+        why: 通过学习方法把外部信息充实并加工为个人知识库
+      - step: 知识经验库积累
+        uses: concept://复盘
+        why: 知识须经实践检验，复盘后才转化为可复用的经验模式
+      - step: 事物认知与决策
+        uses: concept://事物认知
+        why: 认识事物对应What与Which类问题，是理解世界和做选择的路径
+      - step: 问题分析与诊断
+        uses: concept://模式匹配
+        why: 解决问题能力弱往往源于知识经验积累不足与模式匹配能力弱
+      - step: 解决方案与呈现逻辑
+        uses: concept://结构化呈现
+        why: 分析出的方案最终要靠呈现逻辑讲清楚
+    relations:
+      contains:
+        - concept://事物认知
+        - concept://复盘
+        - concept://模式匹配
+      references:
+        - entity://认知提升闭环操作系统
+      related_to:
+        - concept://思维双主线
+    tags: [思维框架, 五要素, 闭环迭代]
+
+  - id: 横切思维
+    define: 在端到端流程的关键阶段点拦截形成聚合点，实现统一管控和增值服务
+    ipo:
+      input:
+        - 事物群或多个产品的端到端业务流程
+        - 流程各阶段点上重复投入的资源与共性活动
+      process:
+        steps:
+          - 由单事物视角切换到事物群视角，梳理端到端流程的阶段点
+          - 识别各产品线或多事物间重复出现的共性资源
+          - 在关键阶段点拦截并形成有价值的聚合点
+          - 将共性能力剥离重构为统一服务再对外开放
+      output:
+        - 统一管控与增值服务能力
+        - 可复用的共享服务平台或横向工作小组
+    relations:
+      references:
+        - entity://AOP
+        - entity://GoF设计模式
+      uses:
+        - entity://TPG
+      related_to:
+        - concept://复用
+        - concept://共性模板化
+    tags: [横切思维, 聚合点, 共享服务]
+
+  - id: 知识
+    define: 可编码、可传递的显性信息，以量堆砌方式线性积累的静态资源
+    ipo:
+      input:
+        - 书籍、文档、数据库等外部介质中的可编码信息
+      process:
+        steps:
+          - 通过阅读学习把外部信息转入个人或外部载体
+          - 以记忆与检索方式线性累加存储量
+          - 在被加工使用时被检索调用
+          - 未被调用的部分沉淀为沉没资产
+      output:
+        - 以线性方式不断累加的知识库
+    relations:
+      references:
+        - entity://知识与认知五维对比
+      related_to:
+        - concept://加工
+        - concept://知识显隐转化
+        - concept://经验模式库
+    tags: [知识, 显性静态, 线性积累]
+
+  - id: 知识关联
+    define: 梳理知识点内在逻辑与依赖关系，让静态知识点连接成知识网络或图谱
+    ipo:
+      input:
+        - 已初步掌握的各知识点
+      process:
+        steps:
+          - 减少机械记忆，把重心放在知识之间的链接上
+          - 完成知识点之间的初步掌握与串接
+          - 由AI工具补全底层细节后纳入同一张网络
+      output:
+        - 互联互通的知识网络或图谱
+    relations:
+      uses:
+        - entity://DeepSeek
+      related_to:
+        - concept://知识图谱构建
+        - concept://融会贯通
+        - concept://跨领域迁移
+    tags: [知识关联, 知识链接, AI辅助, 证据不足]
+
+  - id: 知识深度
+    define: 在特定领域内的精通程度与专业造诣，即沙堆的高度，决定价值上限
+    ipo:
+      input:
+        - 选定的垂直专业领域
+        - 支撑该领域的跨学科广度基础
+      process:
+        steps:
+          - 聚焦一个细分垂直领域做持续深耕
+          - 用大量项目实践把理论固化为熟练技能
+          - 在短期内达到六七十分的基础水平后继续向九十分以上突破
+          - 触及深度极限时先扩展广度底面积以继续抬高高度
+      output:
+        - 不可替代的专业能力
+        - 决定价值上限的沙堆高度
+    relations:
+      depends_on:
+        - concept://知识广度
+      references:
+        - entity://沙堆理论
+      uses:
+        - entity://知识竞争力公式
+      related_to:
+        - concept://价值锚点
+        - concept://差异化竞争
+    tags: [知识深度, 沙堆高度, 不可替代]
+
+  - id: 经验模式库
+    define: 经实践验证与证悟后形成的个人方法论集合
+    ipo:
+      input:
+        - 实践中得到的成功与失败经验点
+        - 复盘提炼出的通用规律
+      process:
+        steps:
+          - 把单次实践中的隐性经验用清晰语言显性化
+          - 提炼出可迁移到其他场景的原则或模式
+          - 按结构化方式存入个人经验模式库
+          - 在后续实践中被检索调用以支撑模式匹配
+      output:
+        - 可供未来调用的结构化经验模式库
+    relations:
+      depends_on:
+        - concept://复盘
+      references:
+        - entity://知识与认知五维对比
+      related_to:
+        - concept://模式匹配
+        - concept://模式提炼
+        - concept://证悟
+    tags: [经验模式库, 模式匹配, 复盘产物]
+
+  - id: 逻辑元素
+    define: 经大量学习、实践和复盘提炼出的、可跨场景复用的思考单元
+    ipo:
+      input:
+        - 大量学习实践复盘后积累的经验素材
+      process:
+        steps:
+          - 去除具体场景的个性化细节
+          - 抽象出可跨场景复用的共性思考单元
+          - 用简洁语言陈述并保证解释力与适用性
+          - 在新场景中检验并修正该单元
+      output:
+        - 可复用的思考单元
+    relations:
+      depends_on:
+        - concept://深度复盘
+      uses:
+        - concept://抽象
+      related_to:
+        - concept://底层逻辑网络
+        - concept://证悟
+    tags: [逻辑元素, 复用单元, 抽象提炼]
+
+  - id: 逻辑分层
+    define: 由基础逻辑、逻辑要素、逻辑方法到领域方法论构成的倒生大树式分层
+    decomposition:
+      - step: 树根层的基础逻辑
+        uses: concept://底层逻辑
+        why: 归纳、演绎、辩证这三大基础逻辑位于倒生大树最上层根的位置
+      - step: 第二层的逻辑要素
+        uses: concept://逻辑要素
+        why: 空间、时间、质、量、关系等是探讨任何逻辑都不能脱离的成分
+      - step: 第三层的逻辑方法
+        uses: concept://逻辑方法
+        why: 常见的各种思维方式本质是基础逻辑与逻辑要素的组合形态
+    relations:
+      contains:
+        - concept://底层逻辑
+        - concept://逻辑要素
+        - concept://逻辑方法
+      related_to:
+        - concept://分层
+        - concept://方法论抽象
+    tags: [逻辑分层, 倒生大树, 分层]
+
+  - id: 逻辑要素
+    define: 空间、时间、质、量、关系、模态，与逻辑组合才形成逻辑方法
+    ipo:
+      input:
+        - 待认知事物所处的问题情境
+        - 所选用的归纳、演绎或辩证基础逻辑
+      process:
+        steps:
+          - 明确该情境使用的是哪一类基础逻辑
+          - 按康德的十二范畴逐项考察质、量、关系、模态
+          - 补上空间与时间这两个先验的认识框架
+          - 把逻辑与要素组合落地为具体的逻辑方法
+      output:
+        - 结合了该情境要素的逻辑方法
+    relations:
+      references:
+        - entity://先验逻辑
+        - entity://康德
+        - entity://亚里士多德
+      related_to:
+        - concept://逻辑分层
+        - concept://逻辑方法
+    tags: [逻辑要素, 十二范畴, 质量关系模态]
+
+  - id: 问题域映射
+    define: 拿到问题域后理解并分解问题，将其映射到最适合的算法或数据结构上
+    ipo:
+      input:
+        - 待解决的问题域描述
+        - 候选的算法与数据结构
+      process:
+        steps:
+          - 理解并定义问题域本身的真实诉求
+          - 把复杂问题域分解为更小的子域
+          - 为每个子域挑选最合适的数据结构
+          - 抽象出判断逻辑与可自动化的循环，把求解过程映射为算法
+          - 验证该映射能否自动化求解原问题域
+      output:
+        - 问题域到算法与数据结构的映射方案
+    relations:
+      depends_on:
+        - concept://问题分解
+      contains:
+        - concept://抽象
+      related_to:
+        - concept://模式匹配
+        - concept://场景-技术映射
+    tags: [问题域映射, 数学建模, 算法结构]
+
+  - id: 静态结构分析
+    define: 按MECE原则逐层分解事物的组成部分，并识别分类、维度属性与抽象层次
+    ipo:
+      input:
+        - 待认知的事物整体
+        - 可直接观察到的事物外在形态表象
+      process:
+        steps:
+          - 由外到内打开第一层，识别出若干组件
+          - 对每个组件继续向下拆分为更细的子组件
+          - 识别组成部分之间的依赖、层级与协作关系
+          - 用MECE法则检查同一层是否互斥且穷尽
+      output:
+        - 逐层分解后的组成结构图
+        - 组件之间的静态关系说明
+    relations:
+      depends_on:
+        - concept://分解
+      uses:
+        - concept://MECE
+      related_to:
+        - concept://动态行为分析
+        - concept://动静结合分析
+        - concept://分层
+    tags: [静态结构, 逐层分解, MECE]
+
+entities:
+  - id: AOP
+    define: 将日志记录、性能统计、安全控制、事务处理等横切关注点从业务逻辑中分离的技术
+    relations:
+      references:
+        - entity://GoF设计模式
+      related_to:
+        - concept://横切思维
+        - concept://复用
+    tags: [AOP, 横切关注点, 解耦]
+
+  - id: DeepSeek
+    define: 带来知识管理思路变革、可协助完成内容输出的AI工具
+    relations:
+      related_to:
+        - entity://GPT
+        - entity://大模型
+        - concept://信息场景依赖
+        - concept://知识关联
+    tags: [AI工具, 知识管理变革, 内容输出]
+
+  - id: GPT
+    define: 与DeepSeek同类的AI工具，使重心转向问题场景下知识的应用
+    relations:
+      related_to:
+        - entity://DeepSeek
+        - entity://大模型
+        - concept://信息场景依赖
+        - concept://知识关联
+    tags: [AI工具, 知识应用, 大模型]
+
+  - id: GoF设计模式
+    define: 追求调用者与被调用者解耦以提升灵活性和可扩展性的模式集合
+    relations:
+      related_to:
+        - entity://AOP
+        - concept://复用
+        - concept://模式提炼
+    tags: [设计模式, 解耦, 可扩展性]
+
+  - id: TPG
+    define: 企业内构建共享技术平台与组件、统一评估技术选型的平台型组织
+    relations:
+      uses:
+        - concept://复用
+      related_to:
+        - concept://横切思维
+        - entity://SOA
+        - entity://平台+应用
+    tags: [TPG, 技术平台组织, 组件复用]
+
+  - id: 先验逻辑
+    define: 康德将逻辑要素展开为质、量、关系、模态等十二范畴的学说
+    relations:
+      contains:
+        - concept://逻辑要素
+      references:
+        - entity://康德
+      related_to:
+        - concept://先验知识
+        - concept://逻辑分层
+    tags: [先验逻辑, 十二范畴, 康德]
+
+  - id: 沙堆理论
+    define: 以沙堆底面积喻知识广度、高度喻深度，二者动态互动的模型
+    relations:
+      contains:
+        - concept://知识广度
+        - concept://知识深度
+      related_to:
+        - entity://知识竞争力公式
+        - concept://广度深度阶段策略
+        - concept://价值锚点
+    tags: [沙堆模型, 广度底面积, 深度高度]
+
+  - id: 知识与认知五维对比
+    define: 从存在形式、存储位置、核心动作、进化逻辑、产物对比二者
+    relations:
+      contains:
+        - concept://知识
+        - concept://经验模式库
+      related_to:
+        - concept://模式匹配
+        - concept://知识显隐转化
+    tags: [对比框架, 知识认知差异, 五维度]
+
+  - id: 知识竞争力公式
+    define: 知识竞争力等于深度乘广度乘时间的竞争力构成公式
+    relations:
+      contains:
+        - concept://知识深度
+        - concept://知识广度
+      related_to:
+        - entity://沙堆理论
+        - concept://价值锚点
+        - concept://长期主义
+    tags: [竞争力公式, 深度广度时间, 价值上限]
+
+  - id: 认知提升闭环操作系统
+    define: 学习、实践、复盘三模块加反馈回路构成的认知进化操作系统
+    relations:
+      contains:
+        - concept://复盘
+        - concept://模式匹配
+      uses:
+        - entity://PDCA
+      references:
+        - entity://三层六阶段学习法
+      related_to:
+        - concept://双循环
+    tags: [闭环操作系统, 学习实践复盘, 反馈回路]
+
+  - id: 金字塔结构
+    define: 以树状层次组织论点、自上而下展开的结构化呈现模型
+    relations:
+      is_a:
+        - entity://树模型
+      uses:
+        - concept://MECE
+      related_to:
+        - entity://思维导图
+        - concept://结构化呈现
+    tags: [树状结构, 层次呈现, 二维分解]
