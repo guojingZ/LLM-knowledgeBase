@@ -1,0 +1,33 @@
+version: "1.0"
+updated_at: "2026-09-25"
+decisions:
+  - decision_id: D-20260923-001
+    layer: concept
+    candidate_id: 静态结构/动态结构
+    action: merge_as_internal_steps
+    target_id: concept://结构化思维
+    reviewer_decision: approved
+    reviewer: user
+    reviewed_at: "2026-09-23"
+    rationale: 静态结构与动态结构是结构化思维的内部步骤，不独立成概念。
+    source_record: runs/build/2026-09-23/logs/workbuddy-memory.md
+  - decision_id: D-20260923-002
+    layer: concept
+    candidate_id: 因果自洽/关系自洽/过程自洽
+    action: merge_as_dimensions
+    target_id: concept://逻辑自洽
+    reviewer_decision: approved
+    reviewer: user
+    reviewed_at: "2026-09-23"
+    rationale: 三者是逻辑自洽的三个维度。
+    source_record: runs/build/2026-09-23/logs/workbuddy-memory.md
+  - decision_id: D-20260923-003
+    layer: concept
+    candidate_id: 满意解/幅度决策
+    action: merge_into_ipo
+    target_id: concept://系统思维
+    reviewer_decision: approved
+    reviewer: user
+    reviewed_at: "2026-09-23"
+    rationale: 二者应进入系统思维的 IPO 描述，不单列概念。
+    source_record: runs/build/2026-09-23/logs/workbuddy-memory.md

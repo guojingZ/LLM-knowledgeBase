@@ -1,0 +1,23 @@
+version: "1.0"
+updated_at: "2026-09-25"
+items:
+  - review_id: model-evidence-001
+    source: model_validation
+    target: concept://呈现和泛化
+    issue_type: weak_evidence
+    status: pending
+  - review_id: model-evidence-002
+    source: model_validation
+    target: concept://知识关联
+    issue_type: weak_evidence
+    status: pending
+  - review_id: model-evidence-003
+    source: model_validation
+    target: concept://问题抽象
+    issue_type: weak_evidence
+    status: pending
+  - review_id: eval-gold-001
+    source: evaluation_design
+    target: eval/questions.yaml
+    issue_type: gold_set_review
+    status: pending

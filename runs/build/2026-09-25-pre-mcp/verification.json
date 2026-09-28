@@ -1,0 +1,35 @@
+{
+  "version": "3.0.0-pre-mcp",
+  "verified_on": "2026-09-25",
+  "source_inventory": {
+    "accepted": 50,
+    "pending": 0,
+    "duplicate_groups": 0
+  },
+  "model": {
+    "scenarios": 17,
+    "concepts": 234,
+    "entities": 163,
+    "broken_references": 0,
+    "errors": 0,
+    "warnings": 2
+  },
+  "automated_tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "seed_retrieval": {
+    "question_count": 24,
+    "question_set_status": "needs_human_review",
+    "scenario_top1_accuracy": 0.6111,
+    "scenario_top3_recall": 0.9444,
+    "expected_source_hit_rate_model": 0.8333,
+    "expected_source_hit_rate_raw": 0.8333,
+    "boundary_behavior_accuracy": 1.0
+  },
+  "package_integration": {
+    "extracted_validation": "passed",
+    "context_feedback_queue": "passed"
+  },
+  "mcp_gate": "not_ready"
+}

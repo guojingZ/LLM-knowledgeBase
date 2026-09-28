@@ -1,0 +1,16 @@
+version: "1.0"
+status: empty_template
+instructions:
+  - 每次只评价一个 trace_id 对应的最终答案。
+  - 评分前先检查回答引用的原文是否真正支撑相邻表述。
+records: []
+record_template:
+  trace_id: REPLACE_ME
+  question_id: Q001
+  route: model-guided
+  scenario_correct: null
+  source_correct: null
+  key_point_coverage: null
+  unsupported_claims: null
+  helpfulness: null
+  notes: ""

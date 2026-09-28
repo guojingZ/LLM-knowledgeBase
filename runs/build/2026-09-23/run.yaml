@@ -1,0 +1,16 @@
+run_id: "2026-09-23"
+kind: bootstrap
+status: model_build_complete
+source_count: 50
+outputs:
+  scenarios: 17
+  concepts: 234
+  entities: 163
+validation_claims_from_log:
+  ipo_steps: 958
+  relation_targets: 1638
+  broken_references: 0
+limitations:
+  - 没有完整事件级工具调用日志，只有 WorkBuddy 记忆摘要和文件产物链。
+  - 没有已确认的真实问答金标准和业务效果对比。
+  - 来源仅到文件级，尚未普遍达到段落或表格单元级。

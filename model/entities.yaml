@@ -12,10 +12,10 @@ entities:
 
   - id: 5W1H
     sources:
-      - raw/如何高效和系统化的构建个人思维和认知体系.md
-      - raw/思维究竟是什么思维的逻辑和模式匹配.md
-      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
-      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+      - raw/accepted/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
     define: 问题定义需明确对象、原因、地点、时间、人物和方式的原则
     category: 框架与模型
     type: 模型-框架
@@ -29,7 +29,7 @@ entities:
 
   - id: AOP
     sources:
-      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+      - raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md
     define: 将日志记录、性能统计、安全控制、事务处理等横切关注点从业务逻辑中分离的技术
     category: 技术与标准
     type: 技术
@@ -43,7 +43,7 @@ entities:
 
   - id: AlphaGo
     sources:
-      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+      - raw/accepted/从经验思维到统计思维你应该了解的思维发展史.md
     define: Google于2016年推出、以人工神经网络为训练算法的围棋程序
     category: 工具与平台
     type: 产品
@@ -55,7 +55,7 @@ entities:
 
   - id: BAT
     sources:
-      - raw/关于思维的七个观点供大家参考.md
+      - raw/accepted/关于思维的七个观点供大家参考.md
     define: 毕业后进入并完成第一阶段积累的互联网大厂代表
     category: 人物与组织
     type: 组织
@@ -68,7 +68,7 @@ entities:
 
   - id: BSC平衡计分卡
     sources:
-      - raw/我是如此思考的思维整体框架和逻辑.md
+      - raw/accepted/我是如此思考的思维整体框架和逻辑.md
     define: 从学习、客户、财务、流程四维分解绩效目标的模型
     category: 框架与模型
     type: 模型-框架
@@ -83,11 +83,11 @@ entities:
 
   - id: CMMI
     sources:
-      - raw/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
-      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
-      - raw/我是如此思考的思维整体框架和逻辑.md
-      - raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
+      - raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/accepted/我是如此思考的思维整体框架和逻辑.md
+      - raw/accepted/碎片化工作和时间如何构建体系化知识库提升系统思维.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
     define: 软件工程领域的标准模型，被借作知识树主干结构参考
     category: 技术与标准
     type: 标准
@@ -100,7 +100,7 @@ entities:
 
   - id: CRM客户关系管理系统
     sources:
-      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md
     define: 作者已有的业务系统经验来源，作为方案制作案例的匹配基础
     category: 工具与平台
     type: 产品
@@ -113,7 +113,7 @@ entities:
 
   - id: CSF关键成功因素法
     sources:
-      - raw/我是如此思考的思维整体框架和逻辑.md
+      - raw/accepted/我是如此思考的思维整体框架和逻辑.md
     define: 将终极目标分解为子目标、关键要素和控制变量的方法
     category: 框架与模型
     type: 模型-框架
@@ -128,7 +128,7 @@ entities:
 
   - id: ChatGPT
     sources:
-      - raw/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
+      - raw/accepted/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
     define: 生成式AI代表工具，可基于个人现状给出渐进式学习计划
     category: 工具与平台
     type: 工具
@@ -143,7 +143,7 @@ entities:
 
   - id: Claude Skills
     sources:
-      - raw/AI时代个体思维能力进化知识显性化表达和输出能力.md
+      - raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md
     define: Claude推出的技能机制，将问题定义与个人知识经验描述封装为技能
     category: 工具与平台
     type: 工具
@@ -157,7 +157,7 @@ entities:
 
   - id: Claude.md
     sources:
-      - raw/AI时代个体思维能力进化知识显性化表达和输出能力.md
+      - raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md
     define: 写给AI的操作手册文件，承载个人规则约束与历史参考样例
     category: 知识资产
     type: 概念实体
@@ -170,7 +170,7 @@ entities:
 
   - id: DeepSeek
     sources:
-      - raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
+      - raw/accepted/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
     define: 带来知识管理思路变革、可协助完成内容输出的AI工具
     category: 工具与平台
     type: 工具
@@ -184,7 +184,7 @@ entities:
 
   - id: GPT
     sources:
-      - raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
+      - raw/accepted/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
     define: 与DeepSeek同类的AI工具，使重心转向问题场景下知识的应用
     category: 工具与平台
     type: 工具
@@ -198,7 +198,7 @@ entities:
 
   - id: GRAI模型
     sources:
-      - raw/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/accepted/如何高效和系统化的构建个人思维和认知体系.md
     define: 回顾目标、评估结果、分析原因、总结规律的复盘方法
     category: 框架与模型
     type: 模型-框架
@@ -214,7 +214,7 @@ entities:
 
   - id: GoF设计模式
     sources:
-      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+      - raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md
     define: 追求调用者与被调用者解耦以提升灵活性和可扩展性的模式集合
     category: 框架与模型
     type: 模型-框架
@@ -227,7 +227,7 @@ entities:
 
   - id: Google DeepResearch
     sources:
-      - raw/AI时代个体思维能力进化知识显性化表达和输出能力.md
+      - raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md
     define: 对陌生知识领域做深度研究并输出长篇研究报告的AI工具
     category: 工具与平台
     type: 工具
@@ -240,7 +240,7 @@ entities:
 
   - id: Google Nano Banana
     sources:
-      - raw/AI时代个体思维能力进化知识显性化表达和输出能力.md
+      - raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md
     define: 对已有知识做结构化与可视化呈现表达的AI信息图绘制工具
     category: 工具与平台
     type: 工具
@@ -254,7 +254,7 @@ entities:
 
   - id: HP
     sources:
-      - raw/关于思维的七个观点供大家参考.md
+      - raw/accepted/关于思维的七个观点供大家参考.md
     define: 咨询规划报告来源之一，与IBM、埃森哲并列被分析
     category: 人物与组织
     type: 组织
@@ -268,7 +268,7 @@ entities:
 
   - id: Hadoop
     sources:
-      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+      - raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
     define: 大数据技术平台，文中作为仅凭技术跳槽而脱离业务终被劝退的案例
     category: 技术与标准
     type: 技术
@@ -280,7 +280,7 @@ entities:
 
   - id: IBM
     sources:
-      - raw/关于思维的七个观点供大家参考.md
+      - raw/accepted/关于思维的七个观点供大家参考.md
     define: 作者做企业架构与IT规划时大量分析其咨询规划报告
     category: 人物与组织
     type: 组织
@@ -294,7 +294,7 @@ entities:
 
   - id: J2EE多层框架
     sources:
-      - raw/从架构思维到大架构观的培养.md
+      - raw/accepted/从架构思维到大架构观的培养.md
     define: 常被误认为架构全部内容的多层技术框架
     category: 技术与标准
     type: 技术
@@ -306,7 +306,7 @@ entities:
 
   - id: Java
     sources:
-      - raw/思维系列从学习的本质到如何高效快速学习.md
+      - raw/accepted/思维系列从学习的本质到如何高效快速学习.md
     define: 新领域学习案例中用于说明开发知识框架的编程技术
     category: 技术与标准
     type: 技术
@@ -320,7 +320,7 @@ entities:
 
   - id: KM指数增长公式
     sources:
-      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
     define: 以人与知识之和的分享科技次方表示知识管理增长的公式
     category: 框架与模型
     type: 模型-框架
@@ -333,7 +333,7 @@ entities:
 
   - id: MBSE
     sources:
-      - raw/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
+      - raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
     define: 基于模型的系统工程学建模思想，被用于为个人学习系统建模
     category: 框架与模型
     type: 模型-框架
@@ -346,7 +346,7 @@ entities:
 
   - id: NotebookLM
     sources:
-      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md
     define: 将文档资料转为双人播客或PPT视频讲解方式的AI学习工具
     category: 工具与平台
     type: 工具
@@ -358,8 +358,8 @@ entities:
 
   - id: Notion
     sources:
-      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
     define: 通过建立双向链接构建知识点间关系的个人知识管理工具
     category: 工具与平台
     type: 工具
@@ -373,7 +373,7 @@ entities:
 
   - id: Obsidian
     sources:
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
     define: 用于建立外脑、将隐性思考外化为显性知识的笔记工具
     category: 工具与平台
     type: 工具
@@ -387,18 +387,18 @@ entities:
 
   - id: PDCA
     sources:
-      - raw/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
-      - raw/信息爆炸时代认知高和认知低的六大核心差异体现.md
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
-      - raw/如何高效和系统化的构建个人思维和认知体系.md
-      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
-      - raw/思维系列从学习的本质到如何高效快速学习.md
-      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
-      - raw/构建思维能力知识体系和框架逻辑的闭环体系.md
-      - raw/知识和认知的本质区别.md
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
-      - raw/突破认知障碍构建认知提升闭环系统.md
-      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+      - raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
+      - raw/accepted/信息爆炸时代认知高和认知低的六大核心差异体现.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/accepted/思维系列从学习的本质到如何高效快速学习.md
+      - raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/accepted/构建思维能力知识体系和框架逻辑的闭环体系.md
+      - raw/accepted/知识和认知的本质区别.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/突破认知障碍构建认知提升闭环系统.md
+      - raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md
     define: 计划-执行-检查-改进的持续迭代循环
     category: 框架与模型
     type: 模型-框架
@@ -412,11 +412,11 @@ entities:
 
   - id: PMBOK
     sources:
-      - raw/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
-      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
-      - raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
-      - raw/突破认知障碍构建认知提升闭环系统.md
+      - raw/accepted/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
+      - raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/accepted/碎片化工作和时间如何构建体系化知识库提升系统思维.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/突破认知障碍构建认知提升闭环系统.md
     define: 项目管理领域的标准模型，被借作知识树主干结构参考
     category: 框架与模型
     type: 模型-框架
@@ -431,7 +431,7 @@ entities:
 
   - id: RUP
     sources:
-      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+      - raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
     define: 提倡用例驱动、架构为核心，先用例分析再找核心对象与接口
     category: 框架与模型
     type: 模型-框架
@@ -446,8 +446,8 @@ entities:
 
   - id: SCOR
     sources:
-      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
     define: 供应链领域用于搭建专业知识树干的标准参考模型
     category: 框架与模型
     type: 模型-框架
@@ -461,8 +461,8 @@ entities:
 
   - id: SMART原则
     sources:
-      - raw/我是如此思考的思维整体框架和逻辑.md
-      - raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
+      - raw/accepted/我是如此思考的思维整体框架和逻辑.md
+      - raw/accepted/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
     define: 以具体、可度量、可达成等要求判断目标的原则
     category: 框架与模型
     type: 模型-框架
@@ -477,12 +477,12 @@ entities:
 
   - id: SOA
     sources:
-      - raw/从架构思维到大架构观的培养.md
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
-      - raw/思维框架和知识体系构建知识组件并实现知识快速组装.md
-      - raw/技术人员如果跳出盒子实现思维和认知升级.md
-      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+      - raw/accepted/从架构思维到大架构观的培养.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md
+      - raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md
+      - raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
     define: 面向服务的架构思想，其分层与复用是架构核心思考模式
     category: 技术与标准
     type: 技术
@@ -497,7 +497,7 @@ entities:
 
   - id: SOA治理框架
     sources:
-      - raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md
+      - raw/accepted/碎片化工作和时间如何构建体系化知识库提升系统思维.md
     define: 以服务全生命周期与管理过程两个维度构建的知识体系参考框架
     category: 框架与模型
     type: 模型-框架
@@ -512,8 +512,8 @@ entities:
 
   - id: SSH框架
     sources:
-      - raw/思维系列从学习的本质到如何高效快速学习.md
-      - raw/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md
+      - raw/accepted/思维系列从学习的本质到如何高效快速学习.md
+      - raw/accepted/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md
     define: 由多层协同完成Java应用功能的组合开发框架
     category: 技术与标准
     type: 技术
@@ -527,7 +527,7 @@ entities:
 
   - id: Spring
     sources:
-      - raw/思维系列从学习的本质到如何高效快速学习.md
+      - raw/accepted/思维系列从学习的本质到如何高效快速学习.md
     define: SSH学习案例中涉及IOC和AOP机制的开发框架
     category: 技术与标准
     type: 技术
@@ -541,7 +541,7 @@ entities:
 
   - id: TPG
     sources:
-      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+      - raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md
     define: 企业内构建共享技术平台与组件、统一评估技术选型的平台型组织
     category: 人物与组织
     type: 组织
@@ -556,8 +556,8 @@ entities:
 
   - id: TRIZ
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md
     define: 产品研发与创新领域已有的完整方法论，被作为思维应有方法论的参照
     category: 框架与模型
     type: 模型-框架
@@ -569,7 +569,7 @@ entities:
 
   - id: T型人才
     sources:
-      - raw/在职场怎么抓住学习和成长的机会.md
+      - raw/accepted/在职场怎么抓住学习和成长的机会.md
     define: 既有专业深度又具备一定广度的能力结构
     category: 框架与模型
     type: 模型-框架
@@ -582,7 +582,7 @@ entities:
 
   - id: iThink
     sources:
-      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
     define: 支持系统思维动态建模与模拟仿真的建模软件
     category: 工具与平台
     type: 工具
@@ -595,7 +595,7 @@ entities:
 
   - id: ima知识库
     sources:
-      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md
     define: 用于导入历史文章、提炼关键词并输出知识图谱的知识库产品
     category: 工具与平台
     type: 产品
@@ -610,7 +610,7 @@ entities:
 
   - id: 《P9工作法》
     sources:
-      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md
     define: 阿里出版，把技术人员成长分为编码设计、架构思维、技术领导力
     category: 知识资产
     type: 书籍
@@ -623,7 +623,7 @@ entities:
 
   - id: 《SOA和大数据-企业私有云PaaS平台建设实践》
     sources:
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 作者2020年出版、依托联通UCloud项目实践总结的技术书籍
     category: 知识资产
     type: 书籍
@@ -635,10 +635,10 @@ entities:
 
   - id: 《你的灯亮着吗》
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
-      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
     define: 给出"问题是现状与期望之间差距"这一定义的著作
     category: 知识资产
     type: 书籍
@@ -649,8 +649,8 @@ entities:
 
   - id: 《刻意练习》
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 学习细分领域的代表著作
     category: 知识资产
     type: 书籍
@@ -662,8 +662,8 @@ entities:
 
   - id: 《如何阅读一本书》
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 阅读细分领域的代表著作
     category: 知识资产
     type: 书籍
@@ -674,8 +674,8 @@ entities:
 
   - id: 《小逻辑》
     sources:
-      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
-      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/accepted/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+      - raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
     define: 黑格尔所著，阐述正题反题如何走向对立统一的辩证逻辑著作
     category: 知识资产
     type: 书籍
@@ -691,7 +691,7 @@ entities:
 
   - id: 《底层逻辑》
     sources:
-      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+      - raw/accepted/个体进化的底层逻辑从知识到技能从技能到方法论.md
     define: 刘润所著，提出人生商业模式与个体进化三要素等内容的书
     category: 知识资产
     type: 书籍
@@ -706,7 +706,7 @@ entities:
 
   - id: 《庖丁解牛》
     sources:
-      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+      - raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md
     define: 以从见全牛到未见全牛比喻显性知识内化为隐性知识的过程
     category: 知识资产
     type: 书籍
@@ -720,8 +720,8 @@ entities:
 
   - id: 《思维框架和逻辑》
     sources:
-      - raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/基于思维框架逻辑来构建思维能力体系并应用到实践.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 作者正在详细修订的、讲思维框架逻辑与思维能力体系的书
     category: 知识资产
     type: 书籍
@@ -736,8 +736,8 @@ entities:
 
   - id: 《思维简史》
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 叙述整个思维发展历程的著作
     category: 知识资产
     type: 书籍
@@ -749,8 +749,8 @@ entities:
 
   - id: 《提问的智慧》
     sources:
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
-      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
     define: 给出完整描述问题四要素的提问方法论
     category: 知识资产
     type: 书籍
@@ -761,7 +761,7 @@ entities:
 
   - id: 《方法论》
     sources:
-      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+      - raw/accepted/从经验思维到统计思维你应该了解的思维发展史.md
     define: 笛卡尔1637年著，提出怀疑一切与复杂问题分解的科学方法论
     category: 知识资产
     type: 书籍
@@ -777,10 +777,10 @@ entities:
 
   - id: 《暗时间》
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
-      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
     define: 刘未鹏所著，提出"锤子和钉子"的心智隐喻
     category: 知识资产
     type: 书籍
@@ -792,7 +792,7 @@ entities:
 
   - id: 《架构之美》
     sources:
-      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+      - raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
     define: 指出架构是洞见内在结构、规律、原则和逻辑的过程而非结果
     category: 知识资产
     type: 书籍
@@ -806,9 +806,9 @@ entities:
 
   - id: 《第五项修炼》
     sources:
-      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 彼得·圣吉所著，系统思维与学习型组织的经典著作
     category: 知识资产
     type: 书籍
@@ -820,7 +820,7 @@ entities:
 
   - id: 《系统实践》工具包
     sources:
-      - raw/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
+      - raw/accepted/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
     define: 融合工程实践与管理实践、体现系统化思维与敏捷思想的电子文档
     category: 知识资产
     type: 书籍
@@ -836,8 +836,8 @@ entities:
 
   - id: 《系统思考》
     sources:
-      - raw/AI时代的个体思维进化从系统思维到第一性原理.md
-      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md
+      - raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
     define: 以问题驱动方式讲解系统思考方法的专著
     category: 知识资产
     type: 书籍
@@ -848,8 +848,8 @@ entities:
 
   - id: 《纯粹理性批判》
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
-      - raw/思维系列如何一阵见血的看透事物的本质.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/思维系列如何一阵见血的看透事物的本质.md
     define: 康德所著，论述感性知性理性并调和经验主义与理性主义的著作
     category: 知识资产
     type: 书籍
@@ -866,7 +866,7 @@ entities:
 
   - id: 《自然哲学的数学原理》
     sources:
-      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+      - raw/accepted/从经验思维到统计思维你应该了解的思维发展史.md
     define: 牛顿1687年著，提出力学三大定律与万有引力定律
     category: 知识资产
     type: 书籍
@@ -879,8 +879,8 @@ entities:
 
   - id: 《见识》
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 吴军所著，作者列举的相对不错的思维类书籍之一
     category: 知识资产
     type: 书籍
@@ -892,7 +892,7 @@ entities:
 
   - id: 《逻辑哲学论》
     sources:
-      - raw/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
+      - raw/accepted/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
     define: 维特根斯坦著作，阐述事实、事态、命题、逻辑图像与逻辑空间
     category: 知识资产
     type: 书籍
@@ -909,8 +909,8 @@ entities:
 
   - id: 万维钢
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 《智识分子》《万万没想到》作者，物理学科背景
     category: 人物与组织
     type: 人物
@@ -922,11 +922,11 @@ entities:
 
   - id: 三层六阶段学习法
     sources:
-      - raw/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
-      - raw/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
-      - raw/知识和认知的本质区别.md
-      - raw/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md
-      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+      - raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
+      - raw/accepted/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md
+      - raw/accepted/知识和认知的本质区别.md
+      - raw/accepted/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md
+      - raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md
     define: 基础-进阶-突破三层与不求甚解到融会贯通六阶段构成的学习路径模型
     category: 框架与模型
     type: 模型-框架
@@ -944,7 +944,7 @@ entities:
 
   - id: 三环学习法
     sources:
-      - raw/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
+      - raw/accepted/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
     define: 依次对行动、假设、上下文做反思以构建逆向闭环学习的方法
     category: 框架与模型
     type: 模型-框架
@@ -960,7 +960,7 @@ entities:
 
   - id: 事物认知模型
     sources:
-      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
     define: 以静态结构、动态时间、环境关系形成完整认知的三维模型
     category: 框架与模型
     type: 模型-框架
@@ -976,7 +976,7 @@ entities:
 
   - id: 二八法则
     sources:
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
     define: 关键的少数影响因子决定多数结果的优先级判定法则
     category: 框架与模型
     type: 模型-框架
@@ -987,11 +987,11 @@ entities:
 
   - id: 亚里士多德
     sources:
-      - raw/AI时代的个体思维进化从系统思维到第一性原理.md
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维系列如何一阵见血的看透事物的本质.md
-      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+      - raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维系列如何一阵见血的看透事物的本质.md
+      - raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md
     define: 强调知识是对事物本质和原因的把握
     category: 人物与组织
     type: 人物
@@ -1003,7 +1003,7 @@ entities:
 
   - id: 人生商业模式
     sources:
-      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+      - raw/accepted/个体进化的底层逻辑从知识到技能从技能到方法论.md
     define: 能力、效率与杠杆三者相乘的公式，用于解释个体进化与价值创造
     category: 框架与模型
     type: 模型-框架
@@ -1017,7 +1017,7 @@ entities:
 
   - id: 以师带徒
     sources:
-      - raw/在职场怎么抓住学习和成长的机会.md
+      - raw/accepted/在职场怎么抓住学习和成长的机会.md
     define: 公司内部导师制度，定期与导师交流困惑与感悟以少走弯路
     category: 框架与模型
     type: 模型-框架
@@ -1030,7 +1030,7 @@ entities:
 
   - id: 企业架构
     sources:
-      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md
     define: 由软件架构升华而来的企业数字化规划与平台建设能力体系
     category: 技术与标准
     type: 技术
@@ -1043,8 +1043,8 @@ entities:
 
   - id: 休谟
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
-      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md
     define: 经验主义集大成者，质疑因果关系的客观必然性与经验可靠性
     category: 人物与组织
     type: 人物
@@ -1058,7 +1058,7 @@ entities:
 
   - id: 佛学
     sources:
-      - raw/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
+      - raw/accepted/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
     define: 提出"诸法皆因缘起，缘起性空"，用以解释事物无独立自存本质
     category: 知识资产
     type: 概念实体
@@ -1072,7 +1072,7 @@ entities:
 
   - id: 信息熵
     sources:
-      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+      - raw/accepted/从经验思维到统计思维你应该了解的思维发展史.md
     define: 香农1948年提出的对信源不确定度进行量化度量的概念
     category: 技术与标准
     type: 技术
@@ -1085,7 +1085,7 @@ entities:
 
   - id: 倒金字塔转化模型
     sources:
-      - raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md
+      - raw/accepted/基于思维框架逻辑来构建思维能力体系并应用到实践.md
     define: 描述个人知识库向经验模式库持续转化的模型
     category: 框架与模型
     type: 模型-框架
@@ -1100,7 +1100,7 @@ entities:
 
   - id: 先验逻辑
     sources:
-      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+      - raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md
     define: 康德将逻辑要素展开为质、量、关系、模态等十二范畴的学说
     category: 知识资产
     type: 概念实体
@@ -1116,7 +1116,7 @@ entities:
 
   - id: 光照说
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
     define: 奥古斯丁认为理性需上帝光照方能认识真理的知识来源学说
     category: 知识资产
     type: 概念实体
@@ -1129,7 +1129,7 @@ entities:
 
   - id: 关键路径法
     sources:
-      - raw/关于思维的七个观点供大家参考.md
+      - raw/accepted/关于思维的七个观点供大家参考.md
     define: 进度管理中计算进度与工期的方法，在角色分工场景下往往不适用
     category: 框架与模型
     type: 模型-框架
@@ -1141,7 +1141,7 @@ entities:
 
   - id: 决策树
     sources:
-      - raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
+      - raw/accepted/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
     define: 用于问题分析思考并输出树状结构的分析工具
     category: 框架与模型
     type: 模型-框架
@@ -1157,7 +1157,7 @@ entities:
 
   - id: 决策矩阵
     sources:
-      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
     define: 按标准、成本、风险及权重为多个方案计算综合得分的工具
     category: 框架与模型
     type: 模型-框架
@@ -1172,10 +1172,10 @@ entities:
 
   - id: 刘未鹏
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
-      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
     define: 《暗时间》作者
     category: 人物与组织
     type: 人物
@@ -1187,7 +1187,7 @@ entities:
 
   - id: 刘润
     sources:
-      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+      - raw/accepted/个体进化的底层逻辑从知识到技能从技能到方法论.md
     define: 《底层逻辑》作者，将复杂道理演绎得浅显易懂
     category: 人物与组织
     type: 人物
@@ -1200,7 +1200,7 @@ entities:
 
   - id: 加兴
     sources:
-      - raw/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
+      - raw/accepted/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md
     define: 发布《系统实践》工具包、引出三环学习法的作者好友
     category: 人物与组织
     type: 人物
@@ -1213,7 +1213,7 @@ entities:
 
   - id: 动态规划
     sources:
-      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md
     define: 运筹学中背包问题可转化映射到的已知解法
     category: 技术与标准
     type: 技术
@@ -1225,8 +1225,8 @@ entities:
 
   - id: 古典
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 《拆掉思维的墙》《跃迁》作者，原新东方名师
     category: 人物与组织
     type: 人物
@@ -1237,8 +1237,8 @@ entities:
 
   - id: 吴军
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 《见识》作者，IT行业专家
     category: 人物与组织
     type: 人物
@@ -1250,7 +1250,7 @@ entities:
 
   - id: 哥白尼式革命
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
     define: 康德主张对象必须符合主体先天认识形式的认识论转向
     category: 知识资产
     type: 概念实体
@@ -1264,8 +1264,8 @@ entities:
 
   - id: 四因说
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
-      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md
     define: 亚里士多德提出的质料因、形式因、动力因、目的因四原因分析框架
     category: 框架与模型
     type: 模型-框架
@@ -1279,7 +1279,7 @@ entities:
 
   - id: 回溯算法
     sources:
-      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md
     define: 八皇后问题可转化映射到的已知解法
     category: 技术与标准
     type: 技术
@@ -1291,8 +1291,8 @@ entities:
 
   - id: 因果循环图
     sources:
-      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
-      - raw/我是如此思考的思维整体框架和逻辑.md
+      - raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/accepted/我是如此思考的思维整体框架和逻辑.md
     define: 描述系统中各要素正负反馈作用关系的环形图示
     category: 框架与模型
     type: 模型-框架
@@ -1306,7 +1306,7 @@ entities:
 
   - id: 图像论
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
     define: 维特根斯坦前期认为语言命题结构与事实结构逻辑同构的学说
     category: 知识资产
     type: 概念实体
@@ -1320,7 +1320,7 @@ entities:
 
   - id: 埃森哲
     sources:
-      - raw/关于思维的七个观点供大家参考.md
+      - raw/accepted/关于思维的七个观点供大家参考.md
     define: 咨询规划报告来源之一，作者分析其方法论的内在逻辑
     category: 人物与组织
     type: 组织
@@ -1334,9 +1334,9 @@ entities:
 
   - id: 培根
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
-      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
     define: 经验主义代表，主张一切知识起源于经验
     category: 人物与组织
     type: 人物
@@ -1348,7 +1348,7 @@ entities:
 
   - id: 大模型
     sources:
-      - raw/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
+      - raw/accepted/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
     define: 生成式反馈式学习模型，可边学边反馈并调整学习路径
     category: 工具与平台
     type: 技术
@@ -1362,8 +1362,8 @@ entities:
 
   - id: 头脑风暴
     sources:
-      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
-      - raw/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/accepted/如何高效和系统化的构建个人思维和认知体系.md
     define: 发散收集影响因子后再自下而上归纳整合的方法
     category: 框架与模型
     type: 模型-框架
@@ -1375,7 +1375,7 @@ entities:
 
   - id: 学习状态机
     sources:
-      - raw/思维系列从学习的本质到如何高效快速学习.md
+      - raw/accepted/思维系列从学习的本质到如何高效快速学习.md
     define: 由学习、实践、复盘、进化状态及触发转换构成的模型
     category: 框架与模型
     type: 模型-框架
@@ -1391,7 +1391,7 @@ entities:
 
   - id: 学习金字塔
     sources:
-      - raw/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/accepted/如何高效和系统化的构建个人思维和认知体系.md
     define: 揭示被动学习与主动学习方式在知识留存效率上的差异
     category: 框架与模型
     type: 模型-框架
@@ -1405,8 +1405,8 @@ entities:
 
   - id: 学习金字塔模型
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
     define: 概念模型-找寻主干-最小目标-知识树-可视化迭代-跃迁的六步学习模型
     category: 框架与模型
     type: 模型-框架
@@ -1423,8 +1423,8 @@ entities:
 
   - id: 层次分析法
     sources:
-      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
-      - raw/构建你的多维思考力从事物认知到问题解决.md
+      - raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/accepted/构建你的多维思考力从事物认知到问题解决.md
     define: 适用于简单二元决策的结构化决策方法
     category: 框架与模型
     type: 模型-框架
@@ -1435,8 +1435,8 @@ entities:
 
   - id: 平台+应用
     sources:
-      - raw/从架构思维到大架构观的培养.md
-      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+      - raw/accepted/从架构思维到大架构观的培养.md
+      - raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md
     define: 分层模式的一种变形，强调共性能力下沉与共享中心建设
     category: 框架与模型
     type: 模型-框架
@@ -1450,11 +1450,11 @@ entities:
 
   - id: 康德
     sources:
-      - raw/AI时代的个体思维进化从系统思维到第一性原理.md
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
-      - raw/思维系列如何一阵见血的看透事物的本质.md
-      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+      - raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/思维系列如何一阵见血的看透事物的本质.md
+      - raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md
     define: 融合经验与理性，提出知识是感性经验与先验范畴的结合
     category: 人物与组织
     type: 人物
@@ -1466,7 +1466,7 @@ entities:
 
   - id: 彼得·圣吉
     sources:
-      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
     define: 《第五项修炼》作者，作者系统思维的启蒙来源
     category: 人物与组织
     type: 人物
@@ -1478,8 +1478,8 @@ entities:
 
   - id: 微服务
     sources:
-      - raw/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
-      - raw/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
+      - raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md
+      - raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md
     define: 当前主流架构风格之一，文中强调需与业务适配而非盲目追随
     category: 技术与标准
     type: 技术
@@ -1492,9 +1492,9 @@ entities:
 
   - id: 德鲁克
     sources:
-      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
-      - raw/在职场怎么抓住学习和成长的机会.md
-      - raw/突破认知障碍构建认知提升闭环系统.md
+      - raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/accepted/在职场怎么抓住学习和成长的机会.md
+      - raw/accepted/突破认知障碍构建认知提升闭环系统.md
     define: 提出知识管理者首先要做好个人自我管理，再走向团队与部门管理
     category: 人物与组织
     type: 人物
@@ -1505,13 +1505,13 @@ entities:
 
   - id: 思维导图
     sources:
-      - raw/AI时代的思考力程序员从学习成长到知识体系构建之路.md
-      - raw/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
-      - raw/从认知的概念到认知系统模型的构建.md
-      - raw/思维系列从个人知识体系构建到知识网络图谱的构建.md
-      - raw/构建思维能力知识体系和框架逻辑的闭环体系.md
-      - raw/碎片化工作和时间如何构建体系化知识库提升系统思维.md
-      - raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
+      - raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md
+      - raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md
+      - raw/accepted/从认知的概念到认知系统模型的构建.md
+      - raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md
+      - raw/accepted/构建思维能力知识体系和框架逻辑的闭环体系.md
+      - raw/accepted/碎片化工作和时间如何构建体系化知识库提升系统思维.md
+      - raw/accepted/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
     define: 以树状展开呈现知识领域结构的图，常用于构建知识树
     category: 框架与模型
     type: 模型-框架
@@ -1525,8 +1525,8 @@ entities:
 
   - id: 思维框架
     sources:
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md
     define: 作者对整体思维体系结构的称呼，含思维框架与思维逻辑两大方面、四个分支
     category: 知识资产
     type: 概念实体
@@ -1542,7 +1542,7 @@ entities:
 
   - id: 思维钻石模型
     sources:
-      - raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md
+      - raw/accepted/基于思维框架逻辑来构建思维能力体系并应用到实践.md
     define: 思维层级模型，本书重点做第四、第五两个层级的事情
     category: 框架与模型
     type: 模型-框架
@@ -1556,7 +1556,7 @@ entities:
 
   - id: 思维闭环系统
     sources:
-      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
     define: 由信息输入、大脑处理、知识经验库和价值输出构成的闭环
     category: 框架与模型
     type: 模型-框架
@@ -1573,7 +1573,7 @@ entities:
 
   - id: 成长第一定律
     sources:
-      - raw/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
+      - raw/accepted/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
     define: 自我价值由经验存量与效率增量构成的动量决定，存量越大越易产出
     category: 框架与模型
     type: 模型-框架
@@ -1589,7 +1589,7 @@ entities:
 
   - id: 成长第二定律
     sources:
-      - raw/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
+      - raw/accepted/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
     define: 效率增量可分解为生产率与时间，以生产率换时间应对精力下降
     category: 框架与模型
     type: 模型-框架
@@ -1605,7 +1605,7 @@ entities:
 
   - id: 敏捷方法
     sources:
-      - raw/在职场怎么抓住学习和成长的机会.md
+      - raw/accepted/在职场怎么抓住学习和成长的机会.md
     define: 软件开发方法，被作者迁移应用到市场活动策划中
     category: 框架与模型
     type: 模型-框架
@@ -1619,7 +1619,7 @@ entities:
 
   - id: 数字化转型架构方法论
     sources:
-      - raw/深度思考的一个关键完成思维逻辑的自洽.md
+      - raw/accepted/深度思考的一个关键完成思维逻辑的自洽.md
     define: 以业务战略到治理体系组件堆砌呈现过程模型的架构方法论书
     category: 知识资产
     type: 书籍
@@ -1630,8 +1630,8 @@ entities:
 
   - id: 柏拉图
     sources:
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
-      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
     define: 主张知识是对永恒不变理念的认识
     category: 人物与组织
     type: 人物
@@ -1643,7 +1643,7 @@ entities:
 
   - id: 树模型
     sources:
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
     define: 逻辑树、问题树、决策树、思维导图等树状分解模型的统称
     category: 框架与模型
     type: 模型-框架
@@ -1657,7 +1657,7 @@ entities:
 
   - id: 正态分布
     sources:
-      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+      - raw/accepted/个体进化的底层逻辑从知识到技能从技能到方法论.md
     define: 与幂等分布相对的收益分布形态，用于讨论服务与产品模式选择
     category: 框架与模型
     type: 模型-框架
@@ -1670,7 +1670,7 @@ entities:
 
   - id: 沙堆理论
     sources:
-      - raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
+      - raw/accepted/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
     define: 以沙堆底面积喻知识广度、高度喻深度，二者动态互动的模型
     category: 框架与模型
     type: 模型-框架
@@ -1686,7 +1686,7 @@ entities:
 
   - id: 波普尔
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
     define: 提出证伪主义与试错法，构建科学知识与科学方法论
     category: 人物与组织
     type: 人物
@@ -1700,7 +1700,7 @@ entities:
 
   - id: 海德格尔
     sources:
-      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
     define: 区分存在与存在者并强调时间性的哲学家
     category: 人物与组织
     type: 人物
@@ -1713,7 +1713,7 @@ entities:
 
   - id: 特斯拉
     sources:
-      - raw/思维系列如何一阵见血的看透事物的本质.md
+      - raw/accepted/思维系列如何一阵见血的看透事物的本质.md
     define: 第一性原理电池案例中实现成本降低的企业
     category: 人物与组织
     type: 组织
@@ -1725,7 +1725,7 @@ entities:
 
   - id: 王徽之
     sources:
-      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+      - raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md
     define: 雪夜乘兴访戴安道而不入门，用以说明过程的体悟胜于结果
     category: 人物与组织
     type: 人物
@@ -1738,7 +1738,7 @@ entities:
 
   - id: 环形正负反馈回路
     sources:
-      - raw/如何提升自己的结构化思维和系统思维能力.md
+      - raw/accepted/如何提升自己的结构化思维和系统思维能力.md
     define: 系统思维中描述要素间正反反馈作用关系的闭环回路
     category: 框架与模型
     type: 模型-框架
@@ -1752,7 +1752,7 @@ entities:
 
   - id: 理性主义
     sources:
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
     define: 主张知识源于先天理性演绎的哲学流派
     category: 知识资产
     type: 概念实体
@@ -1764,7 +1764,7 @@ entities:
 
   - id: 白板说
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
     define: 洛克认为心灵初始如白板、一切知识来源于经验的学说
     category: 知识资产
     type: 概念实体
@@ -1778,7 +1778,7 @@ entities:
 
   - id: 百度文库
     sources:
-      - raw/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
+      - raw/accepted/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md
     define: 传统搜索式学习工具，无法针对个体给出渐进式学习计划
     category: 工具与平台
     type: 工具
@@ -1790,7 +1790,7 @@ entities:
 
   - id: 知识与认知五维对比
     sources:
-      - raw/知识和认知的本质区别.md
+      - raw/accepted/知识和认知的本质区别.md
     define: 从存在形式、存储位置、核心动作、进化逻辑、产物对比二者
     category: 框架与模型
     type: 模型-框架
@@ -1805,7 +1805,7 @@ entities:
 
   - id: 知识四层金字塔
     sources:
-      - raw/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
+      - raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md
     define: 数据资料、知识信息、技能、经验方法论构成的知识层次模型
     category: 框架与模型
     type: 模型-框架
@@ -1821,8 +1821,8 @@ entities:
 
   - id: 知识图谱
     sources:
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
-      - raw/重申观点学习过程的价值远远超过学到的知识本身.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md
     define: 结构与流程相互关联作用形成的网络，是知识关联后的价值放大形态
     category: 框架与模型
     type: 模型-框架
@@ -1839,7 +1839,7 @@ entities:
 
   - id: 知识竞争力公式
     sources:
-      - raw/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
+      - raw/accepted/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md
     define: 知识竞争力等于深度乘广度乘时间的竞争力构成公式
     category: 框架与模型
     type: 模型-框架
@@ -1855,8 +1855,8 @@ entities:
 
   - id: 科学归纳法
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
-      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
     define: 培根提出的含事实收集、三表法、排斥法与肯定结论的归纳方法
     category: 框架与模型
     type: 模型-框架
@@ -1870,10 +1870,10 @@ entities:
 
   - id: 笛卡尔
     sources:
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
-      - raw/普通人理解和认知事物的底层逻辑完整版本.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md
     define: 理性主义代表，主张先天理性通过演绎获得知识
     category: 人物与组织
     type: 人物
@@ -1885,8 +1885,8 @@ entities:
 
   - id: 笛卡尔科学方法论
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
-      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
     define: 笛卡尔提出的普遍怀疑、分析分解、演绎、归纳、综合验证六步法
     category: 框架与模型
     type: 模型-框架
@@ -1903,7 +1903,7 @@ entities:
 
   - id: 符号系统
     sources:
-      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+      - raw/accepted/从经验思维到统计思维你应该了解的思维发展史.md
     define: 以语言、文字、图像等编码形式承载并跨时空传递信息的载体
     category: 技术与标准
     type: 技术
@@ -1917,7 +1917,7 @@ entities:
 
   - id: 第一实体与第二实体
     sources:
-      - raw/信息爆炸时代认知高和认知低的六大核心差异体现.md
+      - raw/accepted/信息爆炸时代认知高和认知低的六大核心差异体现.md
     define: 亚里士多德对具体个体与其抽象概念的区分
     category: 知识资产
     type: 概念实体
@@ -1931,7 +1931,7 @@ entities:
 
   - id: 系统动力学
     sources:
-      - raw/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
+      - raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md
     define: 研究系统因子相互作用与动态平衡的建模仿真方法体系
     category: 技术与标准
     type: 技术
@@ -1944,7 +1944,7 @@ entities:
 
   - id: 经验主义
     sources:
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
     define: 主张知识起源于感官经验的哲学流派
     category: 知识资产
     type: 概念实体
@@ -1956,8 +1956,8 @@ entities:
 
   - id: 维特根斯坦
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
-      - raw/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/诸法皆因缘起世界是事实的总和而非事物的总和从事实到逻辑空间.md
     define: 以图像论与语言游戏论述知识与事实、逻辑及语境的关系
     category: 人物与组织
     type: 人物
@@ -1971,7 +1971,7 @@ entities:
 
   - id: 胡塞尔
     sources:
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
     define: 现象学创立者，揭示知识的意向构造过程
     category: 人物与组织
     type: 人物
@@ -1982,7 +1982,7 @@ entities:
 
   - id: 胡萝卜加大棒
     sources:
-      - raw/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
+      - raw/accepted/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md
     define: 管理学上用奖励与强制驱动行为的方式，会削弱学习成长的自主性
     category: 框架与模型
     type: 模型-框架
@@ -1994,7 +1994,7 @@ entities:
 
   - id: 芭芭拉·明托
     sources:
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
     define: 麦肯锡咨询顾问，《金字塔原理》作者
     category: 人物与组织
     type: 人物
@@ -2006,7 +2006,7 @@ entities:
 
   - id: 苏格拉底
     sources:
-      - raw/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/accepted/如何高效和系统化的构建个人思维和认知体系.md
     define: 提出"我唯一知道的，就是我一无所知"，并被用作三段论演绎举例
     category: 人物与组织
     type: 人物
@@ -2019,7 +2019,7 @@ entities:
 
   - id: 认知提升闭环操作系统
     sources:
-      - raw/知识和认知的本质区别.md
+      - raw/accepted/知识和认知的本质区别.md
     define: 学习、实践、复盘三模块加反馈回路构成的认知进化操作系统
     category: 框架与模型
     type: 模型-框架
@@ -2037,7 +2037,7 @@ entities:
 
   - id: 认知系统模型
     sources:
-      - raw/从认知的概念到认知系统模型的构建.md
+      - raw/accepted/从认知的概念到认知系统模型的构建.md
     define: 含输入层、处理层、存储层、输出层、控制层的六层认知系统模型
     category: 框架与模型
     type: 模型-框架
@@ -2054,7 +2054,7 @@ entities:
 
   - id: 认知闭环
     sources:
-      - raw/克服认知障碍实现认知升级打造认知闭环.md
+      - raw/accepted/克服认知障碍实现认知升级打造认知闭环.md
     define: 事物群分析-深度复盘-经验入库-演绎解决新问题的持续改进循环
     category: 框架与模型
     type: 模型-框架
@@ -2070,7 +2070,7 @@ entities:
 
   - id: 证伪主义
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
     define: 波普尔提出的以可证伪性划界科学、以试错推动知识增长的理论
     category: 框架与模型
     type: 模型-框架
@@ -2087,7 +2087,7 @@ entities:
 
   - id: 语言游戏
     sources:
-      - raw/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
+      - raw/accepted/从知识到智慧如何从西方哲学发展历史角度来理解知识这个核心概念.md
     define: 维特根斯坦后期认为意义由具体语境中的语言使用所赋予的学说
     category: 知识资产
     type: 概念实体
@@ -2101,7 +2101,7 @@ entities:
 
   - id: 贺博士
     sources:
-      - raw/基于思维框架逻辑来构建思维能力体系并应用到实践.md
+      - raw/accepted/基于思维框架逻辑来构建思维能力体系并应用到实践.md
     define: 提出"学习本身就是思维，思维框架应是认知过程加学习过程"
     category: 人物与组织
     type: 人物
@@ -2114,7 +2114,7 @@ entities:
 
   - id: 资源-服务-应用三层
     sources:
-      - raw/从架构思维到大架构观的培养.md
+      - raw/accepted/从架构思维到大架构观的培养.md
     define: 架构分层的核心三大层，平台+应用为其变形
     category: 框架与模型
     type: 模型-框架
@@ -2128,7 +2128,7 @@ entities:
 
   - id: 赫拉克利特
     sources:
-      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+      - raw/accepted/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
     define: 古希腊时期以朴素形式提出并说明对立统一的辩证法思想
     category: 人物与组织
     type: 人物
@@ -2142,7 +2142,7 @@ entities:
 
   - id: 辩证法
     sources:
-      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+      - raw/accepted/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
     define: 在西方哲学体系中占重要地位的、关于对立统一的思维学说
     category: 知识资产
     type: 概念实体
@@ -2157,7 +2157,7 @@ entities:
 
   - id: 迈克尔·波兰尼
     sources:
-      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+      - raw/accepted/从经验思维到统计思维你应该了解的思维发展史.md
     define: 1958年从哲学领域提出隐性知识与显性知识的划分
     category: 人物与组织
     type: 人物
@@ -2170,7 +2170,7 @@ entities:
 
   - id: 逻辑树
     sources:
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
     define: 用于可视化拆解复杂问题、做逻辑分解的树状结构模型
     category: 框架与模型
     type: 模型-框架
@@ -2186,12 +2186,12 @@ entities:
 
   - id: 金字塔原理
     sources:
-      - raw/从架构思维到大架构观的培养.md
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/思维究竟是什么思维的逻辑和模式匹配.md
-      - raw/我是如此思考的思维整体框架和逻辑.md
-      - raw/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/从架构思维到大架构观的培养.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md
+      - raw/accepted/我是如此思考的思维整体框架和逻辑.md
+      - raw/accepted/结构化思维的本质逻辑动态过程结构化静态组成结构化.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
     define: 明托提出的金字塔结构、MECE分解与写作呈现原则
     category: 框架与模型
     type: 模型-框架
@@ -2206,7 +2206,7 @@ entities:
 
   - id: 金字塔结构
     sources:
-      - raw/构建思维能力知识体系和框架逻辑的闭环体系.md
+      - raw/accepted/构建思维能力知识体系和框架逻辑的闭环体系.md
     define: 以树状层次组织论点、自上而下展开的结构化呈现模型
     category: 框架与模型
     type: 模型-框架
@@ -2222,7 +2222,7 @@ entities:
 
   - id: 长尾理论
     sources:
-      - raw/个体进化的底层逻辑从知识到技能从技能到方法论.md
+      - raw/accepted/个体进化的底层逻辑从知识到技能从技能到方法论.md
     define: 幂等分布下边际成本趋零，但也将遭遇更强竞争的分布规律
     category: 框架与模型
     type: 模型-框架
@@ -2235,7 +2235,7 @@ entities:
 
   - id: 问题分类矩阵
     sources:
-      - raw/碎片化时代从体系思维到系统化知识体系构建之路.md
+      - raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md
     define: 以输入定义/输出评价与事物描述/问题解决两维划分的四象限问题矩阵
     category: 框架与模型
     type: 模型-框架
@@ -2250,7 +2250,7 @@ entities:
 
   - id: 问题四分类
     sources:
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
     define: 将问题分为What、How、Which、Where四类的分类框架
     category: 框架与模型
     type: 模型-框架
@@ -2262,8 +2262,8 @@ entities:
 
   - id: 面向对象
     sources:
-      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
-      - raw/技术人员如果跳出盒子实现思维和认知升级.md
+      - raw/accepted/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+      - raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md
     define: 以类、继承、接口先抽象描述现实世界再解决问题的编程思想
     category: 技术与标准
     type: 技术
@@ -2278,7 +2278,7 @@ entities:
 
   - id: 香农
     sources:
-      - raw/从经验思维到统计思维你应该了解的思维发展史.md
+      - raw/accepted/从经验思维到统计思维你应该了解的思维发展史.md
     define: 信息论创立者，提出信息熵解决信息的量化度量问题
     category: 人物与组织
     type: 人物
@@ -2291,8 +2291,8 @@ entities:
 
   - id: 马斯克
     sources:
-      - raw/AI时代的个体思维进化从系统思维到第一性原理.md
-      - raw/思维系列如何一阵见血的看透事物的本质.md
+      - raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md
+      - raw/accepted/思维系列如何一阵见血的看透事物的本质.md
     define: 以回归本质根节点实现突破性创新的代表性人物
     category: 人物与组织
     type: 人物
@@ -2304,8 +2304,8 @@ entities:
 
   - id: 鱼骨图
     sources:
-      - raw/如何高效和系统化的构建个人思维和认知体系.md
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
     define: 从人、机、料、法、环五方面做因果分解的分析图
     category: 框架与模型
     type: 模型-框架
@@ -2318,7 +2318,7 @@ entities:
 
   - id: 麦肯锡
     sources:
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
     define: 咨询公司，输出七步法等结构化思维与呈现方法论
     category: 人物与组织
     type: 组织
@@ -2331,11 +2331,11 @@ entities:
 
   - id: 麦肯锡七步法
     sources:
-      - raw/如何高效和系统化的构建个人思维和认知体系.md
-      - raw/对思维框架和内在逻辑的完整梳理和认识.md
-      - raw/我是如此思考的思维整体框架和逻辑.md
-      - raw/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
-      - raw/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
+      - raw/accepted/如何高效和系统化的构建个人思维和认知体系.md
+      - raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md
+      - raw/accepted/我是如此思考的思维整体框架和逻辑.md
+      - raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md
+      - raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md
     define: 麦肯锡提出的、面向How类问题的结构化解决方案方法论
     category: 框架与模型
     type: 模型-框架
@@ -2352,9 +2352,9 @@ entities:
 
   - id: 黑格尔
     sources:
-      - raw/如何构建完整的个人知识体系以下五个关键点供你参考.md
-      - raw/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
-      - raw/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
+      - raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md
+      - raw/accepted/如何理解辩证思维从抽象规定到思维具体化的完整过程.md
+      - raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md
     define: 提出辩证逻辑，强调知识的动态发展
     category: 人物与组织
     type: 人物

@@ -1,0 +1,25 @@
+version: "1.0"
+updated_at: "2026-09-25"
+aliases:
+  - canonical: concept://第一性原理
+    variants: [第一性原理思维, 第一性]
+  - canonical: concept://结构化思维
+    variants: [静态结构, 动态结构, 动态过程结构化, 静态展现结构化]
+  - canonical: concept://逻辑自洽
+    variants: [因果自洽, 关系自洽, 过程自洽]
+  - canonical: concept://系统思维
+    variants: [满意解, 幅度决策]
+  - canonical: concept://复盘
+    variants: [学习实践复盘, 学习实践复盘闭环, 思维引擎]
+  - canonical: concept://分解
+    variants: [目标分解, 自顶向下分解, 系统分解]
+  - canonical: concept://跨领域迁移
+    variants: [跨领域知识复用, 跨领域类比]
+  - canonical: entity://PDCA
+    variants: [PDCA循环]
+  - canonical: entity://麦肯锡七步法
+    variants: [麦肯锡七步成诗法]
+  - canonical: entity://三层六阶段学习法
+    variants: [三层六阶学习金字塔, 三层六阶段金字塔学习方法论]
+notes:
+  - 这里只登记稳定别名；完整历史去重证据保存在 runs/build/2026-09-23/round1/_round1_dedup_map.md。

@@ -1,0 +1,17 @@
+version: "1.0"
+required:
+  - question
+fields:
+  question:
+    type: string
+    description: 用户的原始问题，不在进入检索前改写为结论。
+  mode:
+    type: enum
+    values: [model-guided, raw]
+    default: model-guided
+  scenario:
+    type: string_or_null
+    description: 仅在用户或人工评测明确指定场景时使用。
+  top_k:
+    type: integer
+    default: 3

@@ -1,0 +1,668 @@
+{
+  "generated_at": "2026-09-25T02:34:06+00:00",
+  "metrics": {
+    "question_count": 24,
+    "answer_question_count": 18,
+    "boundary_question_count": 6,
+    "scenario_top1_accuracy": 0.6111,
+    "scenario_top3_recall": 0.9444,
+    "expected_source_hit_rate_model": 0.8333,
+    "expected_source_hit_rate_raw": 0.8333,
+    "boundary_behavior_accuracy": 1.0,
+    "question_set_status": "needs_human_review"
+  },
+  "results": [
+    {
+      "id": "Q001",
+      "question": "面对一个复杂业务故障，我应该如何一步步定位根因并形成方案？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何分析和解决复杂问题",
+      "model_status": "needs_clarification",
+      "model_selected": "如何培养架构思维与大架构观",
+      "model_top_score": 0.2039,
+      "scenario_top1": false,
+      "scenario_top3": false,
+      "model_source_hit": false,
+      "raw_source_hit": false,
+      "model_sources": [
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md",
+        "raw/accepted/知识和认知的本质区别.md",
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/知识和认知的本质区别.md",
+        "raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md",
+        "raw/accepted/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/关于思维的七个观点供大家参考.md"
+      ]
+    },
+    {
+      "id": "Q002",
+      "question": "CRM 查询变慢，但我不确定是数据库、代码还是网络问题，应该怎么排查？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何分析和解决复杂问题",
+      "model_status": "needs_clarification",
+      "model_selected": "如何分析和解决复杂问题",
+      "model_top_score": 0.2735,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": false,
+      "raw_source_hit": false,
+      "model_sources": [
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md",
+        "raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+        "raw/accepted/深度思考的一个关键完成思维逻辑的自洽.md",
+        "raw/accepted/我是如此思考的思维整体框架和逻辑.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md",
+        "raw/accepted/从经验思维到统计思维你应该了解的思维发展史.md",
+        "raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md"
+      ]
+    },
+    {
+      "id": "Q003",
+      "question": "我要向领导提交一份逻辑完整、可以执行的解决方案，应该包含哪些部分？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何制作一份完整的解决方案",
+      "model_status": "context_ready",
+      "model_selected": "如何定义融入个人经验的AI提示语与技能",
+      "model_top_score": 0.3265,
+      "scenario_top1": false,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md",
+        "raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/构建你的多维思考力从事物认知到问题解决.md",
+        "raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md",
+        "raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md"
+      ]
+    },
+    {
+      "id": "Q004",
+      "question": "怎样从局部技术视角跳出来，培养架构师需要的全局思维？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何培养架构思维与大架构观",
+      "model_status": "context_ready",
+      "model_selected": "如何培养架构思维与大架构观",
+      "model_top_score": 0.4978,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+        "raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md",
+        "raw/accepted/从架构思维到大架构观的培养.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+        "raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md",
+        "raw/accepted/从架构思维到大架构观的培养.md"
+      ]
+    },
+    {
+      "id": "Q005",
+      "question": "系统思维应该怎样练习，而不只是记住几个框架？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何培养系统思维能力",
+      "model_status": "context_ready",
+      "model_selected": "如何构建个人思维框架与认知体系",
+      "model_top_score": 0.3975,
+      "scenario_top1": false,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md",
+        "raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md",
+        "raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md",
+        "raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md",
+        "raw/accepted/从架构思维到大架构观的培养.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md",
+        "raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md",
+        "raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md",
+        "raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md",
+        "raw/accepted/从架构思维到大架构观的培养.md"
+      ]
+    },
+    {
+      "id": "Q006",
+      "question": "如何把个人长期经验写进 AI 提示语，让它更像我的工作方式？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何定义融入个人经验的AI提示语与技能",
+      "model_status": "context_ready",
+      "model_selected": "如何将隐性经验显性化并结构化输出",
+      "model_top_score": 0.2793,
+      "scenario_top1": false,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md",
+        "raw/accepted/关于思维的七个观点供大家参考.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md",
+        "raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md",
+        "raw/accepted/关于思维的七个观点供大家参考.md",
+        "raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md",
+        "raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md"
+      ]
+    },
+    {
+      "id": "Q007",
+      "question": "如何检查一个推理在因果、关系和过程三个方面是否自洽？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何实现思维逻辑自洽",
+      "model_status": "context_ready",
+      "model_selected": "如何实现思维逻辑自洽",
+      "model_top_score": 0.4694,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/深度思考的一个关键完成思维逻辑的自洽.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+        "raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md",
+        "raw/accepted/碎片化工作和时间如何构建体系化知识库提升系统思维.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/深度思考的一个关键完成思维逻辑的自洽.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md",
+        "raw/accepted/碎片化工作和时间如何构建体系化知识库提升系统思维.md",
+        "raw/accepted/构建思维能力知识体系和框架逻辑的闭环体系.md"
+      ]
+    },
+    {
+      "id": "Q008",
+      "question": "怎样把脑子里的隐性经验整理出来，并针对不同对象清楚表达？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何将隐性经验显性化并结构化输出",
+      "model_status": "context_ready",
+      "model_selected": "如何将隐性经验显性化并结构化输出",
+      "model_top_score": 0.3588,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/知识和认知的本质区别.md",
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/知识和认知的本质区别.md",
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md"
+      ]
+    },
+    {
+      "id": "Q009",
+      "question": "AI 时代专业深度和跨领域知识广度应该如何平衡？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何平衡知识广度与深度构建核心竞争力",
+      "model_status": "context_ready",
+      "model_selected": "如何平衡知识广度与深度构建核心竞争力",
+      "model_top_score": 0.6756,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md",
+        "raw/accepted/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md",
+        "raw/accepted/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md"
+      ]
+    },
+    {
+      "id": "Q010",
+      "question": "我想建立自己的思维框架和认知体系，应该从哪里开始？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何构建个人思维框架与认知体系",
+      "model_status": "context_ready",
+      "model_selected": "如何构建个人思维框架与认知体系",
+      "model_top_score": 0.613,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/基于思维框架逻辑来构建思维能力体系并应用到实践.md",
+        "raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md",
+        "raw/accepted/构建思维能力知识体系和框架逻辑的闭环体系.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md",
+        "raw/accepted/基于思维框架逻辑来构建思维能力体系并应用到实践.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md",
+        "raw/accepted/构建思维能力知识体系和框架逻辑的闭环体系.md"
+      ]
+    },
+    {
+      "id": "Q011",
+      "question": "如何把零散的文章、笔记和经验组织成可复用的个人知识体系？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何构建个人知识体系",
+      "model_status": "context_ready",
+      "model_selected": "如何将隐性经验显性化并结构化输出",
+      "model_top_score": 0.4533,
+      "scenario_top1": false,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+        "raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md",
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md",
+        "raw/accepted/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md"
+      ]
+    },
+    {
+      "id": "Q012",
+      "question": "碰到一个从没见过的问题，怎样从已有经验里找到可迁移的模式？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何用模式匹配解决未知问题",
+      "model_status": "needs_clarification",
+      "model_selected": "如何构建个人思维框架与认知体系",
+      "model_top_score": 0.3893,
+      "scenario_top1": false,
+      "scenario_top3": true,
+      "model_source_hit": false,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/克服认知障碍实现认知升级打造认知闭环.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md",
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/克服认知障碍实现认知升级打造认知闭环.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+        "raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md"
+      ]
+    },
+    {
+      "id": "Q013",
+      "question": "我总是受已有经验和思维定势限制，怎样实现认知升级？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何突破认知障碍实现认知升级",
+      "model_status": "context_ready",
+      "model_selected": "如何突破认知障碍实现认知升级",
+      "model_top_score": 0.361,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/克服认知障碍实现认知升级打造认知闭环.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/知识和认知的本质区别.md",
+        "raw/accepted/基于思维框架逻辑来构建思维能力体系并应用到实践.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/克服认知障碍实现认知升级打造认知闭环.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/知识和认知的本质区别.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md"
+      ]
+    },
+    {
+      "id": "Q014",
+      "question": "多个方案各有成本、风险和收益时，如何进行结构化决策？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何进行结构化决策",
+      "model_status": "context_ready",
+      "model_selected": "如何进行结构化决策",
+      "model_top_score": 1.0,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/构建你的多维思考力从事物认知到问题解决.md",
+        "raw/accepted/我是如此思考的思维整体框架和逻辑.md",
+        "raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md",
+        "raw/accepted/问题分析解决核心逻辑麦肯锡解决问题七步法仅是开始.md",
+        "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md",
+        "raw/accepted/我是如此思考的思维整体框架和逻辑.md",
+        "raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md",
+        "raw/accepted/构建你的多维思考力从事物认知到问题解决.md",
+        "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+        "raw/accepted/问题分析和解决逻辑麦肯锡七步成诗仅是开始.md"
+      ]
+    },
+    {
+      "id": "Q015",
+      "question": "怎样从表面现象继续深入，理解一个事物真正的运行机制？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何透过现象看透事物本质",
+      "model_status": "context_ready",
+      "model_selected": "如何通过复盘实现能力进化闭环",
+      "model_top_score": 0.424,
+      "scenario_top1": false,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": false,
+      "model_sources": [
+        "raw/accepted/构建你的多维思考力从事物认知到问题解决.md",
+        "raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md",
+        "raw/accepted/思维系列从学习的本质到如何高效快速学习.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md",
+        "raw/accepted/从认知的概念到认知系统模型的构建.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/构建你的多维思考力从事物认知到问题解决.md",
+        "raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+        "raw/accepted/思维系列从学习的本质到如何高效快速学习.md",
+        "raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md",
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md"
+      ]
+    },
+    {
+      "id": "Q016",
+      "question": "如何通过复盘把一次项目经历沉淀成以后可以复用的方法？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何通过复盘实现能力进化闭环",
+      "model_status": "context_ready",
+      "model_selected": "如何通过复盘实现能力进化闭环",
+      "model_top_score": 0.3946,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+        "raw/accepted/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md",
+        "raw/accepted/思维系列从学习的本质到如何高效快速学习.md",
+        "raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md",
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+        "raw/accepted/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md",
+        "raw/accepted/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+        "raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md",
+        "raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md"
+      ]
+    },
+    {
+      "id": "Q017",
+      "question": "刚进入一个完全陌生的领域，怎样建立学习路径而不是零散看资料？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何高效学习一个全新领域",
+      "model_status": "context_ready",
+      "model_selected": "如何高效学习一个全新领域",
+      "model_top_score": 0.249,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/思维系列从学习的本质到如何高效快速学习.md",
+        "raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md",
+        "raw/accepted/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md",
+        "raw/accepted/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md",
+        "raw/accepted/思维系列从学习的本质到如何高效快速学习.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/进入职场后的学习逻辑三层六阶段金字塔学习方法论和PPT分享.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md"
+      ]
+    },
+    {
+      "id": "Q018",
+      "question": "已经会做系统分析以后，怎样继续追溯到第一性原理并重新演绎？",
+      "expected_behavior": "answer",
+      "expected_scenario": "如何从系统思维进阶到第一性原理",
+      "model_status": "context_ready",
+      "model_selected": "如何从系统思维进阶到第一性原理",
+      "model_top_score": 0.6164,
+      "scenario_top1": true,
+      "scenario_top3": true,
+      "model_source_hit": true,
+      "raw_source_hit": true,
+      "model_sources": [
+        "raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md"
+      ]
+    },
+    {
+      "id": "Q019",
+      "question": "我应该怎样提升自己？",
+      "expected_behavior": "clarify",
+      "expected_scenario": null,
+      "model_status": "needs_clarification",
+      "model_selected": "如何平衡知识广度与深度构建核心竞争力",
+      "model_top_score": 0.3707,
+      "scenario_top1": false,
+      "scenario_top3": false,
+      "model_source_hit": false,
+      "raw_source_hit": false,
+      "model_sources": [
+        "raw/accepted/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md",
+        "raw/accepted/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/在职场怎么抓住学习和成长的机会.md",
+        "raw/accepted/知识和智能时代个人核心竞争力深刻理解知识广度和深度之间的辩证逻辑关系.md",
+        "raw/accepted/职场年过四十被裁员无法破的学习曲线可以破的成长定律.md",
+        "raw/accepted/碎片化工作和时间如何构建体系化知识库提升系统思维.md",
+        "raw/accepted/个体进化的底层逻辑从知识到技能从技能到方法论.md"
+      ],
+      "boundary_correct": true
+    },
+    {
+      "id": "Q020",
+      "question": "帮我做一个方案。",
+      "expected_behavior": "clarify",
+      "expected_scenario": null,
+      "model_status": "needs_clarification",
+      "model_selected": "如何将隐性经验显性化并结构化输出",
+      "model_top_score": 0.4179,
+      "scenario_top1": false,
+      "scenario_top3": false,
+      "model_source_hit": false,
+      "raw_source_hit": false,
+      "model_sources": [
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+        "raw/accepted/碎片化工作和时间如何构建体系化知识库提升系统思维.md",
+        "raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md"
+      ],
+      "boundary_correct": true
+    },
+    {
+      "id": "Q021",
+      "question": "请告诉我今天上海的天气。",
+      "expected_behavior": "abstain",
+      "expected_scenario": null,
+      "model_status": "no_evidence",
+      "model_selected": null,
+      "model_top_score": 0.0,
+      "scenario_top1": false,
+      "scenario_top3": false,
+      "model_source_hit": false,
+      "raw_source_hit": false,
+      "model_sources": [],
+      "raw_sources": [
+        "raw/accepted/关于思维的七个观点供大家参考.md",
+        "raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md",
+        "raw/accepted/什么是系统思维个人应该如何培养系统思维能力从基本概念到案例分析.md",
+        "raw/accepted/从架构思维到大架构观的培养.md",
+        "raw/accepted/如何构建完整的个人知识体系以下五个关键点供你参考.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/所有的思维均来源于我们对世界和自我的认知对思维框架逻辑构建的哲学思考.md"
+      ],
+      "boundary_correct": true
+    },
+    {
+      "id": "Q022",
+      "question": "现在比特币多少钱，适合买入吗？",
+      "expected_behavior": "abstain",
+      "expected_scenario": null,
+      "model_status": "no_evidence",
+      "model_selected": null,
+      "model_top_score": 0.155,
+      "scenario_top1": false,
+      "scenario_top3": false,
+      "model_source_hit": false,
+      "raw_source_hit": false,
+      "model_sources": [],
+      "raw_sources": [
+        "raw/accepted/我是如此思考的思维整体框架和逻辑.md",
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/AI时代的个体思维进化从系统思维到第一性原理.md",
+        "raw/accepted/AI时代的思考力程序员从学习成长到知识体系构建之路.md",
+        "raw/accepted/一文详细讲解基于系统工程思想构建自己的学习体系和学习系统.md",
+        "raw/accepted/个人提升解决问题能力的关键从结果到过程通过复盘形成闭环.md"
+      ],
+      "boundary_correct": true
+    },
+    {
+      "id": "Q023",
+      "question": "根据知识库判断我所在公司的利润明年一定会增长多少。",
+      "expected_behavior": "abstain",
+      "expected_scenario": null,
+      "model_status": "no_evidence",
+      "model_selected": null,
+      "model_top_score": 0.1577,
+      "scenario_top1": false,
+      "scenario_top3": false,
+      "model_source_hit": false,
+      "raw_source_hit": false,
+      "model_sources": [],
+      "raw_sources": [
+        "raw/accepted/我是如此思考的思维整体框架和逻辑.md",
+        "raw/accepted/普通人理解和认知事物的底层逻辑完整版本.md",
+        "raw/accepted/从信息焦虑到智慧从容构建个人知识管理体系从学习到实践.md",
+        "raw/accepted/知识和认知的本质区别.md",
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md"
+      ],
+      "boundary_correct": true
+    },
+    {
+      "id": "Q024",
+      "question": "我有很多不同观点，但不知道该先做知识整理、复盘还是解决具体问题。",
+      "expected_behavior": "clarify",
+      "expected_scenario": null,
+      "model_status": "needs_clarification",
+      "model_selected": "如何用模式匹配解决未知问题",
+      "model_top_score": 0.3232,
+      "scenario_top1": false,
+      "scenario_top3": false,
+      "model_source_hit": false,
+      "raw_source_hit": false,
+      "model_sources": [
+        "raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md",
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md"
+      ],
+      "raw_sources": [
+        "raw/accepted/我们在解决复杂问题时如何抽丝剥茧透过现象看本质.md",
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/如何高效和系统化的构建个人思维和认知体系.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md"
+      ],
+      "boundary_correct": true
+    }
+  ]
+}

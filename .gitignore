@@ -1,15 +1,11 @@
-# Local secrets and environment files
-.env
-.env.*
-!.env.example
-
-# Generated/runtime files
-*.log
-*.tmp
-__pycache__/
 .venv/
-node_modules/
-dist/
-build/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+.workbuddy/
+release/
+*.tmp
+*.log
 .DS_Store
 Thumbs.db

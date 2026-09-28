@@ -1,0 +1,25 @@
+version: "1.0"
+context_output:
+  required:
+    - trace_id
+    - status
+    - question
+    - mode
+    - evidence
+  status_values:
+    - context_ready
+    - needs_clarification
+    - no_evidence
+agent_answer:
+  required_sections:
+    - 结论
+    - 建议步骤
+    - 依据与来源
+    - 不确定性
+  rules:
+    - 只使用 context 和已读取 raw 原文支持的主张。
+    - 来源必须紧邻其支持的表述。
+    - candidate_scenarios 是召回候选；首选语义不匹配时，必须指定更合适的候选并重新取 context。
+    - 候选场景分数接近时先说明歧义，必要时询问用户。
+    - 无充分证据时不得用模型常识补齐为库内结论。
+    - 输出 trace_id，便于记录反馈。
