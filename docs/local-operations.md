@@ -2,7 +2,7 @@
 
 ## 1. 这套版本构建成了什么
 
-它不是聊天 GUI，也不是 Skill 或 MCP 服务，而是桌面 Agent 可直接访问的本地知识项目。Python 工具负责确定性地定位候选场景、展开知识项、回查 raw 原文并保存 trace；桌面 Agent 负责理解语义、必要时澄清和组织最终答案。
+v1.3 已增加知识维护 GUI，见 [工作台手册](studio-guide.md)。本页继续说明桌面 Agent 的 CLI 应用、评测与反馈，不是聊天 GUI、Skill 或 MCP 服务。Python 工具负责确定性地定位候选场景、展开知识项、回查 raw 原文并保存 trace；桌面 Agent 负责理解语义、必要时澄清和组织最终答案。
 
 ```mermaid
 flowchart TD

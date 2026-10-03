@@ -1,0 +1,11 @@
+{
+  "question_count": 24,
+  "answer_question_count": 18,
+  "boundary_question_count": 6,
+  "scenario_top1_accuracy": 0.6111,
+  "scenario_top3_recall": 0.9444,
+  "expected_source_hit_rate_model": 0.8333,
+  "expected_source_hit_rate_raw": 0.8333,
+  "boundary_behavior_accuracy": 1.0,
+  "question_set_status": "needs_human_review"
+}

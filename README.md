@@ -1,39 +1,52 @@
-# LLM KnowledgeBase 3.0 pre-MCP
+# LLM KnowledgeBase Studio v1.3
 
-这是一个可离线维护、可审查、可回放的领域知识库项目。它已经完成知识模型构建，并提供了 MCP 之前的最小知识应用闭环：
+这是面向场景、概念、实体三层知识模型的本地维护与探索工作台。支持浏览、编辑回写 YAML、差异预览、保存历史、段落证据、局部关系图和明确引用的多跳路径解释。仍保留原有桌面 Agent 检索、评测与反馈流程。
 
-```text
-问题 → 场景候选 → 知识项 → raw 原文证据 → 桌面 Agent 回答 → 人工反馈 → 审查队列
+## 开始使用
+
+Windows 双击 `start-studio.bat`；首次安装需要 Python 3.10+ 和联网安装 PyYAML。已有依赖后运行不需要联网。也可手动执行：
+
+```powershell
+python -m pip install -r requirements.txt
+python gui/backend/app.py --open
 ```
 
-项目不包含 MCP、GUI、远程模型 API 或可安装知识库 Skill。当前目标是先验证“模型导航 + 原文证据”是否真的改善业务回答。
+页面地址：`http://127.0.0.1:8787`。不需要 Flask、npm 或远程模型账户。
 
-## 5 分钟开始
+已有本地项目：把新包解压到项目外部目录，从新包根目录运行：
 
-要求 Python 3.10+。
+```powershell
+python apply_update.py --target "C:\Tool\Code\Project\LLM-knowledgeBase"
+```
 
-```bash
-python -m pip install -r requirements.txt
-python scripts/project_status.py .
+把路径改为你的实际位置。更新脚本保留本地已有知识数据和 Git，不删除旧文件。详见 [覆盖与工作台手册](docs/studio-guide.md)。
+
+## 本轮交付
+
+| 阶段 | 合入 v1.3 的功能 |
+|---|---|
+| v1.1 Evidence Explorer | 来源清单、章节/段落/行号、稳定证据 ID、人工确认/撤销/失效检测 |
+| v1.2 Knowledge Graph | 明确引用图、一跳/二跳、方向/类型/关系过滤、节点点击与字段明细 |
+| v1.3 Multi-hop Explorer | 问题召回或指定起点终点、1–4 跳、逐步解释、反向标注、证据候选、JSON/CLI 输出 |
+| 基础维护补齐 | 差异预览、引用影响、版本冲突检测、原子保存、唯一备份与保护回滚 |
+
+多跳查询是确定性引用路径探索，不是自动生成因果推理或业务答案。人工确认的证据与检索候选有明确区别。模型知识和真实问题回答效果仍需要你审查；本轮工程验证不能证明回答质量提升。
+
+原有 CLI 可继续使用：
+
+```powershell
 python scripts/validate_model.py .
 python scripts/kb_context.py --question "面对复杂业务故障时，如何定位根因？" --json
+python scripts/kb_multihop.py --question "面对复杂业务故障时，如何定位根因？"
+python -m unittest discover -s tests -p "test*.py" -v
 ```
-
-在 WorkBuddy 或其他可访问本地目录的桌面 Agent 中输入：
-
-```text
-请读取 application/assistant_prompt.md，严格按其中规则使用这个项目回答：
-面对复杂业务故障时，如何定位根因？
-```
-
-详细操作、评测与反馈方式见 `docs/local-operations.md` 和 `topics/knowledge-application.md`。
 
 ## 主要入口
 
 | 角色 | 从这里开始 | 主要动作 |
 |---|---|---|
 | 业务员 | `application/assistant_prompt.md` | 提问、核对答案、提供反馈 |
-| 开发者 | `docs/local-operations.md` | 本地检索、测试、批量评测 |
+| 开发者 | `docs/studio-guide.md`、`docs/local-operations.md` | 工作台、检索、测试、评测 |
 | 知识维护者 | `PROJECT.md`、`MEMORY.md` | 审查队列、更新模型、记录决策 |
 | 审计/复盘 | `runs/`、`WORKLOG.md` | 回放构建、检索与验证记录 |
 

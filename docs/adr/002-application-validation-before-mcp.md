@@ -1,6 +1,6 @@
 # ADR 002：先验证知识应用，再实现 MCP 和 Skill
 
-- 状态：Accepted
+- 状态：Accepted（GUI/本机 HTTP 的阶段限制被 ADR 004 替代）
 - 日期：2026-09-25
 
 ## 决策
@@ -14,3 +14,7 @@
 ## 后果
 
 业务员暂时通过桌面 Agent 使用；开发者通过 CLI 复现。只有评测证明模型导航有收益后，才将稳定工具包装成 stdio MCP，再增加薄 Skill。
+
+## 2026-10-02 范围更新
+
+用户已明确要求合并开发到 Studio v1.3，GUI 和仅本机 HTTP 的限制由 [ADR 004](004-studio-evidence-and-paths.md) 替代；MCP、向量检索和正式 Skill 仍延后。应用效果的人工验证要求继续有效。

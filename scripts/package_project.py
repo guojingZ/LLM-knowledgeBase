@@ -9,9 +9,9 @@ import zipfile
 from pathlib import Path
 
 
-EXCLUDED_PARTS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache"}
-EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".zip"}
-ZIP_TIMESTAMP = (2026, 9, 25, 0, 0, 0)
+EXCLUDED_PARTS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".venv", "node_modules"}
+EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".zip", ".bak"}
+ZIP_TIMESTAMP = (2026, 10, 2, 0, 0, 0)
 
 
 def package_files(project: Path) -> list[Path]:
@@ -19,6 +19,7 @@ def package_files(project: Path) -> list[Path]:
         path
         for path in sorted(project.rglob("*"))
         if path.is_file()
+        and path.name != "PACKAGE-MANIFEST.sha256"
         and not set(path.relative_to(project).parts) & EXCLUDED_PARTS
         and path.suffix.lower() not in EXCLUDED_SUFFIXES
     ]
@@ -49,7 +50,7 @@ def main() -> int:
             relative = path.relative_to(project).as_posix()
             data = path.read_bytes()
             manifest_lines.append(f"{hashlib.sha256(data).hexdigest()}  {relative}")
-            executable = relative.startswith("scripts/") and path.suffix == ".py"
+            executable = (relative.startswith("scripts/") and path.suffix == ".py") or path.suffix == ".sh"
             archive.writestr(zip_info(f"{prefix}/{relative}", executable), data)
         manifest = ("\n".join(manifest_lines) + "\n").encode("utf-8")
         archive.writestr(zip_info(f"{prefix}/PACKAGE-MANIFEST.sha256"), manifest)

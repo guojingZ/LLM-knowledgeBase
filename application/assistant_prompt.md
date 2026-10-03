@@ -25,3 +25,13 @@
 调试或对照时，可将 `--mode model-guided` 改为 `--mode raw`，比较两条路径返回的来源与证据。
 
 当前种子题验证显示，确定性检索更适合作为“前三候选召回器”，不应被当作自动意图分类器。Agent 的语义判断和必要的二次指定场景，是 pre-MCP 阶段的正式使用方式。
+
+## v1.3 明确引用的多跳探索
+
+用户询问知识关联或希望展示路径时，可以从根目录执行：
+
+```bash
+python scripts/kb_multihop.py --question "用户原始问题"
+```
+
+已知起点终点时传入 `--start-ref`、`--target-ref`，避免仅靠文本召回。检查 `status`、`truncated`，逐步展示 `steps[].field` 和 `traversal`；反向浏览必须注明。路径是模型记录的关联，不等同于因果或已经证明的推理。终点证据 `candidate_unconfirmed` 必须回读原文判断，不能冒充人工确认。原有回答合同和反馈审查继续适用，脚本不会自动修改模型。

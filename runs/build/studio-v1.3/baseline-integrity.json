@@ -1,0 +1,20 @@
+{
+  "models": {
+    "model/entities.yaml": {
+      "sha256": "2bbbd5ccd6502b814fc719afeeaa56f5521c438f5d93e9131f86e96cac855343",
+      "unchanged": true
+    },
+    "model/concepts.yaml": {
+      "sha256": "8f6798376ede29627cc2b492ca56f1236d57bad538a8f6069124c75e0a336a3d",
+      "unchanged": true
+    },
+    "model/scenarios.yaml": {
+      "sha256": "483f5e8dbeee33ff8d137dda2e7a1a1af61422667cea3a91d2abfbf25c5cc78f",
+      "unchanged": true
+    }
+  },
+  "accepted_sources": 50,
+  "source_content_unchanged": true,
+  "encoding_aliases_removed_after_byte_check": 57,
+  "artificial_confirmations": false
+}

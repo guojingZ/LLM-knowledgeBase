@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "checks": [
+    "unique entries / CRC / manifest hashes / no runtime caches",
+    "unpacked model validation",
+    "unpacked HTTP assets / status / explicit two-hop query",
+    "unpacked preview / save / rollback restores original model bytes",
+    "unpacked read-only Agent CLI"
+  ],
+  "manifest_files": 181,
+  "counts": {
+    "scenario": 17,
+    "concept": 234,
+    "entity": 163
+  },
+  "sources": 50,
+  "edges": 2179,
+  "verified_path": [
+    "scenario://如何分析和解决复杂问题",
+    "concept://MECE",
+    "entity://金字塔原理"
+  ],
+  "windows_tested": false,
+  "real_browser_tested": false
+}

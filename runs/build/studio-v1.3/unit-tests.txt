@@ -1,0 +1,35 @@
+test_cli_valid_business_outcomes_exit_successfully (test_application.KnowledgeApplicationTests.test_cli_valid_business_outcomes_exit_successfully) ... ok
+test_generic_multi_intent_question_requires_clarification (test_application.KnowledgeApplicationTests.test_generic_multi_intent_question_requires_clarification) ... ok
+test_model_guided_retrieval_finds_complex_problem_scenario (test_application.KnowledgeApplicationTests.test_model_guided_retrieval_finds_complex_problem_scenario) ... ok
+test_model_guided_retrieval_finds_knowledge_system_scenario (test_application.KnowledgeApplicationTests.test_model_guided_retrieval_finds_knowledge_system_scenario) ... ok
+test_out_of_scope_question_abstains_without_evidence (test_application.KnowledgeApplicationTests.test_out_of_scope_question_abstains_without_evidence) ... ok
+test_raw_mode_returns_traceable_source_lines (test_application.KnowledgeApplicationTests.test_raw_mode_returns_traceable_source_lines) ... ok
+test_canonical_model_validates (test_model_validation.ModelValidationTests.test_canonical_model_validates) ... ok
+test_confirm_repeat_unbind_and_source_changes_are_stale (test_studio.StudioTests.test_confirm_repeat_unbind_and_source_changes_are_stale) ... ok
+test_each_kind_saves_preserves_others_repeats_and_rolls_back (test_studio.StudioTests.test_each_kind_saves_preserves_others_repeats_and_rolls_back) ... ok
+test_evidence_exact_lines_section_stable_id (test_studio.StudioTests.test_evidence_exact_lines_section_stable_id) ... ok
+test_explicit_graph_excludes_free_text_and_distinguishes_same_id (test_studio.StudioTests.test_explicit_graph_excludes_free_text_and_distinguishes_same_id) ... ok
+test_graph_filters_depth_limit_and_original_arrows (test_studio.StudioTests.test_graph_filters_depth_limit_and_original_arrows) ... ok
+test_http_assets_unicode_edit_and_input_guards (test_studio.StudioTests.test_http_assets_unicode_edit_and_input_guards) ... 127.0.0.1 - - [01/Oct/2026 12:47:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "POST /api/preview/concept/MECE HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "POST /api/save/concept/MECE HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "GET /api/node/entity/%E9%80%BB%E8%BE%91%E6%A0%91 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "POST /api/save/concept/MECE HTTP/1.1" 403 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "GET /api/model/nope HTTP/1.1" 400 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "POST /api/multihop HTTP/1.1" 400 -
+127.0.0.1 - - [01/Oct/2026 12:47:25] "GET /unknown HTTP/1.1" 404 -
+ok
+test_invalid_shapes_and_broken_refs_never_modify (test_studio.StudioTests.test_invalid_shapes_and_broken_refs_never_modify) ... ok
+test_multihop_returns_real_two_hop_fields_and_no_cycle (test_studio.StudioTests.test_multihop_returns_real_two_hop_fields_and_no_cycle) ... ok
+test_overlay_keeps_user_data_git_and_is_idempotent (test_studio.StudioTests.test_overlay_keeps_user_data_git_and_is_idempotent) ... ok
+test_preview_required_and_revision_conflict_never_writes (test_studio.StudioTests.test_preview_required_and_revision_conflict_never_writes) ... ok
+test_reverse_is_labeled_disconnected_and_depth_limited (test_studio.StudioTests.test_reverse_is_labeled_disconnected_and_depth_limited) ... ok
+test_rollback_protects_later_changes_failed_replace_is_atomic (test_studio.StudioTests.test_rollback_protects_later_changes_failed_replace_is_atomic) ... ok
+test_source_paths_reject_escape_and_symlink (test_studio.StudioTests.test_source_paths_reject_escape_and_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 5.672s
+
+OK
