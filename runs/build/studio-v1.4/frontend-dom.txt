@@ -1,0 +1,58 @@
+127.0.0.1 - - [03/Oct/2026 18:53:57] "GET /api/search HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:53:57] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:53:58] "GET /api/detail?ref=concept%3A%2F%2FMECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:53:59] "GET /api/history?ref=concept%3A%2F%2FMECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:53:59] "GET /api/node/concept/MECE/evidence?q= HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:53:59] "GET /api/evidence/ev_e0291546797f0a6826390e07 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:00] "POST /api/evidence/bind HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:00] "GET /api/node/concept/MECE/evidence?q= HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "POST /api/evidence/unbind HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "GET /api/node/concept/MECE/evidence?q= HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "POST /api/preview/concept/MECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:04] "POST /api/save/concept/MECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:04] "GET /api/search HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:04] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:05] "GET /api/detail?ref=concept%3A%2F%2FMECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:05] "GET /api/history?ref=concept%3A%2F%2FMECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:05] "GET /api/node/concept/MECE/evidence?q= HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:05] "POST /api/rollback HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:06] "GET /api/search HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:06] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:07] "GET /api/detail?ref=concept%3A%2F%2FMECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:07] "GET /api/history?ref=concept%3A%2F%2FMECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:07] "GET /api/node/concept/MECE/evidence?q= HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:08] "GET /api/graph/concept/MECE?depth=2&direction=both&max_nodes=45 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:11] "POST /api/multihop HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:12] "POST /api/multihop HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:12] "GET /api/search?q=MECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:13] "POST /api/query HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:13] "GET /api/trace?trace_id=qa-20261003T105413972503Z-d0f040e28b69 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:14] "POST /api/feedback HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:14] "GET /api/traces HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:14] "GET /api/trace?trace_id=qa-20261003T105413972503Z-d0f040e28b69 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:14] "GET /api/traces HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:14] "GET /api/traces HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:14] "GET /api/overview HTTP/1.1" 200 -
+{
+  "ok": true,
+  "checks": [
+    "all nodes",
+    "node/IPO view",
+    "evidence context",
+    "confirm/unconfirm",
+    "edit preview/save",
+    "history rollback",
+    "two-hop SVG/fields",
+    "multi-hop explanations",
+    "out-of-scope abstention",
+    "search retains full navigation",
+    "unsaved edit guard",
+    "one-hop context and preview isolation",
+    "trace replay",
+    "feedback sync",
+    "global graph all nodes",
+    "scenario matrix",
+    "field coverage"
+  ],
+  "visual_rendering": false
+}

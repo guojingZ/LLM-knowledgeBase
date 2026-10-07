@@ -1,0 +1,22 @@
+{
+  "manifest_files_checked": 194,
+  "upgrade": {
+    "created": 12,
+    "updated": 22,
+    "preserved": 128,
+    "unchanged": 32
+  },
+  "repeat_upgrade": {
+    "created": 0,
+    "updated": 0,
+    "preserved": 135,
+    "unchanged": 59
+  },
+  "customized_data_git_history_preserved": true,
+  "actual_extracted_upgraded_http_version": "1.4.0",
+  "all_nodes": 414,
+  "legacy_confirmation_preserved_status": "needs_review",
+  "one_hop_query_status": "context_ready",
+  "gui_trace_saved": true,
+  "ok": true
+}

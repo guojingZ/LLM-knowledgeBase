@@ -11,7 +11,7 @@ from pathlib import Path
 
 EXCLUDED_PARTS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".venv", "node_modules"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".zip", ".bak"}
-ZIP_TIMESTAMP = (2026, 10, 2, 0, 0, 0)
+ZIP_TIMESTAMP = (2026, 10, 3, 0, 0, 0)
 
 
 def package_files(project: Path) -> list[Path]:

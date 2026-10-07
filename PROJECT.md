@@ -16,7 +16,8 @@
 | 本地知识上下文检索 | Verified | `scripts/kb_context.py`、`tests/` |
 | Raw 与模型导航自动对照 | Verified as seed baseline | `runs/evaluation/retrieval-seed-v1/`；题集仍需人工确认 |
 | 最终回答质量 | Pending verification | 需要业务员在桌面 Agent 中逐题评分 |
-| GUI / 证据 / 关系 / 多跳 | Verified by automated checks | `gui/`、`tests/test_studio.py`、`runs/build/studio-v1.3/verification.md` |
+| GUI 一跳 / 全局视图 / 证据统一 / trace 与评价 | Verified by automated checks | `gui/`、`tests/test_studio_v14.py`、`runs/build/studio-v1.4/verification.md` |
+| 现有局部图 / 主动多跳 / 编辑回滚 | Verified by automated checks | `tests/test_studio.py`、`runs/build/studio-v1.4/verification.md` |
 | MCP 与正式 Skill | Rejected for current stage | 见 `docs/adr/002-application-validation-before-mcp.md` |
 
 ## 两条主流程
@@ -53,5 +54,8 @@ flowchart LR
 - 当前检索是可解释的轻量字符 n-gram 检索，不依赖向量数据库。
 - 最终自然语言答案由桌面 Agent 生成，本地脚本只返回知识上下文和证据候选。
 - 已增加仅监听本机的 GUI HTTP 服务，操作见 `docs/studio-guide.md`。
-- 多跳仅沿明确引用展开；原文检索候选需要人工确认。
+- 当前主检索为场景到直接知识的一跳流程；GUI 展示后续关系预览，主动多跳仍仅沿明确引用展开。
+- 人工确认限于登记支持范围；GUI 与 CLI 共用段落状态。运行回放与反馈边界见 ADR 005。
 - 未实现 MCP、多人权限、自动模型 API 调用或 Onto-Model 六类扩展。
+
+本轮范围及决策见 [ADR 005](docs/adr/005-one-hop-first-observable-studio.md)。具体操作从 [工作台手册](docs/studio-guide.md) 开始。

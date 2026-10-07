@@ -2,7 +2,7 @@
 const $ = id => document.getElementById(id);
 const kindNames = {scenario:'场景', concept:'概念', entity:'实体'};
 const relationNames = {uses:'使用', references:'引用', related_to:'相关', depends_on:'依赖', produces:'产生', contains:'包含', is_a:'属于', tools:'工具'};
-let state = {kind:'scenario', view:'browse', all:[], navigation:null, current:null, revision:null, original:'', preview:null, evidence:null, paths:null, dirty:false};
+let state = {query:null,overview:null,overviewMode:'graph',trace:null,highlightRefs:[],highlightEdges:[],kind:'scenario', view:'query', all:[], navigation:null, current:null, revision:null, original:'', preview:null, evidence:null, paths:null, dirty:false};
 let requestId=0, searchTimer;
 function el(tag, text, cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;}
 function clear(n){n.replaceChildren();}
@@ -14,23 +14,25 @@ async function api(path, payload){
 }
 function run(fn){return async(...args)=>{try{await fn(...args);}catch(e){tell(e.message,true);}};}
 function endpoint(ref,action='node'){const at=ref.indexOf('://');return `/api/${action}/${ref.slice(0,at)}/${encodeURIComponent(ref.slice(at+3))}`;}
-function refButton(ref){const b=el('button',ref.split('://').slice(1).join('://'),'ref-button');b.title=ref;b.onclick=run(()=>selectNode(ref));return b;}
+function refButton(ref){const b=el('button',ref.split('://').slice(1).join('://'),'ref-button');b.title=ref;b.onclick=run(()=>openNode(ref));return b;}
 function badges(values){const n=el('div');for(const v of values||[])n.append(el('span',v,'badge'));return n;}
 function renderList(){
  clear($('node-list'));const q=$('search').value.trim().toLocaleLowerCase();
  const nodes=(state.navigation||state.all).filter(n=>n.kind===state.kind);
  $('list-count').textContent=`${nodes.length} 个${kindNames[state.kind]}`;
- for(const n of nodes){const b=el('button',n.id,n.ref===state.current?.ref?'active':'');b.append(el('span',n.define,'small'));b.onclick=run(()=>selectNode(n.ref));$('node-list').append(b);}
+ for(const n of nodes){const b=el('button',n.id,n.ref===state.current?.ref?'active':'');b.append(el('span',n.define,'small'));b.onclick=run(()=>openNode(n.ref));$('node-list').append(b);}
  if(!nodes.length)$('node-list').append(el('p','没有匹配节点','empty'));
 }
 async function init(){
- const [status,all]=await Promise.all([api('/api/status'),api('/api/search')]);state.all=all;state.navigation=null;$('search').value='';
+ const [status,all]=await Promise.all([api('/api/status'),api('/api/search')]);state.all=all;state.navigation=null;state.overview=null;$('search').value='';
  clear($('metrics'));for(const [label,count] of [['场景',status.counts.scenario],['概念',status.counts.concept],['实体',status.counts.entity],['来源',status.sources]]){const n=el('div',undefined,'metric');n.append(el('strong',String(count)),el('span',label));$('metrics').append(n);}
  clear($('graph-relation'));$('graph-relation').append(new Option('全部关系',''));for(const r of status.relations)$('graph-relation').append(new Option(relationNames[r]||r,r));
  for(const id of ['path-start','path-target']){const old=$(id).value;clear($(id));$(id).append(new Option(id==='path-start'?'根据问题自动定位':'探索关联知识',''));for(const n of all)$(id).append(new Option(`${kindNames[n.kind]} · ${n.id}`,n.ref));$(id).value=old;}
+ for(const id of ['query-scenario','feedback-expected']){const old=$(id).value;clear($(id));$(id).append(new Option(id==='query-scenario'?'根据问题自动选择':'不指定',''));for(const n of all.filter(n=>n.kind==='scenario'))$(id).append(new Option(n.id,n.id));$(id).value=old;}
+ clear($('overview-relation'));$('overview-relation').append(new Option('隐藏一般相关关系','core'),new Option('全部关系',''));for(const r of status.relations)$('overview-relation').append(new Option(relationNames[r]||r,r));
  renderList();if(status.broken_references)tell(`发现 ${status.broken_references} 条断链，请先检查模型。`,true);
 }
-function setView(view){state.view=view;for(const v of ['browse','graph','paths'])$(v+'-view').hidden=v!==view;for(const b of document.querySelectorAll('.main-tabs button'))b.classList.toggle('active',b.dataset.view===view);if(view==='graph')run(loadGraph)();}
+function setView(view){state.view=view;for(const v of ['query','overview','runs','browse','graph','paths'])$(v+'-view').hidden=v!==view;for(const b of document.querySelectorAll('.main-tabs button'))b.classList.toggle('active',b.dataset.view===view);if(view==='graph')run(loadGraph)();if(view==='overview')run(loadOverview)();if(view==='runs')run(loadRuns)();}
 async function discardCheck(){if(!state.dirty)return true;const d=$('discard-dialog');d.showModal();return new Promise(resolve=>{const close=ok=>{d.close();$('discard-cancel').onclick=null;$('discard-confirm').onclick=null;d.oncancel=null;resolve(ok);};$('discard-cancel').onclick=()=>close(false);$('discard-confirm').onclick=()=>close(true);d.oncancel=e=>{e.preventDefault();close(false);};});}
 async function selectNode(ref, force=false){
  if(!force&&ref===state.current?.ref)return;
@@ -40,7 +42,7 @@ async function selectNode(ref, force=false){
  $('editor').value=state.original;$('save').disabled=true;clear($('preview-result'));$('edit-state').textContent='';
  for(const b of document.querySelectorAll('#kind-tabs button'))b.classList.toggle('active',b.dataset.kind===state.kind);
  clear($('node-heading'));$('node-heading').append(el('span',`${kindNames[detail.kind]} · ${detail.node.type||detail.node.category||'知识节点'}`,'eyebrow'),el('h1',detail.id),badges(detail.node.tags));
- $('selection-label').textContent=ref;renderList();renderNode();editMode(false);
+ $('selection-label').textContent=ref;renderList();renderNode();renderSupportFields();editMode(false);
  $('evidence-content').replaceChildren(el('p','正在定位原文…','loading'));
  await Promise.all([loadEvidence('',ticket),loadHistory(ticket)]);if(state.view==='graph')await loadGraph();
 }
@@ -61,12 +63,12 @@ async function loadEvidence(query='',ticket=requestId){
  if(!state.current)return;const value=await api(endpoint(state.current.ref)+'/evidence?q='+encodeURIComponent(query));if(ticket!==requestId)return;state.evidence=value;renderEvidence();
 }
 function evidenceCard(p, canBind=false){
- const card=el('div',undefined,'evidence-card');const status=p.status==='confirmed'?'已人工确认':p.status==='stale'?'已失效，需复核':'检索候选 · 未确认';card.append(el('span',status,'badge '+(p.status==='confirmed'?'confirmed':'warning')));
+ const card=el('div',undefined,'evidence-card');const status=p.status==='confirmed'?'已人工确认':p.status==='stale'?'需重新审查':p.status==='needs_review'?'旧确认 · 待补充复核':'检索候选 · 未确认';card.append(el('span',status,'badge '+(p.status==='confirmed'?'confirmed':'warning')));
  card.append(el('div',p.section||'正文','muted'),el('div',`${p.source} · L${p.line_start}–${p.line_end}`,'muted'));
- card.append(el('p',p.text||p.reason||'原文已变化'));const actions=el('div',undefined,'evidence-actions');
- const open=el('button','定位原文');open.disabled=p.status==='stale';open.onclick=run(()=>openEvidence(p.evidence_id));actions.append(open);
- if(canBind){const bind=el('button','确认该段支持节点');bind.onclick=run(async()=>{await api('/api/evidence/bind',{ref:state.current.ref,evidence_id:p.evidence_id,source_sha256:p.source_sha256,revision:state.evidence.binding_revision});tell('已登记人工确认的段落证据。');await loadEvidence($('evidence-query').value);});actions.append(bind);}
- if(p.status==='confirmed'&&canBind===false&&state.evidence?.confirmed.some(x=>x.evidence_id===p.evidence_id)&&state.view==='browse'){const unbind=el('button','撤销确认');unbind.onclick=run(async()=>{await api('/api/evidence/unbind',{ref:state.current.ref,evidence_id:p.evidence_id,revision:state.evidence.binding_revision});await loadEvidence($('evidence-query').value);tell('已撤销该段证据确认。');});actions.append(unbind);}
+ card.append(el('p',p.text||p.reason||'原文已变化'));if(p.reason)card.append(el('p',p.reason,'muted'));if(p.support_field)card.append(el('p','支持范围：'+p.support_field,'muted'));if(p.review_note)card.append(el('p','确认理由：'+p.review_note,'muted'));for(const review of p.confirmed_for||[]){const row=el('div',undefined,'muted');row.append(refButton(review.ref),el('span','支持字段：'+review.support_field));card.append(row);}const actions=el('div',undefined,'evidence-actions');
+ const open=el('button','定位原文');open.disabled=!p.evidence_id||((p.status==='stale'||p.status==='needs_review')&&!p.can_reconfirm);open.onclick=run(()=>openEvidence(p.evidence_id,p.source_sha256));actions.append(open);
+ if(canBind||((p.status==='stale'||p.status==='needs_review')&&p.can_reconfirm&&state.view==='browse')){const bind=el('button',p.status==='candidate_unconfirmed'?'确认该段支持节点':'补充／重新确认');bind.onclick=run(async()=>{await api('/api/evidence/bind',{ref:state.current.ref,evidence_id:p.evidence_id,source_sha256:p.source_sha256,revision:state.evidence.binding_revision,node_revision:state.revision,support_field:$('support-field').value||'define',review_note:$('support-note').value});state.overview=null;tell('已确认所选支持范围，有效记录会参与检索。');await loadEvidence($('evidence-query').value);});actions.append(bind);}
+ if(['confirmed','stale','needs_review'].includes(p.status)&&canBind===false&&state.evidence?.confirmed.some(x=>x.evidence_id===p.evidence_id)&&state.view==='browse'){const unbind=el('button','撤销确认');unbind.onclick=run(async()=>{await api('/api/evidence/unbind',{ref:state.current.ref,evidence_id:p.evidence_id,revision:state.evidence.binding_revision});state.overview=null;await loadEvidence($('evidence-query').value);tell('已撤销该段证据确认。');});actions.append(unbind);}
  card.append(actions);return card;
 }
 function renderEvidence(){
@@ -75,7 +77,7 @@ function renderEvidence(){
  if(ev.confirmed.length){root.append(el('h3','已登记证据'));for(const p of ev.confirmed)root.append(evidenceCard(p));}
  root.append(el('h3','相关段落候选'));for(const p of ev.candidates)root.append(evidenceCard(p,true));if(!ev.candidates.length)root.append(el('p','没有匹配段落，可调整关键词或查看全文。','empty'));
 }
-async function openEvidence(id){const p=await api('/api/evidence/'+encodeURIComponent(id));$('source-title').textContent=p.source.replace('raw/accepted/','');$('source-location').textContent=`${p.section||'正文'} · 证据 L${p.line_start}–${p.line_end} · ${p.evidence_id}`;clear($('source-text'));const lines=p.context.split('\n');for(let i=0;i<lines.length;i++){const number=p.context_start+i;const line=el(number>=p.line_start&&number<=p.line_end?'mark':'span',`${number.toString().padStart(4,' ')}  ${lines[i]}\n`);$('source-text').append(line);}$('source-dialog').showModal();}
+async function openEvidence(id,expectedHash){const p=await api('/api/evidence/'+encodeURIComponent(id));$('source-title').textContent=p.source.replace('raw/accepted/','');$('source-location').textContent=`${p.section||'正文'} · 证据 L${p.line_start}–${p.line_end} · ${p.evidence_id}${expectedHash&&expectedHash!==p.source_sha256?' · 当前来源与记录版本不同，请结合历史快照复核':''}`;clear($('source-text'));const lines=p.context.split('\n');for(let i=0;i<lines.length;i++){const number=p.context_start+i;const line=el(number>=p.line_start&&number<=p.line_end?'mark':'span',`${number.toString().padStart(4,' ')}  ${lines[i]}\n`);$('source-text').append(line);}$('source-dialog').showModal();}
 async function openSource(path){const p=await api('/api/source?path='+encodeURIComponent(path));$('source-title').textContent=path.replace('raw/accepted/','');$('source-location').textContent=`全文 · ${p.line_count} 行 · SHA256 ${p.sha256.slice(0,16)}…`;$('source-text').textContent=p.text.split('\n').map((l,i)=>`${String(i+1).padStart(4,' ')}  ${l}`).join('\n');$('source-dialog').showModal();}
 async function preview(){
  if(!state.current)return;let node;try{node=JSON.parse($('editor').value);}catch{throw new Error('JSON 格式无效，请先修正。');}
@@ -108,13 +110,13 @@ function renderGraph(g){
  root.append(svg);
 }
 async function queryPaths(){
- $('path-run').disabled=true;try{const p=await api('/api/multihop',{query:$('path-query').value,start_ref:$('path-start').value||null,target_ref:$('path-target').value||null,max_depth:Number($('path-depth').value),max_paths:6,direction:$('path-direction').value});state.paths=p;$('path-export').disabled=false;renderPaths(p);}finally{$('path-run').disabled=false;}
+ $('path-run').disabled=true;try{const p=await api('/api/multihop',{query:$('path-query').value,start_ref:$('path-start').value||null,target_ref:$('path-target').value||null,max_depth:Number($('path-depth').value),max_paths:6,direction:$('path-direction').value});state.paths=p;state.overview=null;$('path-export').disabled=false;renderPaths(p);if(p.trace_id)$('path-results').prepend(action('查看本次运行记录',()=>loadTrace(p.trace_id)));}finally{$('path-run').disabled=false;}
 }
 function renderPaths(p){const root=$('path-results');clear(root);root.append(el('p',p.message,'muted'));if(!p.paths.length){root.append(el('p',p.status==='no_path'?'在指定方向和跳数范围内未找到明确路径。':p.message,'empty'));for(const s of p.seeds||[])root.append(refButton(s.ref));return;}root.append(el('p',`返回 ${p.paths.length} 条路径 · ${p.explored_edges} 次关系展开${p.truncated?' · 展开达到上限':''}${p.additional_paths_omitted?` · 另有 ${p.additional_paths_omitted} 条候选未展示`:''}`,'muted'));for(const path of p.paths){const card=el('article',undefined,'path-card');card.append(el('h3',`${path.steps.length} 跳 · ${path.nodes.at(-1).id}`));const chain=el('div',undefined,'path-chain');path.refs.forEach((ref,i)=>{if(i)chain.append(el('span','→','muted'));chain.append(refButton(ref));});card.append(chain);for(const[i,step]of path.steps.entries())card.append(el('div',`${i+1}. ${step.explanation}`,'path-step'));card.append(el('h3','终点原文依据'));for(const ev of path.evidence)card.append(evidenceCard(ev));if(!path.evidence.length)card.append(el('p','终点暂无匹配段落；关系存在不表示证据已确认。','muted'));root.append(card);}}
 for(const b of document.querySelectorAll('#kind-tabs button'))b.onclick=()=>{state.kind=b.dataset.kind;for(const x of document.querySelectorAll('#kind-tabs button'))x.classList.toggle('active',x===b);renderList();};
 for(const b of document.querySelectorAll('.main-tabs button'))b.onclick=()=>setView(b.dataset.view);
 $('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(run(async()=>{const q=$('search').value;const result=await api('/api/search?q='+encodeURIComponent(q));if(q!==$('search').value)return;state.navigation=result;renderList();}),180);};
-$('reload').onclick=run(async()=>{if(!(await discardCheck()))return;const ref=state.current?.ref;await init();if(ref)await selectNode(ref,true);tell('已重新读取正式模型。');});
+$('reload').onclick=run(async()=>{if(!(await discardCheck()))return;const ref=state.current?.ref;await init();if(ref)await selectNode(ref,true);if(state.view==='overview')await loadOverview();if(state.view==='runs')await loadRuns();tell('已重新读取正式模型。');});
 $('read-mode').onclick=()=>editMode(false);$('edit-mode').onclick=()=>{if(state.current)editMode(true);};
 $('editor').oninput=()=>{state.dirty=$('editor').value!==state.original;state.preview=null;$('save').disabled=true;clear($('preview-result'));$('edit-state').textContent=state.dirty?'有未保存修改':'';};
 $('preview').onclick=run(preview);$('save').onclick=run(save);$('discard').onclick=()=>{$('editor').value=state.original;state.dirty=false;state.preview=null;$('save').disabled=true;clear($('preview-result'));$('edit-state').textContent='';};
@@ -122,4 +124,4 @@ $('evidence-search').onclick=run(()=>loadEvidence($('evidence-query').value));$(
 $('graph-refresh').onclick=run(loadGraph);$('path-run').onclick=run(queryPaths);$('path-use-current').onclick=()=>{if(state.current){$('path-start').value=state.current.ref;tell('已选择当前节点为查询起点。');}};
 $('path-export').onclick=()=>{if(!state.paths)return;const blob=new Blob([JSON.stringify(state.paths,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const link=el('a');link.href=url;link.download='knowledge-paths.json';link.click();URL.revokeObjectURL(url);};
 $('source-close').onclick=()=>$('source-dialog').close();window.addEventListener('beforeunload',e=>{if(state.dirty){e.preventDefault();e.returnValue='';}});
-run(async()=>{await init();const hash=decodeURIComponent(location.hash.slice(1));const ref=state.all.some(n=>n.ref===hash)?hash:state.all.find(n=>n.kind==='scenario')?.ref;if(ref)await selectNode(ref);})();
+run(async()=>{await init();const hash=decodeURIComponent(location.hash.slice(1));if(state.all.some(n=>n.ref===hash))await openNode(hash);})();

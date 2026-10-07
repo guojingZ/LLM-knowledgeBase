@@ -11,6 +11,7 @@ import sys
 import tempfile
 import threading
 import uuid
+import time
 from collections import deque
 from datetime import datetime, timezone
 from pathlib import Path
@@ -19,6 +20,10 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
 from kb_lib import flatten_text, normalize, tokens, weighted_overlap, retrieve_context
+from kb_evidence import source_index as index_source, read_bindings, resolve_bindings, support_digest
+from kb_trace import VERSION, revisions as trace_revisions, save_trace, read_trace, list_traces
+from record_feedback import record_feedback
+from sync_feedback_queue import sync_feedback_queue
 
 KINDS = {'scenario': 'scenarios', 'concept': 'concepts', 'entity': 'entities'}
 LABELS = {'uses': '使用', 'references': '引用', 'related_to': '相关', 'depends_on': '依赖',
@@ -195,7 +200,7 @@ class Studio:
         snap = self.snapshot()
         es = self.edges(snap)
         broken = [e for e in es if e['target'] not in snap[2]]
-        return {'version': '1.3.0', 'counts': {kind: len(snap[0][kind][key]) for kind, key in KINDS.items()},
+        return {'version': VERSION, 'counts': {kind: len(snap[0][kind][key]) for kind, key in KINDS.items()},
                 'sources': len(snap[3]), 'edges': len(es), 'broken_references': len(broken),
                 'relations': sorted(set(e['relation'] for e in es)), 'revisions': snap[1],
                 'model_authority': 'model/*.yaml', 'write_mode': 'preview + revision + atomic replace'}
@@ -209,53 +214,14 @@ class Studio:
                 and (not query_norm or query_norm in normalize(flatten_text(n['data'])))]
 
     def source_index(self, source):
-        path = self.source_path(source)
-        data = path.read_bytes()
-        sha = digest(data)
-        cached = self._source_cache.get(source)
-        if cached and cached['sha256'] == sha:
-            return cached
-        lines = data.decode('utf-8-sig').splitlines()
-        paragraphs, heading_stack, block, begin, fence = [], [], [], 1, False
-        occurrences = {}
-
-        def emit(end):
-            if not block:
-                return
-            text = '\n'.join(block)
-            key = digest(text)
-            occurrences[key] = occurrences.get(key, 0) + 1
-            evidence_id = 'ev_' + digest(source + '\n' + key + '\n' + str(occurrences[key]))[:24]
-            paragraphs.append({'evidence_id': evidence_id, 'source': source, 'source_sha256': sha,
-                               'line_start': begin, 'line_end': end, 'section': ' / '.join(x[1] for x in heading_stack),
-                               'text': text})
-        for i, line in enumerate(lines, 1):
-            is_fence = bool(re.match(r'^\s*(```|~~~)', line))
-            if not fence:
-                heading = re.match(r'^(#{1,6})\s+(.+)', line)
-                if heading:
-                    emit(i - 1); block = []
-                    level = len(heading[1])
-                    heading_stack[:] = [h for h in heading_stack if h[0] < level]
-                    heading_stack.append((level, heading[2].strip()))
-                if not line.strip():
-                    emit(i - 1); block = []; continue
-            if not block:
-                begin = i
-            block.append(line)
-            if is_fence:
-                fence = not fence
-        emit(len(lines))
-        index = {'path': source, 'sha256': sha, 'text': '\n'.join(lines), 'line_count': len(lines), 'paragraphs': paragraphs}
-        self._source_cache[source] = index
-        return index
+        self.source_path(source)
+        return index_source(self.root, source, self._source_cache)
 
     def bindings(self):
-        p = self.root / 'registry/gui_evidence.yaml'
-        if not p.exists():
-            return {'version': '1.0', 'bindings': {}}, digest(b'')
-        data = p.read_bytes()
-        return yaml.safe_load(data), digest(data)
+        try:
+            return read_bindings(self.root)
+        except ValueError as exc:
+            raise StudioError(str(exc), 422)
 
     def evidence(self, ref, query='', limit=8):
         snap = self.snapshot()
@@ -281,15 +247,12 @@ class Studio:
                 if score > 0:
                     candidates.append(p | {'score': round(score, 4), 'status': 'candidate_unconfirmed'})
         candidates.sort(key=lambda p: (-p['score'], p['source'], p['line_start']))
-        confirmed = []
-        for b in bound:
-            current = all_paragraphs.get(b['evidence_id'])
-            if current and current['source_sha256'] == b.get('source_sha256'):
-                confirmed.append(current | {'status': 'confirmed', 'confirmed_at': b['confirmed_at']})
-            else:
-                confirmed.append(b | {'status': 'stale', 'reason': '来源内容变化或已移除；需重新审查'})
+        confirmed = resolve_bindings(ref, item['data'], all_paragraphs, bindings)
+        registered = {b['evidence_id'] for b in confirmed}
+        candidates = [p for p in candidates if p['evidence_id'] not in registered]
+        status = 'confirmed' if any(b['status'] == 'confirmed' for b in confirmed) else ('review_required' if confirmed else 'candidates_only')
         return {'ref': ref, 'sources': source_info, 'candidates': candidates[:limit], 'confirmed': confirmed,
-                'binding_revision': revision, 'evidence_status': 'confirmed' if any(b['status']=='confirmed' for b in confirmed) else 'candidates_only'}
+                'binding_revision': revision, 'evidence_status': status}
 
     def locate(self, evidence_id):
         for source in self.snapshot()[3]:
@@ -307,7 +270,18 @@ class Studio:
     def bind(self, payload):
         with self.lock:
             ref = payload.get('ref')
-            item = self.find(ref)
+            snap = self.snapshot()
+            item = self.find(ref, snap)
+            if payload.get('node_revision') and payload['node_revision'] != snap[1][item['kind']]:
+                raise StudioError('节点内容已变化，请刷新后再确认', 409)
+            field = payload.get('support_field', 'define')
+            note = payload.get('review_note', '')
+            if not isinstance(note, str) or len(note) > 1000:
+                raise StudioError('确认理由必须是最多 1000 字符的文本')
+            try:
+                node_sha = support_digest(item['data'], field)
+            except ValueError as exc:
+                raise StudioError(str(exc), 422)
             p = self.locate(payload.get('evidence_id'))
             if p['source'] not in item['data'].get('sources', []):
                 raise StudioError('证据来源未被该节点引用', 422)
@@ -319,7 +293,10 @@ class Studio:
             existing = data['bindings'].setdefault(ref, [])
             existing[:] = [b for b in existing if b['evidence_id'] != p['evidence_id']]
             existing.append({k: p[k] for k in ('evidence_id', 'source', 'source_sha256', 'line_start', 'line_end')} | {
+                'support_field': field, 'node_sha256': node_sha, 'review_note': note,
+                'text': p['text'], 'section': p['section'],
                 'confirmed_at': datetime.now(timezone.utc).isoformat()})
+            data['version'] = '2.0'
             self.atomic_write(self.root / 'registry/gui_evidence.yaml', yaml.safe_dump(data,allow_unicode=True,sort_keys=False).encode())
             return {'status': 'confirmed', 'evidence_id': p['evidence_id']}
 
@@ -443,7 +420,7 @@ class Studio:
         for p in selected:
             p['nodes'] = [self.summary(snap[2][r]) for r in p['refs']]
             ev = self.evidence(p['refs'][-1], q, 2)
-            p['evidence'] = ev['confirmed'] + ev['candidates'][:2]
+            p['evidence'] = [b for b in ev['confirmed'] if b['status'] == 'confirmed'] + ev['candidates'][:2]
             p['evidence_status'] = ev['evidence_status']
             p['summary'] = ' → '.join(snap[2][r]['id'] for r in p['refs'])
         return {'query':q, 'status':'paths_found' if selected else ('limit_reached' if truncated else 'no_path'), 'paths':selected,
@@ -453,6 +430,147 @@ class Studio:
                 'message':('路径说明模型中的关联，不等同于因果推断；段落候选未经人工确认。' if selected else
                            '达到展开上限，尚未找到路径；不能据此断定节点之间无路径。' if truncated else
                            '在指定方向和跳数范围内没有明确引用路径。')}
+
+    def query(self, payload):
+        question = payload.get('question', '')
+        mode = payload.get('mode', 'model-guided')
+        scenario = payload.get('scenario') or None
+        if not isinstance(question, str) or not question.strip() or len(question) > 2000:
+            raise StudioError('请输入最多 2000 字符的问题')
+        if mode not in {'raw', 'model-guided'} or (scenario is not None and not isinstance(scenario, str)):
+            raise StudioError('检索模式或场景参数无效')
+        top_k = bounded(payload.get('top_k', 3), 1, 10, 'top_k')
+        evidence_k = bounded(payload.get('evidence_k', 8), 1, 30, 'evidence_k')
+        parameters = {'question': question, 'mode': mode, 'scenario': scenario,
+                      'top_k': top_k, 'evidence_k': evidence_k}
+        with self.lock:
+            before, started = trace_revisions(self.root), time.perf_counter()
+            try:
+                result = retrieve_context(self.root, question, mode=mode, scenario_id=scenario,
+                                          top_k=top_k, evidence_k=evidence_k)
+            except ValueError as exc:
+                raise StudioError(str(exc))
+            snap = self.snapshot()
+            selected = result.get('selected_scenario')
+            direct_refs = {n['ref'] for n in result.get('knowledge_items', [])}
+            all_direct_refs = {ref for phase in (selected or {}).get('phases', []) for ref in phase.get('uses', [])}
+            direct_edges = [e for e in self.edges(snap) if selected and
+                            e['source'] == 'scenario://' + selected['id'] and e['target'] in direct_refs
+                            and e['field'].startswith('composition[')]
+            first_by_target = {}
+            for edge in direct_edges:
+                first_by_target.setdefault(edge['target'], edge)
+            suggestions = []
+            if result['status'] == 'context_ready' and mode == 'model-guided':
+                seen = set()
+                for edge in self.edges(snap):
+                    if edge['source'] not in first_by_target or edge['target'] not in snap[2]:
+                        continue
+                    if edge['target'] in all_direct_refs or edge['target'] == first_by_target[edge['source']]['source']:
+                        continue
+                    signature = (edge['source'], edge['target'], edge['relation'])
+                    if signature in seen:
+                        continue
+                    seen.add(signature)
+                    first = first_by_target[edge['source']]
+                    suggestions.append({'refs': [first['source'], edge['source'], edge['target']],
+                                        'steps': [first, edge], 'preview_only': True})
+            result['one_hop_edges'] = direct_edges
+            result['continuations'] = {'items': suggestions[:12], 'total': len(suggestions),
+                                       'preview_only': True, 'truncated': len(suggestions) > 12}
+            result['retrieval_explanation'] = '选择场景 → 取阶段直接引用知识 → 在相关来源中检索段落；不递归检索后续节点。'
+            return save_trace(self.root, result, parameters, 'gui', (time.perf_counter() - started) * 1000, before)
+
+    def query_paths(self, payload, entrypoint='gui'):
+        with self.lock:
+            before, started = trace_revisions(self.root), time.perf_counter()
+            result = self.multihop(payload)
+            result['query_kind'] = 'multihop'
+            result['question'] = result['query'] or (str(payload.get('start_ref', '')) + ' → ' + str(payload.get('target_ref') or '关联知识'))
+            return save_trace(self.root, result, payload, entrypoint, (time.perf_counter() - started) * 1000, before)
+
+    def traces(self):
+        try:
+            return list_traces(self.root)
+        except ValueError as exc:
+            raise StudioError(str(exc))
+
+    def trace(self, trace_id):
+        try:
+            return read_trace(self.root, trace_id)
+        except FileNotFoundError as exc:
+            raise StudioError(str(exc), 404)
+        except (ValueError, OSError) as exc:
+            raise StudioError(str(exc))
+
+    def feedback(self, payload):
+        with self.lock:
+            try:
+                result = record_feedback(self.root, payload)
+            except FileNotFoundError as exc:
+                raise StudioError(str(exc), 404)
+            except ValueError as exc:
+                raise StudioError(str(exc), 409 if '版本' in str(exc) else 400)
+            try:
+                sync_feedback_queue(self.root)
+            except (OSError, ValueError, yaml.YAMLError) as exc:
+                print(f'Feedback queue sync failed: {type(exc).__name__}: {exc}', file=sys.stderr)
+                return result | {'queue_status': 'sync_failed', 'warning': '评价已保存，待审队列未同步；刷新本次记录后再次保存可重试。'}
+            return result | {'queue_status': 'synced'}
+
+    def overview(self):
+        snap = self.snapshot()
+        bindings, binding_revision = self.bindings()
+        usage = {}
+        traces = self.traces()
+        for run in traces['items']:
+            for ref in run['used_refs']:
+                usage[ref] = usage.get(ref, 0) + 1
+        nodes = []
+        for ref, item in snap[2].items():
+            paragraphs = {}
+            if bindings['bindings'].get(ref):
+                for source in item['data'].get('sources', []):
+                    if source not in snap[3]:
+                        continue
+                    try:
+                        paragraphs.update({p['evidence_id']: p for p in self.source_index(source)['paragraphs']})
+                    except (StudioError, ValueError):
+                        continue
+            reviews = resolve_bindings(ref, item['data'], paragraphs, bindings)
+            valid = [r for r in reviews if r['status'] == 'confirmed']
+            pending = [r for r in reviews if r['status'] != 'confirmed']
+            nodes.append(self.summary(item) | {'source_count': len(item['data'].get('sources', [])),
+                         'confirmed_count': len(valid), 'review_required_count': len(pending),
+                         'confirmed_fields': sorted({r['support_field'] for r in valid if r['support_field'] != 'node'}),
+                         'confirmed_association_count': sum(r['support_field'] == 'node' for r in valid),
+                         'evidence_status': 'review_required' if pending else ('confirmed' if valid else 'sources_only'),
+                         'query_count': usage.get(ref, 0)})
+        grouped, broken = {}, []
+        for edge in self.edges(snap):
+            if edge['target'] not in snap[2]:
+                broken.append(edge); continue
+            key = (edge['source'], edge['target'], edge['relation'])
+            if key not in grouped:
+                grouped[key] = {k: edge[k] for k in ('source', 'target', 'relation', 'label')} | {'fields': [], 'phases': []}
+            grouped[key]['fields'].append(edge['field'])
+            if edge.get('phase'):
+                grouped[key]['phases'].append(edge['phase'])
+        matrix = []
+        for scenario in snap[0]['scenario']['scenarios']:
+            uses = {}
+            for phase in scenario.get('composition', []):
+                for ref in phase.get('uses', []):
+                    uses.setdefault(ref, []).append(phase['phase'])
+            matrix.append({'ref': 'scenario://' + scenario['id'], 'id': scenario['id'], 'uses': uses})
+        return {'nodes': nodes, 'edges': list(grouped.values()), 'matrix': matrix,
+                'revisions': snap[1], 'binding_revision': binding_revision,
+                'counts': {kind: len(snap[0][kind][key]) for kind, key in KINDS.items()},
+                'sources': len(snap[3]), 'edge_records': len(self.edges(snap)), 'broken_references': broken,
+                'trace_count': len(traces['items']), 'skipped_traces': traces['skipped'],
+                'coverage': {'nodes_with_confirmed_fields': sum(bool(n['confirmed_fields']) for n in nodes),
+                             'nodes_needing_review': sum(bool(n['review_required_count']) for n in nodes),
+                             'scope': 'field_review_only_not_whole_node_correctness'}}
 
     def replace_node_text(self, kind, old_id, node):
         raw = self.model_path(kind).read_bytes()

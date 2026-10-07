@@ -11,6 +11,8 @@ from typing import Any, Iterable
 
 import yaml
 
+from kb_evidence import source_index, read_bindings, resolve_bindings
+
 
 STOP_TOKENS = {
     "如何",
@@ -169,46 +171,14 @@ def rank_scenarios(
 
 
 def iter_paragraphs(project: Path, relative_paths: Iterable[str] | None = None):
-    if relative_paths is None:
-        paths = sorted((project / "raw/accepted").rglob("*.md"))
-    else:
-        paths = [project / item for item in sorted(set(relative_paths))]
-    for path in paths:
-        if not path.is_file():
+    manifest = load_yaml(project / "registry/source_manifest.yaml")
+    accepted = {item["path"] for item in manifest.get("sources", []) if item.get("status") == "accepted"}
+    paths = accepted if relative_paths is None else set(relative_paths) & accepted
+    for source in sorted(paths):
+        try:
+            yield from source_index(project, source)["paragraphs"]
+        except (ValueError, OSError):
             continue
-        relative = path.relative_to(project).as_posix()
-        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
-        block: list[str] = []
-        start_line = 1
-
-        def emit(end_line: int):
-            text = " ".join(part.strip() for part in block if part.strip())
-            text = re.sub(r"!\[[^]]*\]\([^)]*\)", "", text)
-            text = re.sub(r"https?://\S+", "", text)
-            text = re.sub(r"\s+", " ", text).strip()
-            if len(text) >= 24:
-                return {
-                    "source": relative,
-                    "line_start": start_line,
-                    "line_end": end_line,
-                    "text": text,
-                }
-            return None
-
-        for line_number, line in enumerate(lines, 1):
-            if line.strip():
-                if not block:
-                    start_line = line_number
-                block.append(line)
-            elif block:
-                item = emit(line_number - 1)
-                if item:
-                    yield item
-                block = []
-        if block:
-            item = emit(len(lines))
-            if item:
-                yield item
 
 
 def rank_evidence(
@@ -217,19 +187,40 @@ def rank_evidence(
     relative_paths: Iterable[str] | None,
     expansion: str = "",
     limit: int = 8,
+    nodes: dict[str, dict] | None = None,
 ) -> list[dict]:
-    question_tokens = tokens(question)
-    expansion_tokens = tokens(expansion)
+    question_tokens, expansion_tokens = tokens(question), tokens(expansion)
+    paragraphs = list(iter_paragraphs(project, relative_paths))
+    by_id = {p["evidence_id"]: p for p in paragraphs}
+    bindings, _ = read_bindings(project)
+    if nodes is None:
+        scenarios, concepts, entities = load_models(project)
+        nodes = {**{"scenario://" + n["id"]: n for n in scenarios},
+                 **{"concept://" + key: n for key, n in concepts.items()},
+                 **{"entity://" + key: n for key, n in entities.items()}}
+    confirmed = {}
+    for ref, node in nodes.items():
+        for item in resolve_bindings(ref, node, by_id, bindings):
+            if item["status"] == "confirmed":
+                confirmed.setdefault(item["evidence_id"], []).append({
+                    "ref": ref, "support_field": item["support_field"],
+                    "review_note": item.get("review_note", ""), "confirmed_at": item["confirmed_at"]})
     ranked = []
-    for paragraph in iter_paragraphs(project, relative_paths):
+    for paragraph in paragraphs:
         paragraph_tokens = tokens(paragraph["text"])
         question_score = weighted_overlap(question_tokens, paragraph_tokens)
         expansion_score = weighted_overlap(expansion_tokens, paragraph_tokens) if expansion_tokens else 0.0
         title_score = weighted_overlap(question_tokens, tokens(Path(paragraph["source"]).stem))
         score = 0.68 * question_score + 0.22 * expansion_score + 0.10 * title_score
-        if score <= 0:
+        reviews = confirmed.get(paragraph["evidence_id"], [])
+        # Review is a bounded preference, never permission to ignore question relevance.
+        bonus = 0.05 if reviews and question_score > 0 else 0.0
+        if score <= 0 or (len(paragraph["text"].strip()) < 24 and not reviews):
             continue
-        ranked.append({**paragraph, "score": round(score, 4)})
+        ranked.append({**paragraph, "score": round(min(1.0, score + bonus), 4),
+                       "retrieval_score": round(score, 4), "confirmation_bonus": bonus,
+                       "status": "confirmed" if reviews else "candidate_unconfirmed",
+                       "confirmed_for": reviews})
     ranked.sort(key=lambda item: (-item["score"], item["source"], item["line_start"]))
     return ranked[:limit]
 
@@ -272,10 +263,13 @@ def build_context_text(context: dict) -> str:
         lines.append(f"场景目标：{scenario.get('goal') or scenario.get('define') or ''}")
     if context.get("knowledge_items"):
         lines.append("相关知识：" + "、".join(item["id"] for item in context["knowledge_items"]))
-    lines.append("证据候选：")
+    lines.append("原文依据（人工确认仅针对登记的支持字段）：")
     for item in context.get("evidence") or []:
+        reviews = item.get("confirmed_for") or []
+        label = "；".join(review["ref"] + " / " + review["support_field"] for review in reviews)
+        status = "已确认支持范围：" + label if reviews else "检索候选 · 未确认"
         lines.append(
-            f"- {item['source']}:{item['line_start']}-{item['line_end']} | {item['text']}"
+            f"- {item['source']}:{item['line_start']}-{item['line_end']} | {status} | {item['text']}"
         )
     return "\n".join(lines)
 
@@ -312,6 +306,7 @@ def retrieve_context(
     base = {
         "question": question,
         "mode": mode,
+        "query_kind": "raw" if mode == "raw" else "one_hop",
         "status": "no_evidence",
         "candidate_scenarios": [],
         "selected_scenario": None,
@@ -372,7 +367,9 @@ def retrieve_context(
         [scenario["id"], scenario.get("define", "")]
         + [item["id"] + " " + (item.get("define") or "") for item in base["knowledge_items"]]
     )
-    evidence = rank_evidence(project, question, sources, expansion=expansion, limit=evidence_k)
+    scope = {"scenario://" + scenario["id"]: scenario}
+    scope.update({item["ref"]: item_for_ref(item["ref"], concepts, entities) for item in base["knowledge_items"]})
+    evidence = rank_evidence(project, question, sources, expansion=expansion, limit=evidence_k, nodes=scope)
     base["evidence"] = evidence
     base["source_files"] = list(dict.fromkeys(item["source"] for item in evidence))
     if not evidence:

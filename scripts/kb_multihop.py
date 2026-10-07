@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only CLI for explicit model paths, usable by desktop Agents."""
+"""CLI for explicit model paths with saved retrieval traces."""
 import argparse
 import json
 import sys
@@ -19,10 +19,13 @@ def main():
     p.add_argument('--max-depth',type=int,default=3)
     p.add_argument('--max-paths',type=int,default=6)
     p.add_argument('--direction',choices=['both','outgoing','incoming'],default='both')
+    p.add_argument('--no-save', action='store_true')
     a=p.parse_args()
     try:
-        result=Studio(a.project).multihop({'query':a.question,'start_ref':a.start_ref,'target_ref':a.target_ref,
-             'max_depth':a.max_depth,'max_paths':a.max_paths,'direction':a.direction})
+        payload={'query':a.question,'start_ref':a.start_ref,'target_ref':a.target_ref,
+                 'max_depth':a.max_depth,'max_paths':a.max_paths,'direction':a.direction}
+        service=Studio(a.project)
+        result=service.multihop(payload) if a.no_save else service.query_paths(payload, 'cli')
     except StudioError as exc:
         print(json.dumps({'error':str(exc)},ensure_ascii=False)); return 1
     print(json.dumps(result,ensure_ascii=False,indent=2)); return 0

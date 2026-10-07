@@ -1,0 +1,56 @@
+test_cli_valid_business_outcomes_exit_successfully (test_application.KnowledgeApplicationTests.test_cli_valid_business_outcomes_exit_successfully) ... ok
+test_generic_multi_intent_question_requires_clarification (test_application.KnowledgeApplicationTests.test_generic_multi_intent_question_requires_clarification) ... ok
+test_model_guided_retrieval_finds_complex_problem_scenario (test_application.KnowledgeApplicationTests.test_model_guided_retrieval_finds_complex_problem_scenario) ... ok
+test_model_guided_retrieval_finds_knowledge_system_scenario (test_application.KnowledgeApplicationTests.test_model_guided_retrieval_finds_knowledge_system_scenario) ... ok
+test_out_of_scope_question_abstains_without_evidence (test_application.KnowledgeApplicationTests.test_out_of_scope_question_abstains_without_evidence) ... ok
+test_raw_mode_returns_traceable_source_lines (test_application.KnowledgeApplicationTests.test_raw_mode_returns_traceable_source_lines) ... ok
+test_canonical_model_validates (test_model_validation.ModelValidationTests.test_canonical_model_validates) ... ok
+test_confirm_repeat_unbind_and_source_changes_are_stale (test_studio.StudioTests.test_confirm_repeat_unbind_and_source_changes_are_stale) ... ok
+test_each_kind_saves_preserves_others_repeats_and_rolls_back (test_studio.StudioTests.test_each_kind_saves_preserves_others_repeats_and_rolls_back) ... ok
+test_evidence_exact_lines_section_stable_id (test_studio.StudioTests.test_evidence_exact_lines_section_stable_id) ... ok
+test_explicit_graph_excludes_free_text_and_distinguishes_same_id (test_studio.StudioTests.test_explicit_graph_excludes_free_text_and_distinguishes_same_id) ... ok
+test_graph_filters_depth_limit_and_original_arrows (test_studio.StudioTests.test_graph_filters_depth_limit_and_original_arrows) ... ok
+test_http_assets_unicode_edit_and_input_guards (test_studio.StudioTests.test_http_assets_unicode_edit_and_input_guards) ... 127.0.0.1 - - [03/Oct/2026 18:54:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "GET /api/status HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "POST /api/preview/concept/MECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "POST /api/save/concept/MECE HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "GET /api/node/entity/%E9%80%BB%E8%BE%91%E6%A0%91 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "POST /api/save/concept/MECE HTTP/1.1" 403 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "GET /api/model/nope HTTP/1.1" 400 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "POST /api/multihop HTTP/1.1" 400 -
+127.0.0.1 - - [03/Oct/2026 18:54:01] "GET /unknown HTTP/1.1" 404 -
+ok
+test_invalid_shapes_and_broken_refs_never_modify (test_studio.StudioTests.test_invalid_shapes_and_broken_refs_never_modify) ... ok
+test_multihop_returns_real_two_hop_fields_and_no_cycle (test_studio.StudioTests.test_multihop_returns_real_two_hop_fields_and_no_cycle) ... ok
+test_overlay_keeps_user_data_git_and_is_idempotent (test_studio.StudioTests.test_overlay_keeps_user_data_git_and_is_idempotent) ... ok
+test_preview_required_and_revision_conflict_never_writes (test_studio.StudioTests.test_preview_required_and_revision_conflict_never_writes) ... ok
+test_reverse_is_labeled_disconnected_and_depth_limited (test_studio.StudioTests.test_reverse_is_labeled_disconnected_and_depth_limited) ... ok
+test_rollback_protects_later_changes_failed_replace_is_atomic (test_studio.StudioTests.test_rollback_protects_later_changes_failed_replace_is_atomic) ... ok
+test_source_paths_reject_escape_and_symlink (test_studio.StudioTests.test_source_paths_reject_escape_and_symlink) ... ok
+test_confirmed_candidate_is_deduplicated_and_field_changes_require_review (test_studio_v14.StudioV14Tests.test_confirmed_candidate_is_deduplicated_and_field_changes_require_review) ... ok
+test_feedback_queue_failure_can_retry_and_review_status_is_preserved (test_studio_v14.StudioV14Tests.test_feedback_queue_failure_can_retry_and_review_status_is_preserved) ... Feedback queue sync failed: OSError: simulated write failure
+ok
+test_feedback_sync_is_idempotent_conflicts_and_never_edits_model (test_studio_v14.StudioV14Tests.test_feedback_sync_is_idempotent_conflicts_and_never_edits_model) ... ok
+test_http_new_workflows_and_invalid_inputs (test_studio_v14.StudioV14Tests.test_http_new_workflows_and_invalid_inputs) ... 127.0.0.1 - - [03/Oct/2026 18:54:02] "GET /workflows.js HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "POST /api/query HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "GET /api/traces HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "GET /api/overview HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "GET /api/trace?trace_id=qa-20261003T105402135699Z-b17eb26e9bb1 HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "POST /api/query HTTP/1.1" 400 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "POST /api/query HTTP/1.1" 400 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "POST /api/query HTTP/1.1" 400 -
+127.0.0.1 - - [03/Oct/2026 18:54:02] "POST /api/query HTTP/1.1" 400 -
+ok
+test_invalid_scope_and_node_conflict_never_write_binding (test_studio_v14.StudioV14Tests.test_invalid_scope_and_node_conflict_never_write_binding) ... ok
+test_legacy_records_survive_and_need_scope_confirmation (test_studio_v14.StudioV14Tests.test_legacy_records_survive_and_need_scope_confirmation) ... ok
+test_one_hop_does_not_include_preview_targets_and_records_unique_runs (test_studio_v14.StudioV14Tests.test_one_hop_does_not_include_preview_targets_and_records_unique_runs) ... ok
+test_overview_includes_all_nodes_and_usage_and_partial_review_coverage (test_studio_v14.StudioV14Tests.test_overview_includes_all_nodes_and_usage_and_partial_review_coverage) ... ok
+test_review_is_shared_by_gui_one_hop_raw_and_cli (test_studio_v14.StudioV14Tests.test_review_is_shared_by_gui_one_hop_raw_and_cli) ... ok
+test_trace_failed_write_cleans_only_new_run (test_studio_v14.StudioV14Tests.test_trace_failed_write_cleans_only_new_run) ... ok
+test_trace_snapshot_is_unchanged_by_later_source_edit_and_id_cannot_overwrite (test_studio_v14.StudioV14Tests.test_trace_snapshot_is_unchanged_by_later_source_edit_and_id_cannot_overwrite) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 5.642s
+
+OK

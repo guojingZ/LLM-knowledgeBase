@@ -10,14 +10,14 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 
-from studio import KINDS, Studio, StudioError, bounded
+from studio import KINDS, Studio, StudioError, bounded, VERSION
 
 ROOT = Path(__file__).resolve().parents[2]
 FRONTEND = Path(__file__).resolve().parents[1] / 'frontend'
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = 'KnowledgeStudio/1.3'
+    server_version = 'KnowledgeStudio/1.4'
 
     def json_response(self, payload, status=200):
         data = json.dumps(payload, ensure_ascii=False).encode('utf-8')
@@ -62,7 +62,9 @@ class Handler(BaseHTTPRequestHandler):
                 except (ValueError,UnicodeDecodeError):
                     raise StudioError('JSON 无效')
                 if not isinstance(payload,dict): raise StudioError('请求体必须是 JSON 对象')
-                if path == '/api/multihop': result = service.multihop(payload)
+                if path == '/api/query': result = service.query(payload)
+                elif path == '/api/multihop': result = service.query_paths(payload)
+                elif path == '/api/feedback': result = service.feedback(payload)
                 elif path == '/api/evidence/bind': result = service.bind(payload)
                 elif path == '/api/evidence/unbind': result = service.unbind(payload)
                 elif path == '/api/rollback': result = service.rollback(payload)
@@ -73,7 +75,10 @@ class Handler(BaseHTTPRequestHandler):
                 else: raise StudioError('接口不存在',404)
                 self.json_response(result); return
             if path == '/api/status': result = service.status()
-            elif path == '/api/health': result = {'ok':True,'version':'1.3.0'}
+            elif path == '/api/health': result = {'ok':True,'version':VERSION}
+            elif path == '/api/overview': result = service.overview()
+            elif path == '/api/traces': result = service.traces()
+            elif path == '/api/trace': result = service.trace(args.get('trace_id'))
             elif path == '/api/search': result = service.search(args.get('q',''),args.get('kind'))
             elif path == '/api/detail': result = service.detail(args.get('ref'))
             elif path == '/api/history': result = service.history(args.get('ref'))
@@ -100,7 +105,8 @@ class Handler(BaseHTTPRequestHandler):
             elif path.startswith('/api/'):
                 raise StudioError('接口不存在',404)
             else:
-                name = {'/':'index.html','/index.html':'index.html','/main.js':'main.js','/styles.css':'styles.css'}.get(path)
+                name = {'/':'index.html','/index.html':'index.html','/main.js':'main.js',
+                        '/workflows.js':'workflows.js','/styles.css':'styles.css'}.get(path)
                 if not name: raise StudioError('页面不存在',404)
                 data = (FRONTEND/name).read_bytes()
                 self.send_response(200)
