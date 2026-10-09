@@ -1,0 +1,13 @@
+{
+  "publication_id": "pub-0dfb8b317de943ad",
+  "purpose": "submit_extraction",
+  "created_at": "2026-10-09T07:23:17.683+00:00",
+  "status": "committed",
+  "files": [
+    {
+      "path": "runs/build/knowledge/jobs/job-53e2b72341484645/job.json",
+      "before": "412c94f43ac0568a2fa65c1a5f8ae8b89cfbcf31c809af49abd8c4342a75ee19",
+      "after": "f931bc2e861605874766d1c79b910ad40b876a31b7e3d702d536bc356cef2978"
+    }
+  ]
+}

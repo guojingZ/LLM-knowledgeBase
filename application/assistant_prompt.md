@@ -44,3 +44,10 @@ python scripts/kb_multihop.py --question "用户原始问题"
 evidence 中的 confirmed_for 列出人工登记的节点及 support_field；确认只针对该范围，不表示本次答案所有主张被确认。候选、旧确认、失效确认不得提升为人审事实。确认状态属于 trace 保存时快照，当前状态需重新查询。
 
 两种查询 CLI 默认保存 trace；--no-save 不保存。最终回答应输出 trace_id，供 GUI 查看检索依据和提交评价。本地程序不自动记录你的最终回答，也不会凭检索日志宣称答案质量改善。
+
+
+## v1.5 任务路由与实际返回
+
+用户要求接入资料、提取、比较或发布知识时，转到根目录 AGENTS.md 与 application/agent-operations.md，调用 kb_manage.py；不要将建设请求当作问答检索。框架仍由人定义，两轮候选经人审再发布。
+
+知识问答仍使用本文件的一跳流程。kb_context.py JSON 包含 selected_scenario 的 define/goal/phases/sources、knowledge_items 的紧凑字段与 evidence；context_text 是更短的文本摘要，不能称为完整模型。完整 IPO、decomposition 和关系字段尚未加入主问答上下文。如需针对某节点核对完整字段，可通过 kb_manage.py catalog/ref 读取，但不能把额外读取冒称为本次 trace 原始结果。

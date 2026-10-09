@@ -136,7 +136,7 @@ class StudioTests(unittest.TestCase):
             req=urllib.request.Request(address+path,data=json.dumps(payload,ensure_ascii=False).encode() if payload is not None else None,headers={'Content-Type':'application/json'}|(headers or {}))
             with urllib.request.urlopen(req) as r:return r.status,r.read()
         try:
-            self.assertEqual(request('/')[0],200);self.assertIn(b'Knowledge Studio',request('/')[1]);self.assertEqual(json.loads(request('/api/status')[1])['version'],'1.4.0')
+            self.assertEqual(request('/')[0],200);self.assertIn(b'Knowledge Studio',request('/')[1]);self.assertEqual(json.loads(request('/api/status')[1])['version'],'1.5.0')
             payload=self.payload('concept://MECE');payload['preview_token']=json.loads(request('/api/preview/concept/MECE',payload)[1])['preview_token']
             self.assertEqual(json.loads(request('/api/save/concept/MECE',payload)[1])['status'],'saved')
             self.assertEqual(json.loads(request('/api/node/entity/'+urllib.parse.quote('逻辑树',safe=''))[1])['id'],'逻辑树')

@@ -1,0 +1,13 @@
+{
+  "publication_id": "pub-c1ea905c151c4365",
+  "purpose": "review_candidate",
+  "created_at": "2026-10-09T07:45:22.384+00:00",
+  "status": "committed",
+  "files": [
+    {
+      "path": "runs/build/knowledge/jobs/job-53e2b72341484645/job.json",
+      "before": "8cee0bac687b942033d81f09b50df45df123602caa8bfb9dc1a857903c1f0b8f",
+      "after": "a03df72f4a9d60673b58c230a851de966899b9cf81df02d13804acdf4fe731ce"
+    }
+  ]
+}

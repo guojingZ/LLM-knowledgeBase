@@ -1,0 +1,38 @@
+{
+  "publication_id": "pub-59daf45416ce4c91",
+  "purpose": "publish_reviewed_knowledge",
+  "created_at": "2026-10-09T07:45:42.232+00:00",
+  "status": "committed",
+  "files": [
+    {
+      "path": "model/scenarios.yaml",
+      "before": "483f5e8dbeee33ff8d137dda2e7a1a1af61422667cea3a91d2abfbf25c5cc78f",
+      "after": "e26e9c08082bb7600558a04b1e6a792e0867c23ce4a7991862f92a045d91b39a"
+    },
+    {
+      "path": "model/concepts.yaml",
+      "before": "8f6798376ede29627cc2b492ca56f1236d57bad538a8f6069124c75e0a336a3d",
+      "after": "7742d8ea621b3bb09660d7615c796432b5fc5e1f6a74867b78efd8e19bfff0b6"
+    },
+    {
+      "path": "model/entities.yaml",
+      "before": "2bbbd5ccd6502b814fc719afeeaa56f5521c438f5d93e9131f86e96cac855343",
+      "after": "1ee97882cc72f9c875dce371179ab1f86f62baddba254a305b9e4c6dfd4160dc"
+    },
+    {
+      "path": "registry/gui_evidence.yaml",
+      "before": "ae576c2fb7a064edfe519059ece590a84c54d79b88fe8317915e9b3e76f1890e",
+      "after": "fa3a2c06ed03dca66d1ff122bc435a44f00af950292559a900ddcf566309c435"
+    },
+    {
+      "path": "registry/knowledge_build.yaml",
+      "before": "8a20d9e32f9664350ddea3f6337c4224ecb0b9b328879454814f3cce842a4908",
+      "after": "ee95472ae48db07cf93a771656f40fd6312b8e21f532acac8c84388a62aaae12"
+    },
+    {
+      "path": "runs/build/knowledge/jobs/job-53e2b72341484645/job.json",
+      "before": "0065dd1b96f0c6df37e9dbf61f715fce7e8fc3a47cb48f5d4b5bdb952397e4eb",
+      "after": "9c74946d362d3c9a8b305f9fd4fa0c3860512032d09a795396ec445cb041d081"
+    }
+  ]
+}

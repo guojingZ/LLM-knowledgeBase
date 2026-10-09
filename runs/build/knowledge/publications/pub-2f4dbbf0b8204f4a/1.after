@@ -1,0 +1,21 @@
+{
+  "job_id": "job-53e2b72341484645",
+  "title": "知识图谱与本体",
+  "created_at": "2026-10-09T07:21:23.218+00:00",
+  "status": "awaiting_extraction",
+  "model_revisions": {
+    "scenario": "483f5e8dbeee33ff8d137dda2e7a1a1af61422667cea3a91d2abfbf25c5cc78f",
+    "concept": "8f6798376ede29627cc2b492ca56f1236d57bad538a8f6069124c75e0a336a3d",
+    "entity": "2bbbd5ccd6502b814fc719afeeaa56f5521c438f5d93e9131f86e96cac855343"
+  },
+  "sources": [
+    {
+      "source_id": "src-4cfc5117652611c6",
+      "path": "raw/accepted/知识图谱和本体的区别与联系.md",
+      "sha256": "e6ca192d49f87c2b121462a42dce1fa1e3ca1f663962d268b317496da6a85abd"
+    }
+  ],
+  "observations": null,
+  "proposals": [],
+  "publications": []
+}

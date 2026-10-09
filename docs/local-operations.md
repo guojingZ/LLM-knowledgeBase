@@ -2,7 +2,7 @@
 
 ## 1. 这套版本构建成了什么
 
-v1.3 已增加知识维护 GUI，见 [工作台手册](studio-guide.md)。本页继续说明桌面 Agent 的 CLI 应用、评测与反馈，不是聊天 GUI、Skill 或 MCP 服务。Python 工具负责确定性地定位候选场景、展开知识项、回查 raw 原文并保存 trace；桌面 Agent 负责理解语义、必要时澄清和组织最终答案。
+v1.5 增加资料与候选建设流程，模块入口见 [AGENTS.md](../AGENTS.md) 和 [建设手册](knowledge-construction.md)。已提供可发现的 CLI/HTTP 操作契约；个人 Skill 和 MCP 仍未安装。知识维护 GUI，见 [工作台手册](studio-guide.md)。本页继续说明桌面 Agent 的 CLI 应用、评测与反馈，不是聊天 GUI、Skill 或 MCP 服务。Python 工具负责确定性地定位候选场景、展开知识项、回查 raw 原文并保存 trace；桌面 Agent 负责理解语义、必要时澄清和组织最终答案。
 
 ```mermaid
 flowchart TD
@@ -28,7 +28,7 @@ python scripts/validate_model.py .
 python -m unittest discover -s tests -v
 ```
 
-预期基线：50 个 accepted 来源、17 个场景、234 个概念、163 个实体、0 个断裂引用、7 个自动测试通过。校验器当前还会报告两个结构质量警告，它们已进入待审队列，不是运行失败。
+预期基线：50 个 accepted 来源、17 个场景、234 个概念、163 个实体、0 个断裂引用、自动测试结果见 runs/build/studio-v1.5/verification.md。校验器当前还会报告两个结构质量警告，它们已进入待审队列，不是运行失败。
 
 ## 3. 在 WorkBuddy / 桌面 Agent 中触发
 

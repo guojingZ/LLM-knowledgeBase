@@ -53,7 +53,8 @@ function renderSnapshot(c,root,showPreview=false){
   if(preview?.truncated)block.append(el('p','展示前 '+preview.items.length+' 条，共 '+preview.total+' 条可探索关系；排序不是任务适用性判断。','muted'));
   root.append(block);
  }
- if(c.context_text){const d=el('details',undefined,'result-card');d.append(el('summary','查看交给 Agent 的完整上下文'),el('pre',c.context_text));root.append(d);}
+ const jsonView=el('details',undefined,'result-card');jsonView.append(el('summary','查看本次实际返回 JSON'),el('pre',JSON.stringify(c,null,2)));root.append(jsonView);
+ if(c.context_text){const d=el('details',undefined,'result-card');d.append(el('summary','查看文本摘要（JSON 返回内容更完整）'),el('pre',c.context_text));root.append(d);}
 }
 async function loadOverview(){
  if(!state.overview)state.overview=await api('/api/overview');

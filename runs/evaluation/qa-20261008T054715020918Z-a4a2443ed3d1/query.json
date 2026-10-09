@@ -1,0 +1,8 @@
+{
+  "trace_id": "qa-20261008T054715020918Z-a4a2443ed3d1",
+  "question": "面对一个复杂业务问题时，我应该如何定位根因？",
+  "mode": "model-guided",
+  "scenario": null,
+  "top_k": 3,
+  "evidence_k": 8
+}

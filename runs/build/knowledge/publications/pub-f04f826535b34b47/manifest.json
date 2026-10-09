@@ -1,0 +1,13 @@
+{
+  "publication_id": "pub-f04f826535b34b47",
+  "purpose": "submit_comparison",
+  "created_at": "2026-10-09T07:37:44.819+00:00",
+  "status": "committed",
+  "files": [
+    {
+      "path": "runs/build/knowledge/jobs/job-53e2b72341484645/job.json",
+      "before": "f931bc2e861605874766d1c79b910ad40b876a31b7e3d702d536bc356cef2978",
+      "after": "2daa513102d519893469075fc2300ad152ecb05dbccb60c3817825a72fad0aa8"
+    }
+  ]
+}

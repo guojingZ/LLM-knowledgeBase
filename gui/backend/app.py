@@ -11,13 +11,14 @@ from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from studio import KINDS, Studio, StudioError, bounded, VERSION
+from kb_build import KnowledgeBuild, BuildError
 
 ROOT = Path(__file__).resolve().parents[2]
 FRONTEND = Path(__file__).resolve().parents[1] / 'frontend'
 
 
 class Handler(BaseHTTPRequestHandler):
-    server_version = 'KnowledgeStudio/1.4'
+    server_version = 'KnowledgeStudio/1.5'
 
     def json_response(self, payload, status=200):
         data = json.dumps(payload, ensure_ascii=False).encode('utf-8')
@@ -62,7 +63,9 @@ class Handler(BaseHTTPRequestHandler):
                 except (ValueError,UnicodeDecodeError):
                     raise StudioError('JSON 无效')
                 if not isinstance(payload,dict): raise StudioError('请求体必须是 JSON 对象')
-                if path == '/api/query': result = service.query(payload)
+                if path.startswith('/api/build/'):
+                    result = KnowledgeBuild(service).execute(path.removeprefix('/api/build/'), payload)
+                elif path == '/api/query': result = service.query(payload)
                 elif path == '/api/multihop': result = service.query_paths(payload)
                 elif path == '/api/feedback': result = service.feedback(payload)
                 elif path == '/api/evidence/bind': result = service.bind(payload)
@@ -106,7 +109,7 @@ class Handler(BaseHTTPRequestHandler):
                 raise StudioError('接口不存在',404)
             else:
                 name = {'/':'index.html','/index.html':'index.html','/main.js':'main.js',
-                        '/workflows.js':'workflows.js','/styles.css':'styles.css'}.get(path)
+                        '/workflows.js':'workflows.js','/construction.js':'construction.js','/styles.css':'styles.css'}.get(path)
                 if not name: raise StudioError('页面不存在',404)
                 data = (FRONTEND/name).read_bytes()
                 self.send_response(200)
@@ -117,10 +120,10 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_header('Content-Security-Policy', "default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-ancestors 'none'")
                 self.end_headers(); self.wfile.write(data); return
             self.json_response(result)
-        except StudioError as exc:
+        except (StudioError, BuildError) as exc:
             self.json_response({'error':str(exc)},exc.status)
         except (ValueError,TypeError,KeyError,AttributeError) as exc:
-            self.json_response({'error':f'参数或数据结构无效：{exc}'},422)
+            self.json_response({'error':f'参数或数据结构无效：{exc}'},getattr(exc, 'status', 422))
         except Exception as exc:
             print(f'[{type(exc).__name__}] {exc}',file=sys.stderr)
             self.json_response({'error':'读取或写入失败；详见服务终端。'},500)

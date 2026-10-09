@@ -24,6 +24,7 @@ from kb_evidence import source_index as index_source, read_bindings, resolve_bin
 from kb_trace import VERSION, revisions as trace_revisions, save_trace, read_trace, list_traces
 from record_feedback import record_feedback
 from sync_feedback_queue import sync_feedback_queue
+from kb_write import serialized_write
 
 KINDS = {'scenario': 'scenarios', 'concept': 'concepts', 'entity': 'entities'}
 LABELS = {'uses': '使用', 'references': '引用', 'related_to': '相关', 'depends_on': '依赖',
@@ -267,6 +268,7 @@ class Studio:
                     return p | {'context_start': begin, 'context_end': end, 'context': '\n'.join(lines[begin-1:end])}
         raise StudioError('证据 ID 已失效或不存在，请重新读取来源', 404)
 
+    @serialized_write
     def bind(self, payload):
         with self.lock:
             ref = payload.get('ref')
@@ -291,7 +293,7 @@ class Studio:
             if payload.get('revision') != revision:
                 raise StudioError('证据登记已变化，请刷新', 409)
             existing = data['bindings'].setdefault(ref, [])
-            existing[:] = [b for b in existing if b['evidence_id'] != p['evidence_id']]
+            existing[:] = [b for b in existing if not (b['evidence_id'] == p['evidence_id'] and (not b.get('support_field') or b.get('support_field') == field))]
             existing.append({k: p[k] for k in ('evidence_id', 'source', 'source_sha256', 'line_start', 'line_end')} | {
                 'support_field': field, 'node_sha256': node_sha, 'review_note': note,
                 'text': p['text'], 'section': p['section'],
@@ -300,6 +302,7 @@ class Studio:
             self.atomic_write(self.root / 'registry/gui_evidence.yaml', yaml.safe_dump(data,allow_unicode=True,sort_keys=False).encode())
             return {'status': 'confirmed', 'evidence_id': p['evidence_id']}
 
+    @serialized_write
     def unbind(self, payload):
         with self.lock:
             ref = payload.get('ref'); self.find(ref)
@@ -307,7 +310,11 @@ class Studio:
             if payload.get('revision') != revision:
                 raise StudioError('证据登记已变化，请刷新',409)
             current = data['bindings'].get(ref,[])
-            data['bindings'][ref] = [b for b in current if b['evidence_id'] != payload.get('evidence_id')]
+            field = payload.get('support_field')
+            data['bindings'][ref] = [b for b in current if not (b['evidence_id'] == payload.get('evidence_id') and
+                                    ('support_field' not in payload or b.get('support_field') == field))]
+            if data['bindings'][ref] == current:
+                return {'status': 'unchanged'}
             self.atomic_write(self.root/'registry/gui_evidence.yaml',yaml.safe_dump(data,allow_unicode=True,sort_keys=False).encode())
             return {'status':'removed'}
 
@@ -628,6 +635,7 @@ class Studio:
         finally:
             if os.path.exists(tmp): os.unlink(tmp)
 
+    @serialized_write
     def save(self, ref, payload):
         with self.lock:
             result,before,after = self.preview(ref,payload)
@@ -656,6 +664,7 @@ class Studio:
             if r.get('ref') == ref: records.append(r)
         return records
 
+    @serialized_write
     def rollback(self, payload):
         with self.lock:
             backup_id = payload.get('backup_id','')

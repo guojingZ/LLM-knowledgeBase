@@ -1,0 +1,154 @@
+![cover_image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYt9xMNdZRia3FUxAzAKanP1MXluzXFNNtcF5OhicianUmbPuiaExIicrZGBg/0?wx_fmt=jpeg)
+
+#  构建你的多维思考力-从事物认知到问题解决
+
+原创  何明璐  何明璐  [ 人月聊IT ](javascript:void\(0\);)
+
+__ _ _ _ _
+
+在小说阅读器中沉浸阅读
+
+  
+
+大家好，我是人月聊IT，今天继续分析思维框架  和逻辑方面的内容。
+
+主要  ** 介绍了一套用于事物认知和问题解决的完整思维框架和逻辑  ** 。文章详细阐述了  ** 学习与实践构成持续迭代的闭环过程  ** ，强调了
+** 知识库和经验库的积累  ** 。作者着重探讨了  ** 事物认知的模型  ** ，包括从  ** 简单观察到深入剖析  ** 的层次，以及如何通过
+** 静态（分解）和动态（集成）属性  ** 来全面理解单个事物。对于事物群的认知，文章强调了  ** 分类和抽象  ** 的重要性，并将其核心逻辑与
+** 面向对象分析  方法  ** 进行了类比。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnY4ciaRqWiaia0gDQrwITll65UovKqkK63lrrSJicp376XhFUMb0iac2ZK83Q/640?wx_fmt=jpeg&from=appmsg)
+
+  
+
+在日常工作和生活中,我们每天都在观察事物、分析问题、做出决策。但很多时候,我们的思考停留在表面,缺乏系统性和深度。如何才能建立科学的思维框架,全面深入地认识和分析事物?本文将从思维框架的基本构成谈起,逐步深入到事物认知的核心方法。
+
+##  一、构建完整的思维框架体系
+
+一个完整的思维框架应该包含五个相互关联的核心部分:  ** 学习方法模式、知识经验库积累、事物认知与决策、问题分析与诊断、解决方案与呈现逻辑  **
+。这五个部分不是孤立存在的,而是形成了一个闭环的持续迭代过程。
+
+在这个框架中,有两个关键认识必须明确:
+
+首先,  ** 学习和实践是完整闭环  **
+。我们通过学习充实知识库,但知识必须经过实践的检验才能转化为真正的经验。正如那句话所说:"人们不可能通过思考养成一种实践习惯,而只能够通过实践学会一种新的思考方式。"
+** 凡所有事,必须经过亲自实践或验证,才能最终确定是否满足期望  ** 。在知识经验库的形成中,学习、实践、总结复盘是最核心的三个环节,缺一不可。
+
+其次,  ** 认识事物和解决问题是理解现实世界的两大途径  **
+。前者对应What(是什么)和Which(选择哪个)类问题,后者对应How(如何做)和Where(问题在哪)类问题。面对不同类型的问题,我们采用的思考逻辑应该有所不同,这需要我们有清晰的认识和判断。
+
+##  二、事物观察:从表象到本质的第一步
+
+要认识事物,首先要学会观察。但观察不是简单地用眼睛看,而是要从两个重要维度入手:
+
+  * ** 静态属性维度  ** 包括事物的外观、形状、颜色、部件组成等,核心是理解事物的三维结构。比如观察一辆汽车,我们看到它的外形、颜色、方向盘和四个轮子。 
+  * ** 动态属性维度  ** 包括事物的运行情况、发展规律,核心是把握时间线索。继续以汽车为例,我们观察它踩油门会动、踩刹车会停,这就是动态属性。 
+
+但仅仅观察这两个维度还不够。  ** 一个完整的事物观察应该是:事物的三维立体模型+所处的空间环境+所处的时间周期(动态)  **
+。只有将事物放在具体的时空环境中观察,才能真正认识清楚、分析透彻。
+
+观察还分为两个层次。"不求甚解"的观察停留在表面现象,而"打破黑盒"的观察则要深入内部机理。比如,表面观察知道汽车能动,深入观察则要了解发动机、变速箱等内部构件如何协作才使汽车运动起来。就像"庖丁解牛,目无全牛而游刃有余",只有深入到事物内在运行机理,才算真正认识了事物。
+
+##  三、单个事物分析:分解与集成的艺术
+
+对单个事物的深入认识,核心方法是  ** 分解  **
+。这就像小时候拆玩具汽车一样,把所有零件拆下来,观察各个零件如何集成在一起,齿轮如何联动,然后再慢慢组装复原。这个过程体现了事物认知的核心逻辑。
+
+** 理解了静态+动态分析,理解了分类+分解,就可以解决80%的思维问题  ** 。
+
+其他很多思维方法和工具基本都是这些基础方法论的延伸。
+
+分解不仅要了解整体,更要深入事物内部,了解内部结构、组成部分以及各部分之间的集成协同关系。就像人体解剖一样,从外部整体深入到内部组成单元,搞清楚这些单元如何协同运作。比如,人运动后出汗是表象,只有深入了解人体内部各器官如何协同运作,才能理解这一现象的内在机理。
+
+分解的顺序可以有两种:一是"静态到动态",先分解再研究各组成单元的协同;二是"动态到静态",先观察运行过程找到组成单元,再考虑如何分解。无论哪种顺序,都必须完成**"分解为组成单元"和"理解单元间如何协同"**这两大任务。
+
+##  四、事物群分析:分类与抽象的智慧
+
+当我们面对成千上万的事物时,不可能对每个个体采用不同的方法,这时就需要  ** 分类和抽象  ** ,两者缺一不可。
+
+  * ** 分类  ** 是根据事物的关键属性进行初步整理。比如投资理财产品可以从风险和收益角度分为银行理财、信托、债券、基金、P2P等大类,基金又可以分为债券基金和股票基金。科学合理的分类,关键是找到事物具备的共有属性,这些属性可能是静态的(如形状),也可能是动态的(如运动方式)。 
+  * ** 抽象  ** 是找寻不同事物的共同特征,从具体产品和事物转化为抽象的思维表达。比如,你家养了一只叫阿黄的小狗,当你看到其他各种各样的动物时,虽然它们颜色、大小、叫声都不同,但你仍能一眼判别出哪些是狗。这就是从实例到类的关键抽象过程。 
+
+** 事物群分析的核心就是归纳和抽象,从研究单个实例对象转变为研究抽象的类对象  **
+。这种方法在软件工程的面向对象分析中得到了充分体现,实际上它是一种普遍适用的事物群研究方法。具体包括两个方面:一是在研究一群事物后抽象出类,二是识别和定义类中的关键属性(对应静态分析)和关键方法(对应动态分析)。
+
+##  五、四种核心分析方法
+
+对事物群进行分类和抽象,主要有四种方法:
+
+  * ** 归类分析  ** :发现归类属性,对事物群进行聚类分析,形成完整的类结构树。这是最基础的分析方法,帮助我们建立事物的层次结构。 
+  * ** 维度矩阵分析  ** :基于不同维度形成各种类型的矩阵分析。这种方法在决策过程中特别有用,可以从多个角度对比评估。 
+  * ** 优先级排序  ** :运用层次分析法和结构化决策,对事物进行多维度评估。当面临多个选择时,这种方法能帮助我们做出更科学的决策。 
+  * ** 演绎分析  ** :对抽象后的同类事物分析,形成普适性的方法论。这是从特殊到一般,再从一般到特殊的完整思维过程。 
+
+##  六、从模仿到超越的思考之道
+
+找寻具备共同特性的事物,基于共性进行抽象概括,同时对关键特性进行维度分析或分组分析,这是举一反三的基础。模仿很重要,但模仿本身不能带来超越。  **
+要超越需要思考,而思考的重点则是由具体到抽象,由抽象到分类和分组分析  ** 。
+
+真正思维能力的提升,独立分析解决问题能力的提升,需要学习、知识库、事物认知、问题分析、模式匹配、呈现能力一个都不能少。只有构建完善的思维知识体系,动静结合、表里兼修,我们才能在认识和改造世界的过程中游刃有余,不断精进。
+
+  
+
+  
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYexsVbhYZficehj3sygfNbXpDyicDicaMlodyV262AqIiaCwm9mS1SYJABQ/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYfJa5icThwfibjYNSqPYQPvcIELzvhTmF7OU2HLpOJmJGjEibFy7ZrzRpg/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnY8J6PbE2kBNjWL5icS8rSqN07cwJOObsNhEEhys87wI7bp0C54xBY00A/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYbWG1muGOfNfaZt5zFLwyS8TtMWiaHTmTfH39O0lQsLBH0CHTmzny0PA/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYU1vnNMlAwvgqicRibe0GpzPZXSoMxOXic7t4lMJtib3mvEib1GicI19ONlZg/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYvZJnEEp0djgVc9cJDOxC7yJTTQhXA8r4ibJARckXpKl8g0RB1Jp6RaA/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYT4I7rs0RYxkRfp5shsE5NmDuNadrTIm0kWTe6TCiacUoiaTKsL3SpYkQ/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYdPDDtVn02wC5VA4Fc1udVRM2xTdiaAzPk3tyrjUnsW8icq8H6o72kOjw/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnY3JsKoMdnvjiaibDaKgRbJP6YfT2SzPWP0U9wxmsCQI9dF1Nmx3qQkaBA/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnY0icVavMM6Tj1ZaEbpI5mwTfFjlVzQQh0Xq8icK1ezv0N0IEMShjVYHVg/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYu1bMpZiaNOp32licUvqgbnD1jRrbCDWmvxBpXHA6fffWhxyvzPvx6crg/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnYLm0E93iaMbuPnbujhWGc5Or27yyKxAbUGEpO4xIxYvwI5dsXkTslNlQ/640?wx_fmt=jpeg&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6fgmVjqw3BsmxDAHOIicjnY9XN5OUyMYcDmJ1mMia5SFjsX7HfNicRUJw3bCB5WKkJ8m7WhKEHrAqBg/640?wx_fmt=jpeg&from=appmsg)
+
+  
+
+  
+
+  
+
+  
+
+  
+
+预览时标签不可点
+
+阅读
+
+
+
+
+
+
+
+
+
+****
+
+
+
+****
+
+
+
+****
+
+
+
+
+
+__
+
+
+
+
+
+
+
+
+

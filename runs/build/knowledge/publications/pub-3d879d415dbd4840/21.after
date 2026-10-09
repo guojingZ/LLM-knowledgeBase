@@ -1,0 +1,380 @@
+![cover_image](https://mmbiz.qlogo.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVX4BbJeXJrqMxCthlqNltlErqLNiaYnVt73ibFQSpTmgEGXibgzqwxwoQBQ/0?wx_fmt=jpeg)
+
+#  对思维框架和内在逻辑的完整梳理和认识
+
+原创  何明璐  [ 人月聊IT ](javascript:void\(0\);)
+
+__ _ _ _ _
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXjaS3JGlmDxos1hYXHzo7Gz57h7ogdsv8cqCZicgQCqc0SFbAk0DSncQ/640?wx_fmt=jpeg)
+
+**
+总论：思维的核心框架是事物认知和问题解决两条主线，同时通过学习实践，总结复盘和知识经验库形成完整闭环。思维的逻辑要素是归纳演绎和模式匹配，归纳演绎推动事物认知能力提升，模式匹配推动问题解决能力提升。
+**
+
+在最近几年的思维类文章整理和写作中，我至少做到了将思维这件事情基本想明白，同时给出一个完整的思维框架，给出了思维这件事究竟应该包括了哪些大块的组件，这些组件之间应该是什么关系。
+在这个想明白后，我们看到实际上基于思维框架，我们看到还需要进一步系统化几个方面的内容。  
+
+> 学习方法和模式：学习是思维的基础，也是补充知识库的关键。
+>
+> 问题的分析解决：即面对问题的时候我们的分析解决全过程。
+>
+> 事物认知：当我们想了解一个新领域，新事物的时候如何切入。
+>
+> 知识库构建方法论：如何构建你自己的知识库和经验库。
+
+可以看到将我们的思维框架展开，实际上就是包括了上面四个方面的内容。同时这四个方面之间本身又是相辅相成的关系。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVX3DqTGDoOqJIIVgoBiaR9ic7nBBSkCckGHPiaGxLzic7MtQJllCxE1pe43A/640?wx_fmt=png)
+
+具  体的关键点关系可以描述为：  
+
+在问题解决，事物认知过程中，都存在学习的过程，学习过程往往会观察整个问题解决和事物的认识，只是我们最终的目标驱动不一样而已。
+
+其次，知识库在整个框架逻辑中起到了前后贯穿的作用，即你会发现你已有的知识库可以应用到新问题解决和新事物认知，同时在你完成了学习后相关内容可以进知识库，同时在你问题解决和事务认知后的复盘，相关内容还可以进入到知识库，我们要考虑的就是知识库中这些信息的构建闭环。
+
+基于上图，我们可以看到这样一个完整的闭环过程。
+
+> 学习完的内容进到知识库，而实践完提取到经验库，形成完整知识经验库
+>
+> 实践过程可以是POC验证，也可以是完整的问题分析解决
+>
+> 模式匹配能力是思维过程中的核心能力
+
+对于我经常说到的两条线，一个是事物认知，一个是问题分析解决，其实你可以看到事物认知的本质仍然是问题分析和解决。因此即可以从事物和问题维度来进行阐述。也可以按照完整的定义-》分析-》解决-》总结的生命周期进行阐述。
+
+基于我上面的构图，我们可以看到一个完整的思维范畴内容应该包括了如下展开。
+
+> 1\. 学习方法和模式
+>
+> 1.1 知识的采集方法和分析
+>
+> 1.2 阅读方法
+>
+> 1.3 学习方法和模式
+>
+> 1.4 POC自我验证和实践
+>
+> 2\. 实践-》问题分析和解决
+>
+> 2.1 通用的问题分析解决方法论
+>
+> 2.2 问题分析解决
+>
+> 2.3 事物认知和决策
+>
+> 2.4 分析和模式匹配
+>
+> 2.5 问题解决后的呈现，演绎和泛化
+>
+> 3\. 知识库和经验库
+>
+> 3.1 知识库的形成和积累
+>
+> 3.2 从知识库到经验库的转化
+>
+> 3.3 常用方法和工具
+>
+> 4\. 总结复盘
+>
+> 4.1 总结复盘方法
+>
+> 4.2 最佳实践
+>
+> 4.3 归纳和抽象
+
+从上面整个构图也可以看到，我们将学习，问题分析i解决，知识库积累，问题解决后的复盘形成一个完整的持续改进的闭环流程。再从这个闭环的流程我们可以看到。
+
+知识经验是基础，模式匹配是核心价值
+
+真正的自我能力提升一定体现在现场真正的实践上，而不是理论堆砌或POC验证
+
+因此我们看到实践很重要，实践是你形成复盘总结的关键输入的基础，否则你拿什么复盘。理论指导实践，但是更加重要的是实践反刍理论。其次就是复盘很重要，复盘是形成和提升模式匹配能力的基础，复盘的深浅将直接决定了你跨领域的问题分析解决能力。
+
+我们可以拿小学奥数来举一个简单的例子，有小丸子和小芋头两个小孩奥数都很厉害，但是存在两种可能。其一是  小丸子
+做了大量的实践和模拟题练习，因此实际考试的题基本都是同类题型；而  小芋头
+可能做的练习并不算太多，但是自己总结和复盘能力强，在现场能够根据已有知识快速地进行分析和模式匹配，也就是我们说的没见过的题在现场也能够临场发挥解决掉。
+
+那么实际上从教育角度，我们真正关心的就是如何将小孩培养为第二种类型。在职场我们就关心如何将员工培养为具备独立分析和问题解决能力的人。
+
+这两天对整体思维框架内容重新进行了整理，供大家参考如下：
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXZZ3tcdmk5H5u5BrgU4o44nTFo1dVfmN5R5Ciax3zjHApMjCpS0yaguw/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXgSqR0u6WxwrrAVY04NtljkSgEo2YkXm2zeRjibn90ib1lDQsafnLQxOQ/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVX9oiaYQbEPh1bnuxwQIcJosWicTCI5UYDOJGDupSTPN9YUwSRtjw3qFiaw/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXqNViaYDaUSDds4oBLIgSGdv9Jaf1x6IeeyG2KokibbED8dibQCiaBibUBWg/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXdfiaWbWSkjqDK45pfZQYORHKB7UB1vmztkYKIx3oVe7n6tRJUuZBrAQ/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXeIsW6koicBkzCBbQEYkmFdwOlqtpecNzypvXic6lBLchABJYYUcI6Nhg/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVX23tkUchnWZBwMtkiaWKp74Uoy4byFG6Rpl7dkCPx4t6LTqp5EysaRicw/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVX5SPfDAkibKcnibM3aX2hNI5cicqashRghGtR2D8LUL7EJcLyFPeph8r9g/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXb30da2VaicB9TL6SwJnaXEyznOZwmRon7nict6gWUHf0qNaqpoMCQa0w/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXT3QZqwYqQy518ZWW82oLea3XUwTBaNPGUdHJJkqFShfwTG4Kx7ymQA/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXFsAGibicTziadKkVDhwda4HDbIfta6sLuP2Pyd4PMmuOou623u45b1kibA/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXlT9UclHbcBgax3DiajWdwZV7gEuBeKRDB2ibHWBGic99LztOrvsebqykA/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXK2V0XDcKLxm31hrV4adR6fMxqon87jouaZJkyRyRg0236jhSCibkjsg/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXzh0ut6dicciaFPDTZWXCczmwumqDfWvxWcmmG18lFkhiaw6nrbOHvVGIg/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXJibzSjOHRK4afSZzHZJOu8Lg7kdBYgfqib1aamiahc2ibnER8iaicicZP5jicg/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXdJ4yZQzwCcia0O4GQWFadicP1o22icyhpKhsmgZ78MKNMQBwgVZ3727Hw/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXUeOKRdNZw0xWF5QZfX2Fsagtib3NOLBRw4aASVd8SVIv4cd85I9btbA/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXLLXj7kfwftb0IjTSY4a0uUQlsxneJnnU9YYaO27Tk64IgoX2aKxjCg/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVX8VZhSjdDEJVBib28ZicPIa9IIBtmiawShfRI0SQKXumSTmyQ1iab4ia5a6g/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXuPK1xc2cwbHVkaJiaeIsic4BJwZX0FUSCg1cyOibm3opOutFCRl7L2oBg/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXqBXyLpQUxzPfN7KDMqaMlW99z7FszUqX33CNnPQicVIUOyJGibZCaaibQ/640?wx_fmt=jpeg)
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXbpzZAiceicAiavKWBG1SDURHT70hnHNmCrcvjhnfLZEaMdKWXEG52SkmQ/640?wx_fmt=jpeg)
+
+  
+
+#  我为何准备写本思维的书？
+
+  
+
+首  先谈下为何要写这本书。  实际上当前关于思维方面的书相对少得多，这基本上已经是一个泛滥的垂直领域。
+在这个领域除了少量的精品外，大部分书籍都质量堪忧，或者仅仅是为了个人品牌或名气而出版，能够算上心灵鸡汤的还算不错，或者有些连心灵鸡汤都算不上。
+
+在我前面的文章里面也提到过，从最早谈系统思维的《第五项修炼》，到叙述整个思维发展历程的《思维简史》，也有类似刘未鹏老师的《暗时间》，吴军老师的《见识》，万维钢老师的《智识分子》和《万万没想到》，古典老师的《拆掉思维的墙》和《跃迁》，采铜老师的《精进》等，这些都是相对不错的书籍。包括在思维大领域里面各个细分领域，比如学习方面的《可以练习》和《学习之道》；在问题方面的《麦肯锡问题分析解决》，《你的灯亮着吗？》；在写作和呈现领域的《金字塔原理》，在阅读方面的《如何阅读一本书》。
+
+如果你是一个爱阅读写作，强调个人自我管理和成长的人，可能上面大部分的书籍你都阅读过。如果仅仅谈里面思维方面的书，你会看到大部分的书籍更加偏向意识和心理学层面，也就是说说谈得如何转变思维意识，如何提升你自己的认知水平和能力。
+
+但是你阅读这些书会发现，所有的道理都是对的，但是很难指导你的实践。
+
+> 简单来说就是你永远无法通过简单的读基本书的理论来改变你的认知能力和水平，但是你却可以通过书籍提供的思路去实践，通过实践完成后提升你认知。
+
+前面谈到的类似吴军，刘未鹏，万维钢，古典老师等，实际都是自己专业细分领域的专家，前面两个是IT行业，万维钢是物理学科，而古典老师多年前就是新东方名师。因为本身就没有一个专业学科是思维专业，
+因此实际上在思维方面有成熟的经验感悟的往往也是在自己专业垂直领域都有不俗成绩的人。
+
+也就是说专业领域大量实践后复盘，让他们有了更多的反思和经验分享。
+
+所以现在思维类的书籍，你可以观察，如果作者本身在自己专业领域本身没有太多成绩，也很难说能够出版一本思维类的好书籍。好的思维类书籍一定是自己实践证悟，而不是简单前人理论的拼凑。
+
+由于这些书籍更多的思维意识和认知层面，如果你自己没有类似的实践经历相互印证，那么当然很难有相同的感受和收获。
+比如书里面经常谈到的，你要有逆向思维，要懂得发散思考，要跳出盒子看问题等，但是你真正遇到问题的时候实际却很难做到。
+
+理想很简单，但是现实很残酷。
+
+懂得思维上的道理简单，但是要讲思维转成能力却很难。
+思维绝对不能是简单意识和心理学层面，而是应该和真正的事物认知过程，问题分析和解决，学习和实践，总结和复盘等结合起来形成一个完整的思维框架和逻辑。
+
+既然类似产品研发和创新等都有类似TRIZ等完整的方法论可以参考，那么对于思维这件事也应该具备完整的逻辑框架。从最早的亚里士多德的基于归纳演绎的逻辑学，到笛卡尔的方法论，从经验科学到经典科学
+( 量化，实验，公式，模型），我们思考问题的方法，认识和改造自然的方法体系不断在完善和进步。
+
+也就是说思维应该是一个完整的能力框架，而不再是简单的意识层面。或者说思维本身应该是一个大量学习实践相互融合的一个线上的过程，而不应该是一个简单的点上的灵光一现。当你真正将学习，实践，事物认知，问题解决，总结复盘融合起来，将个人思维能力转化为自己的知识经验库，方法论和模式库的时候，你才可能真正形成完整思维能力。
+
+而这也是我准备写作思维框架逻辑这本书的初衷。
+
+#  对书籍目录结构的初步思考
+
+  
+
+如果按现在的追热点，出快书的思路，那么实际将我当前头条号发布过的思维类文章简单的归类整理，重新做一些配图即可以出版。
+而且我敢说，即使这样快速出版，这本书的文章结构和逻辑也超过当前一些思维类的书籍。
+
+写一篇博文容易，但是写一本书难，一篇博文是一个知识点，但是一本书却是一个完整的知识体系。书有章节，有脉络，有故事的动态发展，也有结构的静态呈现，所有的内容要能够串联起来，形成完整的逻辑往往是最难的事情。
+
+> 我一直认为一本好书，只可慢读细细品味，它呈现给读者的是一个完整的小世界，能够真正让读者走进来切身感受的小世界。
+
+一本书往往不仅仅是静态的结构呈现，就如前面讲的当我们章节分类都结构清晰了，并不能代表就是一本好书，一本书往往就是在讲一个故事或呈现一个完整的事件，那我们的各个章节之间是否能够根据这种动态的故事线索完整的串联起来，既由浅入深，又层层递进，读者能够围绕这种线索逐步的深入，走入书营造的完整小世界就相当重要了。
+
+> 即一本书不仅仅静态结构完整，动态行为呈现又将静态章节完整的串联起来形成一个整体，如果能够达到这点那就是一本完整意义上的好书。
+
+当前生活和工作节奏下，大家都喜欢或不得已吃快餐居多，即遇到任何问题我们都希望快速地搜索或查资料解决掉问题，但是问题的本源或解决问题的方法论我们并不会去深究，即我们并不会太在意是否去构建一个自己的完整知识体系或方法论。但是越是在快节奏下，我们越需要增加更多的慢阅读，细品慢嚼，多读经典，多做好知识的整理和串联，只有这样才容易将你的技能转变为更加体系化的经验和方法论。
+
+基于这个思路，最近对思维框架逻辑这本书目录做了初步思考如下：
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv6qAc5OVYj3iaFEQZIPiblZVXJHDaY0ekZGrqQobHyfQibo12WsVYyoZDicLUfJrpQgR3a9ibfHXGRMibsg/640?wx_fmt=jpeg)
+
+整本书的目录结构实际都是围绕整体框架展开，即：  
+
+> 主线：包括思维框架和思维逻辑两大方面
+>
+> 分支：包括了学习方法实践，知识库积累，事物认知和决策，问题分析解决
+
+以上即是我重点关注和归纳整理的思维方面的内容。整个思维框架分解展开后我要阐述的内容就在上面的部分。
+其中包括了学习方法模式，知识经验库积累，事物认知和决策，问题分析和诊断，最终解决和呈现逻辑几个方面的内容。
+
+那么基于这个思路，目录结构初步规划如下：
+
+> 第一章 思维概述
+>
+> 1.1 思维发展史概述
+>
+> 1.2 认识和改造世界-从宗教到科学
+>
+> 1.3 问题分析-从基础逻辑到方法论
+>
+> 1.4 我思故我在-思维和意识
+>
+> 1.5 对思维定义的重新思考
+>
+> 1.6 思维的知识范畴和关键要素分析
+>
+>  
+>
+>
+> 第二章 思维框架和模式
+>
+> 2.1 从知乎提问的问题归类说起
+>
+> 2.2 思维整体架构
+>
+> 2.3 思维框架构建
+>
+> 2.4 思维框架中核心要素分析
+>
+> 2.5 从思维框架到思维逻辑要素
+>
+>  
+>
+>
+> 第三章 学习方法和模式
+>
+> 3.2 学习概述
+>
+> 3.3 工作后学习思维意识的转变
+>
+> 3.4 从阅读到写作逻辑
+>
+> 3.5 三阶段六步学习金字塔模型
+>
+> 3.5.1 搭建概念模型
+>
+> 3.5.2 找寻主干
+>
+> 3.5.3 快速POC验证达成目标
+>
+> 3.5.4 构建完整知识树
+>
+> 3.5.5 可视化迭代
+>
+> 3.5.6 跃迁和顿悟
+>
+> 3.6 学习曲线和个人成长定律
+>
+> 3.7 成为一个高段位学习者
+>
+>  
+>
+>
+> 第四章 个人知识库建设
+>
+> 4.1 个人知识管理概述
+>
+> 4.2 个人知识库搭建方法论
+>
+> 4.3 知识库建设-从泛读到精读
+>
+> 4.4 经验库建设-实践到复盘
+>
+> 4.5 知识体系结构整理
+>
+> 4.6 个人知识管理感悟
+>
+>  
+>
+>
+> 第五章 事物认知和决策
+>
+> 5.1 事物认知概述-看待事物的方式
+>
+> 5.2 事物分析方法-静态+动态
+>
+> 5.3 从事物到事物群
+>
+> 5.4 构建事物认知模型
+>
+> 5.5 从事物认知模型到决策评估模型
+>
+>  
+>
+>
+> 第六章 问题分析和解决
+>
+> 6.1 问题概述
+>
+> 6.2 问题定义-提问的智慧
+>
+> 6.3 问题分析-核心是匹配逻辑
+>
+> 6.4 问题解决和验证
+>
+> 6.5 麦肯锡问题分析七步法
+>
+> 6.6 我是如此思考的-从问题到解决方法论
+>
+> 6.7 问题解决案例-技术类问题解决参考
+>
+> 6.8 问题解决案例-售前方案制作问题解决参考
+>
+>  
+>
+>
+> 第七章 总结和复盘
+>
+> 7.1 总结复盘概述
+>
+> 7.2 常用总结复盘方法
+>
+> 7.3 谈写作-写作是为了更好的思考
+>
+> 7.4 从知识到经验，从经验到方法论
+>
+> 7.5 呈现逻辑和金字塔原理
+>
+> 7.6 工作型PPT制作逻辑参考
+>
+> 7.7 解决方案PPT案例分析参考
+
+以上是对书籍目录结构的初步思考，这本书暂时无明确的出版时间计划，个人出这本书的初衷也仅仅是自己多年来在思维领域实践总结的自我总结，不留遗憾。
+
+  
+
+
+
+
+
+
+
+
+
+
+
+****
+
+
+
+****
+
+
+
+
+
+__
+
+
+
+
+
+
+
+
+

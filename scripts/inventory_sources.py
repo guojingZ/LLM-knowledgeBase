@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -53,6 +54,17 @@ def main() -> int:
 
     project = Path(args.project).resolve()
     output = project / args.output
+    if output.resolve() == (project / 'registry/source_manifest.yaml').resolve():
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'gui/backend'))
+        from studio import Studio
+        from kb_build import KnowledgeBuild
+        value = KnowledgeBuild(Studio(project)).execute('sources.scan')
+        rows = value['items']
+        print(f"sources={len(rows)} accepted={sum(r['admission']=='accepted' for r in rows)} pending={sum(r['admission']=='pending' for r in rows)}")
+        print(f"duplicate_groups={len(value['duplicate_groups'])} output={output}")
+        return 1 if value['duplicate_groups'] else 0
+    if not output.resolve().is_relative_to(project):
+        raise ValueError('导出路径必须位于项目内')
     records = collect(project)
     by_hash: dict[str, list[str]] = {}
     for item in records:

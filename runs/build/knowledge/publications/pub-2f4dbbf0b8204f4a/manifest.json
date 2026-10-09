@@ -1,0 +1,28 @@
+{
+  "publication_id": "pub-2f4dbbf0b8204f4a",
+  "purpose": "create_extraction_job",
+  "created_at": "2026-10-09T07:21:23.333+00:00",
+  "status": "committed",
+  "files": [
+    {
+      "path": "runs/build/knowledge/jobs/job-53e2b72341484645/models.json",
+      "before": null,
+      "after": "33a14c0107d9b714c41fec6835778e36b50967486d00ff43525f6be14800a8dc"
+    },
+    {
+      "path": "runs/build/knowledge/jobs/job-53e2b72341484645/job.json",
+      "before": null,
+      "after": "412c94f43ac0568a2fa65c1a5f8ae8b89cfbcf31c809af49abd8c4342a75ee19"
+    },
+    {
+      "path": "registry/knowledge_build.yaml",
+      "before": "985149fd0cb499ccb3ac1ab31bb0c62cf9389826c7911be73b8a7976b2752caa",
+      "after": "8a20d9e32f9664350ddea3f6337c4224ecb0b9b328879454814f3cce842a4908"
+    },
+    {
+      "path": "runs/build/knowledge/jobs/job-53e2b72341484645/task.md",
+      "before": null,
+      "after": "37358eff286b19978425d9fbd41c46d1a6000d29f8a217a03ee9138e7e7ee4a6"
+    }
+  ]
+}

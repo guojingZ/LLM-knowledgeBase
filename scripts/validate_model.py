@@ -155,9 +155,10 @@ def validate(project: Path) -> Report:
         elif isinstance(decomposition, list):
             for part in decomposition:
                 if isinstance(part, dict) and part.get("uses"):
-                    target = part["uses"]
-                    if not resolve_reference(target, concept_ids, entity_ids):
-                        broken.append(f"{owner} -> {target}")
+                    targets = part["uses"] if isinstance(part["uses"], list) else [part["uses"]]
+                    for target in targets:
+                        if not isinstance(target, str) or not resolve_reference(target, concept_ids, entity_ids):
+                            broken.append(f"{owner} -> {target}")
         if "证据不足" in (concept.get("tags") or []):
             weak_evidence.append(concept["id"])
         count = 0

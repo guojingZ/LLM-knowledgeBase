@@ -1,0 +1,620 @@
+{
+  "query": "面对一个复杂业务问题时，我应该如何定位根因？",
+  "status": "paths_found",
+  "paths": [
+    {
+      "refs": [
+        "scenario://如何分析和解决复杂问题",
+        "concept://实证",
+        "scenario://如何培养架构思维与大架构观",
+        "concept://业务驱动技术"
+      ],
+      "steps": [
+        {
+          "source": "scenario://如何分析和解决复杂问题",
+          "target": "concept://实证",
+          "relation": "uses",
+          "field": "composition[3].uses[3]",
+          "phase": "假设验证与根因确认",
+          "label": "使用",
+          "from": "scenario://如何分析和解决复杂问题",
+          "to": "concept://实证",
+          "traversal": "forward",
+          "explanation": "scenario://如何分析和解决复杂问题 在 composition[3].uses[3] 记录“使用” → concept://实证；本步沿记录方向展开。"
+        },
+        {
+          "source": "scenario://如何培养架构思维与大架构观",
+          "target": "concept://实证",
+          "relation": "uses",
+          "field": "composition[4].uses[2]",
+          "phase": "跳出盒子与实践验证",
+          "label": "使用",
+          "from": "concept://实证",
+          "to": "scenario://如何培养架构思维与大架构观",
+          "traversal": "reverse",
+          "explanation": "scenario://如何培养架构思维与大架构观 在 composition[4].uses[2] 记录“使用” → concept://实证；本步反向浏览该引用。"
+        },
+        {
+          "source": "scenario://如何培养架构思维与大架构观",
+          "target": "concept://业务驱动技术",
+          "relation": "uses",
+          "field": "composition[0].uses[1]",
+          "phase": "架构认知校准",
+          "label": "使用",
+          "from": "scenario://如何培养架构思维与大架构观",
+          "to": "concept://业务驱动技术",
+          "traversal": "forward",
+          "explanation": "scenario://如何培养架构思维与大架构观 在 composition[0].uses[1] 记录“使用” → concept://业务驱动技术；本步沿记录方向展开。"
+        }
+      ],
+      "seed": "scenario://如何分析和解决复杂问题",
+      "score": 0.4613,
+      "nodes": [
+        {
+          "ref": "scenario://如何分析和解决复杂问题",
+          "kind": "scenario",
+          "id": "如何分析和解决复杂问题",
+          "define": "系统或业务出现异常偏差时，如何定义问题、分析根因、验证并解决"
+        },
+        {
+          "ref": "concept://实证",
+          "kind": "concept",
+          "id": "实证",
+          "define": "凡所有事须经亲自实践或验证，才能确定是否满足自我与他人的期望"
+        },
+        {
+          "ref": "scenario://如何培养架构思维与大架构观",
+          "kind": "scenario",
+          "id": "如何培养架构思维与大架构观",
+          "define": "面对业务到IT实现的转化，如何以分解集成抽象复用等思维完成整体架构设计"
+        },
+        {
+          "ref": "concept://业务驱动技术",
+          "kind": "concept",
+          "id": "业务驱动技术",
+          "define": "技术为解决业务问题和业务目标服务，避免技术狂热与过度设计"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_40b3fc11edf40cf7f4a9db8a",
+          "source": "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+          "source_sha256": "7107ef9ffb3f63c2b13cd72c522acee82aec516b09e6516f5c03b735ddf68f0f",
+          "line_start": 84,
+          "line_end": 85,
+          "section": "02-架构师的角色和职责",
+          "text": "技术最终是解决业务问题和为业务目标服务\n，也正是整个原因，一个好的架构师不应该陷入到技术驱动，而是业务驱动；不是选择最新，最热的技术或框架，而是应该选择当前最合适的技术和框架。架构师应该避免过度设计和技术狂热，而是真正做好业务和技术的适配，成本和收益的分析工作。",
+          "score": 0.2503,
+          "status": "candidate_unconfirmed"
+        },
+        {
+          "evidence_id": "ev_3f0a4f27c8cbc886022d3c93",
+          "source": "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+          "source_sha256": "7107ef9ffb3f63c2b13cd72c522acee82aec516b09e6516f5c03b735ddf68f0f",
+          "line_start": 79,
+          "line_end": 80,
+          "section": "02-架构师的角色和职责",
+          "text": ">\n> 能够把一个复杂的大系统真正想清楚和透彻，同时还能够把大系统拆散为松耦合的多个模块，最终又在各个模块独立并行完成开发后，能够通过预先定义的接口将这些模块又组装和集成起来，这就是一个真正架构师应该做的事情。",
+          "score": 0.1032,
+          "status": "candidate_unconfirmed"
+        }
+      ],
+      "evidence_status": "candidates_only",
+      "summary": "如何分析和解决复杂问题 → 实证 → 如何培养架构思维与大架构观 → 业务驱动技术"
+    },
+    {
+      "refs": [
+        "scenario://如何分析和解决复杂问题",
+        "concept://MECE",
+        "concept://分解",
+        "concept://分层"
+      ],
+      "steps": [
+        {
+          "source": "scenario://如何分析和解决复杂问题",
+          "target": "concept://MECE",
+          "relation": "uses",
+          "field": "composition[1].uses[2]",
+          "phase": "结构化分解与影响因子穷举",
+          "label": "使用",
+          "from": "scenario://如何分析和解决复杂问题",
+          "to": "concept://MECE",
+          "traversal": "forward",
+          "explanation": "scenario://如何分析和解决复杂问题 在 composition[1].uses[2] 记录“使用” → concept://MECE；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://MECE",
+          "target": "concept://分解",
+          "relation": "related_to",
+          "field": "relations.related_to[0]",
+          "label": "相关",
+          "from": "concept://MECE",
+          "to": "concept://分解",
+          "traversal": "forward",
+          "explanation": "concept://MECE 在 relations.related_to[0] 记录“相关” → concept://分解；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://分层",
+          "target": "concept://分解",
+          "relation": "is_a",
+          "field": "relations.is_a[0]",
+          "label": "属于",
+          "from": "concept://分解",
+          "to": "concept://分层",
+          "traversal": "reverse",
+          "explanation": "concept://分层 在 relations.is_a[0] 记录“属于” → concept://分解；本步反向浏览该引用。"
+        }
+      ],
+      "seed": "scenario://如何分析和解决复杂问题",
+      "score": 0.3,
+      "nodes": [
+        {
+          "ref": "scenario://如何分析和解决复杂问题",
+          "kind": "scenario",
+          "id": "如何分析和解决复杂问题",
+          "define": "系统或业务出现异常偏差时，如何定义问题、分析根因、验证并解决"
+        },
+        {
+          "ref": "concept://MECE",
+          "kind": "concept",
+          "id": "MECE",
+          "define": "分解时相互独立、完全穷尽、不重不漏的划分原则"
+        },
+        {
+          "ref": "concept://分解",
+          "kind": "concept",
+          "id": "分解",
+          "define": "对复杂问题分而治之，拆解为高内聚松耦合且最终可集成的部分"
+        },
+        {
+          "ref": "concept://分层",
+          "kind": "concept",
+          "id": "分层",
+          "define": "按资源、服务、应用等层次切分，使各层可独立设计且相互松耦合"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_40b3fc11edf40cf7f4a9db8a",
+          "source": "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+          "source_sha256": "7107ef9ffb3f63c2b13cd72c522acee82aec516b09e6516f5c03b735ddf68f0f",
+          "line_start": 84,
+          "line_end": 85,
+          "section": "02-架构师的角色和职责",
+          "text": "技术最终是解决业务问题和为业务目标服务\n，也正是整个原因，一个好的架构师不应该陷入到技术驱动，而是业务驱动；不是选择最新，最热的技术或框架，而是应该选择当前最合适的技术和框架。架构师应该避免过度设计和技术狂热，而是真正做好业务和技术的适配，成本和收益的分析工作。",
+          "score": 0.1421,
+          "status": "candidate_unconfirmed"
+        },
+        {
+          "evidence_id": "ev_3f0a4f27c8cbc886022d3c93",
+          "source": "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+          "source_sha256": "7107ef9ffb3f63c2b13cd72c522acee82aec516b09e6516f5c03b735ddf68f0f",
+          "line_start": 79,
+          "line_end": 80,
+          "section": "02-架构师的角色和职责",
+          "text": ">\n> 能够把一个复杂的大系统真正想清楚和透彻，同时还能够把大系统拆散为松耦合的多个模块，最终又在各个模块独立并行完成开发后，能够通过预先定义的接口将这些模块又组装和集成起来，这就是一个真正架构师应该做的事情。",
+          "score": 0.125,
+          "status": "candidate_unconfirmed"
+        }
+      ],
+      "evidence_status": "candidates_only",
+      "summary": "如何分析和解决复杂问题 → MECE → 分解 → 分层"
+    },
+    {
+      "refs": [
+        "scenario://如何分析和解决复杂问题",
+        "concept://MECE",
+        "concept://分解",
+        "concept://加工"
+      ],
+      "steps": [
+        {
+          "source": "scenario://如何分析和解决复杂问题",
+          "target": "concept://MECE",
+          "relation": "uses",
+          "field": "composition[1].uses[2]",
+          "phase": "结构化分解与影响因子穷举",
+          "label": "使用",
+          "from": "scenario://如何分析和解决复杂问题",
+          "to": "concept://MECE",
+          "traversal": "forward",
+          "explanation": "scenario://如何分析和解决复杂问题 在 composition[1].uses[2] 记录“使用” → concept://MECE；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://MECE",
+          "target": "concept://分解",
+          "relation": "related_to",
+          "field": "relations.related_to[0]",
+          "label": "相关",
+          "from": "concept://MECE",
+          "to": "concept://分解",
+          "traversal": "forward",
+          "explanation": "concept://MECE 在 relations.related_to[0] 记录“相关” → concept://分解；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://加工",
+          "target": "concept://分解",
+          "relation": "uses",
+          "field": "decomposition[2].uses[0]",
+          "label": "使用",
+          "from": "concept://分解",
+          "to": "concept://加工",
+          "traversal": "reverse",
+          "explanation": "concept://加工 在 decomposition[2].uses[0] 记录“使用” → concept://分解；本步反向浏览该引用。"
+        }
+      ],
+      "seed": "scenario://如何分析和解决复杂问题",
+      "score": 0.3,
+      "nodes": [
+        {
+          "ref": "scenario://如何分析和解决复杂问题",
+          "kind": "scenario",
+          "id": "如何分析和解决复杂问题",
+          "define": "系统或业务出现异常偏差时，如何定义问题、分析根因、验证并解决"
+        },
+        {
+          "ref": "concept://MECE",
+          "kind": "concept",
+          "id": "MECE",
+          "define": "分解时相互独立、完全穷尽、不重不漏的划分原则"
+        },
+        {
+          "ref": "concept://分解",
+          "kind": "concept",
+          "id": "分解",
+          "define": "对复杂问题分而治之，拆解为高内聚松耦合且最终可集成的部分"
+        },
+        {
+          "ref": "concept://加工",
+          "kind": "concept",
+          "id": "加工",
+          "define": "对输入做分解、组合、排序、聚合、抽象、重组，为后续模式匹配做准备"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_8b6be272bceb2496535a74ae",
+          "source": "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+          "source_sha256": "830ff78ee64429a9165f126d5a0e360c00327456cf44a81c34f3d31ce17d5a2d",
+          "line_start": 298,
+          "line_end": 298,
+          "section": "一个完整的方案制作匹配案例",
+          "text": "同时可以看到，这个跟做CRM解决方案时候有两个大的陌生点，其一就是校园本身的业务究竟是如何的我们并不清楚？其次就是一个校园信息化的整体框架我们应该如何搭建？只有这两个问题都想清楚后我们才能够形成初步完整框架。",
+          "score": 0.129,
+          "status": "candidate_unconfirmed"
+        },
+        {
+          "evidence_id": "ev_d4e830b8e26f7fdef1ec1068",
+          "source": "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+          "source_sha256": "830ff78ee64429a9165f126d5a0e360c00327456cf44a81c34f3d31ce17d5a2d",
+          "line_start": 68,
+          "line_end": 68,
+          "section": "思维框架回顾",
+          "text": "在知识经验库上面就是我们说的面对输入和问题的时候大脑的处理过程。核心是问题定义降噪，加工和模式匹配活动。模式匹配活动就是今天要重点讲的思维逻辑里面的关键。",
+          "score": 0.0981,
+          "status": "candidate_unconfirmed"
+        }
+      ],
+      "evidence_status": "candidates_only",
+      "summary": "如何分析和解决复杂问题 → MECE → 分解 → 加工"
+    },
+    {
+      "refs": [
+        "scenario://如何分析和解决复杂问题",
+        "concept://MECE",
+        "concept://分解",
+        "concept://架构思维"
+      ],
+      "steps": [
+        {
+          "source": "scenario://如何分析和解决复杂问题",
+          "target": "concept://MECE",
+          "relation": "uses",
+          "field": "composition[1].uses[2]",
+          "phase": "结构化分解与影响因子穷举",
+          "label": "使用",
+          "from": "scenario://如何分析和解决复杂问题",
+          "to": "concept://MECE",
+          "traversal": "forward",
+          "explanation": "scenario://如何分析和解决复杂问题 在 composition[1].uses[2] 记录“使用” → concept://MECE；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://MECE",
+          "target": "concept://分解",
+          "relation": "related_to",
+          "field": "relations.related_to[0]",
+          "label": "相关",
+          "from": "concept://MECE",
+          "to": "concept://分解",
+          "traversal": "forward",
+          "explanation": "concept://MECE 在 relations.related_to[0] 记录“相关” → concept://分解；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://架构思维",
+          "target": "concept://分解",
+          "relation": "contains",
+          "field": "relations.contains[0]",
+          "label": "包含",
+          "from": "concept://分解",
+          "to": "concept://架构思维",
+          "traversal": "reverse",
+          "explanation": "concept://架构思维 在 relations.contains[0] 记录“包含” → concept://分解；本步反向浏览该引用。"
+        }
+      ],
+      "seed": "scenario://如何分析和解决复杂问题",
+      "score": 0.3,
+      "nodes": [
+        {
+          "ref": "scenario://如何分析和解决复杂问题",
+          "kind": "scenario",
+          "id": "如何分析和解决复杂问题",
+          "define": "系统或业务出现异常偏差时，如何定义问题、分析根因、验证并解决"
+        },
+        {
+          "ref": "concept://MECE",
+          "kind": "concept",
+          "id": "MECE",
+          "define": "分解时相互独立、完全穷尽、不重不漏的划分原则"
+        },
+        {
+          "ref": "concept://分解",
+          "kind": "concept",
+          "id": "分解",
+          "define": "对复杂问题分而治之，拆解为高内聚松耦合且最终可集成的部分"
+        },
+        {
+          "ref": "concept://架构思维",
+          "kind": "concept",
+          "id": "架构思维",
+          "define": "以分解、集成、抽象、泛化、组合、复用、组装为核心内容的思维方式"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_40b3fc11edf40cf7f4a9db8a",
+          "source": "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+          "source_sha256": "7107ef9ffb3f63c2b13cd72c522acee82aec516b09e6516f5c03b735ddf68f0f",
+          "line_start": 84,
+          "line_end": 85,
+          "section": "02-架构师的角色和职责",
+          "text": "技术最终是解决业务问题和为业务目标服务\n，也正是整个原因，一个好的架构师不应该陷入到技术驱动，而是业务驱动；不是选择最新，最热的技术或框架，而是应该选择当前最合适的技术和框架。架构师应该避免过度设计和技术狂热，而是真正做好业务和技术的适配，成本和收益的分析工作。",
+          "score": 0.1346,
+          "status": "candidate_unconfirmed"
+        },
+        {
+          "evidence_id": "ev_3f0a4f27c8cbc886022d3c93",
+          "source": "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md",
+          "source_sha256": "7107ef9ffb3f63c2b13cd72c522acee82aec516b09e6516f5c03b735ddf68f0f",
+          "line_start": 79,
+          "line_end": 80,
+          "section": "02-架构师的角色和职责",
+          "text": ">\n> 能够把一个复杂的大系统真正想清楚和透彻，同时还能够把大系统拆散为松耦合的多个模块，最终又在各个模块独立并行完成开发后，能够通过预先定义的接口将这些模块又组装和集成起来，这就是一个真正架构师应该做的事情。",
+          "score": 0.1199,
+          "status": "candidate_unconfirmed"
+        }
+      ],
+      "evidence_status": "candidates_only",
+      "summary": "如何分析和解决复杂问题 → MECE → 分解 → 架构思维"
+    },
+    {
+      "refs": [
+        "scenario://如何分析和解决复杂问题",
+        "concept://MECE",
+        "concept://分解",
+        "concept://流程分析"
+      ],
+      "steps": [
+        {
+          "source": "scenario://如何分析和解决复杂问题",
+          "target": "concept://MECE",
+          "relation": "uses",
+          "field": "composition[1].uses[2]",
+          "phase": "结构化分解与影响因子穷举",
+          "label": "使用",
+          "from": "scenario://如何分析和解决复杂问题",
+          "to": "concept://MECE",
+          "traversal": "forward",
+          "explanation": "scenario://如何分析和解决复杂问题 在 composition[1].uses[2] 记录“使用” → concept://MECE；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://MECE",
+          "target": "concept://分解",
+          "relation": "related_to",
+          "field": "relations.related_to[0]",
+          "label": "相关",
+          "from": "concept://MECE",
+          "to": "concept://分解",
+          "traversal": "forward",
+          "explanation": "concept://MECE 在 relations.related_to[0] 记录“相关” → concept://分解；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://流程分析",
+          "target": "concept://分解",
+          "relation": "related_to",
+          "field": "relations.related_to[4]",
+          "label": "相关",
+          "from": "concept://分解",
+          "to": "concept://流程分析",
+          "traversal": "reverse",
+          "explanation": "concept://流程分析 在 relations.related_to[4] 记录“相关” → concept://分解；本步反向浏览该引用。"
+        }
+      ],
+      "seed": "scenario://如何分析和解决复杂问题",
+      "score": 0.3,
+      "nodes": [
+        {
+          "ref": "scenario://如何分析和解决复杂问题",
+          "kind": "scenario",
+          "id": "如何分析和解决复杂问题",
+          "define": "系统或业务出现异常偏差时，如何定义问题、分析根因、验证并解决"
+        },
+        {
+          "ref": "concept://MECE",
+          "kind": "concept",
+          "id": "MECE",
+          "define": "分解时相互独立、完全穷尽、不重不漏的划分原则"
+        },
+        {
+          "ref": "concept://分解",
+          "kind": "concept",
+          "id": "分解",
+          "define": "对复杂问题分而治之，拆解为高内聚松耦合且最终可集成的部分"
+        },
+        {
+          "ref": "concept://流程分析",
+          "kind": "concept",
+          "id": "流程分析",
+          "define": "沿事物发展阶段和活动识别影响要素，再归类形成分解树"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_8b6be272bceb2496535a74ae",
+          "source": "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+          "source_sha256": "830ff78ee64429a9165f126d5a0e360c00327456cf44a81c34f3d31ce17d5a2d",
+          "line_start": 298,
+          "line_end": 298,
+          "section": "一个完整的方案制作匹配案例",
+          "text": "同时可以看到，这个跟做CRM解决方案时候有两个大的陌生点，其一就是校园本身的业务究竟是如何的我们并不清楚？其次就是一个校园信息化的整体框架我们应该如何搭建？只有这两个问题都想清楚后我们才能够形成初步完整框架。",
+          "score": 0.1324,
+          "status": "candidate_unconfirmed"
+        },
+        {
+          "evidence_id": "ev_efbc11fe24e47424f2b4ef94",
+          "source": "raw/accepted/构建思维能力知识体系和框架逻辑的闭环体系.md",
+          "source_sha256": "ddf2fcda29d4829218e2699749b5a8c33cae6935fb212bf864daad996f1e1e83",
+          "line_start": 70,
+          "line_end": 70,
+          "section": "动静结合的分析逻辑",
+          "text": "即当对一个事物进行完整分析时，一方面是对事物进行静态分解，去研究事物的内在组成架构和相互关系；另一方面是研究事物行为特征或运作流程，通过动态分解得到具体的活动和步骤；最后是回答底层的各个业务组件如何匹配到具体的活动上，并通过业务组件间的交互和协同最终完成一个外在行为状态。",
+          "score": 0.1041,
+          "status": "candidate_unconfirmed"
+        }
+      ],
+      "evidence_status": "candidates_only",
+      "summary": "如何分析和解决复杂问题 → MECE → 分解 → 流程分析"
+    },
+    {
+      "refs": [
+        "scenario://如何分析和解决复杂问题",
+        "concept://MECE",
+        "concept://分解",
+        "concept://破题"
+      ],
+      "steps": [
+        {
+          "source": "scenario://如何分析和解决复杂问题",
+          "target": "concept://MECE",
+          "relation": "uses",
+          "field": "composition[1].uses[2]",
+          "phase": "结构化分解与影响因子穷举",
+          "label": "使用",
+          "from": "scenario://如何分析和解决复杂问题",
+          "to": "concept://MECE",
+          "traversal": "forward",
+          "explanation": "scenario://如何分析和解决复杂问题 在 composition[1].uses[2] 记录“使用” → concept://MECE；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://MECE",
+          "target": "concept://分解",
+          "relation": "related_to",
+          "field": "relations.related_to[0]",
+          "label": "相关",
+          "from": "concept://MECE",
+          "to": "concept://分解",
+          "traversal": "forward",
+          "explanation": "concept://MECE 在 relations.related_to[0] 记录“相关” → concept://分解；本步沿记录方向展开。"
+        },
+        {
+          "source": "concept://破题",
+          "target": "concept://分解",
+          "relation": "uses",
+          "field": "decomposition[0].uses[0]",
+          "label": "使用",
+          "from": "concept://分解",
+          "to": "concept://破题",
+          "traversal": "reverse",
+          "explanation": "concept://破题 在 decomposition[0].uses[0] 记录“使用” → concept://分解；本步反向浏览该引用。"
+        }
+      ],
+      "seed": "scenario://如何分析和解决复杂问题",
+      "score": 0.3,
+      "nodes": [
+        {
+          "ref": "scenario://如何分析和解决复杂问题",
+          "kind": "scenario",
+          "id": "如何分析和解决复杂问题",
+          "define": "系统或业务出现异常偏差时，如何定义问题、分析根因、验证并解决"
+        },
+        {
+          "ref": "concept://MECE",
+          "kind": "concept",
+          "id": "MECE",
+          "define": "分解时相互独立、完全穷尽、不重不漏的划分原则"
+        },
+        {
+          "ref": "concept://分解",
+          "kind": "concept",
+          "id": "分解",
+          "define": "对复杂问题分而治之，拆解为高内聚松耦合且最终可集成的部分"
+        },
+        {
+          "ref": "concept://破题",
+          "kind": "concept",
+          "id": "破题",
+          "define": "不破不立，先拆解新问题的构成要素并识别自身已有经验的差距"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "ev_8b6be272bceb2496535a74ae",
+          "source": "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+          "source_sha256": "830ff78ee64429a9165f126d5a0e360c00327456cf44a81c34f3d31ce17d5a2d",
+          "line_start": 298,
+          "line_end": 298,
+          "section": "一个完整的方案制作匹配案例",
+          "text": "同时可以看到，这个跟做CRM解决方案时候有两个大的陌生点，其一就是校园本身的业务究竟是如何的我们并不清楚？其次就是一个校园信息化的整体框架我们应该如何搭建？只有这两个问题都想清楚后我们才能够形成初步完整框架。",
+          "score": 0.1329,
+          "status": "candidate_unconfirmed"
+        },
+        {
+          "evidence_id": "ev_3cb90fd6cc0677f78b76f9eb",
+          "source": "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md",
+          "source_sha256": "830ff78ee64429a9165f126d5a0e360c00327456cf44a81c34f3d31ce17d5a2d",
+          "line_start": 200,
+          "line_end": 200,
+          "section": "解决问题的两个难点",
+          "text": "引入问题既可能是我们的输入出现错误，我们面对的软硬件环境运行状态有问题，也可能是我们实际程序处理构成出现问题。即使你定位到程序处理问题，那么还可能是逻辑层，数据访问层或数据库多个点导致的问题。",
+          "score": 0.0851,
+          "status": "candidate_unconfirmed"
+        }
+      ],
+      "evidence_status": "candidates_only",
+      "summary": "如何分析和解决复杂问题 → MECE → 分解 → 破题"
+    }
+  ],
+  "seeds": [
+    {
+      "ref": "scenario://如何分析和解决复杂问题",
+      "kind": "scenario",
+      "id": "如何分析和解决复杂问题",
+      "define": "系统或业务出现异常偏差时，如何定义问题、分析根因、验证并解决"
+    },
+    {
+      "ref": "concept://业务驱动技术",
+      "kind": "concept",
+      "id": "业务驱动技术",
+      "define": "技术为解决业务问题和业务目标服务，避免技术狂热与过度设计"
+    }
+  ],
+  "explored_edges": 3001,
+  "truncated": true,
+  "additional_paths_omitted": 414,
+  "direction": "both",
+  "mode": "explicit_reference_traversal",
+  "message": "路径说明模型中的关联，不等同于因果推断；段落候选未经人工确认。",
+  "query_kind": "multihop",
+  "question": "面对一个复杂业务问题时，我应该如何定位根因？",
+  "trace_id": "qa-20261008T054801738118Z-9ace2151e247",
+  "generated_at": "2026-10-08T05:48:01.741+00:00"
+}

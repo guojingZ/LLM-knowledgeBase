@@ -1,4 +1,4 @@
-# v1.4 工作台操作与覆盖更新
+# v1.5 工作台操作与覆盖更新
 
 ## 安装或更新
 
@@ -23,11 +23,15 @@ python gui/backend/app.py --open
 
 地址为 `http://127.0.0.1:8787`。终端按 Ctrl+C 停止。端口被占用可运行 `python gui/backend/app.py --port 8788 --open`。Mac/Linux 可运行 `sh start-studio.sh`。界面与 API 同一地址提供，无需单独打开 HTML，无需 Flask / npm。
 
+## 资料与知识建设
+
+新增页面按资料准入、两轮提取/比较、候选审查、预览发布推进。资料状态与知识处理状态分开；来源更新可创建新任务复核。详细步骤和数据位置见 [建设手册](knowledge-construction.md)，Agent 定向操作见 [操作指南](../application/agent-operations.md) 与根目录 [AGENTS.md](../AGENTS.md)。
+
 ## 一跳检索与多跳预览
 
 默认入口为“一跳检索”。输入问题后，程序选择场景，取阶段直接引用的知识项（最多 12 个），再从对应来源检索段落（默认 8 段）。匹配分是词语匹配启发式，不是正确概率。需要澄清时，选择候选场景后重新检索；Raw 模式直接搜索已准入原文，用于对照，不展开图关系。
 
-结果展示选定场景、直接知识、阶段与引用位置、原文及 Agent 上下文。“查看可继续探索的路径”定位到后续关系预览。预览只展示“场景 → 本次直接知识 → 场景未直接引用的后续节点”，不检索后续原文，不加入本次上下文。点击“用此路径开始探索”只填写表单；在“多跳探索”提交后，才运行多跳并创建独立 trace。
+结果展示选定场景、直接知识、阶段与引用位置、原文、文本摘要和实际上下文 JSON。JSON 比文本摘要更完整；本期没有扩展 IPO/decomposition 参与主问答。“查看可继续探索的路径”定位到后续关系预览。预览只展示“场景 → 本次直接知识 → 场景未直接引用的后续节点”，不检索后续原文，不加入本次上下文。点击“用此路径开始探索”只填写表单；在“多跳探索”提交后，才运行多跳并创建独立 trace。
 
 ## 全局视角
 
@@ -106,7 +110,8 @@ python scripts/kb_multihop.py --start-ref "scenario://如何分析和解决复�
 | POST | `/api/save/{kind}/{id}` | `{node, revision, preview_token}`，安全回写 |
 | GET / POST | `/api/history?ref=…`、`/api/rollback` | 保存记录/`{backup_id, revision}` |
 | POST | `/api/evidence/bind` | `{ref, evidence_id, source_sha256, revision, node_revision?, support_field?, review_note?}` |
-| POST | `/api/evidence/unbind` | `{ref, evidence_id, revision}` |
+| POST | `/api/evidence/unbind` | `{ref, evidence_id, revision, support_field?}`；传范围时只撤销该字段 |
+| POST | `/api/build/<operation>` | 资料、任务、候选、发布；`tools` 返回操作契约，详见 Agent 操作指南 |
 | POST | `/api/query` | `{question, mode?, scenario?, top_k?, evidence_k?}`，一跳／Raw 与保存 trace |
 | GET | `/api/overview` | 全部节点、聚合关系、矩阵、证据覆盖与使用统计 |
 | GET | `/api/traces`、`/api/trace?trace_id=…` | 运行列表／历史快照 |
@@ -125,4 +130,4 @@ python scripts/evaluate_retrieval.py . --no-save
 python scripts/verify_frontend.py
 ```
 
-本轮实际验证结果见 [v1.4 验证报告](../runs/build/studio-v1.4/verification.md)。Windows 启动脚本需要在 Windows 本机确认，其实现不等同于已经完成 Windows 运行测试。
+本轮实际验证结果见 [v1.5 验证报告](../runs/build/studio-v1.5/verification.md)。Windows 启动脚本需要在 Windows 本机确认，其实现不等同于已经完成 Windows 运行测试。

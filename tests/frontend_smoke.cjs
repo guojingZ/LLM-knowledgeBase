@@ -16,11 +16,12 @@ class Element {
 const elements=new Map();for(const m of html.matchAll(/<([a-z]+)[^>]*\bid="([^"]+)"[^>]*>/g)){const e=new Element(m[1]);if(m[0].includes(' hidden'))e.hidden=true;if(m[0].includes(' disabled'))e.disabled=true;elements.set(m[2],e);}
 for(const [id,value]of Object.entries({'graph-depth':'1','graph-direction':'both','graph-kind':'','graph-relation':'','path-depth':'3','path-direction':'both','query-mode':'model-guided','query-scenario':'','support-field':'define','overview-relation':'core','overview-zoom':'100'}))elements.get(id).value=value;
 const kindButtons=['scenario','concept','entity'].map(k=>{const b=new Element('button');b.dataset.kind=k;elements.get('kind-tabs').append(b);return b;});
-const viewButtons=['query','overview','runs','browse','graph','paths'].map(k=>{const b=new Element('button');b.dataset.view=k;return b;});
+const viewButtons=['construction','query','overview','runs','browse','graph','paths'].map(k=>{const b=new Element('button');b.dataset.view=k;return b;});
 const overviewButtons=['graph','matrix','coverage'].map(k=>{const b=new Element('button');b.dataset.overview=k;return b;});
 const doc={getElementById:id=>elements.get(id),createElement:tag=>new Element(tag),createElementNS:(_,tag)=>new Element(tag),querySelectorAll:selector=>selector.includes('kind-tabs')?kindButtons:selector.includes('main-tabs')?viewButtons:selector.includes('overview-tabs')?overviewButtons:[]};
 const errors=[];const sandbox={document:doc,Option:function(t,v){const n=new Element('option');n.textContent=t;n.value=v;return n;},window:{addEventListener(){}},location:{hash:''},fetch:(path,args)=>fetch((process.env.QA_ADDRESS||'http://127.0.0.1:8794')+path,args),console,setTimeout,clearTimeout,URL,URLSearchParams,Blob};
 const context=vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(PROJECT,'gui/frontend/main.js'),'utf8'),context);vm.runInContext(fs.readFileSync(path.join(PROJECT,'gui/frontend/workflows.js'),'utf8'),context);
+vm.runInContext(fs.readFileSync(path.join(PROJECT,'gui/frontend/construction.js'),'utf8'),context);
 const $=id=>elements.get(id);const state=()=>vm.runInContext('state',context);
 async function waitFor(predicate,label){const start=Date.now();while(!predicate()){if(Date.now()-start>30000)throw Error('Timeout: '+label+' / '+$('notice').textContent);await new Promise(r=>setTimeout(r,50));}}
 async function clickText(root,text){const visit=n=>n.tagName==='button'&&n._text===text?n:n.children.map(visit).find(Boolean);const b=visit(root);assert(b,'Missing button '+text);await b.click();return b;}
@@ -48,5 +49,26 @@ async function clickText(root,text){const visit=n=>n.tagName==='button'&&n._text
  $('trace-overlay').click();await waitFor(()=>state().overview&&$('overview-canvas').children.length,'global overview');assert.equal(state().overview.nodes.length,414);assert(state().highlightRefs.length);assert.equal($('overview-canvas').children[0].tagName,'svg');
  overviewButtons[1].click();assert.equal($('overview-matrix').children[0].tagName,'table');assert.equal($('overview-matrix').children[0].children[1].children.length,17);
  overviewButtons[2].click();assert.equal($('overview-coverage').children[0].children[1].children.length,414);
- console.log(JSON.stringify({ok:true,checks:['all nodes','node/IPO view','evidence context','confirm/unconfirm','edit preview/save','history rollback','two-hop SVG/fields','multi-hop explanations','out-of-scope abstention','search retains full navigation','unsaved edit guard','one-hop context and preview isolation','trace replay','feedback sync','global graph all nodes','scenario matrix','field coverage'],visual_rendering:false},null,2));
+ // v1.5: exercise the actual UI events through review and incremental publication.
+ await vm.runInContext("setView('construction')",context);
+ await waitFor(()=>vm.runInContext('buildState.sources!==null',context),'construction inventory');
+ assert.equal(vm.runInContext('buildState.sources.items.length',context),50);
+ const raw='# GUI 新资料\n\nMECE 分解遵循相互独立、完全穷尽。\n';
+ $('build-import-name').value='GUI-增量.md';$('build-import-text').value=raw;await $('build-import').click();
+ assert($('build-sources').textContent.includes('待准入'));await clickText($('build-sources'),'准入');
+ await clickText($('build-sources'),'GUI-增量.md');assert($('build-source-detail').textContent.includes(raw));
+ const source=vm.runInContext("buildState.sources.items.find(s=>s.path.endsWith('GUI-增量.md'))",context);
+ const tr=$('build-sources').children[0].children[1].children.find(r=>r.textContent.includes('GUI-增量.md'));
+ const check=tr.children[0].children[0];check.checked=true;check.onchange();assert(!$('build-create').disabled);
+ $('build-title').value='GUI 增量验证';await $('build-create').click();
+ const job=()=>vm.runInContext('buildState.job',context);assert.equal(job().status,'awaiting_extraction');
+ $('build-extract-json').value=JSON.stringify({observations:[{kind:'concept',id:'MECE',define:'分解不重不漏',evidence:[{source_id:source.source_id,line_start:3,line_end:3,excerpt:raw.split('\n')[2]}]}]});
+ await $('build-extract-submit').click();assert.equal(job().status,'awaiting_comparison');
+ $('build-compare-json').value=JSON.stringify({proposals:[{action:'evidence',target_ref:'concept://MECE',observation_ids:['obs-0001'],reason:'增补原文依据',supports:[{source_id:source.source_id,line_start:3,line_end:3,excerpt:raw.split('\n')[2],support_field:'define'}]}]});
+ await $('build-compare-submit').click();assert.equal(job().status,'review_required');
+ await clickText($('build-candidates'),'通过');await $('build-preview-button').click();assert(!$('build-publish').disabled);assert($('build-preview').textContent.includes('raw/accepted/GUI-增量.md'));
+ await $('build-publish').click();assert.equal(job().status,'completed');
+ await vm.runInContext("openNode('concept://MECE')",context);assert(state().current.node.sources.includes('raw/accepted/GUI-增量.md'));assert(state().evidence.confirmed.some(e=>e.support_field==='define'));
+ await $('build-tools').click();assert($('build-agent-tools').textContent.includes('input_schema'));
+ console.log(JSON.stringify({ok:true,checks:['all nodes','node/IPO view','evidence context','confirm/unconfirm','edit preview/save','history rollback','two-hop SVG/fields','multi-hop explanations','out-of-scope abstention','search retains full navigation','unsaved edit guard','one-hop context and preview isolation','trace replay','feedback sync','global graph all nodes','scenario matrix','field coverage','source import/admission/read','create two-round task','extract/compare result import','candidate review','incremental publish and shared evidence','Agent operation discovery'],visual_rendering:false},null,2));
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,443 @@
+{
+  "question": "面对人生压力时，我该怎么办？\n",
+  "mode": "model-guided",
+  "query_kind": "one_hop",
+  "status": "needs_clarification",
+  "candidate_scenarios": [
+    {
+      "id": "如何将隐性经验显性化并结构化输出",
+      "score": 0.3023,
+      "define": "工作多年却无写作记录习惯时，如何通过显性化和结构化让隐性经验可被AI放大"
+    },
+    {
+      "id": "如何从系统思维进阶到第一性原理",
+      "score": 0.2634,
+      "define": "面对复杂系统时，如何通过分解关系与回溯根节点完成思维的逐层抽象"
+    },
+    {
+      "id": "如何构建个人思维框架与认知体系",
+      "score": 0.2634,
+      "define": "如何围绕事物认知与问题解决两条主线搭建个人思维认知体系"
+    }
+  ],
+  "selected_scenario": {
+    "id": "如何将隐性经验显性化并结构化输出",
+    "score": 0.3023,
+    "define": "工作多年却无写作记录习惯时，如何通过显性化和结构化让隐性经验可被AI放大",
+    "goal": "用户能把积累多年的隐性经验通过持续写作显性化，产出具备静态结构逻辑、动态流程逻辑与组件关系逻辑的结构化内容，并能用最简洁的方式陈述清楚、按受众去我化地呈现，最终形成可被AI放大、他人无法复制的个人经验模式库。",
+    "phases": [
+      {
+        "phase": "认清显性化是AI时代的竞争力",
+        "rule": "AI时代个人思维能力的竞争不是AI工具的竞争，而是把个人知识经验显性化表达的能力之争。",
+        "uses": [
+          "concept://知识显性化",
+          "concept://知识显隐转化",
+          "entity://大模型"
+        ]
+      },
+      {
+        "phase": "从记录输出开始动手",
+        "rule": "原来没有记录输出习惯的，第一步就是先把历史经验显性化输出和表达出来，不等想清楚再写，也不能认为规范里都有就没得可写。",
+        "uses": [
+          "concept://输出倒逼输入",
+          "concept://知识萃取",
+          "concept://实践反刍"
+        ]
+      },
+      {
+        "phase": "结构化整理素材",
+        "rule": "输出内容必须体现静态结构逻辑、动态流程逻辑和组件关系逻辑，素材本身凌乱则AI输出必然凌乱。",
+        "uses": [
+          "concept://知识结构化",
+          "concept://结构化分析",
+          "concept://结构化呈现"
+        ]
+      },
+      {
+        "phase": "抽象为概念模型与最简陈述",
+        "rule": "一个道理越能用最简单的方式陈述清楚，越说明你深入实践过并了解细节，也越清楚不同层级受众的真实需求。",
+        "uses": [
+          "concept://概念模型搭建",
+          "concept://自我最简陈述",
+          "concept://抽象"
+        ]
+      },
+      {
+        "phase": "去我化的呈现与表达",
+        "rule": "学习摄入是以自我为中心的，但到输出呈现阶段必须去我化，关注受众真正关心什么、受众的知识结构是什么。",
+        "uses": [
+          "concept://去我化呈现",
+          "concept://呈现和泛化",
+          "concept://模仿超越"
+        ]
+      },
+      {
+        "phase": "沉淀为个人模式库",
+        "rule": "通过周期性深度复盘把做过的一系列事情放到一起抽象共性，形成可复用的模式匹配能力，而不是停留在单个项目的浅复盘。",
+        "uses": [
+          "concept://经验模式库",
+          "concept://知识串联",
+          "concept://融会贯通",
+          "concept://深度复盘"
+        ]
+      }
+    ],
+    "sources": [
+      "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+      "raw/accepted/关于思维的七个观点供大家参考.md"
+    ]
+  },
+  "knowledge_items": [
+    {
+      "ref": "concept://自我最简陈述",
+      "id": "自我最简陈述",
+      "score": 0.1667,
+      "define": "用最简单方式陈述一个道理，越能最简说明越说明深入实践过并了解细节",
+      "sources": [
+        "raw/accepted/关于思维的七个观点供大家参考.md"
+      ]
+    },
+    {
+      "ref": "concept://模仿超越",
+      "id": "模仿超越",
+      "score": 0.0556,
+      "define": "先模仿他人结构和写法做到形似，理解内在逻辑后经实践消化形成自己的方法论",
+      "sources": [
+        "raw/accepted/关于思维的七个观点供大家参考.md"
+      ]
+    },
+    {
+      "ref": "concept://知识显性化",
+      "id": "知识显性化",
+      "score": 0.0556,
+      "define": "将隐性经验通过写作等方式显性化并结构化整理，进而抽象为个人知识体系",
+      "sources": [
+        "raw/accepted/AI时代个体思维能力进化知识显性化表达和输出能力.md",
+        "raw/accepted/在职场怎么抓住学习和成长的机会.md",
+        "raw/accepted/知识和认知的本质区别.md"
+      ]
+    },
+    {
+      "ref": "concept://输出倒逼输入",
+      "id": "输出倒逼输入",
+      "score": 0.0556,
+      "define": "通过写博客、做分享、向他人解释，把模糊理解转化为清晰表达",
+      "sources": [
+        "raw/accepted/在职场怎么抓住学习和成长的机会.md"
+      ]
+    },
+    {
+      "ref": "concept://去我化呈现",
+      "id": "去我化呈现",
+      "score": 0.0,
+      "define": "输出呈现时去自我中心，关注受众真正关心的内容与受众的知识经验结构",
+      "sources": [
+        "raw/accepted/关于思维的七个观点供大家参考.md"
+      ]
+    },
+    {
+      "ref": "concept://呈现和泛化",
+      "id": "呈现和泛化",
+      "score": 0.0,
+      "define": "问题解决后做结构化呈现，并把解法演绎泛化到同类问题",
+      "sources": [
+        "raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md"
+      ]
+    },
+    {
+      "ref": "concept://实践反刍",
+      "id": "实践反刍",
+      "score": 0.0,
+      "define": "理论指导实践，但更重要的是通过实践反刍理论并形成自己的方法论",
+      "sources": [
+        "raw/accepted/对思维框架和内在逻辑的完整梳理和认识.md",
+        "raw/accepted/思维框架和模型全面提升个人认知水平和分析解决问题的能力.md",
+        "raw/accepted/构建思维能力知识体系和框架逻辑的闭环体系.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md"
+      ]
+    },
+    {
+      "ref": "concept://抽象",
+      "id": "抽象",
+      "score": 0.0,
+      "define": "从非类似场景中总结共性内容并归纳为规则方法，以适应各类变更",
+      "sources": [
+        "raw/accepted/从架构思维到大架构观的培养.md",
+        "raw/accepted/思维系列如何一阵见血的看透事物的本质.md",
+        "raw/accepted/技术人员如果跳出盒子实现思维和认知升级.md",
+        "raw/accepted/结构化思维的本质逻辑动态过程结构化静态组成结构化.md",
+        "raw/accepted/软件架构师应走出技术狂热误区锻炼核心全局思维能力.md"
+      ]
+    },
+    {
+      "ref": "concept://概念模型搭建",
+      "id": "概念模型搭建",
+      "score": 0.0,
+      "define": "基于业界做法与已有知识经验，快速搭建陌生领域的整体框架结构",
+      "sources": [
+        "raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md",
+        "raw/accepted/思维究竟是什么思维的逻辑和模式匹配.md"
+      ]
+    },
+    {
+      "ref": "concept://深度复盘",
+      "id": "深度复盘",
+      "score": 0.0,
+      "define": "在周期性时间点对事物群体做共性抽象，归纳出一般性规律与方法论",
+      "sources": [
+        "raw/accepted/从认知的概念到认知系统模型的构建.md",
+        "raw/accepted/克服认知障碍实现认知升级打造认知闭环.md",
+        "raw/accepted/如何提升自己的结构化思维和系统思维能力.md"
+      ]
+    },
+    {
+      "ref": "concept://知识串联",
+      "id": "知识串联",
+      "score": 0.0,
+      "define": "以串接和扩展把已有知识点整合为体系，并转化为自己的经验与方法论",
+      "sources": [
+        "raw/accepted/关于思维的七个观点供大家参考.md",
+        "raw/accepted/思维和认知能力退化AI时代跨领域知识广度远比专业深度更加重要.md"
+      ]
+    },
+    {
+      "ref": "concept://知识显隐转化",
+      "id": "知识显隐转化",
+      "score": 0.0,
+      "define": "显性知识经实践内化为隐性知识，隐性经验再经复盘总结显性化的循环",
+      "sources": [
+        "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+        "raw/accepted/碎片化时代从体系思维到系统化知识体系构建之路.md",
+        "raw/accepted/突破认知障碍构建认知提升闭环系统.md",
+        "raw/accepted/重申观点学习过程的价值远远超过学到的知识本身.md"
+      ]
+    }
+  ],
+  "source_files": [
+    "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+    "raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md",
+    "raw/accepted/在职场怎么抓住学习和成长的机会.md"
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ev_b59bf2b63b9934972a9e1590",
+      "source": "raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md",
+      "source_sha256": "b41ab7c17904058fec45e20ba99165c30c0ea525bd2d7d30c777c6ec12c173a7",
+      "line_start": 183,
+      "line_end": 183,
+      "section": "思维系列-从个人知识体系构建到知识网络图谱的构建 / 保存不要一锅炖：分成资料库、知识库、经验库和模式库",
+      "text": "再往下一层，才是经验库和模式库。经验库来自实践后的总结和复盘，记录经验教训、心得体会；模式库则是在某一个专业领域长期大量实践后，对一个事物群或问题群的体系化总结。它已经不只是告诉你知道了什么，而是告诉你以后遇到类似场景应该怎么做。",
+      "score": 0.1189,
+      "retrieval_score": 0.1189,
+      "confirmation_bonus": 0.0,
+      "status": "candidate_unconfirmed",
+      "confirmed_for": []
+    },
+    {
+      "evidence_id": "ev_0413fcf164eb452ef40e3384",
+      "source": "raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md",
+      "source_sha256": "537b1633d6e5846874f9eba1e84837f7ee949b2b7e2790db0cea3f34a9387a11",
+      "line_start": 92,
+      "line_end": 93,
+      "section": "思维框架和知识体系-构建知识组件并实现知识快速组装",
+      "text": "这个东西才是我们做思维框架和逻辑，做知识管理，或者叫将思维和知识管理融合去实践最最需要的东西。所以我一直在强调，在 2025\n年其实我不会再去拓展新的一些业务领域或者是技术领域，我更多的仍然会基于问题和场景驱动，去思考我究竟应该怎么样去构建不同层面的可复用的知识块，让这些知识块之间能够快速的去组装和关联。而且我希望结合不同的场景问题，把我构建的一些思路能够真正的分享给大家。",
+      "score": 0.1182,
+      "retrieval_score": 0.1182,
+      "confirmation_bonus": 0.0,
+      "status": "candidate_unconfirmed",
+      "confirmed_for": []
+    },
+    {
+      "evidence_id": "ev_c1f132d2d333ef71c2f12c16",
+      "source": "raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md",
+      "source_sha256": "537b1633d6e5846874f9eba1e84837f7ee949b2b7e2790db0cea3f34a9387a11",
+      "line_start": 42,
+      "line_end": 42,
+      "section": "思维框架和知识体系-构建知识组件并实现知识快速组装",
+      "text": "为了更好的解答我这个概念，首先我们来看一下，我们在去做问题的定义，问题分析和问题解决的时候。我们的一个分层的结构究竟应该怎么样的？",
+      "score": 0.1158,
+      "retrieval_score": 0.1158,
+      "confirmation_bonus": 0.0,
+      "status": "candidate_unconfirmed",
+      "confirmed_for": []
+    },
+    {
+      "evidence_id": "ev_3a7da7d151464ad3b6b33cf4",
+      "source": "raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md",
+      "source_sha256": "537b1633d6e5846874f9eba1e84837f7ee949b2b7e2790db0cea3f34a9387a11",
+      "line_start": 89,
+      "line_end": 90,
+      "section": "思维框架和知识体系-构建知识组件并实现知识快速组装",
+      "text": "所以说这个时候当我构建了底层可复用的知识块和知识库以后，\n我更多的是要去找寻一种方法。就是面对不同的场景的时候，我怎么样去做好业务场景或者是活动的分解，让分解出来的业务活动能够快速的去复用我底层涉及到的业务技术过程管理或者是基础相应的知识组件，而这些知识组件能够快速的去匹配和组装型的起来，去解决你特定场景下的问题。",
+      "score": 0.0787,
+      "retrieval_score": 0.0787,
+      "confirmation_bonus": 0.0,
+      "status": "candidate_unconfirmed",
+      "confirmed_for": []
+    },
+    {
+      "evidence_id": "ev_12e6f009ecd2b159b9dac383",
+      "source": "raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md",
+      "source_sha256": "537b1633d6e5846874f9eba1e84837f7ee949b2b7e2790db0cea3f34a9387a11",
+      "line_start": 36,
+      "line_end": 38,
+      "section": "思维框架和知识体系-构建知识组件并实现知识快速组装",
+      "text": "所以我最近在思考过程中，我就想到应该去借鉴 SOA\n面向服务架构里面一个关键的思路，我应该去考虑知识怎么样去组装和复用，考虑知识之间怎么样去做相关的关联，所以说我在这里也提出一个关键的概念，\n通过构建可复用的知识组件和灵活的知识组装来面对千变万化的业务场景和需求。",
+      "score": 0.0783,
+      "retrieval_score": 0.0783,
+      "confirmation_bonus": 0.0,
+      "status": "candidate_unconfirmed",
+      "confirmed_for": []
+    },
+    {
+      "evidence_id": "ev_ceba2be7572d7fbad9276e45",
+      "source": "raw/accepted/在职场怎么抓住学习和成长的机会.md",
+      "source_sha256": "eeda76b2942815e8eb12d811067a2efc5921f410ff51defa7106f763013dd478",
+      "line_start": 70,
+      "line_end": 71,
+      "section": "在职场怎么抓住学习和成长的机会？",
+      "text": "面对信息爆炸的时代，没有系统的学习策略很容易迷失。我的做法是围绕岗位需求建立知识地图，围绕你个人专业和实践的方向构建知识体系。类似我个人工作20多年。早起构建的是软件工程，IT项目管理，职业经理人的知识地图。而中期构建的是SOA\n，云计算  ，IT咨询的知识地图。近期又构建了围绕数字化转型  ，企业架构  和AI能力  的知识地图。",
+      "score": 0.0489,
+      "retrieval_score": 0.0489,
+      "confirmation_bonus": 0.0,
+      "status": "candidate_unconfirmed",
+      "confirmed_for": []
+    },
+    {
+      "evidence_id": "ev_0ea3fb2e0d111d3ed8e8c132",
+      "source": "raw/accepted/在职场怎么抓住学习和成长的机会.md",
+      "source_sha256": "eeda76b2942815e8eb12d811067a2efc5921f410ff51defa7106f763013dd478",
+      "line_start": 53,
+      "line_end": 53,
+      "section": "在职场怎么抓住学习和成长的机会？",
+      "text": "同时在实践后要养成深度复盘与持续改进的习惯。项目结束后，我总会给自己留出一段\"思考时间\"。说白了就是问自己几个问题：我做对了什么？做错了什么？为什么会这样？下次怎么做得更好？",
+      "score": 0.0471,
+      "retrieval_score": 0.0471,
+      "confirmation_bonus": 0.0,
+      "status": "candidate_unconfirmed",
+      "confirmed_for": []
+    },
+    {
+      "evidence_id": "ev_1e01edd4bd98d7955ebf4843",
+      "source": "raw/accepted/在职场怎么抓住学习和成长的机会.md",
+      "source_sha256": "eeda76b2942815e8eb12d811067a2efc5921f410ff51defa7106f763013dd478",
+      "line_start": 31,
+      "line_end": 31,
+      "section": "在职场怎么抓住学习和成长的机会？",
+      "text": "这种量化评估特别直观，让我无处可逃地面对真实的自己。有次我以为自己的代码质量很高，结果统计下来发现我的线上bug率比团队平均水平高出30%，这个数字当头一棒，促使我不得不认真改进自己的测试习惯。",
+      "score": 0.0454,
+      "retrieval_score": 0.0454,
+      "confirmation_bonus": 0.0,
+      "status": "candidate_unconfirmed",
+      "confirmed_for": []
+    }
+  ],
+  "context_text": "问题：面对人生压力时，我该怎么办？\n\n状态：needs_clarification\n选定场景：如何将隐性经验显性化并结构化输出（score=0.3023）\n场景目标：用户能把积累多年的隐性经验通过持续写作显性化，产出具备静态结构逻辑、动态流程逻辑与组件关系逻辑的结构化内容，并能用最简洁的方式陈述清楚、按受众去我化地呈现，最终形成可被AI放大、他人无法复制的个人经验模式库。\n相关知识：自我最简陈述、模仿超越、知识显性化、输出倒逼输入、去我化呈现、呈现和泛化、实践反刍、抽象、概念模型搭建、深度复盘、知识串联、知识显隐转化\n原文依据（人工确认仅针对登记的支持字段）：\n- raw/accepted/思维系列从个人知识体系构建到知识网络图谱的构建.md:183-183 | 检索候选 · 未确认 | 再往下一层，才是经验库和模式库。经验库来自实践后的总结和复盘，记录经验教训、心得体会；模式库则是在某一个专业领域长期大量实践后，对一个事物群或问题群的体系化总结。它已经不只是告诉你知道了什么，而是告诉你以后遇到类似场景应该怎么做。\n- raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md:92-93 | 检索候选 · 未确认 | 这个东西才是我们做思维框架和逻辑，做知识管理，或者叫将思维和知识管理融合去实践最最需要的东西。所以我一直在强调，在 2025\n年其实我不会再去拓展新的一些业务领域或者是技术领域，我更多的仍然会基于问题和场景驱动，去思考我究竟应该怎么样去构建不同层面的可复用的知识块，让这些知识块之间能够快速的去组装和关联。而且我希望结合不同的场景问题，把我构建的一些思路能够真正的分享给大家。\n- raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md:42-42 | 检索候选 · 未确认 | 为了更好的解答我这个概念，首先我们来看一下，我们在去做问题的定义，问题分析和问题解决的时候。我们的一个分层的结构究竟应该怎么样的？\n- raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md:89-90 | 检索候选 · 未确认 | 所以说这个时候当我构建了底层可复用的知识块和知识库以后，\n我更多的是要去找寻一种方法。就是面对不同的场景的时候，我怎么样去做好业务场景或者是活动的分解，让分解出来的业务活动能够快速的去复用我底层涉及到的业务技术过程管理或者是基础相应的知识组件，而这些知识组件能够快速的去匹配和组装型的起来，去解决你特定场景下的问题。\n- raw/accepted/思维框架和知识体系构建知识组件并实现知识快速组装.md:36-38 | 检索候选 · 未确认 | 所以我最近在思考过程中，我就想到应该去借鉴 SOA\n面向服务架构里面一个关键的思路，我应该去考虑知识怎么样去组装和复用，考虑知识之间怎么样去做相关的关联，所以说我在这里也提出一个关键的概念，\n通过构建可复用的知识组件和灵活的知识组装来面对千变万化的业务场景和需求。\n- raw/accepted/在职场怎么抓住学习和成长的机会.md:70-71 | 检索候选 · 未确认 | 面对信息爆炸的时代，没有系统的学习策略很容易迷失。我的做法是围绕岗位需求建立知识地图，围绕你个人专业和实践的方向构建知识体系。类似我个人工作20多年。早起构建的是软件工程，IT项目管理，职业经理人的知识地图。而中期构建的是SOA\n，云计算  ，IT咨询的知识地图。近期又构建了围绕数字化转型  ，企业架构  和AI能力  的知识地图。\n- raw/accepted/在职场怎么抓住学习和成长的机会.md:53-53 | 检索候选 · 未确认 | 同时在实践后要养成深度复盘与持续改进的习惯。项目结束后，我总会给自己留出一段\"思考时间\"。说白了就是问自己几个问题：我做对了什么？做错了什么？为什么会这样？下次怎么做得更好？\n- raw/accepted/在职场怎么抓住学习和成长的机会.md:31-31 | 检索候选 · 未确认 | 这种量化评估特别直观，让我无处可逃地面对真实的自己。有次我以为自己的代码质量很高，结果统计下来发现我的线上bug率比团队平均水平高出30%，这个数字当头一棒，促使我不得不认真改进自己的测试习惯。",
+  "one_hop_edges": [
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://知识显性化",
+      "relation": "uses",
+      "field": "composition[0].uses[0]",
+      "phase": "认清显性化是AI时代的竞争力",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://知识显隐转化",
+      "relation": "uses",
+      "field": "composition[0].uses[1]",
+      "phase": "认清显性化是AI时代的竞争力",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://输出倒逼输入",
+      "relation": "uses",
+      "field": "composition[1].uses[0]",
+      "phase": "从记录输出开始动手",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://实践反刍",
+      "relation": "uses",
+      "field": "composition[1].uses[2]",
+      "phase": "从记录输出开始动手",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://概念模型搭建",
+      "relation": "uses",
+      "field": "composition[3].uses[0]",
+      "phase": "抽象为概念模型与最简陈述",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://自我最简陈述",
+      "relation": "uses",
+      "field": "composition[3].uses[1]",
+      "phase": "抽象为概念模型与最简陈述",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://抽象",
+      "relation": "uses",
+      "field": "composition[3].uses[2]",
+      "phase": "抽象为概念模型与最简陈述",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://去我化呈现",
+      "relation": "uses",
+      "field": "composition[4].uses[0]",
+      "phase": "去我化的呈现与表达",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://呈现和泛化",
+      "relation": "uses",
+      "field": "composition[4].uses[1]",
+      "phase": "去我化的呈现与表达",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://模仿超越",
+      "relation": "uses",
+      "field": "composition[4].uses[2]",
+      "phase": "去我化的呈现与表达",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://知识串联",
+      "relation": "uses",
+      "field": "composition[5].uses[1]",
+      "phase": "沉淀为个人模式库",
+      "label": "使用"
+    },
+    {
+      "source": "scenario://如何将隐性经验显性化并结构化输出",
+      "target": "concept://深度复盘",
+      "relation": "uses",
+      "field": "composition[5].uses[3]",
+      "phase": "沉淀为个人模式库",
+      "label": "使用"
+    }
+  ],
+  "continuations": {
+    "items": [],
+    "total": 0,
+    "preview_only": true,
+    "truncated": false
+  },
+  "retrieval_explanation": "选择场景 → 取阶段直接引用知识 → 在相关来源中检索段落；不递归检索后续节点。",
+  "trace_id": "qa-20261009T065118691596Z-5266f2f5b00c",
+  "generated_at": "2026-10-09T06:51:18.692+00:00"
+}

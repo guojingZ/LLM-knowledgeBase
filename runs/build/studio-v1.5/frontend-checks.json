@@ -1,0 +1,29 @@
+{
+  "ok": true,
+  "checks": [
+    "all nodes",
+    "node/IPO view",
+    "evidence context",
+    "confirm/unconfirm",
+    "edit preview/save",
+    "history rollback",
+    "two-hop SVG/fields",
+    "multi-hop explanations",
+    "out-of-scope abstention",
+    "search retains full navigation",
+    "unsaved edit guard",
+    "one-hop context and preview isolation",
+    "trace replay",
+    "feedback sync",
+    "global graph all nodes",
+    "scenario matrix",
+    "field coverage",
+    "source import/admission/read",
+    "create two-round task",
+    "extract/compare result import",
+    "candidate review",
+    "incremental publish and shared evidence",
+    "Agent operation discovery"
+  ],
+  "visual_rendering": false
+}

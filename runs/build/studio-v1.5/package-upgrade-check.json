@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "manifest_verified_files": 213,
+  "no_duplicate_entries": true,
+  "no_cache_or_write_lock": true,
+  "extracted_cli_operations": 17,
+  "extracted_sources": 50,
+  "from": "1.4.0",
+  "to": "1.5.0",
+  "first_apply": {
+    "created": 18,
+    "updated": 25,
+    "preserved": 136,
+    "unchanged": 34
+  },
+  "second_apply": {
+    "created": 0,
+    "updated": 0,
+    "preserved": 144,
+    "unchanged": 69
+  },
+  "preserved_local_files": 141,
+  "updated_source_detected": true
+}

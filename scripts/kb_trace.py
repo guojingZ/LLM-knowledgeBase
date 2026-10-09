@@ -14,7 +14,7 @@ import yaml
 
 from kb_evidence import digest, source_path
 
-VERSION = '1.4.0'
+VERSION = '1.5.0'
 
 
 def make_trace_id(question=''):

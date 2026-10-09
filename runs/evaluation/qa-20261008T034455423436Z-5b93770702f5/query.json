@@ -1,0 +1,8 @@
+{
+  "trace_id": "qa-20261008T034455423436Z-5b93770702f5",
+  "question": "如何解决人生问题",
+  "mode": "model-guided",
+  "scenario": "如何用模式匹配解决未知问题",
+  "top_k": 3,
+  "evidence_k": 8
+}

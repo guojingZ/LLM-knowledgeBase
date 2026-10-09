@@ -1,0 +1,205 @@
+![cover_image](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkQESQhJjfmc15djiaslc1SSpvOt89aKPfRj2uSZkP8aPz5uQzKr7cGYw/0?wx_fmt=jpeg)
+
+#  问题分析解决核心逻辑-麦肯锡解决问题七步法仅是开始
+
+原创  何明璐  何明璐  [ 人月聊IT ](javascript:void\(0\);)
+
+__ _ _ _ _
+
+在小说阅读器中沉浸阅读
+
+![问题分析解决核心逻辑-
+麦肯锡七步法仅是开始](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkIlMljkibabYBNmJQ1anAetyDEoXYhABlKV4vlwbeqvV2Go2g94UVVaQ/640?wx_fmt=jpeg&from=appmsg)
+
+大家好，我是人月聊IT，今天继续聊问题分析和解决方面的话题。
+
+** 文章概要：  ** 这篇文章提供了一个关于  ** 问题分析和解决逻辑  ** 的全面概述，尤其关注区分不同类型的问题和适用方法。首先  **
+对问题进行了分类  ** （如What, How, Which, Where类），并指出  ** 麦肯锡七步解决法  **
+主要适用于咨询公司如何提供解决方案的“How”类问题。  **  
+**
+
+** 清晰地定义问题  ** 是解决问题的第一步，可以利用5W+1H框架来明确问题。在问题分析阶段，核心步骤是  ** 分解问题和对潜在影响因素进行排序
+** ，以找出关键原因。最后，文章解释了  ** 问题解决  **
+在于制定和执行验证方案以确认并消除问题根源，并提醒读者要避免将解决方案误认为是问题本身，并保持  ** 跳出固定思维模式  ** 的能力。
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkSWLYuqlse5GYhZ2k6z8rmKwsCT9pdTlJuVEcu2DjM33NktkuUrTw3A/640?wx_fmt=other&from=appmsg)
+
+人的一生本质上就是不断面对问题、分析问题和解决问题的过程。大到职业选择、战略决策,小到日常琐事。但很多人在解决问题时缺乏系统方法,往往事倍功半。本文将从问题分类入手,深入探讨问题分析与解决的完整逻辑框架。
+
+##  一、问题的四种类型:找准方向是关键
+
+当我们对大量问题进行研究归纳后,会发现问题主要呈现为四种类型,每种类型需要不同的解决思路:
+
+  * ** What类(是什么)  ** :典型的事物认知类问题,比如"我应该如何看待某个事物"。这类问题需要建立清晰的认知模型,搞清楚事物的本质和规律。 
+  * ** How类(如何做)  ** :方法论类问题,比如"如何写一篇科研论文"。重点在于基于不同领域和目标给出可行的方法论和最佳实践,最终形成完整的解决方案。 
+  * ** Which类(如何选择)  ** :决策分析类问题,比如"收到三个Offer应该选哪个"。从简单的经验决策到结构化决策,再到高级的量化决策,需要多维度评估权衡。 
+  * ** Where类(哪里出问题)  ** :故障诊断类问题,当事物运行状态出现偏差或异常时,需要快速找到问题点并解决。这是狭义的问题分析解决,也是本文的重点。 
+
+** 从普遍方法论来说,问题解决包括问题定义、问题分析、问题解决三大阶段  **
+。但必须注意,不同问题类型在分析和解决思路上存在显著差异。正因如此,完整的问题解决逻辑必须上升到思维框架层面来理解。
+
+##  二、麦肯锡七步法:How类问题的解决之道
+
+提到问题解决,很多人首先想到麦肯锡问题分析解决七步法。但要明确,  ** 麦肯锡方法主要适用于How类问题  **
+,即咨询公司面对客户需求时,如何形成完整解决方案的过程。
+
+典型应用场景包括:如何将产品交付周期从50天缩短到30天?如何编写售前技术方案?如何解决业务系统性能缓慢?这些问题的共同点是,最终要形成包含多个解决措施的完整方案,这些措施协同作用达成目标。
+
+麦肯锡方法的核心逻辑分为三个阶段:
+
+  * ** 第一阶段:问题分解和基础素材对应  ** 。将目标分解为子问题,然后将论据素材映射到对应的子问题上。这个过程中如果知识库不足,需要进一步学习、搜索资料、分析整理,最终留下能够完全支撑目标的有用论据。 
+  * ** 第二阶段:粗粒度对应与整合排序  ** 。对素材进行抽象和归纳,形成大块的解决模块,将解决模块对应到子问题域。同时对素材论据进行优先级排序,确定哪些内容应该优先呈现。 
+  * ** 第三阶段:归纳与演绎的转换  ** 。进一步归纳形成完整整体,无论是静态的金字塔结构还是动态的流程结构,各模块必须构成一个有机整体。然后从归纳反转到演绎,呈现各解决模块如何充分支撑各子问题的解决,通过集成和联动最终完成大目标。 
+
+需要强调的是,如果你只学麦肯锡方法,可能仍然不会解决Where类的故障诊断问题。接下来我们重点探讨这类问题的分析解决方法。
+
+##  三、问题定义:解决问题的真正起点
+
+《你的灯亮着吗》对问题有个经典定义:  ** 问题就是事物的现状和期望结果之间的差距  **
+。从这个角度看,解决问题的途径很明朗:要么降低期望,要么改变现状。
+
+一个完整的问题定义应该包含三大主要内容:问题涉及的人(谁的问题?涉众是谁?期望如何?)、产生问题的环境(空间和时间背景)、产生问题的过程(方法、步骤、工具、操作事物)。
+
+如何完成一个好的问题定义?《提问的智慧》给出了标准:
+
+  1. 遇到问题的详细过程和具体步骤 
+  2. 遇到问题的特定环境和场景 
+  3. 如果是异常或错误,要有详细描述信息(文字和图片) 
+  4. 把问题的边界条件搞清楚 
+
+对比两个例子就能看出差别:
+
+** 愚蠢的问题  ** :"救命啊!我的计算机不能正常显示了!"
+
+** 聪明的问题  ** :"XFree86 4.1下鼠标光标变形,Fooware
+MV1005显示芯片。"或"HP1200无法正常打印,错误提示信息是***,操作系统XP+SP2,使用标准驱动,电缆连接正常,重启无效。"
+
+** 问题定义清楚,问题就解决了一半  **
+。实际上,帮助他人解决问题时,更多是在帮助对方完成问题的完整定义。当你自己面对问题时,首先不是马上求助,而是把问题描述清楚。
+
+还要注意一点:  ** 不要把解决方案转变为问题  **
+。比如发现牛耕田很慢,真正的问题是"如何提升耕田效率",而不是"还有什么动物比牛耕田快"。后者是把一个解决方案变成了问题,会误导问题解决方向。最佳方案可能是直接上耕田机,而不是寻找更快的动物。
+
+##  四、问题分析:分解与排序的双重逻辑
+
+问题分析和问题解决的边界在哪里?  ** 问题分析是找出引起问题原因的最可能假设并按优先级排序,问题解决是按优先级对假设进行验证,最终确认哪个原因导致了问题
+** 。
+
+问题分析有两种方法:
+
+** 结构化分析  ** :对所有导致问题的原因进行穷尽,然后逐个验证。这种方法全面但效率较低,可能连优先级都难以给出。
+
+** 非结构化分析  **
+:根据已有经验直接提出最可能假设。简单说就是"最优假设"而非"穷举"。这就是为什么有经验的人解决问题更快——他们能直接提出最可能假设并验证,而新手还在逐个排查。
+
+比如业务系统某个查询功能很慢,有经验的人直接假设是SQL语句效率问题,然后在后台运行SQL验证,确认后优化SQL即可。
+
+** 问题分析的两个关键点是分解和排序  ** 。问题分析的目的是找到关键影响因素,这就是本质。
+
+分解可以基于问题本身的三维模型和动态过程:
+
+  * ** 静态分析  ** :对问题产生的环境、背景、人等因素分析,列出影响因子 
+  * ** 动态分析  ** :对问题产生的过程进行动态分析,列出可能的影响因子 
+  * ** 优先级排序  ** :根据历史经验对影响因子进行判别并排序 
+
+** 分解用的模型都是树模型  ** ,包括逻辑树、问题树、风险决策树、思维导图、鱼骨图等。鱼骨图常用于问题分解,从人、机、料、法、环五个方面分析因果关系。
+
+排序的目的是确定关键影响因素,或根据二八原则找出那20%的最可能影响因素。排序的依据有两种:一是历史经验积累(包括头脑风暴中的专家经验),二是初步问题诊断(已做初步验证,排除非关键点)。
+
+任何问题的产生只有两个根本原因:要么输入的某个条件发生错误,要么加工处理的某个步骤出现错误。比如考试做错题,要么是已知条件看漏了,要么是计算步骤出错了。
+** 问题分析最终形成的关键影响因素优先级排序,是进入问题解决阶段的关键输入  ** 。
+
+##  五、问题解决:决策与行动的有机结合
+
+问题分析的输出是已排序的问题根源分析列表,那么问题解决要做什么?  ** 简单说,问题解决就是对这些问题原因点进行验证和确认的过程  ** 。
+
+具体包括:制定详细的验证方案和验证计划,执行验证计划并观察结果,看是否解决了问题。问题解决本身并不复杂,真正的难点在于:  **
+当解决当前问题时可能引入新的问题  ** 。
+
+比如CRM系统客户查询缓慢,分析确认是SQL语句问题,添加索引优化后查询快了,却导致客户信息录入时出现新的性能问题。这是最常见的情况——调整某个影响因素时引入新问题。
+
+问题解决还有两个复杂场景:
+
+  * ** 其一:单问题多因子  ** 。比如公司经营遇到瓶颈,可能有多方面影响因素,需要从市场营销、产品研发、团队激励等多个方面同时下功夫。多个举措并行时,难以评估单个因素的具体效果。 
+  * ** 其二:面对事物群或问题群  ** 。比如工厂零部件次品率高,这是对所有零件集合的汇总问题。分析可能发现99%的原因是原材料质量问题,那么只解决这一个影响因素,就能让问题控制在期望范围内。 
+
+** 问题解决包含决策和行动两个关键步骤  ** 。决策是基于关键影响因素从多个备选方案中确定最优方案,行动是针对最优方案制定详细计划。
+
+决策又分为结构化决策和非结构化决策。结构化决策能用确定模型描述,以算法产生方案并选择最优解;非结构化决策过程复杂,无法用确定模型描述,也没有所谓最优解。
+
+决策时要多维度评估排序,不能只考虑影响因子本身,还要考虑实施难度、投入成本、实施周期等。因此,最终决策不一定是解决关键影响点,可能是变通为解决次关键影响点。
+
+##  六、跳出固定思维:从工具到智慧的飞跃
+
+刘未鹏在《暗时间》中提到:  ** 如果你有的是一把锤子,那么所有东西看起来都像钉子  **
+。心中有锤就容易被奴役,必须时刻思考面对的真正问题是什么,而不是因为有锤子就只能敲钉子。
+
+我们很多时候倾向于在既有框架约束下解决问题,而且很难发现这种约束的存在。  ** 思维本身无定势,即使有再好的方法论,不会灵活运用也无法解决问题  ** 。
+
+解决问题的能力只有在不断实践、不断碰壁中自我总结出来。由于是自我实践的积累,所以是最适合自己的方法。知识的积累很重要,但如何在面对问题时快速匹配并为己所用才是关键。
+
+简单的事情可以简单处理,但通过分类和抽象能得出归纳性知识;复杂的事情需要分解、细化和演绎,提出假设并验证,分而治之,进行细粒度匹配。  **
+复杂的事情复杂处理,积累的才是真正需要的思考逻辑  ** 。
+
+普通人遵守规则,牛人无视规则,伟人创造规则。问题分析与解决的最高境界,不是机械套用方法论,而是根据问题本质灵活运用各种工具,在实践中不断迭代提升,最终形成自己的问题解决智慧。
+
+  
+
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkSSZibia6cbsd3tpkMeOlUMfwXBE5k7baibo7e9lqgxjeic7KKzSZ4LtSnA/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibktTz28LPK79J5IZwvkBl8tqcOeSzcR3rQE7rEvQyvvaB92Zibiah9ZoFQ/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2Zcmibibk6oLTsNUgaSMxMgHE3f9O5IWsQSWHeYJeJJqiciay4oFb2nxZgjPBMMWQ/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2Zcmibibk5uTrl31V4ribfN0IsibS19Wq2YEpRONibk9pXL7NGJjXiclib59h3D1ITtw/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkVSJTr8CCKrJGtQiaiaYMOWeq4l8YXPVR1TaNwTjq3g8VXblnAn3EWQrg/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2Zcmibibkb63icib4msAe3VkybibotEqib2O8AcHj1qOCRmLrLm2LzThJByiaRpgpv5g/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2Zcmibibkgw4b5VBLiamgIS7T34JiciazRcbzqB46EiaBQDOpj2wmfI2ibXI6m5oxoKw/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkVMYoLTvpcmHG1kfqtWDguY6F9g8iastVdV9u4ibbbA1pr5SfInu2oH4Q/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkJ7DOffdRAf87bmGQEQx19CnoZ9Ic9pC5WicQ8KxE3fpgUMbVWfNCNFg/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2Zcmibibk5BU1O1d6xMqUAaDY74lrxvibxO2IFfeXundbdsTbqkcObtlFPg79JIA/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkxvclDzxCicOofiaYficNds10ibGeXfiadibh0CWxuGHjnmtboRKatnjIcPBA/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2Zcmibibk2p6ibo3uib8O4wL1K1MYqZiczeWYmCycALCFgZ8JjtQ6ibPMeYJu8YHjmQ/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2Zcmibibk7QVdDnyQeCoZvEEDVGE66qjQpe1XUILTjJxlUMbfI4TOy8rqLo6h1w/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkYIHauibGO2pugrzznegJa9bDibZWzVWuQS5XlGjTX55Y0456ibIYAe0iaQ/640?wx_fmt=other&from=appmsg)
+![](https://mmbiz.qpic.cn/sz_mmbiz_jpg/mqhc3Xuogv6pQUbEKBpW2ULpT2ZcmibibkkHVBTBia3IIyCA2ic98cLOic3ePUIAicAia2uickDTnvUS1p7cbvcnXS95jg/640?wx_fmt=other&from=appmsg)
+
+  
+
+  
+
+  
+
+预览时标签不可点
+
+阅读
+
+
+
+
+
+
+
+
+
+****
+
+
+
+****
+
+
+
+****
+
+
+
+
+
+__
+
+
+
+
+
+
+
+
+

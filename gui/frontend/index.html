@@ -1,13 +1,31 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Knowledge Studio · v1.4</title><link rel="stylesheet" href="/styles.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Knowledge Studio · v1.5</title><link rel="stylesheet" href="/styles.css"></head>
 <body>
-<header><div class="brand"><span class="logo">K</span><div><strong>Knowledge Studio <small>v1.4</small></strong><p>场景 · 概念 · 实体 / 可追溯知识工作台</p></div></div><div id="metrics" class="metrics"></div><button id="reload" class="quiet">刷新模型</button></header>
+<header><div class="brand"><span class="logo">K</span><div><strong>Knowledge Studio <small>v1.5</small></strong><p>场景 · 概念 · 实体 / 可追溯知识工作台</p></div></div><div id="metrics" class="metrics"></div><button id="reload" class="quiet">刷新模型</button></header>
 <div id="notice" role="status" class="notice" hidden></div>
 <div class="workspace">
 <aside class="navigation"><div class="panel-heading"><span class="eyebrow">MODEL EXPLORER</span><h2>知识导航</h2></div><input id="search" type="search" placeholder="搜索名称、定义、标签…" aria-label="搜索知识节点"><div id="kind-tabs" class="segmented"><button data-kind="scenario" class="active">场景</button><button data-kind="concept">概念</button><button data-kind="entity">实体</button></div><p id="list-count" class="muted"></p><div id="node-list" class="node-list"></div></aside>
 <main>
-<div class="main-tabs"><button data-view="query" class="active">一跳检索</button><button data-view="overview">全局视角</button><button data-view="runs">运行记录</button><button data-view="browse">知识浏览</button><button data-view="graph">局部关系图</button><button data-view="paths">多跳探索</button><span id="selection-label" class="muted"></span></div>
+<div class="main-tabs"><button data-view="construction">资料与知识建设</button><button data-view="query" class="active">一跳检索</button><button data-view="overview">全局视角</button><button data-view="runs">运行记录</button><button data-view="browse">知识浏览</button><button data-view="graph">局部关系图</button><button data-view="paths">多跳探索</button><span id="selection-label" class="muted"></span></div>
+<section id="construction-view" class="view" hidden>
+<div class="panel-heading"><span class="eyebrow">KNOWLEDGE CONSTRUCTION</span><h1>从新资料到增量知识</h1><p class="muted">沿用人定义的框架。Agent 忠实提取、比较已有知识，人审查具体变化，程序发布。文档入口：docs/knowledge-construction.md；Agent 入口：AGENTS.md。</p></div>
+<ol class="workflow"><li>资料准入</li><li>两轮提炼与比较</li><li>候选审查</li><li>预览并增量发布</li></ol>
+<div class="toolbar filters"><input id="build-filter" type="search" placeholder="筛选资料名称" aria-label="筛选资料"><select id="build-status" aria-label="资料状态"><option value="">全部状态</option><option value="pending">待准入</option><option value="accepted">已准入</option><option value="needs_update">需更新</option><option value="unprocessed">未处理</option></select><button id="build-refresh">刷新</button><button id="build-scan">扫描本地新增与变化</button><span id="build-summary" class="muted"></span></div>
+<details class="result-card"><summary>导入 Markdown / 文本资料</summary><div class="toolbar"><input id="build-file" type="file" accept=".md,.txt" aria-label="选择资料文件"><input id="build-import-name" placeholder="文件名.md" aria-label="资料文件名"></div><textarea id="build-import-text" placeholder="粘贴完整原文；保留原始证据" aria-label="原始资料"></textarea><button id="build-import">导入待准入区</button></details>
+<label for="build-admission-note">准入说明（可选）</label><input id="build-admission-note" placeholder="来源可信、格式可读等">
+<div id="build-sources" class="table-scroll"></div><div id="build-source-detail" class="result-card" hidden></div>
+<div class="toolbar"><input id="build-title" placeholder="提炼任务名称（可选）" aria-label="任务名"><span id="build-selected" class="muted"></span><button id="build-create" class="primary" disabled>为所选资料创建任务</button></div>
+<h2>提炼任务</h2><div id="build-jobs"></div>
+<article id="build-job-panel" class="trace-panel" hidden><div id="build-job-heading"></div>
+<p class="muted">任务包保留原文快照、建模判据和模型基线。本地 Agent 读取任务包，提交 JSON 结果；工作台不调用模型 API。重新导入比较结果会重置尚未发布的审查决定。</p>
+<div class="build-rounds"><details class="result-card" open><summary>第一轮 · 忠实提取新资料</summary><button id="build-extract-export">导出第一轮任务包</button><textarea id="build-extract-json" spellcheck="false" placeholder='{"observations": [], "note": "无候选时说明理由"}' aria-label="第一轮结果 JSON"></textarea><button id="build-extract-submit">导入第一轮结果</button></details>
+<details class="result-card"><summary>第二轮 · 比较已有知识</summary><button id="build-compare-export">导出第二轮任务包</button><textarea id="build-compare-json" spellcheck="false" placeholder='{"proposals": [], "note": "无变化时说明理由"}' aria-label="第二轮结果 JSON"></textarea><button id="build-compare-submit">导入增量比较结果</button></details></div>
+<h2>候选与人工审查</h2><div id="build-candidates" class="result-stack"></div><div class="toolbar"><button id="build-preview-button">检查并预览发布差异</button><button id="build-publish" class="primary" disabled>发布已通过的建议</button></div><div id="build-preview"></div></article>
+<details class="result-card"><summary>写入记录与中断恢复</summary><p>中断写入恢复前，确认旧进程已停止；外部变动会阻止恢复。完整步骤见 docs/knowledge-construction.md。</p><div id="build-publications"></div></details>
+<details class="result-card"><summary>让 Agent 针对性操作</summary><p>读取 AGENTS.md 和 application/agent-operations.md；通过 JSON 操作入口发现参数并执行。GUI 与 CLI 共用同一内核。</p><pre>python scripts/kb_manage.py tools
+python scripts/kb_manage.py jobs.packet --input request.json</pre><button id="build-tools">查看操作契约</button><div id="build-agent-tools" hidden></div></details>
+</section>
 <section id="query-view" class="view">
 <div class="panel-heading"><span class="eyebrow">ONE-HOP RETRIEVAL</span><h1>从问题到场景，再到直接知识</h1><p class="muted">当前主流程只读取场景阶段直接引用的知识，不递归检索后续节点。最终回答仍由你的 Agent 基于原文组织。</p></div>
 <ol class="workflow"><li>匹配场景</li><li>取直接引用知识</li><li>检索原文段落</li><li>核对依据与评价</li></ol>
@@ -39,5 +57,5 @@
 </main></div>
 <dialog id="source-dialog"><div class="dialog-top"><h2 id="source-title">原文</h2><button id="source-close" class="quiet">关闭</button></div><p id="source-location" class="muted"></p><pre id="source-text"></pre></dialog>
 <dialog id="discard-dialog"><h2>存在未保存修改</h2><p>切换节点将放弃当前编辑内容。</p><div class="toolbar"><button id="discard-cancel" class="quiet">继续编辑</button><button id="discard-confirm" class="primary">放弃并切换</button></div></dialog>
-<script src="/main.js"></script><script src="/workflows.js"></script>
+<script src="/main.js"></script><script src="/workflows.js"></script><script src="/construction.js"></script>
 </body></html>

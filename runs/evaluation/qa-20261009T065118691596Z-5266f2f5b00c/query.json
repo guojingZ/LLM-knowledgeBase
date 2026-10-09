@@ -1,0 +1,8 @@
+{
+  "trace_id": "qa-20261009T065118691596Z-5266f2f5b00c",
+  "question": "面对人生压力时，我该怎么办？\n",
+  "mode": "model-guided",
+  "scenario": null,
+  "top_k": 3,
+  "evidence_k": 8
+}

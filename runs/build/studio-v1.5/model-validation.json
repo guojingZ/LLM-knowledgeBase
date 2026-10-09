@@ -1,0 +1,40 @@
+{
+  "project": "/workspace/scratch/63de44ce4f18/v1.5/LLM-knowledgeBase",
+  "ok": true,
+  "metrics": {
+    "counts": {
+      "scenarios": 17,
+      "concepts": 234,
+      "entities": 163,
+      "accepted_sources": 50,
+      "referenced_sources": 50
+    },
+    "scenario_uses": 378,
+    "ipo_steps": 958,
+    "relation_targets": 1638,
+    "relation_types": {
+      "contains": 154,
+      "depends_on": 81,
+      "is_a": 17,
+      "produces": 33,
+      "references": 118,
+      "related_to": 1116,
+      "uses": 119
+    },
+    "relation_targets_median": 4,
+    "weak_evidence_concepts": [
+      "呈现和泛化",
+      "知识关联",
+      "问题抽象"
+    ],
+    "entities_only_related_to": 99,
+    "broken_references": 0,
+    "errors": 0,
+    "warnings": 2
+  },
+  "errors": [],
+  "warnings": [
+    "Items with more than 6 relation targets: 8",
+    "Entities using only related_to: 99; inspect semantics"
+  ]
+}

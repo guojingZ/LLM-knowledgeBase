@@ -1,62 +1,74 @@
-# LLM KnowledgeBase Studio v1.4
+# LLM KnowledgeBase Studio v1.5
 
-本地知识工作台，帮助你看清“问题 → 场景 → 直接知识 → 原文依据”的一跳流程，维护人工证据，并从全局和运行记录中检查知识怎样被使用。最终自然语言回答仍由桌面 Agent 基于原文组织。
+本地知识建设与应用工作台。新增 Raw 按“准入 → 忠实提取 → 比较已有知识 → 人工审查 → 增量发布”进入模型；一跳检索、原文证据、全局视角和运行评价继续使用。人定义框架，桌面 Agent 负责语义提取、比较及最终回答，Python 负责校验和落盘。
 
 ## 本轮交付
 
-| 入口 | v1.4 功能 |
+| 入口 | 功能 |
 |---|---|
-| 一跳检索 | 展示场景候选、选定场景、直接知识、引用位置和原文；提供 Raw 对照 |
-| 多跳预览 | 提前展示后续明确路径，点击仅填写探索表单；主动查询才执行多跳 |
-| 人工证据 | 确认具体支持范围及理由；GUI / CLI / Raw / 多跳终点统一读取；候选去重与变化复核 |
-| 全局视角 | 全部 414 节点关系图、17 场景—397 知识项矩阵、证据覆盖、查询使用统计 |
-| 运行记录 | 每次明确问题或多跳提交保存 trace；回放、版本、参数、耗时、图中叠加和导出 |
-| 人工评价 | 场景、证据、有用性和问题说明；进入待审队列，不自动改模型 |
+| 资料与知识建设 | .md/.txt 导入、准入、全文、引用影响、重复内容和资料状态 |
+| 两轮任务 | 原文与模型基线快照；忠实提取、增量比较；任务包导出和 JSON 结果导入 |
+| 候选审查与发布 | 新增、补充字段/证据、合并名称、冲突、不纳入；逐条决定、差异预览、部分发布、无新增完成 |
+| 资料更新 | 来源变化/缺失提示、旧任务阻止覆盖、新建任务复核、保留原文版本 |
+| Agent 操作 | 根目录 AGENTS.md 路由、可发现 JSON 操作契约、CLI 与本机 HTTP 共用内核 |
+| 历史能力 | 一跳与 Raw 对照、多跳预览/主动探索、字段证据、414 节点全局视角、trace 评价、编辑与保护回滚 |
 
-知识编辑、差异预览、版本冲突保护、保存历史、回滚和局部关系图继续保留。
+没有内置 LLM 自动调用；两轮结果由桌面 Agent 生成。完整知识字段参与问答留到下期。当前没有安装个人 Skill 或 MCP。
 
 ## 更新已有项目
 
-新包解压到现有项目外部目录，从新包的 LLM-knowledgeBase/ 根目录运行：
+把新包解压到已有项目外部，从新包 LLM-knowledgeBase/ 根目录运行：
 
-    python apply_update.py --target "C:\Tool\Code\Project\LLM-knowledgeBase"
+```powershell
+python apply_update.py --target "C:/Tool/Code/Project/LLM-knowledgeBase"
+```
 
-把路径改为你的本地位置。脚本保留已有 model/、raw/、registry/、runs/、eval/ 和 Git，更新程序与文档；无须删除本地目录。随后关闭旧服务并重新启动，浏览器刷新页面。
+路径改为实际位置。保留已有 model/、raw/、registry/、runs/、eval/ 和 Git，更新代码与文档；无须删除本地目录。关闭旧服务后更新，再重新启动并刷新浏览器。新项目可直接使用解压目录。
 
-新项目可直接使用 ZIP 中的目录。交付知识快照为 17 场景、234 概念、163 实体、50 来源，不替换你本地已修改的知识。旧人工确认会保留并提示补充支持范围。
+交付知识快照仍为 17 场景、234 概念、163 实体、50 来源，没有植入临时业务候选或确认。新建设登记在首次操作时创建。
 
 ## 启动与试用
 
-Windows 双击 start-studio.bat。首次需要 Python 3.10+ 和联网安装 PyYAML；依赖已安装后可离线运行。
+Windows 双击 start-studio.bat。Python 3.10+；首次需联网安装 PyYAML，依赖齐全后可离线运行。
 
-    python -m pip install -r requirements.txt
-    python gui/backend/app.py --open
+```bash
+python -m pip install -r requirements.txt
+python gui/backend/app.py --open
+```
 
-浏览器访问 http://127.0.0.1:8787。不需 Flask、npm、模型账号。Mac/Linux 可运行 sh start-studio.sh。
+访问 http://127.0.0.1:8787。Mac/Linux 可运行 sh start-studio.sh，不需要 Flask/npm。
 
-建议按以下顺序试用：
+1. 进入“资料与知识建设”，导入一篇资料、阅读并准入。
+2. 勾选资料创建任务，导出第一轮包让 Agent 提取，导入结果。
+3. 导出第二轮包让 Agent 比较完整已有节点，导入增量建议。
+4. 检查原文与支持字段，逐条审查，预览差异后发布。
+5. 在知识浏览查看新增来源和字段支持，再从一跳检索、全局与运行记录检查调用。
 
-1. “一跳检索”输入“面对复杂业务故障时，如何定位根因？”。
-2. 查看选定场景、直接知识与原文，在知识浏览中确认具体支持字段。
-3. 重新检索，核对有效人工确认状态；查看多跳预览，但不必执行。
-4. “全局视角”切换关系图、矩阵和证据覆盖。
-5. “运行记录”查看本次上下文快照，评价后检查待审状态。
+Agent 直接读 AGENTS.md，并运行：
 
-## CLI 与检查
+```bash
+python scripts/kb_manage.py tools
+python scripts/kb_manage.py sources.list
+python scripts/kb_manage.py jobs.packet --input request.json
+python scripts/kb_context.py --question "面对复杂业务故障时，如何定位根因？" --json
+```
 
-    python scripts/kb_context.py --question "面对复杂业务故障时，如何定位根因？" --json
-    python scripts/kb_multihop.py --start-ref "scenario://如何分析和解决复杂问题" --target-ref "entity://金字塔原理" --direction outgoing --max-depth 2
-    python scripts/validate_model.py .
-    python -m unittest discover -s tests -p "test*.py" -v
+## 文档入口
 
-两种查询 CLI 默认保存 trace，--no-save 只输出结果。原有反馈和队列脚本继续使用。Node 只用于可选开发检查 python scripts/verify_frontend.py，不属于工作台运行依赖。
+- [项目目的、状态与模块位置](PROJECT.md)
+- [资料、候选、发布与更新手册](docs/knowledge-construction.md)
+- [Agent 路由](AGENTS.md) 与 [JSON 操作指南](application/agent-operations.md)
+- [一跳、证据、全局、编辑与 API](docs/studio-guide.md)
+- [知识应用提示](application/assistant_prompt.md)
+- [当前交付记录](WORKLOG.md) 与 [v1.5 验证报告](runs/build/studio-v1.5/verification.md)
 
-## 阅读入口
+## 检查
 
-- [工作台手册与 API](docs/studio-guide.md)
-- [项目目的与状态](PROJECT.md)
-- [当前交付与验证证据](WORKLOG.md)
-- [v1.4 决策与能力边界](docs/adr/005-one-hop-first-observable-studio.md)
-- [桌面 Agent 提示](application/assistant_prompt.md)
+```bash
+python scripts/validate_model.py .
+python -m unittest discover -s tests -p "test*.py" -v
+python scripts/evaluate_retrieval.py . --no-save
+python scripts/verify_frontend.py
+```
 
-工程检查不等同于业务答案质量验证。种子评测仍需人工确认；多跳仍是明确引用路径探索，不证明因果或逐步推理。
+最后一项是可选 Node DOM/API 检查，不是浏览器视觉测试。工程通过不等同于提炼语义正确或最终回答质量提升；种子题和实际业务候选仍需人审。

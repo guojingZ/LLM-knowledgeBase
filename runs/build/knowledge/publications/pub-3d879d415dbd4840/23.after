@@ -1,0 +1,440 @@
+![cover_image](https://mmbiz.qlogo.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwA5qbbzB2ic3B6TMooibm68vSiaJsf87gvY86tscM812n5iaauZJnic36jVw/0?wx_fmt=jpeg)
+
+#  思维框架和模型-全面提升个人认知水平和分析解决问题的能力
+
+原创  何明璐  [ 人月聊IT ](javascript:void\(0\);)
+
+__ _ _ _ _
+
+最近随笔类文章偏多，原因是我开始重启《思维框架和模型》书籍的整理工作，当前基本完成了一个初稿，大的框架结构和内容全部完成。也开始联系出版社，准备将出版计划提上日程。
+
+在2020年5月我出版了第一本书《SOA和大数据-
+企业私有云PaaS平台建设实践》，这本书销量并不是特别好，主要有两个原因，第一就是自己也没有怎么去刻意宣传，其次就是这本书的成书时间是在2014年，一直拖着没有出版，导致出现的SOA等概念被很多人认为过时。
+
+但是该书大部分依托当时联通集团的UCloud项目建设实践总结提炼而成，来源于一线大项目实践经验总结。当写该书的时候，我们已经在做业务系统内的SOA化，但当时还没有微服务的提法，而实际上当时的做法和当前的微服务架构相当类似，也为会最近2-3年整理微服务方面的文章奠定了基础。
+
+要明白即使当前大谈微服务架构，而其核心仍然是SOA识别服务和重用服务思想，平台+应用思想，我总结的业务能力组件化和组件能力服务化思想。最难的还是在微服务模块的划分，API接口服务的识别和粒度控制，这也是当前中台构建的基础。
+
+其次当前谈DevOps，也和我这本书里面讲的最基本的持续集成思想分不开的，如果连最基本的持续集成都做不好，最基本的软件产品过程管理或敏捷方法论都做不好，那么是很难真正做好DevOps的。因此我也一再强调的微服务和DevOps不是建设的技术平台和技术层面的事情，而是业务和组织层面的事情。
+
+因此如果你说技术，类似SOA架构规划，PaaS云平台规划的，仍然强烈推荐我这本书，可以作为一个重要参考阅读和系统化学习材料。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbw0IjdWnScRXiaaN7ibg16hAao2iaKsrw9QQa0lWwpQ0KMMKBzjYNbYYWibA/640?wx_fmt=png)
+
+在年初，实际我规划的先写作《数字化转型和云原生》的书籍，这本书整体框架目录和相关素材准备也已经完成，但是在3月后整体计划做了改变，准备先整理和初步这本书思维框架和逻辑的书籍。  
+
+人在职场，个人最核心能力即如何提升认知水平，锻炼独立分析和解决问题的能力，而这些能力归根结底都属于思维能力的范畴。思维是人类重要的意识活动，是认识自然和改造自然，推广历史进步和技术变革的关键。但是思维不仅仅是意识和心理学层面的内容，思维本身也遵循相应的框架逻辑和研究方法论。本书提出思维核心是事物认知和问题解决两条主线，构建了完整的思维框架和逻辑体系，同时提出了归纳演绎逻辑是事物认知的核心逻辑，而模式匹配逻辑是问题解决的关键。但是要构建个人完整思维能力，还需要结合学习实践复盘的闭环持续改进逻辑，并不断提升自我经验模式水平。本书基于学习实践，事物认知，问题解决，知识经验库四大核心内容构建完整的思维能力知识体系，并基于大量实践和案例进行说明，可以作为技术类人员或知识工作者的关键参考。
+
+本书特色体现在两个方面，其一是本书是少有的将学习实践，事物认知，问题解决，知识经验库真正融合为一个完整的能力知识体系的系统化思维书籍。其二是本身是个人大量一线咨询和大项目管理实践经验的总结和抽象，更加具备实践指导意义。
+
+对于思维类书籍，最早谈系统思维的《第五项修炼》，到叙述整个思维发展历程的《思维简史》，也有类似刘未鹏老师的《暗时间》，吴军老师的《见识》，万维钢老师的《智识分子》和《万万没想到》，古典老师的《拆掉思维的墙》和《跃迁》，采铜老师的《精进》等，这些都是相对不错的书籍。包括在思维大领域里面的各个细分领域，比如学习方面的《刻意练习》和《学习之道》；在问题方面的《麦肯锡问题分析解决》，《你的灯亮着吗？》；在写作和呈现领域的《金字塔原理》，在阅读方面的《如何阅读一本书》。如果你是一个爱阅读写作，强调个人自我管理和成长的人，可能上面大部分的书籍你都阅读过。如果仅仅谈里面思维方面的书，你会看到大部分的书籍更加偏向意识和心理学层面，也就是说说谈得如何转变思维意识，如何提升你自己的认知水平和能力。
+
+但是你阅读这些书后会发现，所有的道理都是对的，但是很难指导你当下的实践。
+
+思维和软技能类书籍不能脱离专业领域实践，其核心能力的验证最终是通过专业领域大量深入实践来验证的。思维能力最终目标还是要创造价值，如果在自己专业领域本身没有太多成绩，也很难说能够出版一本思维类的好书籍。好的思维类书籍一定是自己实践证悟，而不是简单前人已有的思维理论的拼凑。当前市面同类书籍往往都是对思维某个方面进行阐述，类似认知能力提升书籍，问题解决书籍等，而很少有提出完整思维能力知识体系框架的同类书籍。其次该知识框架的提出本身不是理论驱动，而是作者多年从事咨询项目，大项目管理一线工作的实践积累，是能够真正作为读者实践参考的一套可落地的方法论。
+
+说实话，当前市面很多思维，学习，个人成长类的书籍个人并不认同，一个很大原因就是将其写成了个人文集，简单的堆砌就完成了书籍出版。还有就是纯粹的鸡汤式读完，读起来的时候确实比较愉悦，但是读完后感觉并没有太多收获，或者很少内容能够真正去指导你实践。
+
+对于我的这本书思维书籍，比技术类书籍好的地方就是没有明显的时效性问题，不会说晚出版了内容就过时，因此我会有足够的时间去细细的打磨这本书，以确保内容的严谨性和完整性。
+
+其次这本书一定不是一本通俗读物，虽然我在书里面也会举大量的例子和实践案例，但是这本书的能力知识体系，思维框架逻辑结构要理解仍然会比较费脑，如果真正能够理解清楚这套逻辑架构和闭环体系，我相信对你的日常工作和生活会有帮助。
+
+最后这本书的受众仍然是偏技术类人员，咨询顾问，IT行业从业人员，主要是我书里面的一些例子是偏IT咨询和软件行业的一些小例子，对于这类人员在阅读的时候更加容易理解。我也不准备将其修改为太通俗化的例子，一个重要原因就是案例需要来源于个人长期实践，而不是凭空想象。
+
+整本书的大逻辑围绕思维能力知识体系展开如下：
+
+![](https://mmbiz.qpic.cn/mmbiz_png/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwIEvWfl6x88ffnJBPlXJQqr9v3lbUFtYibzoJl4MicMMj8h6NhVdQUGvw/640?wx_fmt=png)
+
+即事物认知和问题解决作为思维核心双主线，是人类认识自然和改造自然，不断推动社会科学进步的关键力量。
+但是思维本身不是凭空的异想天开，而是需要和实践结合，形成学习-》实践-》复盘持续改进的闭环体系。  
+
+学习是思维核心过程的一个重要输入，学习完成的成果会进入到个人知识库，在进行思维实践的时候就可以随时选择应用；而思维实践过程完成后，最终需要进行总结和复盘，通过复盘后将理论知识转化为自我经验模式。
+
+对于思维实践中的事物认知和问题解决两部分核心内容，事物认知的本质仍然是问题分析和解决。因此对于What是什么，Which选择等问题，更多是偏事物认知分析思维，而对于Where和How类的问题则偏真正的问题类解决。
+
+在思维双主线架构中，不仅仅需要梳理事物认知和问题解决的方法和过程，更加重要的是需要从外而内的去研究两大思维主线的内在逻辑，比如归纳演绎逻辑，模式匹配逻辑等。这个将在本书思维框架逻辑章节做详细阐述。
+
+思维实践不仅仅是思考，更加重要的是行动，因此上述能力知识体系里面谈到的思维实践包括了基于思维和假设内容，采用具体行动，具体落地实践，思维和行动本身应该是融合的，思维目的是指导实践。一个人真正的自我能力提升一定体现在现实世界真正的实践上，而不是理论堆砌或POC验证。
+
+实践很重要，实践是你形成复盘总结的关键输入的基础，否则你拿什么复盘。理论指导实践，但是更加重要的是实践反刍理论。当然实践后的复盘也很重要，复盘是形成和提升模式匹配能力的基础，复盘的深浅将直接决定了你跨领域的问题分析解决能力。
+
+小逻辑则是围绕事物认知和问题解决两个核心思维主线的框架结构。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwdj35iaQmE555nlbSrKH4QoMdarp1IpThOUfH7oK3lRjxsichIBNjXQFQ/640?wx_fmt=png)
+
+对于事物认知核心逻辑是归纳演绎逻辑，而对于问题解决核心逻辑是模式匹配逻辑，由此给出了如下的逻辑架构。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwdbvZia2BKlib4yziaYFJ9XELYQvVSibLJmiaXM1PjW3ANDSaCRPuZg58Vuw/640?wx_fmt=png)
+
+对于该书，整体目录结构如下：
+
+> 第一章-思维概述
+>
+> 1.1-思维的定义
+>
+> 1.2-思维发展史
+>
+> \- -1.2.1-意识产生-主观能动性
+>
+> \- -1.2.2-符号系统-语言和文字
+>
+> \- -1.2.3-经验思维-逻辑的产生
+>
+> \- -1.2.4-科学思维-方法论形成
+>
+> \- -1.2.5-人工智能-统计学思维
+>
+> 第二章-思维能力知识体系
+>
+> 2.1-思维的内容范畴
+>
+> 2.2-思维双核心主线
+>
+> \- -2.2.1-事物认知
+>
+> \- -2.2.2-问题解决
+>
+> 2.3-学习实践闭环逻辑
+>
+> \- -2.3.1-学习
+>
+> \- -2.3.2-实践
+>
+> \- -2.3.3-复盘
+>
+> 2.4-从知识库到经验库
+>
+> 2.5-思维能力知识体系
+>
+> \- -2.5.1-思维能力概述
+>
+> \- -2.5.2-思维能力知识体系
+>
+> 第三章-思维框架和逻辑
+>
+> 3.1-思维框架
+>
+> \- -3.1.1-思维框架研究缘起
+>
+> \- -3.1.2-思维框架构建
+>
+> 3.2-思维逻辑
+>
+> \- -3.2.1-逻辑概述
+>
+> \- -3.2.2-归纳演绎逻辑
+>
+> \- -3.2.3-模式匹配逻辑
+>
+> \- -3.2.4-方案制作思维逻辑案例
+>
+> 第四章-事物认知
+>
+> 4.1-事物认知框架
+>
+> \- -4.1.1-从庖丁解牛谈起
+>
+> \- -4.1.2-事物认知障碍
+>
+> \- -4.1.3-构建事物认知框架
+>
+> 4.2-静态结构分析
+>
+> \- -4.2.1-静态分析概述
+>
+> \- -4.2.2-单事物分析
+>
+> \- -4.2.3-事物群分析
+>
+> 4.3-动态分析
+>
+> \- -4.3.1-动态分析概述
+>
+> \- -4.3.2-行为分析
+>
+> \- -4.3.3-流程分析
+>
+> 4.4-动静分析融合
+>
+> \- -4.4.1-动静分析概述
+>
+> \- -4.4.2-动静分析框架
+>
+> \- -4.4.3-动静分析的普适性
+>
+> 第五章-问题分析和解决
+>
+> 5.1-问题解决框架
+>
+> \- -5.1.1-问题分析解决概述
+>
+> \- -5.1.2-问题解决框架
+>
+> \- -5.1.3-从问题到思维
+>
+> 5.2-问题定义
+>
+> \- -5.2.1-提问的智慧
+>
+> \- -5.2.2-问题定义
+>
+> \- -5.2.3-问题定义模型
+>
+> 5.3-问题分析
+>
+> \- -5.3.1-问题分析概述
+>
+> \- -5.3.2-问题分解
+>
+> \- - -5.3.2.1-问题静态结构分解
+>
+> \- - -5.3.2.2-问题动态过程分解
+>
+> \- -5.3.3-问题排序
+>
+> \- -5.3.4-问题的匹配逻辑
+>
+> \- -5.3.5-How如何达成类问题分析
+>
+> \- -5.3.6-Where故障类问题分析
+>
+> 5.4-问题解决和验证
+>
+> \- -5.4.1-问题解决概述
+>
+> \- -5.4.2-科学决策
+>
+> \- -5.4.3-制定行动计划
+>
+> \- -5.4.4-验证和确认
+>
+> 第六章-学习实践复盘
+>
+> 6.1-学习实践
+>
+> \- -6.1.1-学习概述
+>
+> \- -6.1.2-如何开展一个新领域学习
+>
+> \- -6.1.3-我们需要什么样的学习能力？
+>
+> \- -6.1.4-目标和问题驱动的学习
+>
+> \- -6.1.5-构建学习金字塔模型
+>
+> \- - -6.1.5.1-不求甚解
+>
+> \- - -6.1.5.2-找寻主干
+>
+> \- - -6.1.5.3-达成最小目标
+>
+> \- - -6.1.5.4-梳理完整的知识树
+>
+> \- - -6.1.5.5-可视化迭代学习计划
+>
+> \- - -6.1.5.6-突破关键临界点
+>
+> \- -6.1.6-人在职场-学习曲线和成长定律
+>
+> \- -6.1.7-成为高段位学习者
+>
+> 6.2-复盘
+>
+> \- -6.2.1-复盘概述
+>
+> \- -6.2.2-复盘方法和逻辑
+>
+> \- -6.2.3-总结汇报-PPT核心呈现逻辑
+>
+> \- - -6.2.3.1-PPT制作的方法和原则
+>
+> \- - -6.2.3.2-静态呈现逻辑
+>
+> \- - -6.2.3.3-动态呈现逻辑
+>
+> \- - -6.2.3.4-基于金字塔原理的完整逻辑呈现
+>
+> 6.3-知识经验库
+>
+> \- -6.3.1-个人知识管理概述
+>
+> \- -6.3.2-从资料库构建谈起
+>
+> \- -6.3.3-利用碎片化时间-构建个人知识库
+>
+> \- -6.3.4-从知识库到经验模式库
+>
+> 6.4-构建学习实践复盘完整闭环
+>
+> \- -6.4.1-学习实践复盘闭环
+>
+> \- -6.4.2-学习实践和思维框架的闭环
+>
+> \- -6.4.3-成为一个深度学习者
+>
+> 第七章-案例篇
+>
+> 7.1-我是如此思考的
+>
+> \- -7.1.1-从一个例子谈起
+>
+> \- -7.1.2-破题-不破不立
+>
+> \- -7.1.3-找寻目标
+>
+> \- -7.1.4-静态目标分解
+>
+> \- -7.1.5-动态流程分析
+>
+> \- -7.1.6-排序和优先级确认
+>
+> \- -7.1.7-组合分析
+>
+> \- -7.1.8-结构化决策
+>
+> 7.2-IT规划核心逻辑
+>
+> \- -7.2.1-现状分析
+>
+> \- -7.2.2-差距和目标
+>
+> \- -7.2.3-规划蓝图
+>
+> \- -7.2.4-实施计划
+>
+> \- -7.2.5-IT规划案例参考
+>
+> 7.3-一个内存溢出问题解决案例
+>
+> 7.4-技术人员思维和认知升级
+>
+> \- -7.4.1-从编程思维谈起
+>
+> \- -7.4.2-架构思维
+>
+> \- -7.4.3-从架构思维到大架构观培养
+>
+> 7.5-践行-长期主义者
+
+对于该书，我前期整理一个初步的梳理PPT材料如下，该材料当前可以共享PDF文件，可以关注我并转发该文，然后给我私信我会发送该PDF材料供学习使用。
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwkswzXAmOJglibGf3uLnUJGcJicBAy9doj96zXW2aZRDIbvOSB6fJXgPA/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwM03VmzZWZ58wxMV6MePQBvp318dh3Egp8NWra41f8iaTHg4cTNdaicVA/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwib2jYhEZPQ5FEY59zQFHcB79GP9bo3iaY2PFZACWLwIguBACDfNuhchg/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwcalFu3cVmj78Fgj2Yic33vkJrJlU9zVIwkWRX5yiaUA7a8jr7lJDb0sg/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwGsKm6l5TZZyt6UzAU7JqOevibSPr0xRyib0IXxwfLfsu6sKuQX5U2sBQ/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwQOUIBf2GuQpLosMmhMibqyy2QoclMw0ic0w9dHjmyxfmoktX7ZWcrIfw/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwQibdbBic2Eic5bce9FHUxuicPBAhWK4PIOzFEefUibstPgYxK8AvSUeIqhg/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwI1ZyKh71bB5fWgia7zjLdbOTaqOOvAmHnD115r1iajccEsGDW8iauxrfw/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwETMVBq4NLLNhibU2yMdO8cxcp46NDZHNKp6SGUkSlQibAyEJdszhwwIw/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwPfIWaRZQT1WmhWJiczxKibC5Fg7GlcDu7J4fBr3sqlgw4XrraYu7r49A/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwibIrk8Qo8ljlptHOicP7Lm2ALHKLl93XPR2VhHlerFT5vQkcxZt5NbjA/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwFuEQehKhB2icWzJaAvbM5mUsBHZTbjW9tIE3IQDvwn891xQY51pibicYQ/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwVJ9iabBKzWlEDHgIHPiaiaOh8icJ7fCsE9dB5RqNxuFl7YNQXpxIPK5stw/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwnIRnKmMZvFtciaNSL1SGOqUIUXyOtb6rzcoEzkLzbhBaacehPcelVfw/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbw1DWucocLuaIXuFiaElDdZFqWiaJYJXHM04zQtUhpCHIAExmd0Zic3szGg/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwIjicYh3yiaWVNJJEibYCXoSv05nibI3L9pBdwgYFlSIN3VhJHQ3iaJ48U9w/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbw1sicBdSDY9YzQFXGp43LYk5ROTRiaJ9Xf24bhbosibFzDM3A8yGIZicvug/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwhiatxcibTf9aLQvv0lyA7jq3o3YVfLxSelibykBlLibtnzfCFibLibGueZLg/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwDbHOW3BSOaQrh0mzwibKVuPbmoicOt6nkBJxELynOm4fhxvFWibOZ02Gg/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwAMV05frRXl5TK9Q6bRAN7mHNfIX7MIKQEkHYsHIWhmMwJhlYI3Q0tg/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwDHHAJVTye95LwgmEjrl1MLzMbOIbTVIeJcJaD02icSuokWonqUsykEg/640?wx_fmt=jpeg)
+
+  
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/mqhc3Xuogv7z4jvEQHOlGxcpemygPSbwuV8jsZv89o3Q6ficE8dxWOyKcso6r74y7qty3xJMc8HNs5TiadgcyAdA/640?wx_fmt=jpeg)
+
+注：需要PDF的可以先关注我公众号并转发该文，然后给我发消息，注意不是本篇文章留言。  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+****
+
+
+
+****
+
+
+
+
+
+__
+
+
+
+
+
+
+
+
+

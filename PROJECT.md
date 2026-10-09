@@ -4,7 +4,7 @@
 
 本项目把一组领域原始资料整理为可审查的知识模型，并验证这些模型能否帮助桌面 Agent 更准确、更快速、更可追溯地回答真实问题。
 
-当前交付形态为本地知识工作台和桌面 Agent 配套 CLI。维护者通过 GUI 浏览、人工编辑正式模型和审查证据，业务员通过桌面 Agent 提问，开发者通过脚本复现查询、评测和反馈。不是通用 Skill 成品。
+当前交付为 v1.5 本地知识建设与应用工作台、桌面 Agent 配套 JSON CLI。维护者从 Raw 准入、两轮候选、人工审查完成增量知识建设，也可编辑节点和审查证据；业务员通过桌面 Agent 提问。根目录 AGENTS.md 和 tools 操作契约提供定向入口，当前没有安装个人 Skill 或 MCP。
 
 ## 当前阶段
 
@@ -18,14 +18,15 @@
 | 最终回答质量 | Pending verification | 需要业务员在桌面 Agent 中逐题评分 |
 | GUI 一跳 / 全局视图 / 证据统一 / trace 与评价 | Verified by automated checks | `gui/`、`tests/test_studio_v14.py`、`runs/build/studio-v1.4/verification.md` |
 | 现有局部图 / 主动多跳 / 编辑回滚 | Verified by automated checks | `tests/test_studio.py`、`runs/build/studio-v1.4/verification.md` |
+| 资料接入 / 两轮候选 / 审查发布 / 来源复核 / Agent 操作 | Automated implementation checks; business semantics pending | `scripts/kb_build.py`、`tests/test_knowledge_build.py`、`runs/build/studio-v1.5/verification.md` |
 | MCP 与正式 Skill | Rejected for current stage | 见 `docs/adr/002-application-validation-before-mcp.md` |
 
 ## 两条主流程
 
 ```mermaid
-flowchart LR
-    subgraph Build[离线知识构建]
-        R[raw] --> C[候选]
+flowchart TD
+    subgraph Build[增量知识构建]
+        R[已准入 raw] --> C[两轮候选]
         C --> H[人工裁决]
         H --> M[model]
     end
@@ -48,9 +49,21 @@ flowchart LR
 - 知识维护者：阅读 `docs/studio-guide.md`、`MEMORY.md`、`registry/` 和相关 ADR。
 - 历史构建过程：见 `runs/build/2026-09-23/`。
 
+## 模块定位
+
+| 流程 | GUI / Agent 入口 | 代码 | 文档 |
+|---|---|---|---|
+| 资料、候选、发布、更新 | 资料与知识建设 / `kb_manage.py` | `scripts/kb_build.py`、`gui/frontend/construction.js` | `docs/knowledge-construction.md`、`application/agent-operations.md` |
+| 问答检索 | 一跳检索 / `kb_context.py` | `scripts/kb_lib.py` | `application/assistant_prompt.md` |
+| 字段证据与人工维护 | 知识浏览 / 本机 API | `scripts/kb_evidence.py`、`gui/backend/studio.py` | `docs/studio-guide.md` |
+| 全局关系与路径 | 全局、关系、多跳 / `kb_multihop.py` | `gui/backend/studio.py` | `docs/studio-guide.md` |
+| 调用评价与反馈 | 运行记录 / 反馈 CLI | `scripts/kb_trace.py`、`record_feedback.py`、`sync_feedback_queue.py` | `topics/knowledge-application.md` |
+
+Agent 从 [AGENTS.md](AGENTS.md) 和 [操作指南](application/agent-operations.md) 开始；运行 `python scripts/kb_manage.py tools` 发现参数。建设步骤见 [建设手册](docs/knowledge-construction.md)。资料任务保存在 runs/build/knowledge，问答 trace 在 runs/evaluation。原有历史构建和框架文档继续保留。
+
 ## 当前边界
 
-- 支持本地 Markdown 语料和现有 Scenario–Concept–Entity 模型。
+- 建设支持本地 Markdown/文本及现有 Scenario–Concept–Entity 模型，问答沿用已准入来源检索。
 - 当前检索是可解释的轻量字符 n-gram 检索，不依赖向量数据库。
 - 最终自然语言答案由桌面 Agent 生成，本地脚本只返回知识上下文和证据候选。
 - 已增加仅监听本机的 GUI HTTP 服务，操作见 `docs/studio-guide.md`。
@@ -58,4 +71,6 @@ flowchart LR
 - 人工确认限于登记支持范围；GUI 与 CLI 共用段落状态。运行回放与反馈边界见 ADR 005。
 - 未实现 MCP、多人权限、自动模型 API 调用或 Onto-Model 六类扩展。
 
-本轮范围及决策见 [ADR 005](docs/adr/005-one-hop-first-observable-studio.md)。具体操作从 [工作台手册](docs/studio-guide.md) 开始。
+完整 IPO/decomposition 参与主问答留待下期；当前 GUI 公开实际 JSON 与较短文本摘要。merge 登记别名供建设目录，不改变问答召回；来源删除不会自动删知识，冲突需人处理。
+
+本轮范围见 [ADR 006](docs/adr/006-incremental-knowledge-construction.md)，应用边界继续见 ADR 005。具体操作从建设手册或工作台手册开始。

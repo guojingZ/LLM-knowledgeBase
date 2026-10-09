@@ -11,7 +11,7 @@ from pathlib import Path
 
 EXCLUDED_PARTS = {".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".venv", "node_modules"}
 EXCLUDED_SUFFIXES = {".pyc", ".pyo", ".zip", ".bak"}
-ZIP_TIMESTAMP = (2026, 10, 3, 0, 0, 0)
+ZIP_TIMESTAMP = (2026, 10, 8, 0, 0, 0)
 
 
 def package_files(project: Path) -> list[Path]:
@@ -19,7 +19,7 @@ def package_files(project: Path) -> list[Path]:
         path
         for path in sorted(project.rglob("*"))
         if path.is_file()
-        and path.name != "PACKAGE-MANIFEST.sha256"
+        and path.name not in {"PACKAGE-MANIFEST.sha256", ".knowledge-write.lock"}
         and not set(path.relative_to(project).parts) & EXCLUDED_PARTS
         and path.suffix.lower() not in EXCLUDED_SUFFIXES
     ]
